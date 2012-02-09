@@ -1,0 +1,9 @@
+asset bank 3.77 version decomplied with jad
+-------------------------------------------
+
+This version is the development environment containing only the decompiled java files. It does not have the deployable part, the JSPs, js, and other web related parts of the application. A deployable format 'AssetBankBase' is also available.
+
+
+The decompilation process generated some java files with errors. Most of the errors related to JDK5 format are fixed, and changes are logged in to the file AssetBankDecompilation status.
+
+The decompiled code can be used as a reference for further development.
