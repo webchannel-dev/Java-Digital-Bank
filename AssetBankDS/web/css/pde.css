@@ -1,0 +1,203 @@
+/* ======================================================================================== */
+/* E X P L O R E R    S T Y L E S H E E T                                                */
+/* Contains rules for PureDOMExplorer   */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		James Dacosta		30-Nov-2006    Created.                                          */
+/* ======================================================================================== */
+
+/*
+ * PureDOMExplorer Demo styles 
+ * written by Chris Heilmann 
+ * More at http://onlinetools.org/tools/puredom/
+ */
+ 
+ 
+/* reset ------------------------------------------------------------ */  
+ 
+ 
+ul.pde * {
+  	border: none !important;
+ 	list-style-type: none;
+	text-align: left;
+	font-size: 11px;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* links ------------------------------------------------------------ */  
+
+
+ul.pde a:link,
+ul.pde a:visited,
+ul.pde a:hover,
+ul.pde a:active {
+	text-decoration: none;
+	color: #000;
+}
+
+ul.pde a:hover {
+ 	text-decoration: underline;
+}
+
+
+
+ul.pde,ul.pde li, ul.pde ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ 
+/* section indent ------------------------------------------------------------ */  
+/* float:none is needed to overide previous ul styles */
+ul.pde ul {
+	margin: 0 0 0 20px;
+	float: left;
+	padding: 0;
+	margin-bottom:0 !important;
+ }
+ 
+* html ul.pde ul {
+	float: none !important;
+}
+
+
+ul.pde li {
+ 	padding: 0 !important;
+ 	padding-left: 15px;
+}
+
+/* spacing between sections */
+ul.pde li a {
+	float: left;
+	margin: 2px auto;
+  }
+ 
+/* dynamically added to LIs with nested ULs */
+
+ul.pde li.parent a p{
+  	margin:0px;
+  }
+
+
+ul.pde li.parent img {
+	border: none;
+	padding-right: 2px;
+}
+
+
+li.current{
+	background:red !important;
+	margin-left:100px !important;
+}
+
+/* dynamically added to LIs with nested ULs and STRONG elements in them */
+
+ul.pde a p.current{
+ 	color: white;
+	background:#1F91B5;
+ }
+
+
+/* The class to hide nested ULs */
+
+.hide {
+	position: absolute;
+	top: 0;
+	left: -4000px;
+}
+
+
+/* The class to show nested ULs */
+
+.show {
+	position: static;
+	display: table;
+	top: 0;
+	left: 10px;
+}
+
+ 
+
+ul.pde {
+	width: 272px !important;
+}
+
+ul.pde ul {
+	width:90% !important;
+}
+
+/*
+debug styles - puts in a background colour for the top 6 sections
+
+ul.pde {
+	background:red;
+}
+
+ul.pde ul {
+	background:green;
+}
+
+ul.pde ul ul{
+	background:blue;
+}
+ul.pde ul ul ul{
+	background:pink;
+}
+ul.pde ul ul ul ul{
+	background:yellow;
+}
+ul.pde ul ul ul ul ul{
+	background:brown;
+}
+*/
+
+ul.pde .folder, ul.pde li.parent a {
+	display: inline;
+}
+
+ul.pde .show .empty p {
+	padding-left: 3px;
+}
+
+
+ul.pde .empty a {
+	padding-left: 0px !important;
+}
+
+
+ul.pde a * {
+	float: left;
+	cursor: pointer;
+}
+
+
+ul.pde a:hover * {
+	text-decoration: underline;
+}
+
+
+ul.pde li.empty {
+	 
+}
+
+
+ul.pde a p {
+	padding-left: 5px;
+}
+
+ 
+ul.pde li p {
+	margin: 0px;
+ 	margin-left:2px;
+ 	padding: 1px 3px;
+ }
+
+
+ul.pde li a {
+	padding: 0;
+}
+
+
+

@@ -1,0 +1,91 @@
+
+<!-- 
+	You can have one or more workflows. For each Access Level, you can relate it to a workflow by entering the workflow name in the edit Access Level screen.
+	If you leave the workflow name empty on an Access Level then the 'default' workflow is used.
+-->
+<workflows>
+
+	<workflow name="default" description="Default workflow">
+	
+		<!-- 
+			The for attribute of variation is a list of Asset Type Ids (eg '2' for Image), or '*'.
+			Use '*' when the workflow does not vary according to asset type.
+		-->
+		<variation name="any" for="*">
+	
+			<!-- 
+				The visible-to attribute is a list of Group Ids, or 'approvers'.
+				'approvers' means the set of Groups that have approval permission on the access levels that the asset is in,
+				which also correspond to this workflow.
+			--> 
+			<state name="requires-approval" description="Require Approval" initial="true" visible-to="approvers" >
+				
+				<!-- Help text appears by the state on the approval screen -->
+				<help-text>These assets require approval before they can be seen by non-admin users.</help-text>
+				
+				<!-- Alerts are processed when an asset enters the state -->
+				<alert name="upload-alert" send-to="approvers" handler="AssetUploadedAlertProcessor" template="admin_alert_upload_approvals" />
+				
+				<transition name="approve" description="Approve" next-state="approved" has-message="true">
+					
+					<!-- Help text appears by the transition on the approval screen -->
+					<help-text>Approve this asset</help-text>
+					
+					<!-- Confirmation text is optional, if entered then a confirmation dialog appears with this text,
+						when the transition is chosen on the approval screen -->
+					<confirmation-text>Are you sure you want to approve this asset?</confirmation-text>
+					
+				</transition>
+				
+				<transition name="reject" description="Reject &amp; Delete" next-state="rejected">
+					<help-text>Delete this asset</help-text>
+					<confirmation-text>Are you sure you want to reject this asset?</confirmation-text>				
+				</transition>
+				
+				<!-- has-message means a message box will be shown, message-mandatory means the message must be entered before transition is made -->
+				<transition name="reject-for-resubmit" description="Reject for Resubmit" next-state="rejected-for-resubmit" has-message="true">
+					<help-text>Send back to owner for resubmission</help-text>
+					<confirmation-text>Are you sure you want to reject this asset for resubmission?</confirmation-text>				
+				</transition>
+				
+			</state>	
+			
+			<state name="approved" description="Approved">
+				<!-- Events are triggered when the asset enters the state -->
+				<event name="approve-event" handler="AssetApprovedProcessor" />
+			</state>
+			
+			
+			<!-- This state deletes the asset -->
+			<state name="rejected" description="Rejected">
+				<event name="reject-event" handler="AssetDeleteProcessor" />
+			</state>
+			
+			
+			<state name="rejected-for-resubmit" description="Rejected for Resubmit" visible-to="owner">
+
+				<help-text>These assets require attention before resubmission.</help-text>
+				
+				<alert name="rejected-alert" send-to="owner" handler="SendToOwnerAlertProcessor" template="workflow_asset_rejected" />
+
+				<event name="unsubmit-event" handler="AssetUnsubmittedProcessor" />
+
+				<transition name="resubmit" description="Resubmit" next-state="requires-approval" has-message="true">
+					<help-text>Resubmit this asset</help-text>
+					<confirmation-text>Are you sure you want to resubmit this asset?</confirmation-text>				
+				</transition>
+				
+				<transition name="delete" description="Delete" next-state="rejected">
+					<help-text>Delete this asset</help-text>
+					<confirmation-text>Are you sure you want to delete this asset?</confirmation-text>				
+				</transition>
+				
+			</state>
+			
+			
+		</variation>
+		
+	</workflow>
+
+</workflows>
+

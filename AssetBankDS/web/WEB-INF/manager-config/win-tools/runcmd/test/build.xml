@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project basedir="." name="runcmd-test" default="compile">
+    <target name="compile">
+        <mkdir dir="classes" />
+        <javac srcdir="src" destdir="classes" />
+    </target>
+
+    <target name="clean">
+        <delete dir="classes" />
+    </target>
+</project>

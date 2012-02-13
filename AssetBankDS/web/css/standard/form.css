@@ -1,0 +1,567 @@
+/* ======================================================================================== */
+/* F O R M   S T Y L E S                                                                    */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		14-Feb-2006    Created.                                          */
+/* ======================================================================================== */
+
+form { margin: 0; }
+
+/* table {margin:1em 0;} */
+
+input, textarea {padding: 1px 2px 1px 2px;}
+
+input.button { 
+   background: #b0b0b0;
+   color: #fff; 
+   border: 2px solid #cbcbcb; 
+   border-right-color: #939393; 
+   border-bottom-color: #939393; 
+   padding: 0 2px; 
+   margin-left: 8px; 
+	cursor: pointer;
+	}
+	
+
+input.button[disabled] {
+	background: #bbb; border-color:#ccc;
+	border-right-color: #999;
+	border-bottom-color: #999; 
+	font-style: italic;
+}	
+
+a.cancelLink {
+	float:left;
+	margin: 0.7em 0 0 1em;
+	padding: 0 0 0 1em;
+	border-left: 1px solid #ccc;
+}	
+
+/* Cancel button needs to be horizontally aligned with Submit button */
+input#cancelButton { position: relative; top: -19px; margin-left: 0; }
+* html input#cancelButton { position: static; margin-top:-36px;  }
+/* input#cancelButton:lang(en) { top: -20px; } */
+/*	
+input#cancelButton.button {
+	background: #fff;
+	border-color: #ccc; 
+	border:1px solid #017397;
+	color:#017397;
+	padding: 1px 3px 1px 3px; 
+	} 	*/
+
+input.flush { margin-left: 0 }		/* use this class for buttons that you dont want indented */	
+
+input.floated { 
+	float:left; margin-right:5px;		/* shouldn't need this once all the forms are floated */
+	margin-top:5px;
+	width:auto; 
+}		
+
+input[type=hidden] {						/* prevent whitespace on hidden fields. */
+	padding:0;
+	margin:0;
+}
+
+fieldset {
+	border:1px solid #999;
+	padding:1em;
+	margin: 1em 0;}
+	
+fieldset.subtle {
+	border:0;
+	border-bottom:1px solid #999;
+	padding:0.5em 0;
+	margin: 0.8em 0;}	
+	
+legend { 
+	font-weight: bold;
+	padding: 4px}
+
+input.checkbox { 
+	width: auto !important; 
+	margin-bottom:0; 
+	margin-left:0; 
+	margin-right:5px;
+}
+
+div.buttonHolder { text-align: center;}
+
+label.after {
+	font-weight: normal !important;
+}
+
+label span {
+	font-weight: normal
+}
+
+
+
+
+/* styles for list of radio buttons that highlight when you hover over them */
+ul.radioList {
+	list-style:none;
+	padding:0; margin:0 0 1em 0;
+}
+ul.radioList.narrow {
+	width: 50%;
+}
+ul.radioList li {
+	border:1px dashed #fff;
+	border-width:1px 0;
+	overflow: hidden;
+	height:1%;
+}
+ul.radioList li input.radio {
+	float: left;
+	padding:0; 
+	margin:3px 0 0 0;
+}
+ul.radioList li label{
+	float:left;
+	padding: 3px 0 3px 0.5em;
+	font-weight: bold;
+	width:90%;
+}
+ul.radioList.flush li label {
+	padding-left:0;
+}
+ul.radioList li span {
+	font-weight: normal;
+	padding-left: 0.2em;
+}
+
+ul.radioList li:hover {
+	border-color: #ccc;
+	background: #f8f8f8;
+}
+ul.radioList li span p {
+	display:inline;
+}
+
+form.floated ul.radioList label, form.floated ul.radioList input {
+	margin-bottom:0;
+}
+form.floated ul.radioList span {
+	float:none;
+}
+
+/* ================================================================================= 
+	Consistent cross-browser method of aligning checkboxes with labels.
+	Requires html:
+	<label class="wrapping"><input type="checkbox" /> My label</label>	
+	(Make sure there is a space between the input and the label)								
+==================================================================================== */
+label.wrapping,
+form.floated label.wrapping {
+	display: block;
+	padding-left: 15px;
+   text-indent: -15px;
+   margin: 0.4em 0;
+   position: relative;
+}
+label.wrapping input,
+form.floated label.wrapping input {
+	display:inline;
+	width: 13px !important;
+	height: 13px !important;
+	padding: 0;
+	margin:0 2px 0 0;
+	vertical-align: bottom;
+	position: relative;
+	top: -1px;
+}
+label.wrapping span.required{
+	position:absolute;
+	left: 5px;
+}
+
+table label.wrapping {
+	/* BB - can't remeber what this is needed for therefor have removed for now as causing an issue on the edit asset relationshiops page */
+	/* margin-bottom:0; */
+}
+body.assetSelectPage table label.wrapping input {
+	 margin-bottom:0; 
+}
+
+
+
+/* ================================================================================= 
+	table.form styles
+	this is the main type of table used for forms throughout the site										
+==================================================================================== */
+
+table.form { width: 100%; margin-bottom: 1em; } 
+table.form th, table.form td { padding:3px 0; vertical-align: top; }
+
+table.form th { text-align: left; padding: 6px 15px 0 0; width: 108px; }
+table.form th.checkbox, table.form td.checkbox {padding-top: 6px;}
+table.form td.padded { padding: 6px 6px 0 0; }
+div.dialogPanel table.form th {width:108px; padding-right:5px;}
+div.dialogPanel table.form  {margin:0;}	/* dont need a margin as the dialogPanel holder has padding */
+
+table.form input {width:200px;}					/* standard input field width */
+table.form input.small, input.small { width: 90px !important; }		/* use this for smaller input fields (e.g date fields) */
+input.vsmall {
+	width: 2.5em !important;
+}
+table.form select { width: 208px; }
+table.form select.small {width:98px;}			/* to match smaller text fields */
+table.form input.checkbox { width: auto; margin-bottom:0; margin-left:0; }
+
+
+table.form input.file { width: auto; }
+table.form textarea { width: 335px; height: auto; }
+
+table.form input.checkbox, table.form input.button, table.form input.radio { width: auto; }
+
+/* Positioning of calendar and question mark icons */
+table.form img.icon, #reportSelect img.icon { padding: 0px 4px 0px 2px; position:relative; top:2px;  } 
+table.form img.help { position:relative; top:2px;} 
+
+table.form th.translation { font-weight: normal; }
+
+/* On bulk update page when changing categories or access levels */
+table.form.catUpdate th {
+	padding:4px 0 0 0; width:123px;
+	text-align: left
+}
+table.form.catUpdate td.middle {
+	padding-right: 4px; 
+	width: 130px;
+}
+table.form.catUpdate table {
+	margin:0 !important;
+}
+table.form.catUpdate input.radio {
+	margin:0 3px 0 0;
+	position:relative; top:2px;
+}
+table.form ul {
+	list-style: none; margin: 0;
+	padding:0;
+	width: 50%;
+}
+table.form ul li {
+	margin-bottom: 0.8em;
+}
+table.form div.autocomplete ul {
+	width: 100%;		/* fix for autocomplete dropdown */
+}
+/* specific th widths for different pages */
+#adminPage table.form th {width:95px;}
+
+#checkout table.form th {width:85px;}
+#adminPage #approvalForm th {width:118px;}
+#adminPage #assetRelationshipsForm table.form th {width: 150px;}
+/* ================================================================================= 
+	table.shortform styles
+	for forms with two colums of fiels (e.g. viewUserAdmin)										
+==================================================================================== */
+
+table.shortform { width: 80%; margin-bottom: 1em; } 
+table.shortform th, table.shortform td { padding:3px 0; vertical-align: top; }
+
+table.shortform th { text-align: left; padding: 6px 15px 0 0; width: 80px; }
+table.shortform th.checkbox, table.shortform td.checkbox {padding-top: 6px;}
+table.shortform td {padding-right:50px; }
+table.shortform td.padded { padding: 6px 0 0 0; }
+
+
+/* ================================================================================= 
+	Group permissions table									
+==================================================================================== */
+/* Following is used on the group_edit page only */
+table.permissions {  }
+table.permissions th.radio, table.permissions td.radio { text-align: center; width: 2em; padding: 2px; }
+table.permissions th.checkbox, table.permissions td.checkbox { text-align: center; padding: 2px; }
+table.permissions th.spacer, table.permissions td.spacer { width: 2em; padding: 0px;}
+table.permissions span { display: block;}
+table.permissions td.catPermission1 { padding-left: 0px; font-weight: bold; }	/* for indenting the access level heirachy */
+table.permissions td.catPermission2 { padding-left: 8px; }
+table.permissions td.catPermission3 { padding-left: 18px; }
+table.permissions td.catPermission4 { padding-left: 28px; }
+table.permissions td.catPermission5 { padding-left: 34px; }
+table.permissions td.catPermission6 { padding-left: 40px; }
+table.permissions td img.expander {
+	border:0;
+	margin-right: 4px;
+}
+table.permissions span {
+	display:block;
+}
+table.permissions th.accessLevelsHeading,
+table.permissions span.empty {
+	padding-left: 13px;
+}
+table.permissions th.accessLevelsHeading strong,
+table.permissions th.accessLevelsHeading img {
+	float:left;
+}
+table.permissions th.accessLevelsHeading img.ajaxLoader {
+	position: relative;
+	top:2px;
+	display:none;
+	margin-left:10px;
+}
+table.permissions tr.rowBorder td { border-top:1px solid #ddd; }
+
+/* ================================================================================= 
+	Category selector, used in search page and edit asset page 									
+==================================================================================== */
+table.searchCats { width: 100%; margin-bottom:0; }
+table.searchCats th { text-align: left; padding: 6px 0px; width: 320px; }
+
+table.searchCats td { padding: 0 0 4px 0; vertical-align: top; }
+table.searchCats td.chosen {
+	width:320px;
+}
+select.category, table.form select.category { width: 315px; }
+
+div.categoryListBox { display: none; }
+div#topLevelListBox { display: block; }
+div.categoryListBox input.button { margin-left: 10px; }
+
+div.checkboxPanel {
+	float:left;
+	width: 25%;
+	padding-right: 3%;
+}
+
+/* The following tpe of table is used frequently on admin pages with forms that */
+/* are performing admin actions */
+table.admin {
+	margin-bottom: 1em;
+}
+table.admin th, table.admin td { text-align: left; padding: 2px 16px 2px 0px; }
+table.admin td.action { padding: 2px 4px; }
+table.admin td.disabled { color: #b0b0b0; } /* Grey out action */
+table.admin tr.disabled { color: #b0b0b0; } /* Grey out action */
+table.admin input.text { width: 90px }
+table.admin a.inactive { color: #b0b0b0; text-decoration : none; cursor: default; }
+table.admin td div.constrain {
+	max-width: 15em;									/* defined as width for IE 6, 7, 8 */
+	word-wrap: break-word;							/* force wrapping (useful for breaking up long email addresses) */
+	overflow:hidden;
+}
+table.admin a.sort, table.admin a.ascending, table.admin a.descending {
+	padding-right:12px;
+}
+table.admin a.ascending, table.admin a.sort:hover  {
+	background: url(../../images/standard/arrow/sort_up.gif) center right no-repeat;
+}
+table.admin a.descending {
+	background: url(../../images/standard/arrow/sort_down.gif) center right no-repeat;
+}
+
+table.compact th, table.compact td { text-align: left; padding: 2px 6px 2px 0px; }
+
+/* Styles for the table in the usage popup */
+table.usage { margin: 12px 0px; width: 100%; }
+table.usage th { padding: 4px; border: 1px solid #ccc; border-left: none; background: #eee; }
+table.usage th.left { border: 1px solid #ccc; }
+table.usage td { padding: 4px; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+table.usage td.left { border-left: 1px solid #ccc; }
+
+table.usageAdmin { width: auto; }
+table.usageAdmin table { width: auto; margin: 0px; padding: 0; }
+table.usageAdmin table th { vertical-align: top; padding: 0px }
+table.usageAdmin table td { padding-top: 3px; }
+table.usageAdmin td { text-align: left; vertical-align: top; padding: 2px;}
+
+/* ================================================================================= 
+	Marketing groups list on registration and profile page									
+==================================================================================== */
+table#marketingGroups { width:204px; margin:0; } 
+table#marketingGroups td.checkbox { width:20px !important; padding-top:2px;}
+table#marketingGroups td { padding:5px 0 8px 0; vertical-align: top; }
+table#marketingGroups tr.group td { border-top: #ccc 1px solid; }
+table#marketingGroups tr.lastGroup td { border-bottom: #ccc 1px solid; }
+
+/* ================================================================================= 
+	Table-free forms (i.e. on download image page)											
+==================================================================================== */	
+
+form.floated { 
+	margin:1em 0 1.5em 0;
+	overflow:hidden;
+	height:1%;
+	}
+
+form.floated input, 
+form.floated textarea, 
+form.floated select, 
+form.floated div.holder,
+form.floated label, 
+form.floated span.empty {
+	float:left; 
+	width: 195px; 
+	margin:0 5px 10px 0;
+	}
+
+
+form.floated label, 
+form.floated span.empty {
+	width:100px;
+	font-weight: bold;
+	padding-top:2px;
+	margin-right:10px;
+	} 	
+form.floated textarea { 
+	width:300px;
+	}	
+form.floated select, form.floated input.file, form.floated input.radio {
+	width:auto;
+}	
+form.floated div.holder {
+	width: 195px;
+	padding-top:2px;
+	}
+form.floated img.icon {					/* calendar pop up */
+	float:left;
+	margin: 0.2em 0.2em 0 0;
+	display:none;							/* hidden by default, shown by javascript */
+}	
+form.floated span { 
+	width:auto; float:left; padding:2px 5px 0 0px;
+}
+form.floated label span { 
+	float:none;
+}
+
+form.floated label.after { 
+	font-weight: normal; 
+	width: 180px !important;
+	}	
+form.floated label.after input {
+	margin-bottom: 0 !important;
+	width: 13px;
+   height: 13px;
+	overflow: hidden;
+}	
+form.floated label.wrapping {
+	font-weight: normal;
+	margin-top:0;
+	width: 60%;
+}
+form.floated label.wrapping input {
+	float:none;
+}
+
+form.floated label.language {
+	font-weight: normal;
+}	
+
+form.floated br, div.dialogPanel br {
+	clear:both; 
+	height:1px;
+}
+form.floated input.button {
+	width:auto; 
+	margin-right:5px;
+	margin-top:5px;}
+
+
+
+	
+/* Download page */
+div.dialogPanel label { width:112px;}	
+
+div.dialogPanel span { width:15px; float:left; padding:3px 0 0 5px;}
+div.dialogPanel span.normal { width: auto; padding: 0px; float: none;}
+div.dialogPanel input { float:left; width: 40px; margin-right:20px }
+div.dialogPanel input.checkbox { 
+	width:auto;
+	margin-right:5px;
+	}
+div.dialogPanel select {
+	float:left;
+	margin: 2px 0 10px 0; 
+}		 
+div.dialogPanel label {
+	float:left;
+	width:112px;
+	font-weight: bold;
+	padding-top:3px;
+	margin-bottom:10px;
+} 	
+div.dialogPanel label.checkLabel {
+	font-weight: normal;
+	margin-bottom:10px;
+	width:200px;
+} 	
+div.dialogPanel label.narrow {width:92px;}	
+div.dialogPanel label.inline { padding-top: 0;}
+/* still some table cells in dialoguePanel - tsk tsk */
+div.dialogPanel th label {
+	padding-top:0;
+}
+div.dialogPanel input.button {width:auto; margin-right:5px;}
+div.dialogPanel .hr {
+	border-top:1px solid #ccc !important;
+	}	
+
+/* Labels vary in width depending which page you are on... */
+#loginPage form.floated label, #loginPage form.floated span.empty {
+	width:80px;
+}		
+
+form.floated.wideLabel label{
+	width: 14em;
+}
+form.floated.smallLabel label{
+	width: 6em;
+}
+form.floated.vsmallLabel label{
+	width: 4em;
+}
+
+div.formFields.secondary {
+	border: 1px solid #e8e8e8;
+	border-width: 1px 0;
+	background: #fafafa;
+	padding: 0.5em 0 0 0;
+	margin: 0.5em 0 1em 0;
+}
+/* ================================================================================= 
+	Search Builder form										
+==================================================================================== */	
+ul.searchBuild {
+	list-style: none;
+	margin:1em 0; padding:0;
+	clear:both;
+}
+ul.searchBuild li {
+	margin:0 0 0.5em 0;
+	height:1%;
+}
+ul.searchBuild li input, ul.searchBuild li select{
+	width:26%;
+	margin: 0 0.5em 0 0;
+	padding:0;
+}
+ul.searchBuild li input{			/* Text fields need to be slightly shorter to align with select boxes. */
+	width:25.5%;
+}
+ul.searchBuild li select.selectClause{
+	width:15%;
+}
+ul.searchBuild li select.selectOperator{ 
+	width:7em;
+	display: block;
+}
+ul.searchBuild li img {				/* Date picker positioning  */
+	position:relative;			
+	top:2px;
+}
+ul.searchBuild li br {				/* Used this instead of bottom margin on selectOperator,  */
+	line-height: 0.5em;				/* guess why? -> IE6 */
+	height:0.5em;
+}
+
+a#searchBuildLink{
+	float:right; 
+	margin: 0 0 0 1em; 
+	display:none;
+	line-height:1.5em;
+}

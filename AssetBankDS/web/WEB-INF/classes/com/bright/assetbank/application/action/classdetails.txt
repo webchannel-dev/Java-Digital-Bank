@@ -1,0 +1,982 @@
+Compiled from "AddAssetAction.java"
+public class com.bright.assetbank.application.action.AddAssetAction extends com.bright.assetbank.application.action.SaveAssetAction implements com.bright.assetbank.application.constant.AssetBankConstants
+  SourceFile: "AddAssetAction.java"
+  minor version: 0
+  major version: 49
+  Constant pool:
+const #1 = Method	#103.#169;	//  com/bright/assetbank/application/action/SaveAssetAction."<init>":()V
+const #2 = Field	#102.#170;	//  com/bright/assetbank/application/action/AddAssetAction.m_assetRelationshipManager:Lcom/bright/assetbank/entity/relationship/service/AssetRelationshipManager;
+const #3 = class	#171;	//  com/bright/assetbank/application/form/AssetForm
+const #4 = InterfaceMethod	#172.#173;	//  javax/servlet/http/HttpServletRequest.getSession:()Ljavax/servlet/http/HttpSession;
+const #5 = Method	#174.#175;	//  com/bright/framework/user/bean/UserProfile.getUserProfile:(Ljavax/servlet/http/HttpSession;)Lcom/bright/framework/user/bean/UserProfile;
+const #6 = class	#176;	//  com/bright/assetbank/user/bean/ABUserProfile
+const #7 = Method	#3.#177;	//  com/bright/assetbank/application/form/AssetForm.getFile:()Lorg/apache/struts/upload/FormFile;
+const #8 = InterfaceMethod	#178.#179;	//  org/apache/struts/upload/FormFile.getFileSize:()I
+const #9 = Method	#3.#180;	//  com/bright/assetbank/application/form/AssetForm.getTempFileLocation:()Ljava/lang/String;
+const #10 = Method	#181.#182;	//  java/lang/String.length:()I
+const #11 = Method	#3.#183;	//  com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+const #12 = Method	#184.#185;	//  com/bright/assetbank/application/bean/Asset.getEntity:()Lcom/bright/assetbank/entity/bean/AssetEntity;
+const #13 = Method	#186.#187;	//  com/bright/assetbank/entity/bean/AssetEntity.getId:()J
+const #14 = Method	#186.#188;	//  com/bright/assetbank/entity/bean/AssetEntity.getAllowAssetFiles:()Z
+const #15 = Method	#3.#189;	//  com/bright/assetbank/application/form/AssetForm.isEmptyAsset:()Z
+const #16 = Field	#102.#190;	//  com/bright/assetbank/application/action/AddAssetAction.m_listManager:Lcom/bright/framework/simplelist/service/ListManager;
+const #17 = String	#191;	//  failedValidationFile
+const #18 = Method	#6.#192;	//  com/bright/assetbank/user/bean/ABUserProfile.getCurrentLanguage:()Lcom/bright/framework/language/bean/Language;
+const #19 = Method	#193.#194;	//  com/bright/framework/simplelist/service/ListManager.getListItem:(Ljava/lang/String;Lcom/bright/framework/language/bean/Language;)Lcom/bright/framework/simplelist/bean/ListItem;
+const #20 = Method	#195.#196;	//  com/bright/framework/simplelist/bean/ListItem.getBody:()Ljava/lang/String;
+const #21 = Method	#3.#197;	//  com/bright/assetbank/application/form/AssetForm.addError:(Ljava/lang/String;)V
+const #22 = Method	#3.#198;	//  com/bright/assetbank/application/form/AssetForm.setNoUploadFileSpecified:(Z)V
+const #23 = class	#199;	//  java/util/Date
+const #24 = Method	#23.#169;	//  java/util/Date."<init>":()V
+const #25 = Method	#184.#200;	//  com/bright/assetbank/application/bean/Asset.setDateAdded:(Ljava/util/Date;)V
+const #26 = Method	#201.#202;	//  com/bright/framework/util/StringUtil.stringIsPopulated:(Ljava/lang/String;)Z
+const #27 = Method	#203.#204;	//  com/bright/framework/util/FileUtil.getFilename:(Ljava/lang/String;)Ljava/lang/String;
+const #28 = Method	#3.#205;	//  com/bright/assetbank/application/form/AssetForm.getOriginalFilename:()Ljava/lang/String;
+const #29 = Method	#203.#206;	//  com/bright/framework/util/FileUtil.getFilepathWithoutSuffix:(Ljava/lang/String;)Ljava/lang/String;
+const #30 = Method	#184.#207;	//  com/bright/assetbank/application/bean/Asset.setImportedAssetId:(Ljava/lang/String;)V
+const #31 = Method	#103.#208;	//  com/bright/assetbank/application/action/SaveAssetAction.execute:(Lorg/apache/struts/action/ActionMapping;Lorg/apache/struts/action/ActionForm;Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/apache/struts/action/ActionForward;
+const #32 = Field	#102.#209;	//  com/bright/assetbank/application/action/AddAssetAction.m_assetEntityManager:Lcom/bright/assetbank/entity/service/AssetEntityManager;
+const #33 = Method	#210.#211;	//  com/bright/assetbank/entity/service/AssetEntityManager.getEntity:(Lcom/bright/framework/database/bean/DBTransaction;J)Lcom/bright/assetbank/entity/bean/AssetEntity;
+const #34 = Method	#184.#212;	//  com/bright/assetbank/application/bean/Asset.setEntity:(Lcom/bright/assetbank/entity/bean/AssetEntity;)V
+const #35 = Method	#213.#214;	//  org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+const #36 = String	#215;	//  Success
+const #37 = Method	#181.#216;	//  java/lang/String.equals:(Ljava/lang/Object;)Z
+const #38 = String	#217;	//  BrowseCategory
+const #39 = String	#218;	//  BrowseExplorer
+const #40 = String	#219;	//  AddExtensionAssetAL
+const #41 = String	#220;	//  AddExtensionAsset
+const #42 = Method	#3.#221;	//  com/bright/assetbank/application/form/AssetForm.getPeerId:()J
+const #43 = Method	#3.#222;	//  com/bright/assetbank/application/form/AssetForm.getParentId:()J
+const #44 = Method	#181.#223;	//  java/lang/String.valueOf:(J)Ljava/lang/String;
+const #45 = Field	#102.#224;	//  com/bright/assetbank/application/action/AddAssetAction.m_assetManager:Lcom/bright/assetbank/application/service/IAssetManager;
+const #46 = InterfaceMethod	#225.#226;	//  com/bright/assetbank/application/service/IAssetManager.getAsset:(Lcom/bright/framework/database/bean/DBTransaction;JLjava/util/Vector;ZZ)Lcom/bright/assetbank/application/bean/Asset;
+const #47 = Method	#184.#227;	//  com/bright/assetbank/application/bean/Asset.getPeerAssetIdsAsString:()Ljava/lang/String;
+const #48 = class	#228;	//  java/lang/StringBuilder
+const #49 = Method	#48.#169;	//  java/lang/StringBuilder."<init>":()V
+const #50 = Method	#48.#229;	//  java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+const #51 = String	#230;	//  ,
+const #52 = Method	#48.#231;	//  java/lang/StringBuilder.toString:()Ljava/lang/String;
+const #53 = String	#232;	//  peerAssetIds
+const #54 = Method	#184.#233;	//  com/bright/assetbank/application/bean/Asset.setPeerAssetIdsAsString:(Ljava/lang/String;)V
+const #55 = long	3l;
+const #57 = String	#234;	//  childAssetIds
+const #58 = Method	#184.#235;	//  com/bright/assetbank/application/bean/Asset.setParentAssetIdsAsString:(Ljava/lang/String;)V
+const #59 = Method	#236.#237;	//  com/bright/assetbank/entity/relationship/service/AssetRelationshipManager.saveRelatedAssetIds:(Lcom/bright/framework/database/bean/DBTransaction;Lcom/bright/assetbank/application/bean/Asset;Ljava/lang/String;JZ)V
+const #60 = String	#238;	//   
+const #61 = String	#239;	//  
+const #62 = Method	#181.#240;	//  java/lang/String.replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+const #63 = Method	#201.#241;	//  com/bright/framework/util/StringUtil.convertToVectorOfLongs:(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Vector;
+const #64 = Method	#242.#243;	//  java/util/Vector.iterator:()Ljava/util/Iterator;
+const #65 = InterfaceMethod	#244.#245;	//  java/util/Iterator.hasNext:()Z
+const #66 = InterfaceMethod	#244.#246;	//  java/util/Iterator.next:()Ljava/lang/Object;
+const #67 = class	#247;	//  java/lang/Long
+const #68 = Method	#67.#248;	//  java/lang/Long.longValue:()J
+const #69 = Method	#249.#250;	//  com/bright/assetbank/application/constant/AssetBankSettings.getSortByPresenceOfChildAssets:()Z
+const #70 = Method	#184.#251;	//  com/bright/assetbank/application/bean/Asset.getAttributeValues:()Ljava/util/Vector;
+const #71 = Method	#252.#253;	//  com/bright/assetbank/attribute/util/AttributeUtil.getDataFromChildrenSet:(Ljava/util/Vector;)Z
+const #72 = Field	#102.#254;	//  com/bright/assetbank/application/action/AddAssetAction.m_searchManager:Lcom/bright/assetbank/search/service/MultiLanguageSearchManager;
+const #73 = Method	#255.#256;	//  com/bright/assetbank/search/service/MultiLanguageSearchManager.indexDocument:(Lcom/bright/framework/search/bean/IndexableDocument;Z)V
+const #74 = Method	#184.#187;	//  com/bright/assetbank/application/bean/Asset.getId:()J
+const #75 = String	#257;	//  id=
+const #76 = String	#258;	//  &
+const #77 = String	#259;	//  =
+const #78 = Method	#48.#260;	//  java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+const #79 = String	#261;	//  AddedRelatedAsset
+const #80 = Method	#102.#262;	//  com/bright/assetbank/application/action/AddAssetAction.createRedirectingForward:(Ljava/lang/String;Lorg/apache/struts/action/ActionMapping;Ljava/lang/String;)Lorg/apache/struts/action/ActionForward;
+const #81 = Method	#186.#263;	//  com/bright/assetbank/entity/bean/AssetEntity.getAllowChildren:()Z
+const #82 = String	#264;	//  isParent
+const #83 = Method	#181.#265;	//  java/lang/String.valueOf:(Z)Ljava/lang/String;
+const #84 = String	#266;	//  typeName
+const #85 = Method	#186.#214;	//  com/bright/assetbank/entity/bean/AssetEntity.getName:()Ljava/lang/String;
+const #86 = String	#267;	//  childName
+const #87 = Method	#186.#268;	//  com/bright/assetbank/entity/bean/AssetEntity.getChildRelationshipToName:()Ljava/lang/String;
+const #88 = String	#269;	//  childrenName
+const #89 = Method	#186.#270;	//  com/bright/assetbank/entity/bean/AssetEntity.getChildRelationshipToNamePlural:()Ljava/lang/String;
+const #90 = String	#271;	//  addingFromBrowseCatId
+const #91 = Method	#3.#272;	//  com/bright/assetbank/application/form/AssetForm.getAddingFromBrowseCatId:()J
+const #92 = String	#273;	//  addingFromBrowseTreeId
+const #93 = Method	#3.#274;	//  com/bright/assetbank/application/form/AssetForm.getAddingFromBrowseTreeId:()J
+const #94 = String	#275;	//  Failure
+const #95 = Method	#186.#276;	//  com/bright/assetbank/entity/bean/AssetEntity.getHasDefaultRelationship:()Z
+const #96 = String	#144;	//  forward
+const #97 = InterfaceMethod	#172.#277;	//  javax/servlet/http/HttpServletRequest.setAttribute:(Ljava/lang/String;Ljava/lang/Object;)V
+const #98 = String	#278;	//  id
+const #99 = Method	#67.#279;	//  java/lang/Long."<init>":(J)V
+const #100 = String	#280;	//  DefaultRelationship
+const #101 = Method	#281.#282;	//  org/apache/struts/action/ActionMapping.findForward:(Ljava/lang/String;)Lorg/apache/struts/action/ActionForward;
+const #102 = class	#283;	//  com/bright/assetbank/application/action/AddAssetAction
+const #103 = class	#284;	//  com/bright/assetbank/application/action/SaveAssetAction
+const #104 = class	#285;	//  com/bright/assetbank/application/constant/AssetBankConstants
+const #105 = Asciz	m_assetRelationshipManager;
+const #106 = Asciz	Lcom/bright/assetbank/entity/relationship/service/AssetRelationshipManager;;
+const #107 = Asciz	<init>;
+const #108 = Asciz	()V;
+const #109 = Asciz	Code;
+const #110 = Asciz	LineNumberTable;
+const #111 = Asciz	LocalVariableTable;
+const #112 = Asciz	this;
+const #113 = Asciz	Lcom/bright/assetbank/application/action/AddAssetAction;;
+const #114 = Asciz	setAssetRelationshipManager;
+const #115 = Asciz	(Lcom/bright/assetbank/entity/relationship/service/AssetRelationshipManager;)V;
+const #116 = Asciz	a_assetRelationshipManager;
+const #117 = Asciz	execute;
+const #118 = Asciz	(Lorg/apache/struts/action/ActionMapping;Lorg/apache/struts/action/ActionForm;Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/apache/struts/action/ActionForward;;
+const #119 = Asciz	peerAsset;
+const #120 = Asciz	Lcom/bright/assetbank/application/bean/Asset;;
+const #121 = Asciz	asset;
+const #122 = Asciz	longId;
+const #123 = Asciz	Ljava/lang/Long;;
+const #124 = Asciz	i$;
+const #125 = Asciz	Ljava/util/Iterator;;
+const #126 = Asciz	sIds;
+const #127 = Asciz	Ljava/lang/String;;
+const #128 = Asciz	sOriginalId;
+const #129 = Asciz	lRelationshipId;
+const #130 = Asciz	J;
+const #131 = Asciz	sParam;
+const #132 = Asciz	longIdsToReindex;
+const #133 = Asciz	Ljava/util/Vector;;
+const #134 = Asciz	a_mapping;
+const #135 = Asciz	Lorg/apache/struts/action/ActionMapping;;
+const #136 = Asciz	a_form;
+const #137 = Asciz	Lorg/apache/struts/action/ActionForm;;
+const #138 = Asciz	a_request;
+const #139 = Asciz	Ljavax/servlet/http/HttpServletRequest;;
+const #140 = Asciz	a_response;
+const #141 = Asciz	Ljavax/servlet/http/HttpServletResponse;;
+const #142 = Asciz	form;
+const #143 = Asciz	Lcom/bright/assetbank/application/form/AssetForm;;
+const #144 = Asciz	forward;
+const #145 = Asciz	Lorg/apache/struts/action/ActionForward;;
+const #146 = Asciz	userProfile;
+const #147 = Asciz	Lcom/bright/assetbank/user/bean/ABUserProfile;;
+const #148 = Asciz	sTempFileLocation;
+const #149 = Asciz	entity;
+const #150 = Asciz	Lcom/bright/assetbank/entity/bean/AssetEntity;;
+const #151 = Asciz	LocalVariableTypeTable;
+const #152 = Asciz	Ljava/util/Vector<Ljava/lang/Long;>;;
+const #153 = Asciz	Exceptions;
+const #154 = class	#286;	//  com/bn2web/common/exception/Bn2Exception
+const #155 = Asciz	addInvisibleCategoryIds;
+const #156 = Asciz	(Ljava/util/Vector;Ljava/util/Set;Ljava/util/Vector;Z)V;
+const #157 = Asciz	a_vExistingCategoriesInAsset;
+const #158 = Asciz	a_visIds;
+const #159 = Asciz	Ljava/util/Set;;
+const #160 = Asciz	a_vecNewCategoriesInAsset;
+const #161 = Asciz	a_bImplySameForAllDescendants;
+const #162 = Asciz	Z;
+const #163 = Asciz	Ljava/util/Vector<Lcom/bright/framework/category/bean/Category;>;;
+const #164 = Asciz	Ljava/util/Set<Ljava/lang/Long;>;;
+const #165 = Asciz	Signature;
+const #166 = Asciz	(Ljava/util/Vector<Lcom/bright/framework/category/bean/Category;>;Ljava/util/Set<Ljava/lang/Long;>;Ljava/util/Vector<Lcom/bright/framework/category/bean/Category;>;Z)V;
+const #167 = Asciz	SourceFile;
+const #168 = Asciz	AddAssetAction.java;
+const #169 = NameAndType	#107:#108;//  "<init>":()V
+const #170 = NameAndType	#105:#106;//  m_assetRelationshipManager:Lcom/bright/assetbank/entity/relationship/service/AssetRelationshipManager;
+const #171 = Asciz	com/bright/assetbank/application/form/AssetForm;
+const #172 = class	#287;	//  javax/servlet/http/HttpServletRequest
+const #173 = NameAndType	#288:#289;//  getSession:()Ljavax/servlet/http/HttpSession;
+const #174 = class	#290;	//  com/bright/framework/user/bean/UserProfile
+const #175 = NameAndType	#291:#292;//  getUserProfile:(Ljavax/servlet/http/HttpSession;)Lcom/bright/framework/user/bean/UserProfile;
+const #176 = Asciz	com/bright/assetbank/user/bean/ABUserProfile;
+const #177 = NameAndType	#293:#294;//  getFile:()Lorg/apache/struts/upload/FormFile;
+const #178 = class	#295;	//  org/apache/struts/upload/FormFile
+const #179 = NameAndType	#296:#297;//  getFileSize:()I
+const #180 = NameAndType	#298:#299;//  getTempFileLocation:()Ljava/lang/String;
+const #181 = class	#300;	//  java/lang/String
+const #182 = NameAndType	#301:#297;//  length:()I
+const #183 = NameAndType	#302:#303;//  getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+const #184 = class	#304;	//  com/bright/assetbank/application/bean/Asset
+const #185 = NameAndType	#305:#306;//  getEntity:()Lcom/bright/assetbank/entity/bean/AssetEntity;
+const #186 = class	#307;	//  com/bright/assetbank/entity/bean/AssetEntity
+const #187 = NameAndType	#308:#309;//  getId:()J
+const #188 = NameAndType	#310:#311;//  getAllowAssetFiles:()Z
+const #189 = NameAndType	#312:#311;//  isEmptyAsset:()Z
+const #190 = NameAndType	#313:#314;//  m_listManager:Lcom/bright/framework/simplelist/service/ListManager;
+const #191 = Asciz	failedValidationFile;
+const #192 = NameAndType	#315:#316;//  getCurrentLanguage:()Lcom/bright/framework/language/bean/Language;
+const #193 = class	#317;	//  com/bright/framework/simplelist/service/ListManager
+const #194 = NameAndType	#318:#319;//  getListItem:(Ljava/lang/String;Lcom/bright/framework/language/bean/Language;)Lcom/bright/framework/simplelist/bean/ListItem;
+const #195 = class	#320;	//  com/bright/framework/simplelist/bean/ListItem
+const #196 = NameAndType	#321:#299;//  getBody:()Ljava/lang/String;
+const #197 = NameAndType	#322:#323;//  addError:(Ljava/lang/String;)V
+const #198 = NameAndType	#324:#325;//  setNoUploadFileSpecified:(Z)V
+const #199 = Asciz	java/util/Date;
+const #200 = NameAndType	#326:#327;//  setDateAdded:(Ljava/util/Date;)V
+const #201 = class	#328;	//  com/bright/framework/util/StringUtil
+const #202 = NameAndType	#329:#330;//  stringIsPopulated:(Ljava/lang/String;)Z
+const #203 = class	#331;	//  com/bright/framework/util/FileUtil
+const #204 = NameAndType	#332:#333;//  getFilename:(Ljava/lang/String;)Ljava/lang/String;
+const #205 = NameAndType	#334:#299;//  getOriginalFilename:()Ljava/lang/String;
+const #206 = NameAndType	#335:#333;//  getFilepathWithoutSuffix:(Ljava/lang/String;)Ljava/lang/String;
+const #207 = NameAndType	#336:#323;//  setImportedAssetId:(Ljava/lang/String;)V
+const #208 = NameAndType	#117:#118;//  execute:(Lorg/apache/struts/action/ActionMapping;Lorg/apache/struts/action/ActionForm;Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/apache/struts/action/ActionForward;
+const #209 = NameAndType	#337:#338;//  m_assetEntityManager:Lcom/bright/assetbank/entity/service/AssetEntityManager;
+const #210 = class	#339;	//  com/bright/assetbank/entity/service/AssetEntityManager
+const #211 = NameAndType	#305:#340;//  getEntity:(Lcom/bright/framework/database/bean/DBTransaction;J)Lcom/bright/assetbank/entity/bean/AssetEntity;
+const #212 = NameAndType	#341:#342;//  setEntity:(Lcom/bright/assetbank/entity/bean/AssetEntity;)V
+const #213 = class	#343;	//  org/apache/struts/action/ActionForward
+const #214 = NameAndType	#344:#299;//  getName:()Ljava/lang/String;
+const #215 = Asciz	Success;
+const #216 = NameAndType	#345:#346;//  equals:(Ljava/lang/Object;)Z
+const #217 = Asciz	BrowseCategory;
+const #218 = Asciz	BrowseExplorer;
+const #219 = Asciz	AddExtensionAssetAL;
+const #220 = Asciz	AddExtensionAsset;
+const #221 = NameAndType	#347:#309;//  getPeerId:()J
+const #222 = NameAndType	#348:#309;//  getParentId:()J
+const #223 = NameAndType	#349:#350;//  valueOf:(J)Ljava/lang/String;
+const #224 = NameAndType	#351:#352;//  m_assetManager:Lcom/bright/assetbank/application/service/IAssetManager;
+const #225 = class	#353;	//  com/bright/assetbank/application/service/IAssetManager
+const #226 = NameAndType	#302:#354;//  getAsset:(Lcom/bright/framework/database/bean/DBTransaction;JLjava/util/Vector;ZZ)Lcom/bright/assetbank/application/bean/Asset;
+const #227 = NameAndType	#355:#299;//  getPeerAssetIdsAsString:()Ljava/lang/String;
+const #228 = Asciz	java/lang/StringBuilder;
+const #229 = NameAndType	#356:#357;//  append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+const #230 = Asciz	,;
+const #231 = NameAndType	#358:#299;//  toString:()Ljava/lang/String;
+const #232 = Asciz	peerAssetIds;
+const #233 = NameAndType	#359:#323;//  setPeerAssetIdsAsString:(Ljava/lang/String;)V
+const #234 = Asciz	childAssetIds;
+const #235 = NameAndType	#360:#323;//  setParentAssetIdsAsString:(Ljava/lang/String;)V
+const #236 = class	#361;	//  com/bright/assetbank/entity/relationship/service/AssetRelationshipManager
+const #237 = NameAndType	#362:#363;//  saveRelatedAssetIds:(Lcom/bright/framework/database/bean/DBTransaction;Lcom/bright/assetbank/application/bean/Asset;Ljava/lang/String;JZ)V
+const #238 = Asciz	 ;
+const #239 = Asciz	;
+const #240 = NameAndType	#364:#365;//  replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+const #241 = NameAndType	#366:#367;//  convertToVectorOfLongs:(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Vector;
+const #242 = class	#368;	//  java/util/Vector
+const #243 = NameAndType	#369:#370;//  iterator:()Ljava/util/Iterator;
+const #244 = class	#371;	//  java/util/Iterator
+const #245 = NameAndType	#372:#311;//  hasNext:()Z
+const #246 = NameAndType	#373:#374;//  next:()Ljava/lang/Object;
+const #247 = Asciz	java/lang/Long;
+const #248 = NameAndType	#375:#309;//  longValue:()J
+const #249 = class	#376;	//  com/bright/assetbank/application/constant/AssetBankSettings
+const #250 = NameAndType	#377:#311;//  getSortByPresenceOfChildAssets:()Z
+const #251 = NameAndType	#378:#379;//  getAttributeValues:()Ljava/util/Vector;
+const #252 = class	#380;	//  com/bright/assetbank/attribute/util/AttributeUtil
+const #253 = NameAndType	#381:#382;//  getDataFromChildrenSet:(Ljava/util/Vector;)Z
+const #254 = NameAndType	#383:#384;//  m_searchManager:Lcom/bright/assetbank/search/service/MultiLanguageSearchManager;
+const #255 = class	#385;	//  com/bright/assetbank/search/service/MultiLanguageSearchManager
+const #256 = NameAndType	#386:#387;//  indexDocument:(Lcom/bright/framework/search/bean/IndexableDocument;Z)V
+const #257 = Asciz	id=;
+const #258 = Asciz	&;
+const #259 = Asciz	=;
+const #260 = NameAndType	#356:#388;//  append:(J)Ljava/lang/StringBuilder;
+const #261 = Asciz	AddedRelatedAsset;
+const #262 = NameAndType	#389:#390;//  createRedirectingForward:(Ljava/lang/String;Lorg/apache/struts/action/ActionMapping;Ljava/lang/String;)Lorg/apache/struts/action/ActionForward;
+const #263 = NameAndType	#391:#311;//  getAllowChildren:()Z
+const #264 = Asciz	isParent;
+const #265 = NameAndType	#349:#392;//  valueOf:(Z)Ljava/lang/String;
+const #266 = Asciz	typeName;
+const #267 = Asciz	childName;
+const #268 = NameAndType	#393:#299;//  getChildRelationshipToName:()Ljava/lang/String;
+const #269 = Asciz	childrenName;
+const #270 = NameAndType	#394:#299;//  getChildRelationshipToNamePlural:()Ljava/lang/String;
+const #271 = Asciz	addingFromBrowseCatId;
+const #272 = NameAndType	#395:#309;//  getAddingFromBrowseCatId:()J
+const #273 = Asciz	addingFromBrowseTreeId;
+const #274 = NameAndType	#396:#309;//  getAddingFromBrowseTreeId:()J
+const #275 = Asciz	Failure;
+const #276 = NameAndType	#397:#311;//  getHasDefaultRelationship:()Z
+const #277 = NameAndType	#398:#399;//  setAttribute:(Ljava/lang/String;Ljava/lang/Object;)V
+const #278 = Asciz	id;
+const #279 = NameAndType	#107:#400;//  "<init>":(J)V
+const #280 = Asciz	DefaultRelationship;
+const #281 = class	#401;	//  org/apache/struts/action/ActionMapping
+const #282 = NameAndType	#402:#403;//  findForward:(Ljava/lang/String;)Lorg/apache/struts/action/ActionForward;
+const #283 = Asciz	com/bright/assetbank/application/action/AddAssetAction;
+const #284 = Asciz	com/bright/assetbank/application/action/SaveAssetAction;
+const #285 = Asciz	com/bright/assetbank/application/constant/AssetBankConstants;
+const #286 = Asciz	com/bn2web/common/exception/Bn2Exception;
+const #287 = Asciz	javax/servlet/http/HttpServletRequest;
+const #288 = Asciz	getSession;
+const #289 = Asciz	()Ljavax/servlet/http/HttpSession;;
+const #290 = Asciz	com/bright/framework/user/bean/UserProfile;
+const #291 = Asciz	getUserProfile;
+const #292 = Asciz	(Ljavax/servlet/http/HttpSession;)Lcom/bright/framework/user/bean/UserProfile;;
+const #293 = Asciz	getFile;
+const #294 = Asciz	()Lorg/apache/struts/upload/FormFile;;
+const #295 = Asciz	org/apache/struts/upload/FormFile;
+const #296 = Asciz	getFileSize;
+const #297 = Asciz	()I;
+const #298 = Asciz	getTempFileLocation;
+const #299 = Asciz	()Ljava/lang/String;;
+const #300 = Asciz	java/lang/String;
+const #301 = Asciz	length;
+const #302 = Asciz	getAsset;
+const #303 = Asciz	()Lcom/bright/assetbank/application/bean/Asset;;
+const #304 = Asciz	com/bright/assetbank/application/bean/Asset;
+const #305 = Asciz	getEntity;
+const #306 = Asciz	()Lcom/bright/assetbank/entity/bean/AssetEntity;;
+const #307 = Asciz	com/bright/assetbank/entity/bean/AssetEntity;
+const #308 = Asciz	getId;
+const #309 = Asciz	()J;
+const #310 = Asciz	getAllowAssetFiles;
+const #311 = Asciz	()Z;
+const #312 = Asciz	isEmptyAsset;
+const #313 = Asciz	m_listManager;
+const #314 = Asciz	Lcom/bright/framework/simplelist/service/ListManager;;
+const #315 = Asciz	getCurrentLanguage;
+const #316 = Asciz	()Lcom/bright/framework/language/bean/Language;;
+const #317 = Asciz	com/bright/framework/simplelist/service/ListManager;
+const #318 = Asciz	getListItem;
+const #319 = Asciz	(Ljava/lang/String;Lcom/bright/framework/language/bean/Language;)Lcom/bright/framework/simplelist/bean/ListItem;;
+const #320 = Asciz	com/bright/framework/simplelist/bean/ListItem;
+const #321 = Asciz	getBody;
+const #322 = Asciz	addError;
+const #323 = Asciz	(Ljava/lang/String;)V;
+const #324 = Asciz	setNoUploadFileSpecified;
+const #325 = Asciz	(Z)V;
+const #326 = Asciz	setDateAdded;
+const #327 = Asciz	(Ljava/util/Date;)V;
+const #328 = Asciz	com/bright/framework/util/StringUtil;
+const #329 = Asciz	stringIsPopulated;
+const #330 = Asciz	(Ljava/lang/String;)Z;
+const #331 = Asciz	com/bright/framework/util/FileUtil;
+const #332 = Asciz	getFilename;
+const #333 = Asciz	(Ljava/lang/String;)Ljava/lang/String;;
+const #334 = Asciz	getOriginalFilename;
+const #335 = Asciz	getFilepathWithoutSuffix;
+const #336 = Asciz	setImportedAssetId;
+const #337 = Asciz	m_assetEntityManager;
+const #338 = Asciz	Lcom/bright/assetbank/entity/service/AssetEntityManager;;
+const #339 = Asciz	com/bright/assetbank/entity/service/AssetEntityManager;
+const #340 = Asciz	(Lcom/bright/framework/database/bean/DBTransaction;J)Lcom/bright/assetbank/entity/bean/AssetEntity;;
+const #341 = Asciz	setEntity;
+const #342 = Asciz	(Lcom/bright/assetbank/entity/bean/AssetEntity;)V;
+const #343 = Asciz	org/apache/struts/action/ActionForward;
+const #344 = Asciz	getName;
+const #345 = Asciz	equals;
+const #346 = Asciz	(Ljava/lang/Object;)Z;
+const #347 = Asciz	getPeerId;
+const #348 = Asciz	getParentId;
+const #349 = Asciz	valueOf;
+const #350 = Asciz	(J)Ljava/lang/String;;
+const #351 = Asciz	m_assetManager;
+const #352 = Asciz	Lcom/bright/assetbank/application/service/IAssetManager;;
+const #353 = Asciz	com/bright/assetbank/application/service/IAssetManager;
+const #354 = Asciz	(Lcom/bright/framework/database/bean/DBTransaction;JLjava/util/Vector;ZZ)Lcom/bright/assetbank/application/bean/Asset;;
+const #355 = Asciz	getPeerAssetIdsAsString;
+const #356 = Asciz	append;
+const #357 = Asciz	(Ljava/lang/String;)Ljava/lang/StringBuilder;;
+const #358 = Asciz	toString;
+const #359 = Asciz	setPeerAssetIdsAsString;
+const #360 = Asciz	setParentAssetIdsAsString;
+const #361 = Asciz	com/bright/assetbank/entity/relationship/service/AssetRelationshipManager;
+const #362 = Asciz	saveRelatedAssetIds;
+const #363 = Asciz	(Lcom/bright/framework/database/bean/DBTransaction;Lcom/bright/assetbank/application/bean/Asset;Ljava/lang/String;JZ)V;
+const #364 = Asciz	replaceAll;
+const #365 = Asciz	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;;
+const #366 = Asciz	convertToVectorOfLongs;
+const #367 = Asciz	(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Vector;;
+const #368 = Asciz	java/util/Vector;
+const #369 = Asciz	iterator;
+const #370 = Asciz	()Ljava/util/Iterator;;
+const #371 = Asciz	java/util/Iterator;
+const #372 = Asciz	hasNext;
+const #373 = Asciz	next;
+const #374 = Asciz	()Ljava/lang/Object;;
+const #375 = Asciz	longValue;
+const #376 = Asciz	com/bright/assetbank/application/constant/AssetBankSettings;
+const #377 = Asciz	getSortByPresenceOfChildAssets;
+const #378 = Asciz	getAttributeValues;
+const #379 = Asciz	()Ljava/util/Vector;;
+const #380 = Asciz	com/bright/assetbank/attribute/util/AttributeUtil;
+const #381 = Asciz	getDataFromChildrenSet;
+const #382 = Asciz	(Ljava/util/Vector;)Z;
+const #383 = Asciz	m_searchManager;
+const #384 = Asciz	Lcom/bright/assetbank/search/service/MultiLanguageSearchManager;;
+const #385 = Asciz	com/bright/assetbank/search/service/MultiLanguageSearchManager;
+const #386 = Asciz	indexDocument;
+const #387 = Asciz	(Lcom/bright/framework/search/bean/IndexableDocument;Z)V;
+const #388 = Asciz	(J)Ljava/lang/StringBuilder;;
+const #389 = Asciz	createRedirectingForward;
+const #390 = Asciz	(Ljava/lang/String;Lorg/apache/struts/action/ActionMapping;Ljava/lang/String;)Lorg/apache/struts/action/ActionForward;;
+const #391 = Asciz	getAllowChildren;
+const #392 = Asciz	(Z)Ljava/lang/String;;
+const #393 = Asciz	getChildRelationshipToName;
+const #394 = Asciz	getChildRelationshipToNamePlural;
+const #395 = Asciz	getAddingFromBrowseCatId;
+const #396 = Asciz	getAddingFromBrowseTreeId;
+const #397 = Asciz	getHasDefaultRelationship;
+const #398 = Asciz	setAttribute;
+const #399 = Asciz	(Ljava/lang/String;Ljava/lang/Object;)V;
+const #400 = Asciz	(J)V;
+const #401 = Asciz	org/apache/struts/action/ActionMapping;
+const #402 = Asciz	findForward;
+const #403 = Asciz	(Ljava/lang/String;)Lorg/apache/struts/action/ActionForward;;
+
+{
+public com.bright.assetbank.application.action.AddAssetAction();
+  Code:
+   Stack=2, Locals=1, Args_size=1
+   0:	aload_0
+   1:	invokespecial	#1; //Method com/bright/assetbank/application/action/SaveAssetAction."<init>":()V
+   4:	aload_0
+   5:	aconst_null
+   6:	putfield	#2; //Field m_assetRelationshipManager:Lcom/bright/assetbank/entity/relationship/service/AssetRelationshipManager;
+   9:	return
+  LineNumberTable: 
+   line 69: 0
+   line 72: 4
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      10      0    this       Lcom/bright/assetbank/application/action/AddAssetAction;
+
+
+public void setAssetRelationshipManager(com.bright.assetbank.entity.relationship.service.AssetRelationshipManager);
+  Code:
+   Stack=2, Locals=2, Args_size=2
+   0:	aload_0
+   1:	aload_1
+   2:	putfield	#2; //Field m_assetRelationshipManager:Lcom/bright/assetbank/entity/relationship/service/AssetRelationshipManager;
+   5:	return
+  LineNumberTable: 
+   line 75: 0
+   line 76: 5
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      6      0    this       Lcom/bright/assetbank/application/action/AddAssetAction;
+   0      6      1    a_assetRelationshipManager       Lcom/bright/assetbank/entity/relationship/service/AssetRelationshipManager;
+
+
+public org.apache.struts.action.ActionForward execute(org.apache.struts.action.ActionMapping, org.apache.struts.action.ActionForm, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)   throws com.bn2web.common.exception.Bn2Exception;
+  Code:
+   Stack=8, Locals=19, Args_size=5
+   0:	aload_2
+   1:	checkcast	#3; //class com/bright/assetbank/application/form/AssetForm
+   4:	astore	5
+   6:	aconst_null
+   7:	astore	6
+   9:	aload_3
+   10:	invokeinterface	#4,  1; //InterfaceMethod javax/servlet/http/HttpServletRequest.getSession:()Ljavax/servlet/http/HttpSession;
+   15:	invokestatic	#5; //Method com/bright/framework/user/bean/UserProfile.getUserProfile:(Ljavax/servlet/http/HttpSession;)Lcom/bright/framework/user/bean/UserProfile;
+   18:	checkcast	#6; //class com/bright/assetbank/user/bean/ABUserProfile
+   21:	astore	7
+   23:	aload	5
+   25:	invokevirtual	#7; //Method com/bright/assetbank/application/form/AssetForm.getFile:()Lorg/apache/struts/upload/FormFile;
+   28:	ifnull	44
+   31:	aload	5
+   33:	invokevirtual	#7; //Method com/bright/assetbank/application/form/AssetForm.getFile:()Lorg/apache/struts/upload/FormFile;
+   36:	invokeinterface	#8,  1; //InterfaceMethod org/apache/struts/upload/FormFile.getFileSize:()I
+   41:	ifne	129
+   44:	aload	5
+   46:	invokevirtual	#9; //Method com/bright/assetbank/application/form/AssetForm.getTempFileLocation:()Ljava/lang/String;
+   49:	ifnull	63
+   52:	aload	5
+   54:	invokevirtual	#9; //Method com/bright/assetbank/application/form/AssetForm.getTempFileLocation:()Ljava/lang/String;
+   57:	invokevirtual	#10; //Method java/lang/String.length:()I
+   60:	ifne	129
+   63:	aload	5
+   65:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   68:	invokevirtual	#12; //Method com/bright/assetbank/application/bean/Asset.getEntity:()Lcom/bright/assetbank/entity/bean/AssetEntity;
+   71:	invokevirtual	#13; //Method com/bright/assetbank/entity/bean/AssetEntity.getId:()J
+   74:	lconst_0
+   75:	lcmp
+   76:	ifle	93
+   79:	aload	5
+   81:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   84:	invokevirtual	#12; //Method com/bright/assetbank/application/bean/Asset.getEntity:()Lcom/bright/assetbank/entity/bean/AssetEntity;
+   87:	invokevirtual	#14; //Method com/bright/assetbank/entity/bean/AssetEntity.getAllowAssetFiles:()Z
+   90:	ifeq	129
+   93:	aload	5
+   95:	invokevirtual	#15; //Method com/bright/assetbank/application/form/AssetForm.isEmptyAsset:()Z
+   98:	ifne	129
+   101:	aload	5
+   103:	aload_0
+   104:	getfield	#16; //Field m_listManager:Lcom/bright/framework/simplelist/service/ListManager;
+   107:	ldc	#17; //String failedValidationFile
+   109:	aload	7
+   111:	invokevirtual	#18; //Method com/bright/assetbank/user/bean/ABUserProfile.getCurrentLanguage:()Lcom/bright/framework/language/bean/Language;
+   114:	invokevirtual	#19; //Method com/bright/framework/simplelist/service/ListManager.getListItem:(Ljava/lang/String;Lcom/bright/framework/language/bean/Language;)Lcom/bright/framework/simplelist/bean/ListItem;
+   117:	invokevirtual	#20; //Method com/bright/framework/simplelist/bean/ListItem.getBody:()Ljava/lang/String;
+   120:	invokevirtual	#21; //Method com/bright/assetbank/application/form/AssetForm.addError:(Ljava/lang/String;)V
+   123:	aload	5
+   125:	iconst_1
+   126:	invokevirtual	#22; //Method com/bright/assetbank/application/form/AssetForm.setNoUploadFileSpecified:(Z)V
+   129:	aload	5
+   131:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   134:	new	#23; //class java/util/Date
+   137:	dup
+   138:	invokespecial	#24; //Method java/util/Date."<init>":()V
+   141:	invokevirtual	#25; //Method com/bright/assetbank/application/bean/Asset.setDateAdded:(Ljava/util/Date;)V
+   144:	aload	5
+   146:	invokevirtual	#9; //Method com/bright/assetbank/application/form/AssetForm.getTempFileLocation:()Ljava/lang/String;
+   149:	astore	8
+   151:	aload	8
+   153:	invokestatic	#26; //Method com/bright/framework/util/StringUtil.stringIsPopulated:(Ljava/lang/String;)Z
+   156:	ifeq	182
+   159:	aload	8
+   161:	invokestatic	#27; //Method com/bright/framework/util/FileUtil.getFilename:(Ljava/lang/String;)Ljava/lang/String;
+   164:	astore	8
+   166:	aload	5
+   168:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   171:	aload	5
+   173:	invokevirtual	#28; //Method com/bright/assetbank/application/form/AssetForm.getOriginalFilename:()Ljava/lang/String;
+   176:	invokestatic	#29; //Method com/bright/framework/util/FileUtil.getFilepathWithoutSuffix:(Ljava/lang/String;)Ljava/lang/String;
+   179:	invokevirtual	#30; //Method com/bright/assetbank/application/bean/Asset.setImportedAssetId:(Ljava/lang/String;)V
+   182:	aload_0
+   183:	aload_1
+   184:	aload_2
+   185:	aload_3
+   186:	aload	4
+   188:	invokespecial	#31; //Method com/bright/assetbank/application/action/SaveAssetAction.execute:(Lorg/apache/struts/action/ActionMapping;Lorg/apache/struts/action/ActionForm;Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)Lorg/apache/struts/action/ActionForward;
+   191:	astore	6
+   193:	aload_0
+   194:	getfield	#32; //Field m_assetEntityManager:Lcom/bright/assetbank/entity/service/AssetEntityManager;
+   197:	aconst_null
+   198:	aload	5
+   200:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   203:	invokevirtual	#12; //Method com/bright/assetbank/application/bean/Asset.getEntity:()Lcom/bright/assetbank/entity/bean/AssetEntity;
+   206:	invokevirtual	#13; //Method com/bright/assetbank/entity/bean/AssetEntity.getId:()J
+   209:	invokevirtual	#33; //Method com/bright/assetbank/entity/service/AssetEntityManager.getEntity:(Lcom/bright/framework/database/bean/DBTransaction;J)Lcom/bright/assetbank/entity/bean/AssetEntity;
+   212:	astore	9
+   214:	aload	5
+   216:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   219:	aload	9
+   221:	invokevirtual	#34; //Method com/bright/assetbank/application/bean/Asset.setEntity:(Lcom/bright/assetbank/entity/bean/AssetEntity;)V
+   224:	aload	6
+   226:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   229:	ifnull	297
+   232:	aload	6
+   234:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   237:	ldc	#36; //String Success
+   239:	invokevirtual	#37; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   242:	ifne	297
+   245:	aload	6
+   247:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   250:	ldc	#38; //String BrowseCategory
+   252:	invokevirtual	#37; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   255:	ifne	297
+   258:	aload	6
+   260:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   263:	ldc	#39; //String BrowseExplorer
+   265:	invokevirtual	#37; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   268:	ifne	297
+   271:	aload	6
+   273:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   276:	ldc	#40; //String AddExtensionAssetAL
+   278:	invokevirtual	#37; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   281:	ifne	297
+   284:	aload	6
+   286:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   289:	ldc	#41; //String AddExtensionAsset
+   291:	invokevirtual	#37; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   294:	ifeq	918
+   297:	aload	5
+   299:	invokevirtual	#42; //Method com/bright/assetbank/application/form/AssetForm.getPeerId:()J
+   302:	lconst_0
+   303:	lcmp
+   304:	ifgt	317
+   307:	aload	5
+   309:	invokevirtual	#43; //Method com/bright/assetbank/application/form/AssetForm.getParentId:()J
+   312:	lconst_0
+   313:	lcmp
+   314:	ifle	713
+   317:	aconst_null
+   318:	astore	10
+   320:	aconst_null
+   321:	astore	11
+   323:	lconst_0
+   324:	lstore	12
+   326:	aconst_null
+   327:	astore	14
+   329:	aload	5
+   331:	invokevirtual	#42; //Method com/bright/assetbank/application/form/AssetForm.getPeerId:()J
+   334:	lconst_0
+   335:	lcmp
+   336:	ifle	434
+   339:	aload	5
+   341:	invokevirtual	#42; //Method com/bright/assetbank/application/form/AssetForm.getPeerId:()J
+   344:	invokestatic	#44; //Method java/lang/String.valueOf:(J)Ljava/lang/String;
+   347:	astore	10
+   349:	aload	10
+   351:	astore	11
+   353:	aload_0
+   354:	getfield	#45; //Field m_assetManager:Lcom/bright/assetbank/application/service/IAssetManager;
+   357:	aconst_null
+   358:	aload	5
+   360:	invokevirtual	#42; //Method com/bright/assetbank/application/form/AssetForm.getPeerId:()J
+   363:	aconst_null
+   364:	iconst_1
+   365:	iconst_0
+   366:	invokeinterface	#46,  7; //InterfaceMethod com/bright/assetbank/application/service/IAssetManager.getAsset:(Lcom/bright/framework/database/bean/DBTransaction;JLjava/util/Vector;ZZ)Lcom/bright/assetbank/application/bean/Asset;
+   371:	astore	15
+   373:	aload	15
+   375:	invokevirtual	#47; //Method com/bright/assetbank/application/bean/Asset.getPeerAssetIdsAsString:()Ljava/lang/String;
+   378:	invokestatic	#26; //Method com/bright/framework/util/StringUtil.stringIsPopulated:(Ljava/lang/String;)Z
+   381:	ifeq	414
+   384:	new	#48; //class java/lang/StringBuilder
+   387:	dup
+   388:	invokespecial	#49; //Method java/lang/StringBuilder."<init>":()V
+   391:	aload	10
+   393:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   396:	ldc	#51; //String ,
+   398:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   401:	aload	15
+   403:	invokevirtual	#47; //Method com/bright/assetbank/application/bean/Asset.getPeerAssetIdsAsString:()Ljava/lang/String;
+   406:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   409:	invokevirtual	#52; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   412:	astore	10
+   414:	lconst_1
+   415:	lstore	12
+   417:	ldc	#53; //String peerAssetIds
+   419:	astore	14
+   421:	aload	5
+   423:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   426:	aload	10
+   428:	invokevirtual	#54; //Method com/bright/assetbank/application/bean/Asset.setPeerAssetIdsAsString:(Ljava/lang/String;)V
+   431:	goto	477
+   434:	aload	5
+   436:	invokevirtual	#43; //Method com/bright/assetbank/application/form/AssetForm.getParentId:()J
+   439:	lconst_0
+   440:	lcmp
+   441:	ifle	477
+   444:	aload	5
+   446:	invokevirtual	#43; //Method com/bright/assetbank/application/form/AssetForm.getParentId:()J
+   449:	invokestatic	#44; //Method java/lang/String.valueOf:(J)Ljava/lang/String;
+   452:	astore	10
+   454:	aload	10
+   456:	astore	11
+   458:	ldc2_w	#55; //long 3l
+   461:	lstore	12
+   463:	ldc	#57; //String childAssetIds
+   465:	astore	14
+   467:	aload	5
+   469:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   472:	aload	10
+   474:	invokevirtual	#58; //Method com/bright/assetbank/application/bean/Asset.setParentAssetIdsAsString:(Ljava/lang/String;)V
+   477:	aload_0
+   478:	getfield	#2; //Field m_assetRelationshipManager:Lcom/bright/assetbank/entity/relationship/service/AssetRelationshipManager;
+   481:	aconst_null
+   482:	aload	5
+   484:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   487:	aload	10
+   489:	lload	12
+   491:	iconst_1
+   492:	invokevirtual	#59; //Method com/bright/assetbank/entity/relationship/service/AssetRelationshipManager.saveRelatedAssetIds:(Lcom/bright/framework/database/bean/DBTransaction;Lcom/bright/assetbank/application/bean/Asset;Ljava/lang/String;JZ)V
+   495:	aload	10
+   497:	ldc	#60; //String  
+   499:	ldc	#61; //String 
+   501:	invokevirtual	#62; //Method java/lang/String.replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   504:	ldc	#51; //String ,
+   506:	invokestatic	#63; //Method com/bright/framework/util/StringUtil.convertToVectorOfLongs:(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Vector;
+   509:	astore	15
+   511:	aload	15
+   513:	invokevirtual	#64; //Method java/util/Vector.iterator:()Ljava/util/Iterator;
+   516:	astore	16
+   518:	aload	16
+   520:	invokeinterface	#65,  1; //InterfaceMethod java/util/Iterator.hasNext:()Z
+   525:	ifeq	606
+   528:	aload	16
+   530:	invokeinterface	#66,  1; //InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+   535:	checkcast	#67; //class java/lang/Long
+   538:	astore	17
+   540:	aload_0
+   541:	getfield	#45; //Field m_assetManager:Lcom/bright/assetbank/application/service/IAssetManager;
+   544:	aconst_null
+   545:	aload	17
+   547:	invokevirtual	#68; //Method java/lang/Long.longValue:()J
+   550:	aconst_null
+   551:	iconst_1
+   552:	iconst_1
+   553:	invokeinterface	#46,  7; //InterfaceMethod com/bright/assetbank/application/service/IAssetManager.getAsset:(Lcom/bright/framework/database/bean/DBTransaction;JLjava/util/Vector;ZZ)Lcom/bright/assetbank/application/bean/Asset;
+   558:	astore	18
+   560:	lload	12
+   562:	lconst_1
+   563:	lcmp
+   564:	ifeq	593
+   567:	invokestatic	#69; //Method com/bright/assetbank/application/constant/AssetBankSettings.getSortByPresenceOfChildAssets:()Z
+   570:	ifne	584
+   573:	aload	18
+   575:	invokevirtual	#70; //Method com/bright/assetbank/application/bean/Asset.getAttributeValues:()Ljava/util/Vector;
+   578:	invokestatic	#71; //Method com/bright/assetbank/attribute/util/AttributeUtil.getDataFromChildrenSet:(Ljava/util/Vector;)Z
+   581:	ifeq	603
+   584:	lload	12
+   586:	ldc2_w	#55; //long 3l
+   589:	lcmp
+   590:	ifne	603
+   593:	aload_0
+   594:	getfield	#72; //Field m_searchManager:Lcom/bright/assetbank/search/service/MultiLanguageSearchManager;
+   597:	aload	18
+   599:	iconst_1
+   600:	invokevirtual	#73; //Method com/bright/assetbank/search/service/MultiLanguageSearchManager.indexDocument:(Lcom/bright/framework/search/bean/IndexableDocument;Z)V
+   603:	goto	518
+   606:	aload_0
+   607:	getfield	#72; //Field m_searchManager:Lcom/bright/assetbank/search/service/MultiLanguageSearchManager;
+   610:	aload_0
+   611:	getfield	#45; //Field m_assetManager:Lcom/bright/assetbank/application/service/IAssetManager;
+   614:	aconst_null
+   615:	aload	5
+   617:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   620:	invokevirtual	#74; //Method com/bright/assetbank/application/bean/Asset.getId:()J
+   623:	aconst_null
+   624:	iconst_1
+   625:	iconst_1
+   626:	invokeinterface	#46,  7; //InterfaceMethod com/bright/assetbank/application/service/IAssetManager.getAsset:(Lcom/bright/framework/database/bean/DBTransaction;JLjava/util/Vector;ZZ)Lcom/bright/assetbank/application/bean/Asset;
+   631:	iconst_1
+   632:	invokevirtual	#73; //Method com/bright/assetbank/search/service/MultiLanguageSearchManager.indexDocument:(Lcom/bright/framework/search/bean/IndexableDocument;Z)V
+   635:	aload	6
+   637:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   640:	ifnull	656
+   643:	aload	6
+   645:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   648:	ldc	#36; //String Success
+   650:	invokevirtual	#37; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   653:	ifeq	710
+   656:	new	#48; //class java/lang/StringBuilder
+   659:	dup
+   660:	invokespecial	#49; //Method java/lang/StringBuilder."<init>":()V
+   663:	ldc	#75; //String id=
+   665:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   668:	aload	11
+   670:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   673:	ldc	#76; //String &
+   675:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   678:	aload	14
+   680:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   683:	ldc	#77; //String =
+   685:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   688:	aload	5
+   690:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   693:	invokevirtual	#74; //Method com/bright/assetbank/application/bean/Asset.getId:()J
+   696:	invokevirtual	#78; //Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+   699:	invokevirtual	#52; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   702:	aload_1
+   703:	ldc	#79; //String AddedRelatedAsset
+   705:	invokestatic	#80; //Method createRedirectingForward:(Ljava/lang/String;Lorg/apache/struts/action/ActionMapping;Ljava/lang/String;)Lorg/apache/struts/action/ActionForward;
+   708:	astore	6
+   710:	goto	918
+   713:	aload	6
+   715:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   718:	ifnull	734
+   721:	aload	6
+   723:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   726:	ldc	#36; //String Success
+   728:	invokevirtual	#37; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   731:	ifeq	918
+   734:	aload	9
+   736:	ifnull	918
+   739:	aload	9
+   741:	invokevirtual	#81; //Method com/bright/assetbank/entity/bean/AssetEntity.getAllowChildren:()Z
+   744:	ifeq	918
+   747:	new	#48; //class java/lang/StringBuilder
+   750:	dup
+   751:	invokespecial	#49; //Method java/lang/StringBuilder."<init>":()V
+   754:	ldc	#75; //String id=
+   756:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   759:	aload	5
+   761:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   764:	invokevirtual	#74; //Method com/bright/assetbank/application/bean/Asset.getId:()J
+   767:	invokevirtual	#78; //Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+   770:	ldc	#76; //String &
+   772:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   775:	ldc	#82; //String isParent
+   777:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   780:	ldc	#77; //String =
+   782:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   785:	iconst_1
+   786:	invokestatic	#83; //Method java/lang/String.valueOf:(Z)Ljava/lang/String;
+   789:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   792:	ldc	#76; //String &
+   794:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   797:	ldc	#84; //String typeName
+   799:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   802:	ldc	#77; //String =
+   804:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   807:	aload	9
+   809:	invokevirtual	#85; //Method com/bright/assetbank/entity/bean/AssetEntity.getName:()Ljava/lang/String;
+   812:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   815:	ldc	#76; //String &
+   817:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   820:	ldc	#86; //String childName
+   822:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   825:	ldc	#77; //String =
+   827:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   830:	aload	9
+   832:	invokevirtual	#87; //Method com/bright/assetbank/entity/bean/AssetEntity.getChildRelationshipToName:()Ljava/lang/String;
+   835:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   838:	ldc	#76; //String &
+   840:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   843:	ldc	#88; //String childrenName
+   845:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   848:	ldc	#77; //String =
+   850:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   853:	aload	9
+   855:	invokevirtual	#89; //Method com/bright/assetbank/entity/bean/AssetEntity.getChildRelationshipToNamePlural:()Ljava/lang/String;
+   858:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   861:	ldc	#76; //String &
+   863:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   866:	ldc	#90; //String addingFromBrowseCatId
+   868:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   871:	ldc	#77; //String =
+   873:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   876:	aload	5
+   878:	invokevirtual	#91; //Method com/bright/assetbank/application/form/AssetForm.getAddingFromBrowseCatId:()J
+   881:	invokevirtual	#78; //Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+   884:	ldc	#76; //String &
+   886:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   889:	ldc	#92; //String addingFromBrowseTreeId
+   891:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   894:	ldc	#77; //String =
+   896:	invokevirtual	#50; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   899:	aload	5
+   901:	invokevirtual	#93; //Method com/bright/assetbank/application/form/AssetForm.getAddingFromBrowseTreeId:()J
+   904:	invokevirtual	#78; //Method java/lang/StringBuilder.append:(J)Ljava/lang/StringBuilder;
+   907:	invokevirtual	#52; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   910:	aload_1
+   911:	ldc	#36; //String Success
+   913:	invokestatic	#80; //Method createRedirectingForward:(Ljava/lang/String;Lorg/apache/struts/action/ActionMapping;Ljava/lang/String;)Lorg/apache/struts/action/ActionForward;
+   916:	astore	6
+   918:	aload	6
+   920:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   923:	ifnull	939
+   926:	aload	6
+   928:	invokevirtual	#35; //Method org/apache/struts/action/ActionForward.getName:()Ljava/lang/String;
+   931:	ldc	#94; //String Failure
+   933:	invokevirtual	#37; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   936:	ifne	1014
+   939:	aload	5
+   941:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   944:	invokevirtual	#12; //Method com/bright/assetbank/application/bean/Asset.getEntity:()Lcom/bright/assetbank/entity/bean/AssetEntity;
+   947:	invokevirtual	#95; //Method com/bright/assetbank/entity/bean/AssetEntity.getHasDefaultRelationship:()Z
+   950:	ifeq	1014
+   953:	aload	5
+   955:	invokevirtual	#42; //Method com/bright/assetbank/application/form/AssetForm.getPeerId:()J
+   958:	lconst_0
+   959:	lcmp
+   960:	ifgt	1014
+   963:	aload	5
+   965:	invokevirtual	#43; //Method com/bright/assetbank/application/form/AssetForm.getParentId:()J
+   968:	lconst_0
+   969:	lcmp
+   970:	ifgt	1014
+   973:	aload_3
+   974:	ldc	#96; //String forward
+   976:	aload	6
+   978:	invokeinterface	#97,  3; //InterfaceMethod javax/servlet/http/HttpServletRequest.setAttribute:(Ljava/lang/String;Ljava/lang/Object;)V
+   983:	aload_3
+   984:	ldc	#98; //String id
+   986:	new	#67; //class java/lang/Long
+   989:	dup
+   990:	aload	5
+   992:	invokevirtual	#11; //Method com/bright/assetbank/application/form/AssetForm.getAsset:()Lcom/bright/assetbank/application/bean/Asset;
+   995:	invokevirtual	#74; //Method com/bright/assetbank/application/bean/Asset.getId:()J
+   998:	invokespecial	#99; //Method java/lang/Long."<init>":(J)V
+   1001:	invokeinterface	#97,  3; //InterfaceMethod javax/servlet/http/HttpServletRequest.setAttribute:(Ljava/lang/String;Ljava/lang/Object;)V
+   1006:	aload_1
+   1007:	ldc	#100; //String DefaultRelationship
+   1009:	invokevirtual	#101; //Method org/apache/struts/action/ActionMapping.findForward:(Ljava/lang/String;)Lorg/apache/struts/action/ActionForward;
+   1012:	astore	6
+   1014:	aload	6
+   1016:	areturn
+  LineNumberTable: 
+   line 85: 0
+   line 86: 6
+   line 87: 9
+   line 90: 23
+   line 94: 101
+   line 96: 123
+   line 100: 129
+   line 103: 144
+   line 105: 151
+   line 107: 159
+   line 108: 166
+   line 112: 182
+   line 115: 193
+   line 116: 214
+   line 119: 224
+   line 126: 297
+   line 128: 317
+   line 129: 320
+   line 130: 323
+   line 131: 326
+   line 133: 329
+   line 135: 339
+   line 136: 349
+   line 137: 353
+   line 138: 373
+   line 140: 384
+   line 142: 414
+   line 143: 417
+   line 144: 421
+   line 145: 431
+   line 146: 434
+   line 148: 444
+   line 149: 454
+   line 150: 458
+   line 151: 463
+   line 152: 467
+   line 156: 477
+   line 157: 495
+   line 159: 511
+   line 161: 540
+   line 164: 560
+   line 168: 593
+   line 170: 603
+   line 176: 606
+   line 179: 635
+   line 181: 656
+   line 183: 710
+   line 186: 713
+   line 189: 747
+   line 202: 918
+   line 205: 939
+   line 208: 973
+   line 209: 983
+   line 210: 1006
+   line 214: 1014
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   373      58      15    peerAsset       Lcom/bright/assetbank/application/bean/Asset;
+   560      43      18    asset       Lcom/bright/assetbank/application/bean/Asset;
+   540      63      17    longId       Ljava/lang/Long;
+   518      88      16    i$       Ljava/util/Iterator;
+   320      390      10    sIds       Ljava/lang/String;
+   323      387      11    sOriginalId       Ljava/lang/String;
+   326      384      12    lRelationshipId       J
+   329      381      14    sParam       Ljava/lang/String;
+   511      199      15    longIdsToReindex       Ljava/util/Vector;
+   0      1017      0    this       Lcom/bright/assetbank/application/action/AddAssetAction;
+   0      1017      1    a_mapping       Lorg/apache/struts/action/ActionMapping;
+   0      1017      2    a_form       Lorg/apache/struts/action/ActionForm;
+   0      1017      3    a_request       Ljavax/servlet/http/HttpServletRequest;
+   0      1017      4    a_response       Ljavax/servlet/http/HttpServletResponse;
+   6      1011      5    form       Lcom/bright/assetbank/application/form/AssetForm;
+   9      1008      6    forward       Lorg/apache/struts/action/ActionForward;
+   23      994      7    userProfile       Lcom/bright/assetbank/user/bean/ABUserProfile;
+   151      866      8    sTempFileLocation       Ljava/lang/String;
+   214      803      9    entity       Lcom/bright/assetbank/entity/bean/AssetEntity;
+
+  LocalVariableTypeTable: length = 0xC
+   00 01 01 FFFFFFFF 00 FFFFFFC7 00 FFFFFF84 00 FFFFFF98 00 0F 
+  Exceptions: 
+   throws com.bn2web.common.exception.Bn2Exception
+public void addInvisibleCategoryIds(java.util.Vector, java.util.Set, java.util.Vector, boolean);
+  Code:
+   Stack=0, Locals=5, Args_size=5
+   0:	return
+  LineNumberTable: 
+   line 224: 0
+
+  LocalVariableTable: 
+   Start  Length  Slot  Name   Signature
+   0      1      0    this       Lcom/bright/assetbank/application/action/AddAssetAction;
+   0      1      1    a_vExistingCategoriesInAsset       Ljava/util/Vector;
+   0      1      2    a_visIds       Ljava/util/Set;
+   0      1      3    a_vecNewCategoriesInAsset       Ljava/util/Vector;
+   0      1      4    a_bImplySameForAllDescendants       Z
+
+  LocalVariableTypeTable: length = 0x20
+   00 03 00 00 00 01 00 FFFFFF9D 00 FFFFFFA3 00 01 00 00 00 01
+   00 FFFFFF9E 00 FFFFFFA4 00 02 00 00 00 01 00 FFFFFFA0 00 FFFFFFA3 00 03
+   
+  Signature: length = 0x2
+   00 FFFFFFA6 
+
+}
+

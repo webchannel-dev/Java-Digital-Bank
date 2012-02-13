@@ -1,0 +1,32 @@
+
+
+<workflows>
+
+	<workflow name="default" description="">
+	
+		<variation name="any" for="*">
+	
+			<state name="requires-approval" description="Requires Approval" initial="true" visible-to="approvers" >
+				<help-text></help-text>
+				<alert name="upload-alert" send-to="approvers" handler="AssetUploadedAlertProcessor" />
+				<transition name="approve" description="Approve" next-state="approved">
+					<help-text>Click to approve this asset</help-text>
+					<confirmation-text>Are you sure you want to approve this asset?</confirmation-text>
+				</transition>
+				<transition name="reject" description="Reject" next-state="rejected" />
+			</state>	
+			
+			<state name="approved" description="Approved" final="true">
+				<event name="approve-event" handler="AssetApprovedProcessor" />
+			</state>
+			
+			<state name="rejected" description="Rejected" final="true">
+				<event name="reject-event" handler="AssetRejectedProcessor" />
+			</state>
+			
+		</variation>
+		
+	</workflow>
+
+</workflows>
+

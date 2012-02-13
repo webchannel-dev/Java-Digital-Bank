@@ -1,0 +1,10 @@
+Name	Description
+Private	Private images
+Private/Internal	Internal images
+Public	Images that are available for public view
+Graphics Department/Images	Images for general use 
+Marketing Department	Images for marketing use only
+Press/archives	files for archive
+HR/Confidential	Only for confidential documents
+Sales	Sales campaigns
+Finance/Customers	Contact information

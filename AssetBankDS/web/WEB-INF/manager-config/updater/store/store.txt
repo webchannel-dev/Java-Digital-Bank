@@ -1,0 +1,1 @@
+This folder is used to store a record of previously applied system updates.  Plese do not modify this directory or it's contents in any way.

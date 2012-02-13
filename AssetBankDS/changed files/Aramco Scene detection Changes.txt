@@ -1,0 +1,58 @@
+changes
+1. Database table-> videoasset -> added field 'detectedscenes'(char (1))
+                                   created a sequense scenesequence
+2. added classes com.bright.assetbank.application.action.DetectVideoScenes,
+		 com.bright.framework.util.commandline.CommandLineExecHandysaw
+		 com.bright.framework.util.commandline.StreamGobblerHandysaw
+                 com.bright.assetbank.application.form.DetectVideoSceneForm,
+		 com.bright.assetbank.application.constant.HandysawDSConstants
+3. struts-config.xml
+		<form-bean name="detectVideoSceneForm" type="com.bright.assetbank.application.form.DetectVideoSceneForm" />
+
+..........................
+ 			<action
+				path="/detectVideoScenes"
+				type="com.bright.assetbank.application.action.DetectVideoScenes"
+				scope="request"
+				name="detectVideoSceneForm"
+				validate="false">
+				<forward name="success" path="/jsp/standard/en/asset-admin/detected_scenes.jsp"/>
+                                <forward name="processing" path="/jsp/standard/en/asset-admin/detecting_scenes.jsp"/>
+                                <forward name="processed" path="/jsp/standard/en/asset-admin/processed_scenes.jsp"/>
+                                <forward name="failure" path="/jsp/standard/en/asset-admin/detect_scenes_failure.jsp"/>
+			</action>
+
+
+4. jsp/en/public/inc_view_asset_buttons.jsp
+
+Remove duplicated DS buton if any
+Scene detection bases on flv clip,
+if preview is generated , show Ds button.
+
+<li>
+                             <form name="detectSceneForm" action="../action/detectVideoScenes" method="get" onsubmit="return callAsynchronusly('../action/detectVideoScenes');">
+                               <input type="hidden" id="returnUrl" value="<c:out value='${checkoutReturnUrl}'/>" />    
+                                <input id="detectSceneAssetButton" class="button" type="submit" value="Detect scenes" />
+                                <input type="hidden" name="file" value="<bean:write name='assetForm' property='asset.originalFilename'/>" />
+                                <input type="hidden" name="id" value="<bean:write name='assetForm' property='asset.id'/>" />
+                                <input type="hidden" name="fileLocation" value="<bean:write name='assetForm' property='asset.embeddedPreviewClipLocation'/>"/>
+                             </form>
+                    </li>
+5.jsp/en/public/view_video_asset.jsp
+	<script type="text/javascript" src="../js/detect_scenes.js"></script>
+	.....
+	<c:if test="${assetForm.asset.isVideo}">
+            <div class="info" style="display:none" id="errorDs"></div> 
+        </c:if>
+
+6. added detect_scenes.js
+
+7. added result jsps
+
+	/jsp/standard/en/asset-admin/detected_scenes.jsp,processed_scenes.jsp,detecting_scenes.jsp,detect_scenes_failure.jsp
+8.applications.properties
+
+	#Handysaw DS installation path
+	handysaw-install-path=C:\\Program Files\\Davis Software\\HandySaw DS\\HandySawDS.exe
+
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,1 @@
+This folder should be accessible via FTP. Consider creating a symbolic link to the FTP user's home directory instead of this folder.

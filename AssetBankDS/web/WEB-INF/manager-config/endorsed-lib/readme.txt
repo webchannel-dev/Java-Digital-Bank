@@ -1,0 +1,1 @@
+This directory is added to java.endores.dirs on webapp startup to allow overriding of standard jre libs.

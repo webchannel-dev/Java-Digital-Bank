@@ -1,0 +1,22 @@
+Name	Description
+Art/Paintings	Paintings by famous artists
+Art/Drawings	A collection of drawings
+Art/Sculpture	Marble statues
+Art/Photography/Portraits	Sepia portraits
+Art/Print	Screen prints
+Documents/Forms	HR details
+Documents/Finance	Clients list
+Documents/Contracts	Supplier Contracts
+Events/Conferences	Summer 09 conference agenda
+Events/Christmas	Photos of Christmas party
+Graphics/Logos	Company logo
+Graphics/Brochure	Client information on company
+Graphics/Website	Website information
+Graphics/Intranet	Internal information only
+Company/Structure	Departments
+Company/Directors	Director images
+Company/Locations	Images of different sites
+Company/Partnerships	Present partnership
+Company/Level	Staff levels
+Transport/Vans	Delivery vans
+Transport/Compnay Cars	Range of car makes
