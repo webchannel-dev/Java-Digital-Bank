@@ -1,0 +1,346 @@
+/* ======================================================================================== */
+/* C U S T O M I S A T I O N   S T Y L E S H E E T                                          */
+/* ---------------------------------------------------------------------------------------- */
+/*                                                                                     
+	Customisations of the look and feel of Asset Bank should go in here.                                         
+*/
+/* ======================================================================================== */
+
+/* ================================================================================= 
+	General typography																		
+==================================================================================== */
+/* Global font color and size */
+body,
+legend {
+	color: #444;									
+	font-family: tahoma, verdana, arial, sans-serif;  
+	}		
+/* Base font size */	
+body { 
+	font-size: 70%; 
+}						
+/* Main headings */
+h1 { 													
+	color: #009BC6;				
+}
+/* Colour of links throughout */
+a,												
+span.required,
+span.requiredForCompleteness,							
+div.copy code {
+	color: #009BC6;						
+}
+
+
+/* ================================================================================= 
+	Login and registration pages																		
+==================================================================================== */
+#loginPage div.logo, #registrationPage div.logo {
+	padding-top:25px;								/* padding around logo on login page */
+	padding-bottom: 25px;
+	background: #009bc6 url(../../images/standard/misc/ab_header_bg.png) repeat-x left bottom;
+	}	
+
+/* ================================================================================= 
+	Borders of panels, images and horizontal rules throughout the application															
+==================================================================================== */
+div.browsePanel,
+div.newsPanel,
+div.noFeatured,
+.underline,
+div.hr,
+div.head,
+ul.results li,
+#footer
+div.infoPanel,
+div.dialogPanel,
+#loginPanel,
+p.tabHolder strong,
+#tabContent,
+fieldset,
+#homePage a.imgWrapper,
+div.adminTabs h2,
+div.tabClearing,
+div.sortStrip,
+div.slideshowPanel   {
+	border-color: #ccc;								
+}
+/* border color of image thumbnails throughout - may need toning down. */
+img.image { 											
+	border-color: #000
+}
+#homePage a.imgWrapper:hover, a.videoFrameLink:hover img,
+div.commonSaved a:hover img {				
+	border-color: #009BC6;				/* Hover effect on recent and promoted images, and video thumbs */
+	background: #FFF;				
+}
+ 
+/* ================================================================================= 
+	Top strip, language selector															
+==================================================================================== */
+#topStrip {
+	background: #444; 
+	color: #FFF;
+	border-bottom: 1px solid #97bcc9;
+	height: 1em;					
+}
+#topStrip .pageWrapper {
+	height: 1em;
+}	
+/* back link styles in demo: */
+#topStrip a {
+	line-height: 1.9em;
+	color:#fff;
+	font-weight: normal;
+	float:left;
+	display:block;
+}	
+div#topStrip.langSelect {							/* multi-language switched on */
+	background: #444; 
+	border-bottom: 1px solid #97bcc9;
+	color: #eee;
+}	
+
+/* ================================================================================= 
+	Header styles															
+==================================================================================== */
+#hLinks { 
+	margin-top: 25px; 							/* tweak to adjust hLinks position */
+	margin-bottom: 13px;							/* tweak to adjust search bar position */
+	color: #bae0ed;
+}				
+div.headShadow {
+	background: #009bc6 url(../../images/standard/misc/ab_header_bg.png) repeat-x left bottom;
+	padding: 0;
+}
+#header {
+	background: transparent;							/* Main banner colour */
+	border: none;
+	height: auto;
+}
+#header div.pageWrapper {
+	background: transparent url(../../images/standard/misc/ab_header.png) no-repeat left bottom;
+	overflow: hidden;
+}
+/* tweak position of logo in header */
+#header img.logo { 
+	padding: 30px 0; 
+	margin: 0;
+}	
+
+/* ================================================================================= 
+	Home page panels and left-hand column panels														
+==================================================================================== */
+div.browsePanel{					
+	border-color:#ccc;
+	background: #d9d9d9 url(../../images/standard/misc/large_box_grad.png) repeat-x left top;
+}
+div.newsPanel,
+div.noFeatured {
+	border-color:#ccc;
+	background: #e6e6e6 url(../../images/standard/misc/news_grad_bg.png) repeat-x left bottom;
+}		
+div.lbPanel,
+div.infoPanel
+{							
+	border: none;										/* border is now on lbShadow */
+	background: #fdfdfd url(../../images/standard/misc/lb_grad_bg.png) repeat-x 0 0;
+}
+div.lbShadow {
+	margin-top: 2em;
+	background: #FFF;
+	padding-bottom: 0;
+	width: 136px;
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+div.lbPanel, div.infoPanel {
+	margin-top: 0 !important;
+	width: 136px;
+}	
+
+/* ================================================================================= 
+	Quick search panel on homepage												
+==================================================================================== */	
+#qsPanel {
+	padding: 0;
+	border-color: #54859d;
+	background: #009bc6;
+}
+#qsPanel form {
+	border: 1px solid #4ab8d7;
+	background: #009bc6;
+	color: #FFF;
+	padding: 10px 0 10px 2%;
+	overflow:hidden;
+	height: 1%;
+}
+#qsPanel a.advanced {
+	color:#fff;
+}
+#qsPanel a.advanced:hover {
+	color:#fff;
+}
+#qsPanel.middle,
+div.mySaved.middle,
+div.commonSaved.middle {							/* Seperation of different saved searches */
+	border-bottom: 1px solid #aaa; 				/* Border instead of default bg image */
+}
+div.mySaved, div.commonSaved,
+div.mySaved.middle,
+div.commonSaved.middle {
+	background: #fdfdfd url(../../images/standard/misc/lb_grad_bg.png) repeat-x 0 0;
+	border-color: #ccc;
+}
+
+/* ================================================================================= 
+	Asset panel styles - contains new larger sizes												
+==================================================================================== */
+ul.lightbox li	{
+	border-color:#ccc;
+	background: #e6e6e6 url(../../images/standard/news_grad_bg.png) repeat-x left bottom;		
+	width: 16.5em;
+}	
+ul.lightbox li div.detailWrapper {		/* wraps thumbnmail and details */
+ 	min-height:19em; 							/* this is also defined as height in ie5.css and ie6.css */
+}			
+* html ul.lightbox li div.detailWrapper {		/* IE only */
+	height:19em !important;							/* explicitly define height for IE5 & 6 */
+}	
+
+
+/* ================================================================================= 
+	Navigation styles											
+==================================================================================== */
+/* Colour of main navigation links */			
+ul.nav a	{	
+	color: #676767;							
+	background: #FFF;
+}
+/* Current page highlighting in the main navigation */							
+ul.nav li a.current, 							
+ul.nav li a.current:hover {						
+	/* Occasionaly may want to use nav_arrow_white.gif, if defining a dark background colour */
+	background: #e9eaeb url(../../images/standard/arrow/nav_arrow.gif) right center no-repeat; 		
+}
+/* Replace image-based dividers with borders */
+ul.nav,								
+ul#admin_nav,
+ul#upload_nav,
+ul.nav li,	
+ul.nav ul li {
+	background: #bec0c2;
+}
+ul.nav a:hover  {
+	background-color: #FFF;
+}
+ul.nav li.subholder a:hover, #adminPage a#admin_nav_link, #importPage a#upload_nav_link  {
+	background-color: #FFF !important;
+}
+ul.nav a.open {
+	background-color: #FFF !important;
+}
+
+/* Colour of links in the header bar */
+#hLinks a {
+	color: #FFF;										
+}
+/* Help link in header */
+a#helpLink {
+	background: transparent url(../../images/standard/icon/help_icon.png) no-repeat scroll right center;
+}
+
+/* ================================================================================= 
+	Misc styles											
+==================================================================================== */
+
+#help div.copy h2,						
+#popup div.copy h2,
+#masks h1 {
+	background: #009BC6;					/* Pop-up help headers */	
+	color: #fff; 			
+}
+
+
+table.stripey tr.even th, table.stripey tr.even td  {
+	background: #eee;						/* color of attribute stripes on asset detail page	 */
+}
+
+/* Styling of all buttons throughout the application */			
+input.button {
+	background: #FEFEFE url(../../images/standard/misc/button_bg.png) repeat-x left bottom;					
+	color: #494754;
+	padding: 2px 3px; 						
+	border-top: 1px solid #336a86;
+	border-bottom: 1px solid #527c94;
+	border-left: 1px solid #7092a6;
+	border-right: 1px solid #336886;
+}
+/* Styling of search keywords inputs */
+input.keywords, 
+#qsPanel input.text, 
+input.inline  {
+	border: 1px solid #0084a8;
+}
+div.headerContent input.keywords, 
+input.inline { 
+	padding: 3px;							/* match height of new buttons */
+}
+
+/* Optional browse tabs on homepage */
+#homePage p.tabHolderPopup a {
+	background:url("../../images/standard/misc/lb_grad_bg.png") repeat-x scroll 0 0 #FDFDFD;
+}
+#homePage p.tabHolderPopup a.active {
+	background: #E6E6E6;
+}
+
+/* ================================================================================= 
+   Deactivate drop shadows				 																
+==================================================================================== */
+	
+/* div.leftShadow, div.rightShadow, div.headShadow, div.lbShadow {
+	background: none;
+	padding:0;
+	} */
+
+
+	
+div.rightShadow, div.leftShadow {
+	background: #FFF;
+	padding-bottom: 5px;
+}	
+	
+/* ================================================================================= */
+/* Revert to older Asset Bank styles 																 */
+/* ================================================================================= */
+
+/* 
+#topStrip { background: #fff;}
+
+div.headShadow {
+	background: none;
+	}
+div.headerContent { 
+	background: #999;
+	border-top:8px solid #333;
+	padding: 0 8px 10px 0;
+	}	
+#header { 
+	border:0;
+	}	
+
+div.recent {
+	padding:8px;
+	background-color: #ccc;
+	position:relative;
+	top:-11px;
+	z-index:1000;}
+
+a.imgWrapper {
+	position:relative;
+	}
+			
+a.imgWrapper img {margin:0!important;} 
+
+*/

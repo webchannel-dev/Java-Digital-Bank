@@ -1,0 +1,1 @@
+If you make any customisations to JSP pages, images, etc then they need to be placed into the folder WEB-INF/manager-config/updater/customise, within the same folder structure.

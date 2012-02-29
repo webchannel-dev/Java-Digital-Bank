@@ -1,0 +1,113 @@
+/* ======================================================================================== */
+/* IE - WINDOWS SPECIFIC STYLES                                                             */
+/* All IE-specific fixes go in here.								                                */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		14-Feb-2006    Created.                                          */
+/* ======================================================================================== */
+
+@import url("ie-win.css");
+
+/* Used for hiding select boxes when hovering divs over them */
+.ie6Hide {
+	visibility:hidden;
+}
+
+
+div.pageWrapper {            
+   height: 1%;  
+	margin:0 3.9%;					/* Have percentage margins as alternative to min-width */
+	padding:0 10px;
+   }
+
+#topStrip { 
+	background-image: none;		/* hide png background image */
+	}	
+
+/* =qsPanel styles
+------------------------------------------------------------------------*/		
+#qsPanel div.inner {
+	width: 83%;
+}	
+#qsPanel label.search { 									/* Search... label */
+	width: 60px;
+	position: relative;
+
+}	
+#qsPanel a.advanced {							/* Advanced search link */
+	/* width: 105px; */
+	display: inline;
+	position: relative;
+
+}	
+
+/* =UI components
+------------------------------------------------------------------------*/
+div.lbPanel a.dropLink {
+	border:1px solid #eee;		/* IE6 doesn't support transparent borders */
+
+}
+
+
+/* =3 category columns - IE6 needs narrower columns to prevent dropping
+------------------------------------------------------------------------*/		
+#homePage div.categoryList ul.cols3 {
+    width: 28% !important;
+    }		
+
+/* =lightbox styles - IE7 doesn't need these
+------------------------------------------------------------------------*/	
+ul.lightbox li div.detailWrapper {		/* define height for IE - other browsers use min-height*/
+	height:16em !important;
+ 	}				
+	
+
+/* Zoom Control panel on full size image popup
+------------------------------------------------------------------------*/		
+#zoomControlPanel {
+	position:absolute;		/* IE6 puts panel behind image when position:fixed is used */
+	}	
+
+/* layouts for contact sheet (default behaviour is to use max-height)
+------------------------------------------------------------------------*/		
+
+/* use expressions to mimic max-width and max-height */
+#compareLayout16 div.compare, #compareLayout20 div.compare {
+	width: 150px;
+}
+#compareLayout1 img{
+	height:expression(this.height>this.width && this.height>599?600:true);
+	width:expression(this.width>this.height && this.width>599?600:true);
+}
+#compareLayout2 img{
+	width:expression(this.width-280>this.height && this.width>599?600:true);
+	height:expression(this.height>this.width-280 && this.height>319?320:true);
+}
+#compareLayout4 img{
+	width:expression(this.width-60>this.height && this.width>309?310:true);
+	height:expression(this.height>this.width-60 && this.height>249?250:true);
+}
+#compareLayout8 img {
+	width:expression(this.width-142>this.height && this.width>309?310:true);
+	height:expression(this.height>this.width-142 && this.height>167?168:true);
+}
+#compareLayout16 img {
+	height:expression(this.height>this.width+10 && this.height>159?160:true);
+	width:expression(this.width+10>this.height && this.width>149?150:true);
+}
+#compareLayout20 img {
+	width:expression(this.width-30>this.height && this.width>149?150:true);
+	height:expression(this.height>this.width-30 && this.height>119?120:true);
+}
+
+
+/* Serve up gifs instead of pngs for IE6
+------------------------------------------------------------------------*/	
+#controlPanel a.print {
+	background: url(../../images/standard/icon/print_grey.gif) top left no-repeat;
+}	
+
+
+
+
+	

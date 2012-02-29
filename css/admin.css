@@ -1,0 +1,74 @@
+body  { margin: 13px; padding: 0px; }
+a { color: #00a5cc; text-decoration: none; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; }
+a:hover { color: #00a5cc; text-decoration: underline; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+form { margin: 0px; padding: 0px }
+td { font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; }
+th { font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; }
+p { color: #535353; font-size: 70%; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; text-align: left }
+td.centre { color: #535353; font-size: 70%; }
+td.main         { background: url(../images/bits/background.gif) no-repeat 0px 0px; padding-top: 50px; width: 703px }
+td.main-right  { background: url(../images/bits/background_right.gif) no-repeat; width: 34px; height: 120px }
+td.main-bottom   { background: url(../images/bits/background_bottom.gif) no-repeat; height: 27px }
+td.main-br    { background: url(../images/bits/background_rr.gif) repeat-y; width: 34px; height: 102px }
+td.content  { padding-left: 20px }
+h1.page-title            { color: #737373; font-style: italic; font-size: 18px; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; padding-top: 5px; padding-left: 44px; border-bottom: 1px solid #b0b0b0; width: 340px }
+a.menu-item     { color: #535353; font-weight: bold; font-size: 70%; text-decoration: none }
+a.menu-item:hover    { color: #535353; font-weight: bold; font-size: 70%; text-decoration: underline }
+input  { font-size: 90%; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+input.search  { font-size: 90%; }
+select  { font-size: 90%; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+textarea  { font-size: 90%; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular }
+td.left  { color: #535353; font-size: 70%; text-align: left; padding: 3px 3px 3px 0px }
+th.left { color: #535353; font-weight: bold; font-size: 70%; text-align: left; padding: 3px 3px 3px 0px }
+td.leftResult { color: #535353; font-size: 70%; text-align: left; vertical-align: top; padding: 6px 3px 6px 0px }
+td.right { color: #535353; font-size: 70%; text-align: left; padding: 3px 0px 3px 3px }
+td.rightResult { color: #535353; font-size: 70%; text-align: left; vertical-align: top; padding: 6px 0px 6px 3px }
+td.mid { color: #535353; font-size: 70%; text-align: left; padding: 3px }
+td.midResult { color: #535353; font-size: 70%; text-align: left; vertical-align: top; padding: 6px 3px }
+ul.content { color: #535353; font-size: 70%; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; text-align: left }
+p.comment { color: #00a5cb; }
+span.comment { color: #8f8f8f; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; }
+td.comment { color: #00a5cb; font-size: 70%; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; text-align: left }
+p.error { color: red; font-size: 70%; }
+p.error td { font-size: 100%; } 
+table.form { width: 535px }
+h2 { color: #8f8f8f; font-style: italic; font-size: 12px; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; border-bottom: 1px solid #dedede; width: 530px }
+h3 { color: #09c; font-size: 120% }
+h4  { color: #676767; font-weight: bold; font-size: 100%; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; margin-top: 0px; margin-bottom: 2px }
+img.thumb { border: solid 1px #a4a4a4 }
+h3.category { color: #757575; margin-bottom: 2px }
+/*img.medium { border: solid 1px #a4a4a4 }*/
+h3.result { color: #35b9ff; font-size: 140%; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; margin-top: 0px; margin-bottom: 0px }
+h3.imageTitle  { color: #09c; font-size: 140%; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; margin-top: 0px; margin-bottom: 0px }
+a.result { color: #00a5cb; font-size: 70%; text-decoration: none }
+a.result:hover { color: #00a5cb; text-decoration: underline }
+table.result { border-bottom: 1px dotted #aaa }
+td.resultRule { border-bottom: 1px dotted #aaa }
+td.imageHolder { vertical-align: top; padding: 0px 12px 0px 0px }
+table.downloadImage { margin-top: 12px }
+span.required { color: red; font-weight: bold; font-size: 12px }
+td.menu-item         { color: #535353; font-weight: normal; text-align: right; padding-top: 3px; padding-right: 10px; padding-bottom: 3px }
+td.menu-item-top      { color: #535353; font-weight: normal;  text-align: right; padding-top: 2px; padding-right: 10px; padding-bottom: 8px; border-bottom: 1px solid #a2defe }
+td.menu-item-bottom     { color: #535353; font-weight: normal; text-align: right; padding-top: 6px; padding-right: 10px; padding-bottom: 2px; border-top: 1px solid #a2defe }
+td.menu     { vertical-align: top; padding-left: 12px; border-right: 1px solid #a2defe }
+div.download-image { width: 500px; height: 500px; overflow: scroll }
+td.approvalFlagImage { text-align: center; padding-top: 3px; width: 20px; }
+td.approvalFlagText { padding: 0px; vertical-align: top; font-size: 60%; color: #535353; text-align: right; padding-right: 4px; font-family: Verdana, Arial, Helvetica, Geneva, Swiss, SunSans-Regular; }
+div.main { text-align:center; }
+span.score { font-size: 80%; }
+td.captionLeft { color: #000; vertical-align: center; text-align: left; padding: 2px 2px 2px 4px;  font-size: 70%; background-color: #FFC896; border-bottom: solid 1px #a4a4a4; border-left: solid 1px #a4a4a4; }
+td.captionCentre { color: #000; vertical-align: center; text-align: center; padding: 2px 2px 2px 2px;  font-size: 70%; background-color: #FFC896; border-bottom: solid 1px #a4a4a4; }
+td.captionRight { color: #000; vertical-align: center; text-align: right; padding: 2px 4px 2px 2px;  font-size: 70%; background-color: #FFC896; border-bottom: solid 1px #a4a4a4; border-right: solid 1px #a4a4a4; }
+td.image { border: solid 1px #a4a4a4 }
+th.list { border-top: 1px #ccc dotted; border-bottom: 1px #ccc dotted; padding: 3px 10px 3px 0px; color: #535353; font-size: 60%; }
+td.list { color: #535353; font-size: 60%; text-align: left; padding: 3px 10px 3px 0px }
+td.content a { font-size: 11px; }
+span.usageTypeSimple { color: green; }
+span.usageTypeAdvanced { color: red; }
+
+/* category permission indent styles */
+.catPermission1 { margin-left: 0px; }
+.catPermission2 { margin-left: 26px; }
+.catPermission3 { margin-left: 52px; }
+.catPermission4 { margin-left: 78px; }
+.catPermission5 { margin-left: 100px; }

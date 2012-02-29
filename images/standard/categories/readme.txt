@@ -1,0 +1,1 @@
+This directory is used to store thumbnails that are shown next to categories

@@ -1,0 +1,133 @@
+<%@include file="../inc/doctype_html.jsp" %>
+
+<!-- Website designed and developed by Bright Interactive, http://www.bright-interactive.com -->
+<%-- History:
+	 d1		James Home	02-Jun-2008		Created
+--%>
+
+<%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %>
+<%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic" %>
+<%@ taglib uri="/WEB-INF/c.tld" prefix="c" %>
+<%@ taglib uri="/WEB-INF/fmt.tld" prefix="fmt" %>
+<%@ taglib uri="/WEB-INF/bright-tag.tld" prefix="bright" %>		
+
+<logic:present parameter="parentId">
+	<bean:parameter id="backToAssetId" name="parentId"/>
+</logic:present>
+<logic:notPresent parameter="parentId">
+	<bean:define id="backToAssetId" name="repurposingForm" property="assetId"/>
+</logic:notPresent>
+		
+<bean:define id="version" name="repurposingForm" property="repurposedVersion"/>
+
+<c:set var="height" value="74"/>
+<c:set var="width" value="300"/>
+
+<head>
+	
+	<title><bright:cmsWrite identifier="title-repurposed-audio-clip" filter="false" /></title> 
+	<bean:define id="section" value=""/>
+	<%@include file="../inc/head-elements.jsp"%>
+	<script src="../js/download-form.js" type="text/javascript"></script>
+</head>
+
+<body id="detailsPage">
+
+	<%@include file="../inc/body_start.jsp"%>
+	
+	<h1 class="underline"><bright:cmsWrite identifier="heading-repurposed-audio-clip" filter="false" /></h1>
+	
+	<logic:present parameter="new">
+		<p><bright:cmsWrite identifier="snippet-repurposed-audio-clip-intro" filter="false"/></p>
+	</logic:present>
+		
+	
+	<bean:define id="file" name="version" property="url"/>
+	<bean:define id="autoplay" value="false"/>
+	
+	<bean:write name="version" property="embeddableHtml" filter="false"/>	
+
+	<br/>
+
+	<table cellpadding="0" cellspacing="0" border="0" class="admin">
+		<c:if test="${not empty version.createdByUser}">
+			<tr>
+				<th><bright:cmsWrite identifier="label-created-by" filter="false"/></th>
+				<td><bean:write name="version" property="createdByUser.fullName" filter="false"/> <c:if test="${not empty version.createdByUser.emailAddress}"><bean:write name="version" property="createdByUser.emailAddress" filter="false"/></c:if>
+				</td>
+			</tr>
+		</c:if>
+		<tr>
+			<th nowrap="nowrap"><bright:cmsWrite identifier="label-created-date" filter="false"/></th>
+			<td><bean:write name="version" property="createdDate" format="dd/MM/yyyy hh:mm a"/></td>
+		</tr>
+		<tr>
+			<th><bright:cmsWrite identifier="label-duration" filter="false"/></th>
+			<td>
+				<c:set var="duration" value="${version.duration / 1000}"/> 
+				<bean:write name="duration" format="0"/> <bright:cmsWrite identifier="snippet-seconds" filter="false"/>
+			</td>
+		</tr>
+		<tr>
+			<th><bright:cmsWrite identifier="label-file-type" filter="false"/></th>
+			<td><bean:write name="version" property="suffix"/></td>
+		</tr>
+		<tr>
+			<th><bright:cmsWrite identifier="label-audio-url" filter="false"/></th>
+			<td>
+				<span><bean:write name="repurposingForm" property="baseUrl"/>/<bean:write name="version" property="url"/></span>
+			</td>
+		</tr>
+		<tr>
+			<th style="vertical-align: top;  width:auto;"><bright:cmsWrite identifier="label-html-code" filter="false"/></th>
+			<td style="padding-right:0px;">
+				<div style="width:690px; overflow: auto;">
+					<form action=""> 
+					 	<textarea style="width: auto;" cols="129" rows = "3" onclick="javascript:this.focus();this.select();" readonly><bean:write name="version" property="embeddableHtml" filter="false"/></textarea>
+					</form>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<br/>
+	<logic:present parameter="new">
+		<bean:parameter id="isNew" name="new"/>
+	</logic:present>
+	<c:if test="${userprofile.isAdmin || (not empty isNew && not empty repurposingForm.repurposedVersion.createdByUser && userprofile.user.id==repurposingForm.repurposedVersion.createdByUser.id)}">
+		<bean:parameter id="id" name="id"/>
+		<c:choose>
+			<c:when test="${not empty isNew && userprofile.user.id==repurposingForm.repurposedVersion.createdByUser.id}">
+				<p><bright:cmsWrite identifier="snippet-can-delete-version" filter="false"/> <c:if test="${!userprofile.isAdmin}"> <bright:cmsWrite identifier="snippet-cannot-after-leaving-page" filter="false"/></c:if></p> 
+			</c:when>
+			<c:otherwise>
+				<div class="warning">
+					You may delete this version by clicking on the button below, but be aware that this file may be being used by external websites via http - if so, deleting this version would result in a http 404 error being returned to those websites.
+				</div>
+			</c:otherwise>
+		</c:choose>
+		<c:if test="${isNew}">
+			<form action="removeNewRepurposedVersion">
+		</c:if>
+		<c:if test="${!isNew}">
+			<form action="removeRepurposedAudio">
+		</c:if>
+			<input type="hidden" name="id" value="<bean:write name="id"/>"/>
+			<input type="hidden" name="assetId" value="<bean:write name="backToAssetId"/>"/>
+			<input class="button flush" type="submit" value="<bright:cmsWrite identifier="button-delete"/>" onclick="return confirm('<bright:cmsWrite identifier="js-confirm-delete-image-version"/>');"/>
+		</form>
+		<br/>
+	</c:if>
+	
+	<logic:present parameter="new">
+		<a href="viewAsset?id=<bean:write name="backToAssetId"/>"><bright:cmsWrite identifier="link-back-item" filter="false"/></a>
+	</logic:present>
+	<logic:notPresent parameter="new">
+		<a href="viewRepurposedAudioClips?id=<bean:write name="repurposingForm" property="assetId"/>">&laquo; <bright:cmsWrite identifier="link-back-to-repurposed-audio-clips" filter="false"/></a>
+	</logic:notPresent>
+	
+	<%@include file="../inc/body_end.jsp"%>
+	
+</body>
+</html>

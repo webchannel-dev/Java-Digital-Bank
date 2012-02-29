@@ -1,0 +1,96 @@
+<taglib
+	 xmlns="http://java.sun.com/xml/ns/j2ee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	 version="2.0">
+	<description>
+        Tag library for Asset Bank plugin support.
+    </description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>abplugin</short-name>
+	<uri>http://www.assetbank.co.uk/taglib/abplugin</uri>
+	<tag>
+        <description>Includes extension JSPs in an HTML form</description>
+        <name>include-form-extensions</name>
+        <tag-class>com.bright.assetbank.plugin.taglib.IncludeFormExtensionsTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+			<description>The entity that the form is editing. Must be one of the values in com.bright.assetbank.plugin.constant.ExtensibleEntityConstants</description>
+	        <name>extensibleEntity</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+	        <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+			<description>The action that is being performed, must be one of the values in com.bright.assetbank.plugin.constant.FormVerbConstants</description>
+	        <name>verb</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+	        <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+			<description>An ID that the tag should automatically determine the verb from.  If the ID is less than 0 the verb will be set to "add", else it will be set to "edit"</description>
+	        <name>determineVerbFromId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+	        <type>java.lang.Long</type>
+        </attribute>
+        <attribute>
+			<description>The position within the form that the tag is placed at (must be one of the values in com.bright.assetbank.plugin.constant.FormPositionConstants)</description>
+			<name>position</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+	        <type>java.lang.String</type>
+        </attribute>
+    </tag>
+
+	<tag>
+        <description>Includes extension JSPs in an HTML view page (e.g. "view asset"). PluginManager.populateViewRequest() must have been called by the Action before this tag can be used in a JSP.</description>
+        <name>include-view-extensions</name>
+        <tag-class>com.bright.assetbank.plugin.taglib.IncludeViewExtensionsTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+			<description>The entity that the page is displaying. Must be one of the values in com.bright.assetbank.plugin.constant.ExtensibleEntityConstants</description>
+	        <name>extensibleEntity</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+	        <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+			<description>The position within the page that the tag is placed at (must be one of the values in com.bright.assetbank.plugin.constant.PagePositionConstants)</description>
+			<name>position</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+	        <type>java.lang.String</type>
+        </attribute>
+    </tag>
+
+	<tag>
+        <description>Sets a variable to true if include-view-extensions would include any extensions, false if not</description>
+        <name>have-view-extension-includes</name>
+        <tag-class>com.bright.assetbank.plugin.taglib.HaveViewExtensionIncludesTag</tag-class>
+		<tei-class>com.bright.assetbank.plugin.taglib.HaveViewExtensionIncludesTEI</tei-class>
+        <body-content>empty</body-content>
+		<attribute>
+			<description>The name of the variable to set</description>
+			<name>id</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+        <attribute>
+			<description>The entity that the page is displaying. Must be one of the values in com.bright.assetbank.plugin.constant.ExtensibleEntityConstants. PluginManager.populateViewRequest() must have been called by the Action before this tag can be used in a JSP.</description>
+	        <name>extensibleEntity</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+	        <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+			<description>The position within the page that the tag is placed at (must be one of the values in com.bright.assetbank.plugin.constant.PagePositionConstants)</description>
+			<name>position</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+	        <type>java.lang.String</type>
+        </attribute>
+    </tag>
+
+</taglib>

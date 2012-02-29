@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Calendar</title>
+<script language="JavaScript" type="text/javascript">
+<!--
+function Calendar(Month,Year) {
+	//initialise output
+	var output = '';
+	// Get todays date, and collect the year month and day values
+	var right_now = new Date();
+	var thisYear = right_now.getFullYear();
+	var thisMonth = right_now.getMonth();
+	var thisDay = right_now.getDate();
+	
+	output += '<td class="back"><a href="#" title="Back a year" onclick="backyear(' + Year + ');"><img src="L-year-arrow.jpg" alt="<<" \/></a>&nbsp;<a href="#" title="Back a month" onclick="backward(' + Month + ',' + Year + ');"><img src="L-arrow.jpg" alt="<" \/><\/a><\/td>'; 
+	output += '<td align="center"><h1>' + names[Month] + ' ' + Year + '<\/h1><\/td>';
+	output += '<td class="forward" ><a href="#" title="Forward a month" onClick="forward(' + Month + ',' + Year + ');"><img src="R-arrow.jpg" alt=">" \/><\/a>&nbsp;<a href="#" title="Forward a year" onclick="forwardyear(' + Year + ');"><img src="R-year-arrow.jpg" alt=">>" \/></a><\/td>';
+	output += '<\/tr><tr><td align="center" colspan="3">';
+	
+	firstDay = new Date(Year,Month,1);
+	startDay = firstDay.getDay();
+
+	if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0))
+		days[1] = 29; 
+   else
+		days[1] = 28;  
+
+	output += '<table class="calendar" cellspacing="0"><tr>';
+
+	for (i=0; i<7; i++)
+   	output += '<th>' + dow[i] +'<\/th>';
+
+	output += '<\/tr><tr>';
+
+	var column = 0;
+	var lastMonth = Month - 1;
+	if (lastMonth == -1) lastMonth = 11;
+
+	for (i=0; i<startDay; i++, column++)
+		output += '<td class="greyed">' + (days[lastMonth]-startDay+i+1) + '<\/td>';
+
+	for (i=1; i<=days[Month]; i++, column++) {
+	 		// Check if todays date
+			if ((Year == thisYear) && (Month == thisMonth)&& (i == thisDay)) {
+	      	output += '<td class="today"><a href="javascript:changeDay(' + i + ')">' + i + '<\/a><\/td>';
+			}
+			// or output a normal table cell
+			else {
+				output += '<td><a href="javascript:changeDay(' + i + ')">' + i + '<\/a><\/td>';
+			}
+			if (column == 6) {
+				//start new row
+				output += '<\/tr><tr>';
+				column = -1;
+			}
+			
+	}
+
+	if (column > 0) {
+		for (i=1; column<7; i++, column++)
+			output +=  '<td class="greyed">' + i + '<\/td>';
+   }
+	output +=  '<\/tr> <\/table> <\/td>';
+	return output;
+}
+
+function changeDay(day) {
+    opener.day = day + '';
+    opener.restart();
+    self.close;
+}
+
+function makeArray0() {
+    for (i = 0; i<makeArray0.arguments.length; i++)
+        this[i] = makeArray0.arguments[i];
+}
+
+// Go forward one month
+function forward(currMonth,currYear) {
+	if (currMonth == 11){
+		opener.month = 0;
+		opener.year = currYear + 1;
+	}
+	else {
+		opener.month = currMonth + 1;
+	}
+	window.location.reload();
+}
+// Go back one month
+function backward(currMonth,currYear) {
+	if (currMonth == 0){
+		opener.month = 11;
+		opener.year = currYear - 1;
+	}
+	else {
+		opener.month = currMonth - 1;
+	}
+	window.location.reload();
+}
+// Go forward one year
+function forwardyear(currYear) {
+	opener.year = currYear + 1;
+	window.location.reload();
+}
+// Go back one year
+function backyear(currYear) {
+	opener.year = currYear - 1;
+	window.location.reload();
+}
+
+var names     = new makeArray0('January','February','March','April','May','June','July','August','September','October','November','December');
+var days      = new makeArray0(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+var dow       = new makeArray0('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+//-->
+</script>
+<link href="../css/calendar.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+
+	<form name="Cal">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				
+					<script language="JavaScript" type="text/javascript">
+						<!--
+						document.write(Calendar(opener.month,opener.year));
+						//-->
+					</script>
+
+			</tr>
+		</table>
+	</form>
+					
+</body>
+</html>

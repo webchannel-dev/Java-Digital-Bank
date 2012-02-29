@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<License>
+  <Data>
+    <LicensedTo>Bright Interactive</LicensedTo>
+    <LicenseType>Developer OEM Subscription</LicenseType>
+    <LicenseNote>Limited to 1 developer.</LicenseNote>
+    <OrderID>100701162106</OrderID>
+    <OEM>This is a redistributable license</OEM>
+    <Products>
+      <Product>Aspose.Slides for Java</Product>
+    </Products>
+    <EditionType>Enterprise</EditionType>
+    <SerialNumber>6a176c74-6dc8-43f7-b932-41f05dc9f2d2</SerialNumber>
+    <SubscriptionExpiry>20110701</SubscriptionExpiry>
+    <LicenseVersion>2.2</LicenseVersion>
+  </Data>
+  <Signature>qwL08MiwiqBU8m9Aj2pjmMIZpjxiD8YjQXj5OOUA2u4qpLvcpzGNkfaWrh1Iyvebonx5hfuQcm6N/xIkUAZu86CDc2tNf6LQRA6Gsa+GuTl3MZmXiz0H2yRnR3mOCQjzDPNrIPEa/2DMQyIE+RnB4hzACb2ukZZKjWmbk6C0VdI=</Signature>
+</License>

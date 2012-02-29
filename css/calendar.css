@@ -1,0 +1,73 @@
+/* --------------------------------------------------- */
+/* calendar.css                         					 */
+/* --------------------------------------------------- */
+/* Applied to the pop-up date-picker used throughout   */
+/* image bank.														 */
+/* --------------------------------------------------- */
+
+body {
+	font-family: tahoma, verdana, Arial, sans-serif;
+	background: #fff;
+	margin: 2px 4px;
+	font-size: 70%;}
+
+h1 {
+	font-size: 140%;
+	color: #333;
+	margin: 4px 0 5px 2px;}
+
+select { font-family: tahoma, verdana, Arial, sans-serif;}	
+
+a img { border:0; }
+
+table { font-size: 1em;}				/* For the benefit of IE 5x */	
+
+td.back {
+	text-align:left;
+	width:auto;
+	}
+	
+td.forward {
+	text-align:right;
+	width:auto;
+	}
+
+table.calendar td a:hover { text-decoration: underline;}
+
+table.calendar {
+	table-layout: fixed;					/* Makes sure all cells are the same width */
+	border: 1px solid #444;
+	border-collapse: collapse;}
+
+table.calendar td a { 
+	text-decoration: none; 
+	color: #333; 
+	display:block; 
+	height:27px; 
+	he\ight:20px; 
+	width:40px; 
+	padding-top:7px;}
+
+table.calendar th, table.calendar td {
+	border: 1px solid #999;
+	width: auto;
+	text-align: center;
+	padding: 0; 
+	border-collapse: collapse;}
+	
+table.calendar th {
+	background: #777;
+	color: #fff;
+	border-color: #444;
+	padding: 4px 0px;  }
+
+table.calendar td {
+	color: #999;
+	}
+
+table.calendar td.greyed { background-color: #eee; }
+table.calendar td.today { background-color: #D9EEFF; font-weight: bold;}
+
+/* table.calendar td:hover { background-color: #bbb;} */	/* removed as causing problems in IE7 */
+
+table.calendar td a:hover { color:#000;}

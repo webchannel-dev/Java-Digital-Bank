@@ -1,0 +1,334 @@
+/* ======================================================================================== */
+/* H O M E   S T Y L E S H E E T                                                            */
+/* Home page specific styles											                                */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		13-Feb-2007    Created.                                          */
+/* ======================================================================================== */
+
+/* ================================================================================= */
+/* Page layout 																			 				 */
+/* ================================================================================= */
+#homePage #rightCol { 
+   float: right; 
+   width: 284px; 
+   }
+
+#homePage #leftCol {
+	margin-right:309px;
+	} 	
+	 
+
+/* ================================================================================= */
+/* Quick Search Panel																	 				 */
+/* ================================================================================= */
+
+#qsPanel { 
+   background: #fff url(../../images/standard/misc/panel_grad.gif) bottom left repeat-x; 
+   border: 1px solid #aaa; 
+   margin: 1.5em 0 0 0;
+   padding:13px 2% 12px 2%;
+	height:1%; 
+	overflow:hidden;
+	}
+
+#qsPanel div.inner {
+	float:left;
+	width: 83%;
+}	
+
+#qsPanel label.search { 									/* Search... label */
+	font-size: 1.4em; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin:0;
+	line-height: 28px;
+	float:left;
+	text-align:right;
+	width: 16%;
+	min-width: 50px;
+}
+
+#qsPanel input, #qsPanel select {
+	float:left;
+	margin-left: 2%;
+}
+#qsPanel select {
+	margin: 0.8em 0 0 2%;
+	clear:left;
+}
+ 
+#qsPanel input.text { 
+	font-size: 1.2em;
+	height: 1.2em;
+	padding: 5px;
+	border: 1px solid #aaa;
+	width:43%;
+
+}
+#qsPanel input.text.wider {
+	width: 48%;									/* Used when asset type dropdown is displayed */
+}
+	
+#qsPanel input.button { 					/* Go button */
+	margin:0 4% 1px 2%; 
+	height: 28px;
+	font-weight: bold;
+}
+
+#qsPanel a.advanced {						/* Advanced search link */
+	width: 27%;
+	min-width: 105px;
+	padding: 0.7em 0 0 ;
+	margin: 0 0 0 2%;
+	float:left;
+}	
+	
+	
+#qsPanel a.advanced:hover {color:#454545;}
+
+#qsPanel ul.radioList {
+	margin: 0.8em 1% 0 2%;
+	float:left;
+	clear:left;
+	width: 46%;
+}
+#qsPanel ul.radioList li {
+	border:0;
+}
+#qsPanel ul.radioList li input.radio {
+	margin-left:0;
+}
+#qsPanel ul.radioList li:hover {
+	background: none;
+}
+#qsPanel ul.radioList label {
+	font-weight: normal;
+	cursor: pointer;
+	width: 83%;
+}
+
+	
+
+/* ================================================================================= */
+/* Saved Searched																			 				 */
+/* ================================================================================= */	
+div.mySaved,
+div.commonSaved { 
+   background: #fff url(../../images/standard/misc/panel_long_grad.gif) bottom left repeat-x; 
+   border: 1px solid #aaa; 
+	border-top:0;
+   margin: 0;
+   padding:11px 0 0 3%;
+	height:1%;
+	overflow: hidden; 
+}
+div.commonSaved ul {
+	list-style: none;
+	margin: 0; padding:0;
+}
+div.commonSaved ul li{
+	float:left;
+	width: 29%;
+	margin: 0 3% 0 0;
+	padding-bottom: 1em;
+}
+div.commonSaved img{
+	float:left;
+	margin-right: 0.5em;
+	border: 1px solid #888;
+}
+div.commonSaved a.thumb {
+	float:left;
+}
+div.commonSaved a:hover img{
+	border-color: #333;
+}
+div.commonSaved a,
+div.mySaved a{
+	font-weight: normal;
+	text-decoration: underline;
+}
+div.commonSaved a:hover,
+div.mySaved a:hover{
+	color:#333;
+}
+#qsPanel.middle {
+	background: #fff url(../../images/standard/misc/panel_grad_border.gif) bottom left repeat-x;
+	border-bottom:0;
+}
+div.mySaved.middle,
+div.commonSaved.middle{
+	background: #fff url(../../images/standard/misc/panel_long_grad_border.gif) bottom left repeat-x;
+	border-bottom:0;
+}
+
+div.mySaved ul { 
+	float:left; 
+	width:28%;
+	margin-bottom: 1em;
+	}
+div.mySaved  ul li { 
+	line-height: 1.2em; 
+	padding: 0px 3% 3px 0; 
+	}
+	
+/* ================================================================================= */
+/* Browse categories and access levels panels									 				 */
+/* ================================================================================= */
+h3.browse {
+	margin: 1em 0 0.2em 0;
+}
+div.browsePanel {
+	border:1px solid #aaa;
+	background: #eee;
+	padding: 12px 0 12px 3%;
+	padding-bottom:0;
+	margin-top:1em;
+	height: 1%;
+	}
+div.tabsAbove div.browsePanel {
+	margin-top:0;
+	}	
+
+div.tabsAbove {
+	margin-top:-1px;
+}	
+
+#homePage div.categoryList ul { 
+	width: 28%; 
+	margin-bottom:1em;
+	min-width:9em;								/* stops columns getting too scrunched up */
+	}
+	
+/* Css for different numbers of columns on homepage */       
+#homePage div.categoryList ul.cols1 {
+    width: 90%;
+    }
+#homePage div.categoryList ul.cols2 {
+    width: 45%;
+    }    
+#homePage div.categoryList ul.cols3 {
+    width: 29% !important;
+    }	
+/* squeeze a bit more width out of categories with images */    
+#homePage div.categoryList ul.catThumbs.cols3 { 	
+	width: 33%;
+	}    
+#homePage div.categoryList ul.cols4 {
+    width: 20%;
+    }	   
+    
+/* ================================================================================= */
+/* Optional Browse tabs on homepage									 								 */
+/* ================================================================================= */     
+
+#homePage p.tabHolderPopup a {
+	background-color: #fff;
+}
+#homePage p.tabHolderPopup a.active {
+	background-color: #EEEEEE;
+}
+
+
+
+/* ================================================================================= */
+/* Featured, recently added, and promoted images								 				 */
+/* ================================================================================= */
+
+img.featuredImage {border:0; display: block;}
+
+div.noFeatured {			/* Only displayed when there is no featured image selected */
+	background: #eee;
+	border: 1px solid #ccc;
+	padding:10px;
+	margin-bottom:1em;
+	}
+
+div.promo {padding-bottom:8px;}	
+div.promo p {margin-bottom:0;}
+
+	
+#homePage #rightCol h3{ 
+	margin:0.1em 0 0.5em; 
+	clear:both; }
+
+#homePage a.imgWrapper {  
+	float:left; 
+	margin:0 9px 5px 0px; 
+	border:1px solid #ccc; 
+	height:1%;
+	}
+	
+#homePage a.squareThumb3, #homePage a.squareThumb6, #homePage a.squareThumb9, #homePage a.squareThumb12, #homePage a.squareThumb15  { 		
+	margin-right:0;				/* zero the margin on every third thumbnail */
+	}
+	
+#homePage a.imgWrapper:hover {
+	border-color:#eee; 
+	} 
+
+#homePage a.imgWrapper img {
+	border:0px; 
+	margin:3px 3px 3px 3px; 
+	display:block; 
+	}
+
+/* File icons in promoted images panel */	
+div.promo a.iconWrapper { 				/* This is completely dependant on the size of homogenised thumbnails in the application */
+	height:86px !important;
+	width:86px;
+	text-align: center;
+	}
+div.promo a.iconWrapper img{
+	margin-top:15px !important;
+	margin-left: auto !important;
+   margin-right: auto !important;
+	}		
+		
+
+/* ================================================================================= */
+/* javascript explorer							 									 */
+/* ================================================================================= */
+/* When this is activated the leftCol is closed off before it so assets can stretch the full 
+	width of the page */
+.homepageExplorer{ 
+	width:272px; 
+	float: left; 
+	}
+ 
+.homePageBrowse{
+	margin-left:300px;
+	}
+	
+* html .homePageBrowse{margin-left:28px; float:left;}
+  
+.explorerBrowse{
+	width:100%; 
+	float:left;
+	background: url(../../images/standard/misc/vdots_dark.gif) top left repeat-y;
+	background-position:271px 0px;
+	margin-top:15px;
+	border:1px solid #ccc;
+	border-width:1px 0px;
+	padding-top:15px;
+	padding-bottom: 15px;
+} 
+.explorerBrowse .panelWrapper {
+	height: 1%;
+	width: 100%;
+	float:left;
+}
+
+
+
+/* ================================================================================= */
+/* Slideshow Panel													 				 */
+/* ================================================================================= */
+
+div.slideshowPanel {
+	height:600px;
+	border:1px solid #ccc;
+	background:#eee;
+}
+

@@ -1,0 +1,1 @@
+<li><a href="../action/browseItems?categoryId=-1&amp;categoryTypeId=1" id="nav_browse" <logic:equal name='section' value='browse'>class="current"</logic:equal>><bright:cmsWrite identifier="menu-browse" filter="false"/></a></li>

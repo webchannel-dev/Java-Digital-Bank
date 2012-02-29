@@ -1,0 +1,269 @@
+/* ======================================================================================== */
+/* R T L  S T Y L E S H E E T                                                            	  */
+/* Used for languages that flow right to left, creating a mirror image of the site.			  */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		20-Nov-2007    Created.                                          */
+/* ======================================================================================== */
+
+
+/* ================================================================================= 
+	Main structure	and global tweaks						
+==================================================================================== */	
+
+#content {                    	/* wrapper div for main content column */
+   float: left; 
+   margin-right: -165px;				/* using negative margins to hold nav column */
+	margin-left: 0;
+   }
+
+#mainCol  {                    	/* push main content over */
+   margin-right:165px;
+	margin-left:0; 
+	}
+
+#navCol {                     	/* left-hand column containg navigation */
+   float:right;
+	}
+	
+#footer { 
+   margin: 2em 165px 2em 0; 
+	}	
+
+#header div.headerContent{				/* contains hLinks and search */ 
+	margin-left:0px;
+	margin-right:165px;
+	text-align:left;
+	float:left;
+	}
+
+#header form {
+	float:left;
+	}
+		
+#hLinks { 
+	float:none;
+	}		
+	
+#header img { 								/* logo */
+	float:right; 
+	}		
+	
+ul {
+	padding:0;
+   margin: 0 1.5em 0 0;
+   }	
+	
+* html ul {
+	margin:0;
+	padding: 0 1.5em 0 0;
+	}	
+
+/* Swap alignments */
+.floatRight { float: left;}	
+.floatLeft { float: right;}		
+
+.alignRight { text-align: left !important; }
+
+.rtlmargin { margin-right:1em !important; }	/* used for rtl issue on batch update page */
+
+/* Collapsing expanding content */	
+.expand { 
+	padding: 0px 11px 0 0;
+	background: url(../../images/standard/arrow/arrow_rtl.gif) center right no-repeat;
+	height: 1%;
+}	
+
+.collapse {
+	padding: 0 13px 0 0;
+	background: url(../../images/standard/arrow/nav_down_arrow_rtl.gif) right 4px no-repeat;
+}
+		
+/* ================================================================================= 
+	Navigation					
+==================================================================================== */		
+ul.nav a:hover, ul.nav li a.current, ul.nav li a.current:hover { 
+   background-position: left center; 
+	background-image: url(../../images/standard/arrow/nav_arrow_rtl.gif); 
+	} 
+   
+/* Upload and Admin expanding links */	
+a.openHover{
+	background-position: left center !important; 
+	background-image: url(../../images/standard/arrow/nav_down_arrow_hover_rtl.gif) !important;
+	}
+
+a.open {
+	background-position: left center !important; 
+	background-image: url(../../images/standard/arrow/nav_down_arrow_rtl.gif) !important;
+	}
+	
+#adminPage a#admin_nav_link,
+#importPage a#upload_nav_link {
+	background: url(../../images/standard/arrow/nav_down_arrow_rtl.gif) right center no-repeat;
+	}
+	
+/* sub-menu styles */  
+ul.nav ul li a {padding-left: 0px; padding-right:20px;}
+
+
+/* Ensure the sub-menus stay open when on an admin or upload page */
+#adminPage ul#admin_nav,#importPage ul#upload_nav { display: block; } 
+#adminPage a#admin_nav_link, #importPage a#upload_nav_link {background: url(../../images/standard/arrow/nav_down_arrow_rtl.gif) left center no-repeat;}
+
+div.lbPanel a#lbLink { 
+	background: url(../../images/standard/icon/folder.gif) top right no-repeat; 
+	padding-left: 0px; padding-right: 20px;
+	}	
+	
+a#profileLink,
+a#logoutLink,
+a#helpLink { 
+	background: none; padding:0; }	
+	
+/* ================================================================================= 
+	Home page					
+==================================================================================== */		
+
+#homePage #rightCol { 
+	float:left;
+   }
+
+#homePage #leftCol {
+	margin-left:309px;
+	margin-right:0;
+	display:block;
+	} 
+
+#homePage #leftCol .clearLeft {
+	clear:right
+	} 	
+	
+#homePage a.imgWrapper {  
+	float:right; 
+	margin:0 0px 5px 9px; 
+	}		
+
+#qsPanel a.advanced { 							/* Advanced search link */
+	float:left; 
+	margin-left:1%;
+	margin-right:0;
+	width: 5em;
+	}	
+
+#homePage a.squareThumb3, #homePage a.squareThumb6, #homePage a.squareThumb9  { 		
+	margin-left:0;				/* zero the margin on every third thumbnail */
+	}
+		
+/* ================================================================================= */
+/* Browse, search results page                                                       */
+/* ================================================================================= */
+div.categoryList ul { float:right;}
+
+ul.lightbox li { 								/* lightbox panels */
+   float: right; 
+   margin: 4px 0px 4px 8px; 
+  	}
+  
+ul.lightbox p.action { 
+	margin: 0 5px 8px 8px; 
+	text-align: left;
+	font-size: 90%;}
+	 
+ul.lightbox p.action a, ul.lightbox p.action span.added { 
+	padding: 0 0 0 12px !important; 
+	background-position: left center!important;}   
+	
+/* ================================================================================= */
+/* Asset detail page				                                                       */
+/* ================================================================================= */
+div.actions { float:right; margin-left:1em; }	
+
+div.thumbFile { 			
+   float:right;
+	margin-left:1em; }
+
+
+/* ================================================================================= */
+/* Lightbox page				                                                       */
+/* ================================================================================= */
+#lightboxPage div.buttons {float:left;}
+#lightboxPage h2.section { clear: both; } 
+
+/* ================================================================================= */
+/* Tabs 				                                                       */
+/* ================================================================================= */
+div.adminTabs h2, p.tabHolder strong {
+	margin:0 0px 0 2px;
+	float: right;
+	}	
+
+select {
+	padding-right:2px;
+	}	
+	
+/* ================================================================================= 
+	Table-free forms (i.e. on download image page)	
+	- Reverse float directions										
+==================================================================================== */	
+div.dialogPanel span, div.dialogPanel input, div.dialogPanel label { 
+	float:right; 
+	}
+
+div.dialogPanel input.button { 	
+	margin-left:5px; 
+	margin-right:0; 
+	}
+
+form.floated input, 
+form.floated textarea, 
+form.floated select,
+form.floated label, 
+form.floated span.empty {
+	float:right; 
+	margin-left:5px;
+	}
+	
+table.form th { text-align: right; }		
+
+/* Just show cancel button below because of alignment issues */
+input#cancelButton { position: static; top: 0px; margin-top: 5px; }
+* html input#cancelButton { position: static; margin-top:5px;  }
+
+
+/* Required because IE5 needs an align to sit in the middle */
+* html #loginPanel { 
+	text-align: right;
+	}	
+
+/* ================================================================================= */
+/* Popups			                                                                   */
+/* ================================================================================= */	
+
+div.copy p {margin-right:1em; }
+div.copy ul {margin-right:2.5em; padding-right:0;}	
+
+
+/* =================================================================================  
+   Footer language links													 	 
+   ================================================================================= */	
+div.languageHolder {
+	float:left;
+	}	
+		
+ul.languageLinks {
+	float:left;
+	margin:0 1em 0 0;
+	}
+
+ul.languageLinks li {
+	margin:0 10px 5px 0;
+	}
+	
+/* Content edit button fix */
+#qsPanel img.editImg {
+	float:left;
+	margin-left:2px;
+	}	
+
+

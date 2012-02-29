@@ -1,0 +1,1 @@
+<c:if test="${not empty attribute.onChangeScript}">onChange="<bean:write name="attribute" property="onChangeScript" filter="false"/>"</c:if>

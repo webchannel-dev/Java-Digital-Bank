@@ -1,0 +1,9 @@
+div.content { margin: 20px; width: 400px; }
+
+table.email { border: thin solid #aaa; margin-bottom: 10px; width: 100% }
+table.email th { text-align: left; padding: 4px 8px 4px 14px; background-color: white; border-bottom: 1px thin; width: 10%; }
+table.email td { padding: 4px 8px; background-color: white; border-bottom: 1px thin;} 
+table.email td.body { padding:14px; }
+table.email td.language { text-decoration: underline; }
+table.email tr.odd td, table.email tr.odd th { background-color: #eee; }
+

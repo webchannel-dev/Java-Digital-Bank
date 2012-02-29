@@ -1,0 +1,2 @@
+<option value="25" <c:if test="${downloadForm.frameRate == 24}">selected</c:if>><bright:cmsWrite identifier="snippet-standard" filter="false"/> (25 fps)</option>
+<option value="50" <c:if test="${downloadForm.frameRate == 50}">selected</c:if>><bright:cmsWrite identifier="snippet-high" filter="false"/> (50 fps)</option>
