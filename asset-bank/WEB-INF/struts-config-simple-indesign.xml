@@ -1,0 +1,13 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<action-mappings>
+		<action path="/sInDViewLinkedAssets" type="com.bright.assetbank.custom.simpleindesign.asset.action.ViewInDesignLinkedAssetsAction">
+			<forward name="Success" path="/jsp/plugin/simpleindesign/view_indesign_linked_assets.jsp" />
+			<forward name="AssetNotFound" path="/jsp/standard/en/error/asset_not_found.jsp" />
+		</action>
+		<action path="/sInDViewReferencingDocs" type="com.bright.assetbank.custom.simpleindesign.asset.action.ViewInDesignReferencingDocsAction">
+			<forward name="Success" path="/jsp/plugin/simpleindesign/view_indesign_referencing_assets.jsp"/>
+			<forward name="AssetNotFound" path="/jsp/standard/en/error/asset_not_found.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

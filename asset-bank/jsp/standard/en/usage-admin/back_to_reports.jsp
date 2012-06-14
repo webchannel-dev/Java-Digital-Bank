@@ -1,0 +1,1 @@
+	<a href="../action/viewReportHome?startDateString=<bean:write name='reportForm' property='startDateString'/>&endDateString=<bean:write name='reportForm' property='endDateString'/>&reportType=<bean:write name='reportForm' property='reportType'/>" class="bold">&laquo; Back to Reports</a>

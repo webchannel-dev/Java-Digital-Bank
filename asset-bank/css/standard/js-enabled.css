@@ -1,0 +1,69 @@
+/* ======================================================================================== */
+/* J A V A S C R I P T   E N A B L E D                                                      */
+/* Contains rules for general typography and frequently used elements (e.g. horizontal      */
+/* rules, etc)                                                                              */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		10-Nov-2008    Created.                                          */
+/* ======================================================================================== */
+
+
+/* ================================================================================= */
+/* General initial hiding													 				 				 */
+/* ================================================================================= */
+.js-enabled-hide {
+	display:none !important;
+}
+
+.js-enabled-hide-soft {
+	display:none;
+}
+
+.js-enabled-show {
+	display:block !important;
+}
+
+.js-enabled-show-inline {
+	display:inline !important;
+}
+
+/* ================================================================================= */
+/* Specific examples														 				 				 */
+/* ================================================================================= */
+
+ul#main_nav li.subholder ul{ 
+	display: none; 
+	} 
+	
+/* approve items pages */	
+ul.assetList li.first td.copyAction{
+	vertical-align:middle;
+	background: url(../../images/standard/misc/curly_bracket.png) left center no-repeat;
+	padding-left: 60px;
+	visibility: visible;
+} 	
+
+ul.radioButtons label input {
+	left:-9999px;
+	position: absolute !important;
+}
+
+ul.assetList li table div.radioGroup {
+	display:none;
+}
+
+
+p.tabHolder input {
+	position:absolute;
+	left:-9999px;
+}
+table.permissions img.expander {
+	visibility:visible;				
+}
+
+
+/* Show javascript dropdowns*/
+div.dropHolder{
+	display:inline-block;
+}
+

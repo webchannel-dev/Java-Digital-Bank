@@ -1,0 +1,1979 @@
+/* ======================================================================================== */
+/* G L O B A L    S T Y L E S                                                               */
+/* Contains rules for general typography and frequently used elements (e.g. horizontal      */
+/* rules, etc)                                                                              */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		07-Feb-2006    Created.                                     */
+/* ======================================================================================== */
+
+
+/*! normalize.css 2011-11-04T15:38 UTC - http://github.com/necolas/normalize.css */
+/* BB - I've stripped a few uneccesary rules out of normalize*/
+/* =============================================================================
+Base
+========================================================================== */
+
+/*
+* 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+* http://clagnut.com/blog/348/#c790
+* 2. Keeps page centred in all browsers regardless of content height
+* 3. Prevents iOS text size adjust after orientation change, without disabling user zoom
+* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+*/
+
+html {
+    font-size: 100%; /* 1 */
+    overflow-y: scroll; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 3 */
+    -ms-text-size-adjust: 100%; /* 3 */
+}
+
+/*
+* Addresses margins handled incorrectly in IE6/7
+*/
+
+body {
+    margin: 0;
+}
+
+/*
+* Addresses font-family inconsistency between 'textarea' and other form elements.
+*/
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: tahoma, arial, sans-serif 
+}
+
+
+/* =============================================================================
+Links
+========================================================================== */
+
+/*
+* Addresses outline displayed oddly in Chrome
+*/
+
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+* Improves readability when focused and also mouse hovered in all browsers
+* people.opera.com/patrickl/experiments/keyboard/test
+*/
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+
+/* =============================================================================
+Typography
+========================================================================== */
+
+/*
+* Neutralise smaller font-size in 'section' and 'article' in FF4+, Chrome, S5
+*/
+
+h1 {
+    font-size: 2em;
+}
+
+/*
+* Addresses styling not present in IE7/8/9, S5, Chrome
+*/
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/*
+* Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+
+b,
+strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+/*
+* Addresses styling not present in S5, Chrome
+*/
+
+dfn {
+    font-style: italic;
+}
+
+/*
+* Addresses styling not present in IE6/7/8/9
+*/
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/*
+* Corrects font family set oddly in IE6, S4/5, Chrome
+* en.wikipedia.org/wiki/User:Davidgothberg/Test59
+*/
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+/*
+* Improves readability of pre-formatted text in all browsers
+*/
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+* 1. Addresses CSS quotes not supported in IE6/7
+* 2. Addresses quote property not supported in S4
+*/
+
+/* 1 */
+
+q {
+    quotes: none;
+}
+
+/* 2 */
+
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+small {
+    font-size: 75%;
+}
+
+/*
+* Prevents sub and sup affecting line-height in all browsers
+* gist.github.com/413930
+*/
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+
+
+
+/* =============================================================================
+Embedded content
+========================================================================== */
+
+/*
+* 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+* 2. Improves image quality when scaled in IE7
+* code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+*/
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/*
+* Corrects overflow displayed oddly in IE9
+*/
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+
+/* =============================================================================
+Forms
+========================================================================== */
+
+/*
+* 1. Corrects color not being inherited in IE6/7/8/9
+* 2. Corrects alignment displayed oddly in IE6/7
+*/
+
+legend {
+    border: 0; /* 1 */
+    *margin-left: -7px; /* 2 */
+}
+
+/*
+* 1. Corrects font size not being inherited in all browsers
+* 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+* 3. Improves appearance and consistency in all browsers
+*/
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/*
+* Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+*/
+
+button,
+input {
+    line-height: normal; /* 1 */
+}
+
+/*
+* 1. Improves usability and consistency of cursor style between image-type 'input' and others
+* 2. Corrects inability to style clickable 'input' types in iOS
+* 3. Removes inner spacing in IE7 without affecting normal text inputs
+* Known issue: inner spacing remains in IE6
+*/
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer; /* 1 */
+    -webkit-appearance: button; /* 2 */
+    *overflow: visible; /* 3 */
+}
+
+/*
+* 1. Addresses box sizing set to content-box in IE8/9
+* 2. Removes excess padding in IE8/9
+*/
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+* 1. Addresses appearance set to searchfield in S5, Chrome
+* 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+*/
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+* Removes inner padding that is displayed in S5, Chrome on OS X
+*/
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+* Removes inner padding and border in FF3+
+* www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+*/
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+* 1. Removes default vertical scrollbar in IE6/7/8/9
+* 2. Improves readability and alignment in all browsers
+*/
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+
+/* =============================================================================
+Tables
+========================================================================== */
+
+/*
+* Remove most spacing between table cells
+*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ================================================================================= */
+/* General typography													 			 */
+/* ================================================================================= */
+
+body { 
+   	margin: 0;
+   	padding: 0; 
+   	font-family: tahoma, verdana, arial, sans-serif; 
+   	font-size: 70%; 
+	background-color: #fff; 
+	color: #444; 
+}
+
+p {
+   line-height: 1.3em;
+   margin: 0 0 0.8em 0;
+   }
+
+.disabled {color: #b0b0b0;}
+a.disabled {
+	cursor: auto;
+}
+a.disabled:hover {
+	text-decoration: none !important;
+	color: #b0b0b0 !important;
+}
+.comment {color: #909090;}
+.subtle {color: #bbb;}
+.note {color: #777;}
+.hidden {display:none;}
+.underline { border-bottom: 1px solid #ccc;}
+.noTopMargin {margin-top:0 !important}
+.noBottomMargin {margin-bottom:0 !important}
+.noRightMargin {margin-right:0 !important}
+.noLeftMargin {margin-left:0 !important}
+.noMargin {margin:0 !important;}
+.padded { padding: 1em 0;}
+.even {
+	background-color: #eee;
+}
+
+/* Used for testing what copy is content-managed */
+span.langTest, span.langtest { 
+	color:red !important; 
+	width:auto !important; 
+	display:inline; 
+	float:none !important; 
+	padding:0 !important;}   
+    
+a {
+   color: #555;
+   font-weight: bold;
+   text-decoration: none;
+   outline:none;
+   }   
+a:hover { text-decoration: underline; }
+a.help-popup { }
+
+input#closeButton {					/* Close window buttons on popup windows - hidden until shown by javascript */
+	display:none;
+	float:right;
+	margin-bottom:1em;
+}
+
+/* Headings */   
+h1 { font-size: 170%; margin: 0 0 0.6em 0;}
+h1.underline { padding-bottom: 10px; }	/* for pages which don't have a div.head */
+h2 { font-size: 125%; margin: 0 0 0.8em 0; }
+h2.underline { font-size: 125%; margin: 0 0 0.8em 0;  padding-bottom: 10px;}
+h3 { font-size: 110%; margin: 0 0 0.8em 0; }   
+h4 { font-size: 100%; margin: 0 0 0.5em 0; }  
+
+h2.light {
+	font-weight: normal; 
+	font-size: 140%;
+}
+h2 span {
+	font-weight: normal;
+	font-size: 0.8em;
+}
+h2 strong, h3 strong {
+	/* color:#000; */
+}
+
+
+
+blockquote {
+    border-left: 5px solid #EEEEEE;
+    margin: 1em 0;
+    padding-left: 15px;
+}
+blockquote p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+}
+blockquote small {
+    color: #BFBFBF;
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 18px;
+}
+blockquote small:before {
+    content: "— ";
+}
+/* make sure browsers display font-sizes consistently */ 
+ul, ol, dl, table, p, input, textarea, select, label { font-size: 100%; }   
+textarea {font-family: tahoma, verdana, arial, sans-serif;}
+
+ul {
+   margin: 0 0 0 1.2em;
+   padding: 0;
+   }
+
+ul.normal li {margin: 0.2em 0;}
+
+
+/* Thumbnail images used throught asset bank */
+a.image img, img.image { border: 1px solid #000;  }
+img.icon {border:0;}
+
+/* Make sure all browsers display hover behaviour: */
+a.image:hover img, * html a.image:hover { border-color: #999; }
+
+
+.hr {									/* Horizontal rule   <div class="hr"></div>  */
+	padding: 0;
+	margin: 1em 0;
+	padding-top: 0px;
+	border-top:1px solid #666;
+	line-height: 1px;
+	}
+	
+.centered {							/* Used a lot for form submit buttons */
+	text-align:center; }	
+	
+.alignRight { text-align: right !important; }
+
+	
+span.required { 					/* used to style the asterix indicating a required field */   
+	color: #f00; 
+	font-weight: normal; 
+	}   
+span.requiredForCompleteness { 					/* used to style the asterix indicating a required field */   
+	color: #61A52B !important; 
+	} 	
+#importPage span.requiredForCompleteness { 	/* do not show on bulk upload page */   
+	display:none;
+	} 	
+	
+span.quotemark {
+	color: #666;
+	font-size: 1.3em;
+	font-wieght: bold;
+	font-family: georgia serif;
+	height: 12px;
+	line-height: 12px;
+}	
+	
+div#loading { 						/* loading box - background image also needs to be defined inline on the page to work */
+	background: url(../images/standard/misc/loading.gif) top center no-repeat;  
+	padding-top:40px;
+	font-style: italic;
+	text-align: center;
+	
+	}
+		
+div.head { 							/* head strip on numerous pages usually containg a link back */
+   padding:1em 0; 				/* to previous pages */
+   margin-bottom: 1em; 
+   border: 1px solid #ddd; 
+   border-width: 1px 0px;  
+   overflow: hidden;
+   height: 1%;
+	}
+div.head.stripBelow {
+	margin-bottom: 0;
+	border-width:1px 0;
+}
+div.head.tabsAbove {
+	border-top:0;
+	padding-top:0;
+}
+	
+a.slideshow {
+	float:right;
+	background: url(../../images/standard/icon/slideshow.gif) left center no-repeat;  
+	padding-left:20px;
+}	
+
+a.editLink {
+	color: red;
+}
+
+a.addLink {
+	background: url(../../images/standard/icon/add_circle.gif) left center no-repeat;
+	padding-left: 18px;
+}
+a.empty {
+	background: url(../../images/standard/icon/bin.gif) left center no-repeat;
+	padding-left: 11px;
+}
+
+.js-enabled-show, .js-enabled-show-inline {				/* initially hide things which are shown in the dynamic js-enabled.css */
+	display:none !important;
+}
+
+.printOnly {
+	display:none;
+}
+.printOnlyIE67 {
+	display:none;
+}
+
+.ie6Only {
+	display:none;
+}
+/* fix issue with tinymce inserting paragraphs around content */
+label p {
+	display:inline;
+	margin:0; padding:0;
+}
+
+div.horizontalScroll {
+	width: 100%;
+	overflow-x: auto;
+}
+
+/* dl used for printing out attributes (e.g user details) */
+dl {
+	overflow: hidden;
+	height:1%;
+}
+dt,dd {
+	float:left;
+	padding: 0.3em 0;
+	margin: 0;
+}
+dt {
+	width: 13%;
+	font-weight: bold;
+	clear:left;
+	text-align:right;
+	padding-left: 2%;
+}
+dd {
+	float:left;
+	padding-left: 2%;
+	width: 83%;
+}
+
+dl.user {
+	border: 1px solid #ccc;
+	margin-bottom: 2em;
+}
+
+/* System logs */
+div.log {
+	margin: 1em 0;
+}
+div.log h3 {
+	color: #fff;
+	background:#888;
+	margin:0;
+	padding: 0.5em 1em;
+}
+div.log > ul {
+	margin:0 0 1.5em 0;
+	padding:0;
+	list-style:none;
+	border: 1px solid #ccc;
+	border-top:0;
+	max-height:200px;
+	overflow-y:auto;
+}
+div.log > ul li{
+	padding: 0.4em 1em;
+	border-bottom: 1px solid #e4e4e4;
+}
+div.log > ul li:last-child {
+	border:0;
+}
+div.log > ul li.even,
+div.log > ul li:nth-child(2n) {
+	background:#eee;
+}
+
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* UI components																	 */
+/* ================================================================================= */
+/* ================================================================================= */
+
+/* ================================================================================= */
+/* System messages															     	 */
+/* ================================================================================= */		
+/* old school error messages */
+.error {color: #8F1111;}
+
+/* New style of system message */
+div.error, div.confirm, div.warning, div.info, div.edit-mode-strip{
+	border:1px solid #aaa;
+	padding:1.2em 1em 1.1em 5.4em;
+	margin-bottom:1em;
+	line-height:1.3em;
+	background-position: 1.4em center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	/* Do not insert display : block or some unwanted messages will start showing up */
+}	
+div.error {
+	border-color: #CF5A5A;
+	background-color: #FCE4E4;
+	background-image: url(../../images/standard/icon/error.gif);
+	color:#8F1111;
+}
+div.confirm {
+	border-color: #61A52B;
+	background-color: #E9F9D0;
+	background-image: url(../../images/standard/icon/confirm.gif);
+}
+div.info {
+	border-color: #77A5BF;
+	background-color: #e7f0f3;
+	background-image:  url(../../images/standard/icon/info.gif);
+	color: #3A505B;
+}	
+div.warning {
+	border-color:#DFB90D;
+	background-color: #fdfecd;
+	background-image: url(../../images/standard/icon/warning.gif);
+	color: #5B4226;
+}	
+	
+/* Panel typography */
+div.error h3, div.warning h3, div.info h3, div.confirm h3 {
+	margin:0;
+	line-height: 1.6;
+}
+div.error a, div.warning a, div.info a, div.confirm a  {
+	text-decoration: underline;
+}
+div.error a {
+	color: #8F1111;
+}
+div.warning a {
+	color:#BC7927;
+}
+div.info a {
+	color: #1C5270;
+}
+div.confirm a {
+	color: #4B7F1F;
+}
+div.error p, div.confirm p, div.warning p, div.info p{
+	margin:0 0 0.2em 0;
+}		
+div.error ul, div.confirm ul, div.warning ul, div.info ul{
+	margin:0.5em 0;padding:0 0 0 0em;
+	list-style: square;
+	list-style-position:inside;
+}	
+div.error li, div.confirm li, div.warning li, div.info li{
+	margin:0 0 0.5em 0;padding:0;
+}
+
+/* Versions without an icon */
+div.confirm.noIcon, div.error.noIcon, div.warning.noIcon, div.info.noIcon {
+	background-image: none;
+	padding-left: 1em
+}	
+div.confirm.noIcon h2 {
+	background: url(../../images/standard/icon/accept.png) left 2px no-repeat;
+	padding-left: 22px;
+	line-height: 30px;
+	margin-bottom: 0;
+}
+div.confirm.noIcon h3 {
+	background: url(../../images/standard/icon/confirm.gif) left 0 no-repeat;
+	padding-left: 3.2em;
+	line-height: 30px;
+	margin-bottom: 0;
+}
+div.confirm div.floated {
+	float: left;
+	padding: 1em 0;
+	margin: 1em 0;
+}
+
+div.info img.loader {
+	float:right;
+	margin-top: 3px;
+}
+
+div.confirm.empty h2{
+	background-position: 1em 1em;
+}	
+
+/* Notification area at top of the page */
+div.top-strip {
+	background-image: none; 
+	margin:0;
+	border-top:0;
+	padding: 0;
+}	
+div.top-strip p.info {
+	font-size: 1.2em;
+	background: url(../../images/standard/icon/info.gif) left center no-repeat;
+	padding-left: 40px;
+	line-height: 40px;
+}
+div.top-strip p.error {
+	font-size: 1.1em;
+	background: url(../../images/standard/icon/error.gif) left center no-repeat;
+	padding: 0 0 0 40px;
+	line-height: 40px;
+}
+	
+/*	Older, legacy styles:	*/		
+p.message {
+	border: 1px dashed #bbb;
+	background: #eee;
+	padding:1em;
+	font-weight: bold;
+	margin:1em 0;
+}	
+
+div.highlight{
+	border: 1px solid #aaa;
+	background-color: #eee;
+	margin: 0.5em 0;
+	padding: 0.5em;
+}		
+
+
+/* Single line system messages. Try and keep these messages to a single line */
+.warningInline, .errorInline, .infoInline, .confirmInline, .loadInline {
+	background: url(../../images/standard/icon/alert.png) left 3px no-repeat;
+	padding-left:19px;
+	line-height: 24px;
+}
+.infoInline {
+	background: url(../../images/standard/icon/info_inline.png) left 4px no-repeat;
+}
+.confirmInline {
+	background: url(../../images/standard/icon/tick.png) left 4px no-repeat;
+}
+.errorInline {
+	background: url(../../images/standard/icon/cross.png) left 4px no-repeat;
+	padding-left:21px;
+}       
+.loadInline {
+	background: url('../../images/standard/misc/ajax_loader_small.gif') left 4px no-repeat;
+	padding-left:21px;
+}
+
+
+/* Inline Status style indicators ----------------------------------- */
+span.status {
+	padding-left: 20px;	
+}
+span.status-wait {
+	color: #666;
+	background: url('../../images/standard/icon/clock.png') left center no-repeat;
+	font-style:italic;
+}
+span.status-success {
+	color: #4B7F1F;
+	background: url('../../images/standard/icon/tick.png') left center no-repeat;
+}
+span.status-fail {
+	color: #8F1111;
+	background: url('../../images/standard/icon/cross.png') left center no-repeat;
+}
+
+
+
+/* ==================================================================
+	Generic container panel
+	================================================================== */
+.well {
+	padding: 1em;
+	background: #eee;
+	border: 1px solid #ccc;
+}
+
+
+/* ==================================================================
+	Buttons
+	================================================================== */
+.button {
+	font-weight: normal;
+	cursor: pointer;
+	display: inline-block;
+	background-color: #d1d1d1;
+	background-repeat: no-repeat;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d1d1d1));
+	background-image: -moz-linear-gradient(top, #f6f6f6, #d1d1d1);
+	background-image: -ms-linear-gradient(top, #f6f6f6, #d1d1d1);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #d1d1d1));
+	background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+	background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+	background-image: linear-gradient(top, #f6f6f6, #d1d1d1);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#d1d1d1', GradientType=0);
+	padding: 3px 10px 3px 10px;
+	color: #494754;
+	line-height: normal;
+	border: 1px solid #aaa;
+	border-bottom-color: #999; border-right-color: #999;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-webkit-transition: 0.1s linear all;
+	-moz-transition: 0.1s linear all;
+	-ms-transition: 0.1s linear all;
+	-o-transition: 0.1s linear all;
+	transition: 0.1s linear all;
+	text-decoration:none !important;
+}
+.confirm .button, .alert .button, .error .button {
+	color: #494754;
+}
+.button:hover {
+  background-position: 0 -10px;
+  color: #333;
+  text-decoration: none;
+}
+.button:focus {
+  outline: 1px dotted #666;
+}
+
+
+.button.button-alt {
+	background-color: #444;
+	background-repeat: no-repeat;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#666666), to(#444444));
+	background-image: -moz-linear-gradient(top, #666666, #444444);
+	background-image: -ms-linear-gradient(top, #666666, #444444);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #666666), color-stop(100%, #444444));
+	background-image: -webkit-linear-gradient(top, #666666, #444444);
+	background-image: -o-linear-gradient(top, #666666, #444444);
+	background-image: linear-gradient(top, #666666, #444444);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#444444', GradientType=0);
+	color: #eee;
+	border: 1px solid #333;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow:  0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* ==================================================================
+	Multiline button links 
+	================================================================== */
+.multilineButton {
+	padding: 1em;
+	display: inline-block;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	background-repeat: no-repeat;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e1e1e1));
+	background-image: -moz-linear-gradient(top, #eee, #ddd);
+	background-image: -ms-linear-gradient(top, #f6f6f6, #d1d1d1);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #d1d1d1));
+	background-image: -webkit-linear-gradient(top, #f6f6f6, #d1d1d1);
+	background-image: -o-linear-gradient(top, #f6f6f6, #d1d1d1);
+	background-image: linear-gradient(top, #f6f6f6, #d1d1d1);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#d1d1d1', GradientType=0);
+	margin: 1em 1.5em 1em 0;
+	-moz-border-radius: 0.7em;   
+	-webkit-border-radius: 0.7em;  
+	border-radius: 0.7em;
+	text-decoration: none;
+	font-weight: bold;
+	text-align:center;
+	-webkit-transition: 0.1s linear all;
+	-moz-transition: 0.1s linear all;
+	-ms-transition: 0.1s linear all;
+	-o-transition: 0.1s linear all;
+	transition: 0.1s linear all;
+	cursor:pointer;
+	
+}
+.ie9 .multilineButton {
+	border-radius: 0;
+}
+.multilineButton span {
+	font-weight: normal;
+	text-decoration: none;
+	color: #444;
+}
+.multilineButton:hover,
+.multilineButton.on {
+	border-color: #aaa;
+  	background-position: 0 -20px;
+	text-decoration: none;
+}
+div.error .multilineButton,
+div.warning .multilineButton,
+div.info .multilineButton,
+div.confirm .multilineButton {
+	margin:0.5em 1em 0 0;
+	filter:none;
+}
+div.warning .multilineButton {
+
+	border: 1px solid #DFB90D;
+	background: #F3F4AB;
+	text-decoration: none;
+}
+div.warning .multilineButton:hover {
+	border-color:#E5C05B;
+	background-color:#FCFA92;
+}
+
+/* radio button version of multilineButtons */
+ul.radioButtons {
+	overflow: hidden;
+	height:1%;
+	list-style: none;
+	margin:0; padding:0;
+}
+ul.radioButtons  li {
+	float:left;
+	max-width: 220px;
+}
+ul.radioButtons label {
+	display:block;
+}
+ul.radioButtons label.last {
+	margin-right:0;
+}
+ul.radioButtons label span {
+	color:#555;
+}
+
+/* ==================================================================
+	toolbar-like control panels, e.g. on assetbox page 
+	================================================================== */
+div.toolbar {
+	margin:1em 0;
+	clear:both;
+	/* cannot use overflow hidden for clearing as js dropdown will be obscured */
+	display:block;
+	height: 1%;
+}
+
+div.toolbar div.group,
+div.toolbar ul.toolbarActions  li {
+	float:left;
+	height: 1%;
+	display:block;
+	background: url(../../images/standard/misc/vdots.gif) top left repeat-y;
+	padding-left: 1.5em;
+	margin-left:1.5em; 
+	line-height: 2em; 
+	list-style:none;
+}
+
+
+div.toolbar ul.toolbarActions  li.first ,
+div.toolbar div.group.first {
+	background: none;
+	padding: 0; margin:0;
+}
+div.toolbar div.group input,
+div.toolbar div.group select,
+div.toolbar div.group .button {
+	float:left;
+	margin-right:10px;
+}
+div.toolbar div.group .last {
+	margin-right:0;
+}
+div.toolbar div.group select {
+	padding: 2px;
+}
+div.toolbar h2 {
+	float:left;
+	margin:0 !important;
+	line-height: 1.5em;
+}
+div.toolbar h3 {
+	float:left;
+	line-height: 1.8em;
+	margin:0 !important;
+}
+div.toolbar p {
+	float:left;
+	line-height: 2em;
+	margin:0 1em 0 0;
+}
+
+
+/* Dropdown buttons  (require an empty span tag for the drop arrow)----------------------------------- */
+div.dropHolder{
+	position: relative;
+	display:none; /*This is overwritten in js-enabled.css */
+	z-index:1; 	/*Needed for drop down to appear above assets in IE7*/ 
+}
+.ie6 .dropButton {
+	width: 90px;
+}
+.ie7 .dropButton {
+	max-width: 90px;
+}
+.dropButton span {
+	width: 9px;
+	height: 5px;
+	float:right;
+	margin: 5px 0 0  6px;
+	background: url('../../images/standard/arrow/drop_down_arrow.gif') left top no-repeat;
+}
+.dropButton:hover span {
+	background-position: left -10px;
+}
+.dropButton.on span {
+	background-position: left -20px;
+}
+div.dropHolder a.dropButton.on,
+div.dropHolder a.dropButton.on:hover {
+	color:#fff;
+	background-position:0 0;
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#bebdbd), to(#8c8b8b));
+	background-image: -moz-linear-gradient(top, #bebdbd, #8c8b8b);
+	background-image: -ms-linear-gradient(top, #bebdbd, #8c8b8b);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bebdbd), color-stop(100%, #8c8b8b));
+	background-image: -webkit-linear-gradient(top, #bebdbd, #8c8b8b);
+	background-image: -o-linear-gradient(top, #bebdbd, #8c8b8b);
+	background-image: linear-gradient(top, #bebdbd, #8c8b8b);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bebdbd', endColorstr='#8c8b8b', GradientType=0);	
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+
+ul.dropOptions {
+	position: absolute;
+	background: #fff;
+	left:0;
+	top:21px;
+	z-index:100;
+	padding: 0;
+	border:1px solid #aaa;
+	line-height: 1.2em;
+	width: 14em;
+	display: none;
+	list-style: none;
+	margin:0;
+	-moz-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Firefox */
+	-webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Safari, Chrome */
+	box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* CSS3 */	
+}
+div.toolbar ul.dropOptions li {
+	padding:0;margin:0;
+	float:none; background: none;
+	height: auto;
+	line-height: 1.3em;
+}
+ul.dropOptions a {
+	display:block;
+	padding: 0.5em 1em;
+	font-weight: normal;
+	color:#333;
+	height:1%;
+}
+ul.dropOptions a:hover {
+	background: #eee;
+	text-decoration: none;
+}
+
+
+/* dummy button for when proper button is disabled (i.e. no items are selected) */
+#dummyButtons {
+	opacity:0.5;
+	-moz-opacity: 0.5;
+	filter: alpha(opacity=50);
+	float:left;
+}
+#dummyButtons a {
+	cursor: default;
+}
+#dummyButtons  a.button.dropArrow:hover {
+	background-position: right top;
+}
+#dropButtonSelected {
+	display:none;						/* Actual button is initially hidden */
+	float:left;
+}
+
+/* Dropdown links ----------------------------------- */
+div.linkType ul.dropOptions,
+div.linkType div.drop {
+	top:21px;
+	z-index:1; 
+}
+
+a.dropLink {
+	padding: 4px 2.1em 5px 10px;
+	border: 1px solid #fff;
+	background: url(../../images/standard/arrow/nav_down_arrow.gif) right 60% no-repeat;
+	height: 1%;
+	float:left;
+	line-height: 1;
+}
+div.dropHolder a.dropLink:hover,
+div.dropHolder a.dropLink.on {
+	border-color:#ccc;
+	text-decoration: none;
+	
+}
+div.dropHolder a.dropLink:hover {
+	-moz-box-shadow: 4px 4px 6px rgba(0, 0, 0, .2); /* Firefox */
+	-webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, .2); /* Safari, Chrome */
+	box-shadow: 4px 4px 6px rgba(0, 0, 0, .2); /* CSS3 */	
+}
+div.dropHolder.linkType a.dropLink.on {
+	border-bottom-color:#fff;
+	color:#666;
+}
+div.dropHolder.linkType a.dropLink.on:hover {
+	-moz-box-shadow: none; /* Firefox */
+	-webkit-box-shadow: none; /* Safari, Chrome */
+	box-shadow: none; /* CSS3 */	
+	border-bottom-color:#fff;
+}
+
+/* Version without link text (only a single down arrow e.g. used in lb panel) ----------------------------------- */
+div.singleButton {
+	clear:none;
+	display:block;
+	float:left;
+}
+div.singleButton a.dropLink {
+	float:left;
+	height: 14px;
+	line-height: 14px;
+	width: 17px;
+	padding: 1px;
+	margin:2px 0 0 12px;
+	background-color: fff;
+	background-position: 5px 4px;
+	background-repeat: no-repeat;
+	border:1px solid transparent;
+	border-left-color: #ccc;
+	/* display:block; */
+}
+
+div.singleButton a.dropLink:hover {
+	background-color: #ddd;
+	border-color: #999;
+}
+div.singleButton a.dropLink.on {
+	text-decoration: none;
+	display:block;
+	background-color: #aaa;
+	border-color: #999;	
+}
+
+div.singleButton ul.dropOptions,
+div.singleButton div.drop {
+	top:18px;
+	right: 0;
+}
+
+/* Version in lbPanel */
+div.lbPanel div.singleButton a.dropLink {
+	margin:-1px 0 0 7px;
+}
+
+
+div.lbPanel div.dropOptions {
+	position: absolute;
+	background: #fff;
+	width: 15em;
+	left:10px;
+	top: 1.4em;
+	z-index:100;
+	border:1px solid #aaa;
+	line-height: 1.2em;
+	display: none;
+	-moz-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Firefox */
+	-webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Safari, Chrome */
+	box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* CSS3 */	
+}
+
+
+div.lbPanel div.dropOptions.scroll{
+	width: 15em;
+}
+div.lbPanel div.dropOptions.scroll ul {
+	max-height: 200px;
+	overflow-y: scroll;
+}
+
+div.lbPanel div.dropOptions ul {
+	display:block;
+	position: static;
+	line-height: 1.2em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+div.dropOptions ul a {
+	display:block;
+	padding: 0.5em 1em;
+	font-weight: normal;
+	color:#333;
+	height:1%;
+}
+div.dropOptions ul a:hover {
+	background: #eee;
+	text-decoration: none;
+}
+
+div.lbPanel div.dropOptions li.current,
+div.lbPanel div.dropOptions li.current a{
+	background: #aaa !important;
+	color:#fff;
+}
+div.lbPanel div.dropOptions li img {
+	margin: 0.5em 1em;
+}
+
+/* Add new lightbox section of dropdown */
+div.lbPanel div.add  {
+	padding: 7px 10px;
+	border-top: 1px solid #ccc; 
+	background: #eee;
+}
+
+div.dropOptions div.add input {
+	font-size: 1em;
+}
+div.dropOptions div.add input.text{
+	width: 92px;
+	font-size: 1em;
+}
+div.dropOptions div.add input.button {
+	margin:0;
+}
+
+
+/* Link list - used as a low level navigation device ---- */
+
+ul.linkList {
+	list-style: none;
+	margin: 0 0 1.5em 0;
+	overflow:hidden;
+	height:1%;
+}
+ul.linkList li {
+	float:left;
+	margin-left:1em;
+	padding: 2px 0 2px 1em;
+	border-left: 1px solid #ccc;
+}
+ul.linkList li:first-child,
+ul.linkList li.no-border {
+	margin-left:0;
+	padding-left:0;
+	border:0;
+}
+ul.linkList a {
+	display:block;
+}
+ul.linkList li.active a{
+	color: #333;
+}
+
+
+/* List view toggle ----------------------------------- */
+div.toolbar p.listViewToggle {
+	float: right;
+	margin: 1px 0 0 0;
+}
+p.listViewToggle a {
+	float:left;
+	margin-left:0.5em;
+	text-indent: -9999px;
+	background: url(../../images/standard/icon/panel_view.gif) left top no-repeat;
+	width: 20px;
+	height: 20px;
+	overflow:hidden;
+}
+p.listViewToggle a.list-view {
+	background-image: url(../../images/standard/icon/list_view.gif);
+}	
+p.listViewToggle a.compact-view {
+	background-image: url(../../images/standard/icon/compact_view.gif);
+}
+p.listViewToggle a.active,
+p.listViewToggle a.active:hover {
+	background-position: left -20px;
+}
+p.listViewToggle a.active {
+	cursor: default;
+}
+p.listViewToggle a:hover {
+	background-position: left -40px;
+}
+
+p.listViewToggle:hover a.dropLink {
+	background-color: #fff !important;
+	border-color: transparent;
+}
+
+
+/* sort strip - shown on lightbox, browse & search results ------------------------------ */	
+div.sortStrip {
+	margin: 0;
+	padding: 0.8em 0.5em;
+	background: #eee;
+	color:#666;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+#lightboxPage div.sortStrip {
+	border-bottom: 1px solid #ccc;
+}
+
+div.sortStrip .pager {
+	line-height:1.9em;
+}
+div.sortStrip input, div.sortStrip select {
+	margin:0;
+}
+
+a.sortToggle {
+	background-color: #aaa;
+	float:right;
+	padding: 0 0.8em 0 1.8em !important;
+	line-height: 1.7em;
+	font-weight: normal;
+	background-position: 0.8em center !important;
+	-moz-border-radius-bottomleft: 0.7em;  
+	-moz-border-radius-bottomright: 0.7em;  
+	-webkit-border-bottom-left-radius: 0.7em;  
+	-webkit-border-bottom-right-radius: 0.7em;  
+}
+
+
+/* colourpicker (farbtastic) ------------------------------------------------------------ */	
+/* bright styles for colourpicker */
+#pickerHolder {
+	display:none;
+}
+#hexString {
+	border: 1px solid #555;
+}
+#colorPicker {
+	float:left;
+	width: 195px;
+	padding: 10px 15px;
+	background: #eee;
+	border: 1px solid #aaa;
+	margin-bottom: 10px;
+}
+a.pickerLink {
+	float:left;
+	line-height: 17px;
+}
+a.closePicker {
+	float:left;
+	display:block;
+	padding: 5px 5px 5px 24px;
+	background: #555 url(../../images/standard/icon/close.gif) 5px center no-repeat;
+	color: #fff;
+	width: 30px;
+	position:relative;
+	left: -59px;
+}
+/* farbtastic styles for colourpicker */
+.farbtastic {
+  position: relative;
+}
+.farbtastic * {
+  position: absolute;
+  cursor: crosshair;
+}
+.farbtastic, .farbtastic .wheel {
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .color, .farbtastic .overlay {
+  top: 47px;
+  left: 47px;
+  width: 101px;
+  height: 101px;
+}
+.farbtastic .wheel {
+  background: url(../../tools/colorpicker/wheel.png) no-repeat;
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .overlay {
+  background: url(../../tools/colorpicker/mask.png) no-repeat;
+}
+.farbtastic .marker {
+  width: 17px;
+  height: 17px;
+  margin: -8px 0 0 -8px;
+  overflow: hidden; 
+  background: url(../../tools/colorpicker/marker.png) no-repeat;
+}
+/* ================================================================================= */
+/* Clearing	/ floating																 					 */
+/* ================================================================================= */	
+	
+/* clearfix class to be used instead of div.clearing where possible */    
+/* -apply to the block element containing the floated element (not the floated element itself) */
+.clearfix:after {
+	content: "."; 
+	display: block; 
+	position:relative; /*works better in IE5.5 or float in float situations*/
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+	}
+	
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+/* Clearing div to be used when clearfix class not applicable */
+div.clearing { clear: both; height: 1px; line-height: 1px;}
+/* Left clearing div useful on the homepage */
+div.clearLeft {clear:left;  line-height: 1px; }
+
+.floatRight { float: right; }
+.floatLeft { float: left; }
+   
+div.pageBreak {
+	border-top: 5px dashed #bbb;
+	margin: 1em 0;
+	font-size: 1.3em; line-height:1.8em;
+	color:#aaa;
+	clear:both;
+}
+
+.clearedContainer {
+	overflow: hidden;
+	zoom: 1;
+}
+	
+	
+/* ================================================================================= 
+	Pager e.g. when search results span more than one page													
+==================================================================================== */	
+
+div.pager a { 
+	font-weight: bold; 								
+	display: block; 
+	float:left; 						/* BB - had to use floating to fix rtl display issues */
+	margin: 0 2px; 
+	}
+div.pager span {						/* wraps | divider */
+	display: block; 
+	float:left;
+	color: #999;
+	margin: 0 2px;
+	}	
+div.pager span.pipe {
+	margin:0;
+}	
+div.pager a.bf, div.pager span.bf { 						/* prev and next links */
+	font-weight: normal; 
+	margin: 0 4px;
+	}
+
+
+
+
+/* ================================================================================= 
+	sliding door drop shadows												
+==================================================================================== */	
+div.leftShadow {
+	background: url(../../images/standard/misc/drop_left.gif) bottom left no-repeat;
+	height:1%;
+	}
+div.rightShadow {
+	background: url(../../images/standard/misc/drop_right.gif) bottom right no-repeat;
+	padding-bottom:12px;
+	}
+
+
+
+/* ================================================================================= */
+/* Popup styles 																						 	 */
+/* ================================================================================= */
+#conditionsPopup, #help, #popup, body.popup { 
+	padding: 10px; 
+	margin:0; 
+	background: #fff; 
+	min-width:10px;
+	height: 90%;
+	}
+body.popup { 
+	padding: 20px;
+	margin:0; 
+}	
+
+body.popup #mainCol{
+	margin-left:0;
+}
+
+/* needs homogenizing -BB */
+div.copy h2 { margin: 0 0 0.8em 0; padding: 0.5em;}
+div.copy h3, div.copy h4 { margin: 1.2em 0.5em 0.8em 0.5em; }
+div.copy p {margin-left:1em; }
+div.copy ul {margin-left:2.5em; padding-left:0;}
+div.copy p.note { font-style: italic; }
+div.copy li { margin-bottom: 0.5em; }
+div.copy code { font-size: 120%; color: #333;  }
+div.copy code.searchString { border: 1px solid #aaa; padding: 1px 5px; }	
+
+#popup div.copy table, #popup div.copy p { margin:0 0.5em; width:none;}
+
+
+
+/* ================================================================================= */
+/* Collapsing expanding content																	 	 */
+/* ================================================================================= */
+/* e.g. on the bulk upload page there is a section of help text that uses javascript
+	to show and hide it. Initialise the display site here: */
+#ftpHelp { display: block; }				/* this is reversed by javascript on the page iself */
+#expandLink {display: none; }
+#collapseLink {display: none; }
+
+.expand { 
+	padding-left: 13px;
+	background: url(../../images/standard/arrow/arrow.gif) center left no-repeat;
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 1%;
+}
+.expand.collapse {
+	padding-left: 13px;
+	background: url(../../images/standard/arrow/nav_down_arrow.gif) center left no-repeat;
+}
+.expand.collapse_up {
+	padding-left: 13px;
+	background-image: url(../../images/standard/arrow/nav_up_arrow.gif) ; 
+	background-position:  left 4px; 
+	background-repeat: no-repeat;
+}
+/* for use on a dark background */
+.expand.white { 
+	background: url(../../images/standard/arrow/arrow_white.gif) left center  no-repeat;
+	color:#fff;
+}
+.expand.collapse.white {
+	background-image: url(../../images/standard/arrow/down_arrow_white.gif)
+	background-position: left 4px;
+	background-repeat: no-repeat;
+	color:#fff;
+}
+.expand.white_small {
+	background-image: url(../../images/standard/arrow/expand_small_white.png); 
+	color:#fff;
+}
+.expand.collapse_up.white_small {
+	background-image: url(../../images/standard/arrow/expand_small_white_up.png);
+	color:#fff;
+}
+/* =================================================================================  
+   Tabs																	 	 
+   ================================================================================= */
+
+/* Large tabs */
+div.adminTabs { 
+	margin:1.3em 0 1em 0;
+}
+div.adminTabs h2 {
+	margin:0 2px 0 0;
+	padding:6px 11px;
+	float: left;
+	background: none;
+	border:1px solid #bbb;
+	position:relative; z-index: 10;
+}	
+div.adminTabs h2.current {
+	background: url(../../images/standard/misc/panel_grad.gif) bottom left repeat-x;
+	border-bottom-color:#EBEAEB;
+} 
+div.adminTabs h2.current a {
+	color: #444;
+}
+div.tabClearing { 
+	clear:both;
+	height:0.4em; line-height:0.4em;
+	border:1px solid #bbb;
+	background: #EBEAEB;
+	position: relative;
+	top:-1px;
+}
+	
+/* Smaller tabs */
+p.tabHolder {
+	overflow: hidden;
+	height: 1%;
+	margin: 14px 0 0px 0;
+}
+p.tabHolder a,
+p.tabHolder label {
+	display: block;
+	margin:0 2px 0 0;
+	padding: 6px 11px;
+	float: left;
+	background: #eee;
+	border:1px solid #bbb;
+	font-weight:bold;
+	cursor: pointer;
+}
+p.tabHolder a.active,
+p.tabHolder label.active {
+	background-color: #fff;
+	border-bottom-width:0px;
+	color:#333;
+	padding-top: 7px;
+	position:relative;
+}
+#tabContent, div.tabContent{
+	border:1px solid #666;
+	padding:15px;
+	margin-top:-1px;
+	margin-bottom: 1.5em;
+}
+	
+	
+	
+/* =================================================================================  
+   Hover help (using tooltips)																 	 
+   ================================================================================= */	
+img.hoverHelp {
+	cursor:help; 
+	display:inline; 
+	margin-top:-3px; 
+	position:relative; 
+	top:3px;
+	}
+	
+	
+/* =================================================================================  
+   Content Edit mode																	 	 
+   ================================================================================= */
+
+span.editSpan { 
+	padding-right:5px;
+	display: inline;
+}
+span.editSpan:hover, span.editSpan:hover p {
+	background: #efefef !important;
+}			
+img.editImg { 
+	border:0; 
+	position:relative; 
+	top:1px; 
+	right:-5px;
+}
+
+/* Fix various display issues */
+ul.nav a.editLink {
+	display: inline;
+	padding:0;
+	}
+	
+#header img.editImg { 								/* logo */
+	float:none; 
+	margin-top:0;
+	}
+	
+#qsPanel img.editImg {
+	position:static;
+	float:right;
+	margin-right:2px;
+	}
+#qsPanel label img.editImg { float:none; }			
+
+.formHelp {
+	padding-left: 10px;
+}
+
+/* ================================================================================= 
+	Standard invisible table styles 											
+==================================================================================== */
+table.standard {
+	margin: 1em 0;
+}
+
+table.standard th, table.standard td {
+	padding: 0.4em 1.5em 0.4em 0;
+	text-align: left;
+	vertical-align: top;	
+}
+table.standard thead th {
+	vertical-align: bottom;
+}
+
+
+/* ================================================================================= 
+	List style tables styles (use <thead>)											
+==================================================================================== */
+table.list {
+	border-bottom: 1px solid #ccc;
+	margin: 1em 0;
+	border-collapse:collapse;
+	border-spacing:0;
+}
+table.list.wide {
+	width: 100%;
+}
+table.list.wide th {
+	width: 10%;
+}
+
+table.list th, table.list td {
+	padding: 0.4em 2em 0.4em 0;
+	text-align: left;
+	vertical-align: top;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px 0 0 0;	
+
+}
+
+table.list thead th {
+	vertical-align: bottom;
+	border-top:0;
+}
+
+table.list td.action {
+	padding-right:1em;
+}
+table.list th.width150, table.list td.width150 {
+	width: 150px;	
+}
+
+table.list.stripey thead tr,table.list.stripey thead th {
+	background: none !important;
+	vertical-align:bottom;
+}
+table.highlight tr:hover td, table.highlight tr:hover td {
+	background-color: #f3f3f3 !important;
+}
+/* drag and drop */
+table.list  td.sort {
+	cursor: move;
+	background: url('../../images/standard/misc/grip.gif') left center no-repeat;
+	padding-left: 13px;
+}
+table.list tr.active td {
+	border-bottom-width: 1px;
+	background-color: #d3e1fa;
+	border-color: #77A5BF;
+	background-color: #e7f0f3;
+}
+table.list tr.landing {
+	height: 23px;
+}
+
+/* Nasty nested tables */
+table.list table td {
+	border: 0;
+	padding: 0 0.5em 0.2em 0;
+}
+
+table.list tr.spacer td {
+	background: #fff !important;
+	height: 2em;
+}
+
+
+/* ================================================================================= 
+	Spinner control - text field with up/down incremental buttons											
+==================================================================================== */
+.spinner .buttons, .spinner a, .spinner input{
+	float:left;
+}
+.spinner a {
+	width: 19px;
+	height: 10px;
+	background-image:url(../../images/standard/misc/buttons_spinner.gif);
+	display:block;
+	text-indent: -9999px;
+}
+.spinner a.up {
+	background-position: 0px 0px;
+}
+.spinner a.up:hover {
+	background-position: 0px 10px;
+}
+.spinner a.down {
+	background-position: 19px -1px;
+	clear:left;
+	height: 9px;
+}
+.spinner a.down:hover {
+	background-position: 19px 9px;
+}
+.spinner input {
+	margin: 0;
+	height:13px;
+}
+
+/* ================================================================================= 
+	Explorer - Windows explorer type control											
+==================================================================================== */
+ul.explorer,ul.explorer li, ul.explorer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* indentation of sub-categories */
+ul.explorer ul {
+	margin: 0 0 0 20px;
+}
+
+ul.explorer li {
+ 	/*padding-right: 10px;*/
+ 	height: 1%;
+}
+ul.explorer ul li {
+ 	padding-right: 0;
+}
+
+/* links */
+ul.explorer a:link,
+ul.explorer a:visited,
+ul.explorer a:hover,
+ul.explorer a:active {
+	text-decoration: none;
+	color: #000;
+	font-weight: normal;
+}
+ul.explorer a:hover {
+ 	text-decoration: underline;
+}
+ul.explorer a.expand:hover {
+ 	text-decoration: none;
+}
+ul.explorer li a {
+	margin: 1px auto;
+	background-image: url(../../images/standard/sprites/explorer2.gif);		/* sprite image */
+	background-position:  -14px -34px;
+	background-repeat:  no-repeat;
+	padding: 3px 0 3px 20px;
+	margin-left:15px;
+	display:block;
+	line-height: 1.2em;
+	height: 1%;
+  }
+ul.explorer li a.open {
+ 	background-position:-14px -1px;
+}
+ul.explorer li.empty a.open {			
+	background-position:  -14px -34px;			/* stick with closed foler if at the end of the tree */
+}
+ 
+/* expander links */
+ul.explorer li a.expand {
+	background-image: url(../../images/standard/sprites/explorer2.gif);
+	background-position: 0 1px;
+	width: 9px;
+	height: 10px;
+	padding:0; margin:5px 0 0 0;
+	float:left;
+	outline:none;
+	overflow: hidden;
+} 
+
+ul.explorer li a.collapse	{
+	background-image: url(../../images/standard/sprites/explorer2.gif);
+	background-position: 0 -9px;
+}
+
+/* Highlighted version */
+ul.explorer li a.current {
+	background-color: #e3e3e3;
+}
+
+/* Hide nested ULs */
+ul.explorer ul {
+	display:none; 
+}
+
+
+/* ================================================================================= 
+	jquery ui tweaks										
+==================================================================================== */
+/* Autocomplete */
+.ui-autocomplete {
+	font-family: tahoma, arial, sans-serif !important;
+	z-index:10 !important;
+	
+}
+.ui-autocomplete a {
+	font-weight:normal;
+}
+
+/* ================================================================================= 
+	Select: all | none widget										
+==================================================================================== */
+p.selectAllNone {
+	overflow:hidden;
+}
+p.selectAllNone a,
+p.selectAllNone span {
+	float:left;
+	display:block;
+	padding: 2px 0;
+}
+p.selectAllNone a.all,
+p.selectAllNone span.all,
+p.selectAllNone a.none,
+p.selectAllNone span.none {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+p.selectAllNone .none {
+	display:none;			/* Initially hidden */
+}

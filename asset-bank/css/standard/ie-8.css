@@ -1,0 +1,31 @@
+/* ======================================================================================== */
+/* IE 8 SPECIFIC STYLES                                                             		  */
+/*                                             					                                */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		09-Jul-2009    Created.                                          */
+/* ======================================================================================== */
+
+/* Import common IE rules */
+/* @import url("ie-win.css"); */
+
+
+input.button { 
+
+   overflow: visible;
+}
+
+/* force wrapping within a table cell */
+table.admin td div.constrain {
+	width: 15em;	/* other browsers use max-width, IE doesn't like this */
+}
+
+/* Opacity + bg gradients + IE7/8 doesn't work */
+#dummyButtons {
+	filter:none;
+}
+#dummyButtons a.button {
+	cursor: default;
+	color: #aaa;
+	border-color: #ddd;
+}

@@ -1,0 +1,91 @@
+/* ======================================================================================== 
+	IE - WINDOWS SPECIFIC STYLES                                                             
+	All IE-specific fixes go in here. This is imported into ie6.css and ie7.css NOT 
+	ie8.css (because ie8 actually works!)							                                
+ 
+/ ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		14-Feb-2006    Created.                                          */
+/* ======================================================================================== */
+
+/* Force block level behaviour */
+#header div.headerContent {display:inline-block;}	
+ul.nav a { height: 1%; } 							/* Main navigation */
+#footer {height:1%;}		
+
+table {margin:1em 0;}			/* is this still needed? -BB */
+
+ul {                      		/* Lists are defined differently in IE */
+   margin: 0;
+   padding: 0 0 0 1.5em;
+   } 
+	
+span.inline { 						/* Tidy up text that sits inline with form elements in IE */
+	position: relative; 
+	top: -2px; }
+
+
+#qsPanel a.advanced {
+	position: relative;			/* Fix wierd IE float bug */
+}
+
+		
+/* Search results page ===================================================== */
+ul.results div.imageHolder { width:120px; }
+ul.results div.detailHolder { height:1%; }
+
+ul.lightbox p.action a, 
+ul.lightbox p.action span.added { height:1%; }
+
+	
+/* Form style corrections ===================================================== */
+
+input.button { 
+	overflow: visible;  /* Prevent wierd horizontal padding*/
+}
+
+
+
+/* IE diplays checkboxes slightly differently */
+input.checkbox { 			
+	position: relative; 
+	left: -4px; 
+	margin-right:0;}	
+
+body.assetSelectPage li input.checkbox {
+	left: 0px;
+	margin-right: -3px;
+}	
+
+/* Bug in IE when you use the above position relative settings on a floated checkbox (it dissapears) */	
+div.dialogPanel input.checkbox, form.floated input.checkbox {
+	position: static; 
+	margin-left:-4px; margin-right:4px;
+}	
+
+table.form input.file { width: 276px; padding:1px 2px; }
+
+/* Radio button selector list (e.g. on Approval workflow page) */
+ul.radioList li input.radio {
+	margin-top:0px;
+	margin-left:-4px;
+}
+ul.radioList li label {
+	padding-left:0.1em;
+}
+
+/* Consistent checkbox alignment */
+label.wrapping input {
+	left:0; /* overriding other styles */
+	overflow: hidden;
+}
+
+/* force wrapping within a table cell */
+table.admin td div.constrain {
+	width: 15em;			/* other browsers use max-width, IE doesn't like this */
+}
+
+/* Positioning of large image view tabs  */
+body.largeViewEnabled p.tabHolder {
+	margin-top:4px;
+}

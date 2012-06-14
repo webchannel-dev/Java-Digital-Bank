@@ -1,0 +1,27 @@
+/* ======================================================================================== */
+/* IE 7 SPECIFIC STYLES                                                             		  */
+/*                                             					                                */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		13-Feb-2007    Created.                                          */
+/* ======================================================================================== */
+
+/* Import common IE rules */
+@import url("ie-win.css");
+
+/* Positioning of cancel buttons */
+input#cancelButton { position: relative; top: -21px; margin-left: 0; }
+
+#hLinks li.help-button {
+	margin:-3px 0 0 0;
+}
+
+/* Opacity + bg gradients + IE7/8 doesn't work */
+#dummyButtons {
+	filter:none;
+}
+#dummyButtons a.button {
+	cursor: default;
+	color: #aaa;
+	border-color: #ddd;
+}

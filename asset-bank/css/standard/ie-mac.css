@@ -1,0 +1,28 @@
+/* ======================================================================================== */
+/* IE - MAC SPECIFIC STYLES                                                   	           */
+/* All IE-Mac specific fixes go in here.								                             */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		18-Feb-2006    Created.                                          */
+/* ======================================================================================== */
+
+/* Lightbox page - position of action links */
+ul.lightbox  p.action { text-align: right; margin: 4px 18px 0 0; font-size: 95%}
+
+/* View Asset details page - action buttons */
+div.actions input { display: inline-table; } /* Fix for IE/Mac */
+
+/* Adjustments for IE/Mac */ 
+div.actions ul { width: 140px; } 
+div.actions ul li { clear: both; } 
+
+/* Add category button on search page */
+div.categoryListBox input.button { margin-left: 6px; } 
+
+div.categoryList ul { width: 26%; float: left; }
+
+/* Search results page ===================================================== */
+ul.results div.imageHolder { width:90px; }
+
+#hLinks { 
+  margin-right:10px; }	

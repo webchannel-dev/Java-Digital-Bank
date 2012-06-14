@@ -1,0 +1,242 @@
+ 
+<!--
+	You can have one or more workflows. For each Access Level, you can relate it to a workflow by entering the workflow name in the edit Access Level screen.
+	If you leave the workflow name empty on an Access Level then the 'default' workflow is used. You can add an optional type attribute to workflow which specifies
+	what asset bank entity the workflow in question applies omitting this type is equivalent to marking the workflow as an asset one.
+-->
+<workflows>
+
+	<workflow name="default" description="Default workflow">
+
+		<!--
+			The for attribute of variation is a list of Asset Type Ids (eg '2' for Image), or '*'.
+			Use '*' when the workflow does not vary according to asset type.
+		-->
+		<variation name="any" for="*">
+
+			<!--
+				The visible-to attribute is a list of Group Ids, or 'approvers'.
+				'approvers' means the set of Groups that have approval permission on the access levels that the asset is in,
+				which also correspond to this workflow.
+			-->
+			<state name="requires-approval" description="Require Approval" initial="true" visible-to="approvers" >
+
+				<!-- Help text appears by the state on the approval screen -->
+				<help-text>These assets require approval before they can be seen by non-admin users.</help-text>
+
+				<!-- Alerts are processed when an asset enters the state -->
+				<alert name="upload-alert" send-to="approvers" handler="AssetUploadedAlertProcessor" template="admin_alert_upload_approvals" />
+
+				<transition name="approve" description="Approve" next-state="approved">
+
+					<!-- Help text appears by the transition on the approval screen -->
+					<help-text>Approve selected items(s)</help-text>
+
+					<!-- Confirmation text is optional, if entered then a confirmation dialog appears with this text,
+						when the transition is chosen on the approval screen -->
+					<confirmation-text>Please confirm that you would like to Approve these items</confirmation-text>
+
+				</transition>
+
+				<transition name="reject" description="Reject &amp; Discard" next-state="rejected">
+					<help-text>Discard selected items(s)</help-text>
+					<confirmation-text>Please confirm that you would like to Reject &amp; Discard these items</confirmation-text>
+				</transition>
+
+				<!-- has-message means a message box will be shown, message-mandatory means the message must be entered before transition is made -->
+				<transition name="reject-for-resubmit" description="Reject for Resubmit" next-state="rejected-for-resubmit" has-message="true">
+					<help-text>Send back to owner for resubmission</help-text>
+					<confirmation-text>Please confirm that you want to Reject these items and send them back to their owners for resubmission</confirmation-text>
+				</transition>
+
+			</state>
+
+			<state name="approved" description="Approved">
+				<!-- Events are triggered when the asset enters the state -->
+				<event name="approve-event" handler="AssetApprovedProcessor" />
+			</state>
+
+
+			<!-- This state deletes the asset -->
+			<state name="rejected" description="Rejected">
+				<event name="reject-event" handler="AssetDeleteProcessor" />
+			</state>
+
+
+			<state name="rejected-for-resubmit" description="Rejected for Resubmit" visible-to="owner">
+
+				<help-text>These items require attention before resubmission.</help-text>
+
+				<alert name="rejected-alert" send-to="owner" handler="SendToOwnerAlertProcessor" template="workflow_asset_rejected" />
+
+				<event name="unsubmit-event" handler="AssetUnsubmittedProcessor" />
+
+				<transition name="resubmit" description="Resubmit" next-state="requires-approval" has-message="true">
+					<help-text>Resubmit selected item(s)</help-text>
+					<confirmation-text>Please confirm that you would like to resubmit these items</confirmation-text>
+				</transition>
+
+				<transition name="delete" description="Discard" next-state="rejected">
+					<help-text>Discard selected item(s)</help-text>
+					<confirmation-text>Please confirm that you would like to discard these items</confirmation-text>
+				</transition>
+
+			</state>
+
+
+			<!-- This state is a "bridge" between "Request Workflow" and this "Asset Workflow" (RequestFulfilledProcessor) -->
+			<state name="fulfilled" description="Request Fulfilled" visible-to="owner">
+				<transition name="submit" description="Submit for approval" next-state="requires-approval" has-message="true">
+					<confirmation-text>Please confirm that you would like to submit these items</confirmation-text>
+				</transition>
+			</state>
+
+		</variation>
+
+	</workflow>
+
+
+	<!-- batch release workflow - Do not change the states/names associated with this workflow -->
+	<workflow name="batchrelease" type="batchrelease" description="Batch Release Workflow">
+		<variation name="any" for="*">
+
+			<state name="being-created" description="Being created" initial="true" visible-to="plugin:com.bright.assetbank.batchrelease.workflow.plugin.SelectBatchReleaseOwnerPlugin" >
+
+				<transition name="request-approval" description="Send for approval" next-state="awaiting-approval" has-message="true">
+					<confirmation-text>Are you sure you want to send this batch release for approval?</confirmation-text>
+				</transition>
+
+			</state>
+
+			<!-- approval states - requesting approval and approved -->
+
+			<state name="awaiting-approval" description="Awaiting approval" visible-to="plugin:com.bright.assetbank.batchrelease.workflow.plugin.SelectBatchReleaseApprovalUsersPlugin">
+
+				<alert name="awaiting-approval-alert" send-to="plugin:com.bright.assetbank.batchrelease.workflow.plugin.SelectBatchReleaseApprovalUsersPlugin" handler="BatchReleaseAlertProcessor" template="batch_release_alert_approvers" />
+
+				<event name="awaiting-approval-event" handler="BatchReleaseRequestApprovalProcessor" />
+
+				<transition name="approve" description="Approve" next-state="approved" has-message="true">
+					<confirmation-text>Are you sure you want to approve this batch release?</confirmation-text>
+				</transition>
+
+				<transition name="return-to-being-created" description="Return to Being Created" next-state="being-created" hidden="true">
+				</transition>
+
+			</state>
+
+
+			<state name="further-approval-required" description="Awaiting approval" visible-to="plugin:com.bright.assetbank.batchrelease.workflow.plugin.SelectBatchReleaseApprovalUsersPlugin">
+
+				<transition name="approve" description="Approve" next-state="approved" has-message="true">
+					<confirmation-text>Are you sure you want to approve this batch release?</confirmation-text>
+				</transition>
+			</state>
+
+
+			<state name="approved" description="Approved" visible-to="plugin:com.bright.assetbank.batchrelease.workflow.plugin.SelectBatchReleaseOwnerPlugin">
+				<event name="approval-event" handler="BatchReleaseApprovalProcessor" />
+
+				<transition name="not-fully-approved" description="Return for approval" next-state="further-approval-required" hidden="true">
+				</transition>
+
+				<transition name="release" description="Release" next-state="pending-release" has-message="true">
+					<confirmation-text>Are you sure you want to release this batch release?</confirmation-text>
+				</transition>
+
+			</state>
+
+			<!-- release states - checking release status and released -->
+
+			<state name="pending-release" description="Release in progress..." visible-to="plugin:com.bright.assetbank.batchrelease.workflow.plugin.SelectBatchReleaseOwnerPlugin">
+
+				<event name="released-event" handler="BatchReleasePendingReleaseProcessor" />
+
+				<transition name="not-valid" description="Not valid" next-state="not-ready-for-release" hidden="true" />
+				<transition name="valid" description="Valid" next-state="released" hidden="true" />
+
+				<transition name="retry-release" description="Retry release" next-state="pending-release" has-message="true">
+					<confirmation-text>Are you sure you want to release this batch release?</confirmation-text>
+				</transition>
+
+			</state>
+
+			<state name="not-ready-for-release" description="Failed last release" visible-to="plugin:com.bright.assetbank.batchrelease.workflow.plugin.SelectBatchReleaseOwnerPlugin">
+
+				<transition name="release" description="Release" next-state="pending-release" has-message="true">
+					<confirmation-text>Are you sure you want to release this batch release?</confirmation-text>
+				</transition>
+
+			</state>
+
+			<state name="released" description="Released (not finalised)" visible-to="plugin:com.bright.assetbank.batchrelease.workflow.plugin.SelectBatchReleaseOwnerPlugin">
+
+				<event name="released-event" handler="BatchReleaseReleaseProcessor" />
+
+				<alert name="awaiting-approval-alert" send-to="plugin:com.bright.assetbank.workflow.plugin.SelectAdminUsersPlugin" handler="BatchReleaseAlertProcessor" template="batch_release_acknowledge" />
+
+			</state>
+
+		</variation>
+
+	</workflow>
+
+
+	<!-- Request worfklow - manages image fulfillment requests, don't change the states associated with this workflow -->
+	<workflow name="request" type="request" description="Asset Request Workflow">
+
+		<variation name="any" for="*">
+
+			<!-- Send the request to approver users for approval prior to fulfillment -->
+			<state name="requires-approval" description="Requires Approval" initial="true" visible-to="approvers" >
+
+				<alert name="request-alert" send-to="approvers" handler="RequestAlertProcessor" template="request_requires_approval" />
+
+				<transition name="approve" description="Approve" next-state="requires-fulfiller"></transition>
+				<transition name="reject" description="Reject" next-state="rejected" has-message="true">
+					<confirmation-text>Please confirm that you want to Reject this request.</confirmation-text>
+				</transition>
+
+			</state>
+
+			<!-- Request is approved and is with admin users for assignment of a fulfiller -->
+			<state name="requires-fulfiller" description="Requires Fulfiller" visible-to="plugin:com.bright.assetbank.workflow.plugin.SelectAdminUsersPlugin">
+
+				<transition name="assign" description="Assign a Fulfiller" next-state="assigned" has-message="true">
+					<confirmation-text>Please enter a message to the Fulfiller.</confirmation-text>
+				</transition>
+				<transition name="reject" description="Reject" next-state="rejected" has-message="true">
+					<confirmation-text>Please confirm that you want to Reject this request.</confirmation-text>
+				</transition>
+
+			</state>
+
+			<!-- Request has been assigned a user to fulfill it -->
+			<state name="assigned" description="Requires Fulfillment" visible-to="plugin:com.bright.assetbank.request.workflow.plugin.SelectFulfillerForRequestPlugin" >
+
+				<alert name="fulfiller-alert" send-to="plugin:com.bright.assetbank.request.workflow.plugin.SelectFulfillerForRequestPlugin" handler="RequestAlertProcessor" template="request_requires_fulfillment" />
+
+				<transition name="fulfill" description="Upload" next-state="fulfilled" has-message="true">
+					<confirmation-text>First, submit message for requester.</confirmation-text>
+				</transition>
+				
+			</state>
+
+			<!--  Request fulfilled - send it on to the required point in the approval workflow -->
+			<state name="fulfilled" description="Fulfilled" visible-to="owner">
+
+				<alert name="sumbitter-alert" send-to="owner" handler="RequestAlertProcessor" template="request_fulfilled" />
+
+			</state>
+
+			<state name="rejected" description="Rejected" visible-to="owner">
+
+			</state>
+
+		</variation>
+
+	</workflow>
+
+
+</workflows>
+

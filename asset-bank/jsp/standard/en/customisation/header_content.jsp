@@ -1,0 +1,1 @@
+<bright:cmsWrite identifier="custom-header-content" filter="false"/>

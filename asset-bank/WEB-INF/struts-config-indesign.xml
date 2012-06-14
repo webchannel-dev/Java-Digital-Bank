@@ -1,0 +1,52 @@
+<!DOCTYPE struts-config PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="inDesignMakeTemplatedForm" type="com.bright.assetbank.custom.indesign.asset.form.MakeTemplatedForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+		<action path="/inDesignOverrideTemplate" type="com.bright.assetbank.custom.indesign.asset.action.OverrideTemplateAction">
+			<forward name="Success" path="/action/viewAsset"/>
+		</action>
+
+		<action path="/inDesignRegeneratePDF" type="com.bright.assetbank.custom.indesign.asset.action.RegeneratePDFAction">
+			<forward name="Success" path="/action/viewAsset"/>
+		</action>
+
+		<action path="/inDesignRegenerateAllPDFsInBatchRelease" type="com.bright.assetbank.custom.indesign.asset.action.RegenerateAllPDFsInBatchReleaseAction">
+			<!-- Forward to the view job queue page so users can see that
+			     what they've just done has worked, i.e. PDF jobs have been
+			     queued, and can watch the progress if they want. -->
+			<forward name="Success" path="/action/viewJobQueue" redirect="true"/>
+		</action>
+
+		<action path="/inDesignDownloadInDesignDocument" type="com.bright.assetbank.custom.indesign.asset.action.DownloadInDesignDocumentAction">
+			<forward name="Success" path="/servlet/download"/>
+			<forward name="DownloadFailure" path="/action/viewError"/>
+		</action>
+
+		<action path="/inDesignViewMakeTemplated"
+				type="com.bright.assetbank.custom.indesign.asset.action.ViewMakeTemplatedAction"
+				name="inDesignMakeTemplatedForm"
+				scope="request"
+				validate="false">
+			<forward name="Success" path="/jsp/plugin/indesign/make_templated.jsp"/>
+		</action>
+
+		<action path="/inDesignMakeTemplated"
+				type="com.bright.assetbank.custom.indesign.asset.action.MakeTemplatedAction"
+				name="inDesignMakeTemplatedForm"
+				scope="request"
+				validate="true"
+				input="/action/inDesignViewMakeTemplated">
+			<forward name="Success" path="/action/viewAsset" redirect="true"/>
+		</action>
+
+	</action-mappings>
+
+</struts-config>
