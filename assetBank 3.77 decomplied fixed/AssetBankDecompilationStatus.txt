@@ -1,0 +1,391 @@
+Java files with errors (Replaced with thier original class files)
+
+1. com.bright.assetbank.application.action.SavaassetAction.java
+2. com.bright.assetbank.custom.indesign.pdf.service.InDesignPDFGenerator
+3. com.bright.assetbank.custom.lfb.plugin.IncidentLookupPlugin
+4. com.bright.assetbank.repurposing.action.ViewRepurposedVideosAction
+5.com.bright.assetbank.webservice.service.SynchronisationService
+6. com.bright.framework.service.FileStoreManager --This class has no sysntax errors, there could be innerclass details decompiled in a wrong way.
+
+
+Apart from that, a class,AddAssetAction.java related to SaveAssetAction cannot be compiled, eventhough it has no errors.
+
+Also ABUserManager will throw some errors while startign the application.
+
+If the aboved mentioned class files are replaced with the original class files, the appilcation is running .
+
+
+functions checked,
+Register user, admin user login, user approval, search user, upload image, upload video, search item
+
+functions with errors
+
+change video's thumbnail, save search
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+####################################################################################################################
+
+CODE CHANGES & FIXES LOG
+_____________________________
+
+info.setDuration(()(dDuration * 1000.0D)); 		VideoUtil
+localActionOnAsset1 = action; jsr 136; 			ActiononassetManger
+ 	
+						
+com.bright.assetbank.application.action.DeleteAssetactions
+-------------------------------------------------------
+111,118 -jsr
+
+com.bright.assetbank.actiononasset.action.ActionOnAsset
+-------------------------------------------
+68 throw new IllegalArgumentException			
+
+
+com.bright.framework.category.util.CategoryUtil.java
+--------------------------------- 
+commented import J
+generics fixws at 3 lines
+
+com.bright.framework.common.bean.BrightDate
+-------------------------------------------
+ 401      long day = (long)Math.floor((getDate().getTime() + offset) / 86400000.0D);
+
+
+com.bright.assetbank.application.action.CompareAssetsAction
+----------------------------------------------------------
+generic fix
+248     for (Iterator i$ = vecAttributes.iterator(); i$.hasNext(); ) { Attribute attribute = (Attribute)i$.next();
+
+
+com.bright.assetbank.application.action.DirectLinkToImageAction
+---------------------------------------------------------------
+generic fix
+
+com.bright.assetbank.application.action.DownloadAssetAction
+-----------------------------------------------------------
+
+//for (Map.Entry fieldEntry : entries )
+/*     */     //{
+/* 151 */     //  String sfieldName = (String)fieldEntry.getKey();
+/*     */ 
+/* 153 */     //  long lUsageTypeId = Long.valueOf(sfieldName).longValue();
+/*     */ 
+/* 155 */     //  secondaryUsageTypes.add(Long.valueOf(lUsageTypeId));
+/*     */    // }
+
+
+com.bright.assetbank.application.action.EmailAssetAction
+--------------------------------------------------------
+import com.bright.framework.queue.bean.MessageBatchMonitor;
+
+
+com.bright.assetbank.application.action.ViewUploadAssetFileAction
+--------------------------------------------------------------
+generic fix
+
+com.bright.assetbank.application.bean.Asset
+-------------------------------------------
+generic fix
+import fix
+
+com.bright.assetbank.application.bean.ImageAsset
+-------------------------------------------------
+ 116 */     throw new RuntimeException(e);}
+
+
+com.bright.assetbank.application.form.AssetForm
+-----------------------------------------------
+generic fix
+import fix
+
+com.bright.assetbank.application.form.AssetForm
+----------------------------------------------
+generic fix
+
+com.bright.assetbank.application.service.AssetManager 
+----------------------------------------------------
+public class AssetManager extends Bn2Manager to abstract
+
+
+com.bright.assetbank.attribute.bean.AttributeValue
+-------------------------------------------------
+ private String m_sValue;
+ private Language m_language;
+
+....
+com.bright.assetbank.attribute.bean.Attribute
+private long m_lId = 0L;
+ private String m_sAdditionalValue;
+
+com.bright.assetbank.checkout.action
+---------------------------------------------------
+//public int compare(Asset right, Asset left)
+                public int compare(Object right, Object left)
+/*    */       {
+/* 64 */         return ((Asset)left).getDateCheckedOut().compareTo(((Asset)right).getDateCheckedOut());
+
+
+
+The same for the next class in the package
+
+com.bright.assetbank.commercialoption.bean.CommercialOption
+-----------------------------------------------------------
+ public class Translation extends BaseCommercialOption
+/*     */     implements com.bright.framework.language.bean.Translation 
+
+
+com.bright.assetbank.converter.DOCXToTextConverter
+---------------------------------------------------
+generics fix
+/*    */       }
+
+com.bright.assetbank.application.service.AssetCategoryManager
+------------------------------------------------------------
+
+innerclass fix
+/* 1236 */     }//throw localObject;
+
+
+
+ private void reindexAssetsInCategoriesAsynchronously(final Vector<LightweightAsset> a_vecAssets)
+/*      */   {
+/*  858 */     Thread thread = new Thread() //innerclass fix
+
+com.bright.assetbank.application.util.AssetUtil
+--------------------------------------
+fixed import
+
+com.bright.assetbank.search.service.MultiLanguageSearchManager
+------------------------------------------------------------
+
+innerclass fix
+
+com.bright.framework.database.bean.AdaptedStatement
+---------------------------------------------------
+
+import fix
+
+((OraclePreparedStatement)this.m_statement).setFormOfUse(a_iParameterIndex,(short) 2);
+/*     */     }
+
+com.bright.assetbank.batch.upload.service.ImportManager.BrandTemplateManager
+
+
+
+return true;
+    
+                        // int i = 1;
+/*      */             //  return i;
+
+
+generic fix
+
+
+com.bright.assetbank.brandtemplate.service.BluebooksInDesignAttributeProvider
+
+
+com.bright.assetbank.custom.bluebooks.indesign
+ public Attrib//public AttributeValuteValueGetter(Long a_inDesignDocumentAssetId ,Collection<Long> a_attributeIds ) 
+/*     */     {
+/*  92 */       this.m_inDesignDocumentAssetId = a_inDesignDocumentAssetId;
+/*  93 */       this.m_attributeIds = a_attributeIds;
+/*  94 */       this.m_skuAssets = null;
+/*     */     }
+
+  
+
+               BrightDateTime dtTriggerDate;
+com.bright.assetbank.attribute.service.AttributeDateRuleManager
+
+com.bright.assetbank.autocomplete.service.AutoCompleteUpdateManager
+ public Object execute(Object a_indexManager) throws Bn2Exception //this was IndexManager
+/*     */         {
+/* 628 */           ((IndexManager)a_indexManager).optimizeIndex();
+
+
+generic fix
+
+com.bright.assetbank.entity.util.AssetEntityUtil
+
+generic fix
+
+com.bright.assetbank.feedback.service.AssetFeedbackManager
+int i = 0;
+/*     */             //return i;
+                     return false;
+com.bright.framework.util.CollectionUtil
+
+
+com.bright.framework.storage.service.BaseStorageDeviceFactory
+populateAdditionalFields(rs,(T) device);
+
+package com.bright.assetbank.attribute.service.AttributeDateRuleManager
+
+//DateValueColumns.access$002(columns, sDateColumns);
+/*  667 */     //DateValueColumns.access$102(columns, sDatetimeColumns);
+
+
+com.bright.assetbank.application.service.IAssetManager
+public abstract Vector<Long> deleteAssetRelationship(DBTransaction a_dbTransaction, long a_lParentAssetId, long a_lChildAssetId, long a_lRelationshipTypeId) throws Bn2Exception;
+
+
+com.bright.assetbank.attribute.service.AttributeManager
+public AttributeValue getAttributeValueId(DBTransaction object, long id, String string, boolean b) throws Bn2Exception{
+     return this.m_attributeValueManager.getListAttributeValueId(null, id, string, b);
+    }
+
+com.bright.assetbank.batch.update.service.MetadataImportManager
+                      //this.m_categoryManager.updateItemCategories(dbTransaction,asset,1L,sCategoryIds);
+
+
+package com.bright.assetbank.custom.bluebooks.indesign.BluebooksInDesignAttributeProvider
+
+
+
+com.bright.assetbank.application.action.RegenerateImageAction
+
+
+//  this.m_imageAssetManager.createThumbnails(videoAsset, 
+/* 200 */     //    null, 
+/* 201 */     //    null);
+/*     */ 
+/* 203 */     //  this.m_videoAssetManager.saveVideo(null, 
+/* 204 */      //   videoAsset, 
+/* 205 */      //   true, 
+/* 206 */      //   false);
+
+
+RelateSelectedAssetsAction
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+saveAssetAction
+commented out lines from 150-166, 205
+
+ABServletContextListener
+commented out lin no 31
+
+BluebooksInDesignAttributeProvider
+ String attValToUse = BluebooksInDesignAttributeProvider.getNonEmptyAttributeValueAsString(mainAsset, attributeId);
+
+com.bright.framework.search.lucene.Bn2StopAnalyzer
+
+return new StopFilter(/*added true->*/true,new Bn2LowerCaseTokenizer(a_reader), this.m_stopSet);
+
+
+AssetRejectedProcessor
+commented out line no. 28
+
+
+VideoUtil.java
+hardcoded the thumbnail dimension values.
+
+
+ABUserManager -original files
+
+
+
+//SELECT a.Id aId, a.Label, a.AttributeTypeId, a.ValueColumnName, gae.Value, COUNT(u
+g.Id) AS NumGroups FROM Attribute a INNER JOIN GroupAttributeExclusion gae ON a.
+Id = gae.AttributeId INNER JOIN UserGroup ug ON gae.UserGroupId = ug.Id WHERE  u
+g.IsDefaultGroup=1  GROUP BY a.Id, a.Label, a.AttributeTypeId, a.ValueColumnName
+, gae.Value">
+com.bright.framework.database.exception.SQLStatementException: Erro
+r preparing or executing SQL 
+
+SELECT a.Id aId, a.Label, a.AttributeTypeId, a.ValueColumnName, gae.Value, COUNT(ug.Id) AS NumGroups FROM Attribute a INNER JOIN GroupAttributeExclusion gae ON a.Id = gae.AttributeId INNER JOIN UserGroup ug ON
+gae.UserGroupId = ug.Id WHERE  ug.IsDefaultGroup=1  GROUP BY a.Id, a.Label, a.AttributeTypeId, a.ValueColumnName, gae.Value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================================================================================================
+ffmpg  returned code: 1. Error output: FFmpeg version SVN-r24208, Copyright (c) 2000
+-2010 the FFmpeg developers
+  built on Jul 12 2010 04:30:41 with gcc 4.4.2
+  configuration: --enable-gpl --enable-version3 --enable-libgsm --enable-pthread
+s --enable-libvorbis --enable-libtheora --enable-libspeex --enable-libmp3lame --
+enable-libopenjpeg --enable-libschroedinger --enable-libopencore_amrwb --enable-
+libopencore_amrnb --enable-libvpx --arch=x86 --enable-runtime-cpudetect --enable
+-libxvid --enable-libx264 --extra-libs='-lx264 -lpthread' --enable-librtmp --ext
+ra-libs='-lrtmp -lpolarssl -lws2_32 -lwinmm' --target-os=mingw32 --enable-avisyn
+th --cross-prefix=i686-mingw32- --cc='ccache i686-mingw32-gcc' --enable-memalign
+-hack
+  libavutil     50.22. 0 / 50.22. 0
+  libavcodec    52.83. 0 / 52.83. 0
+  libavformat   52.73. 0 / 52.73. 0
+  libavdevice   52. 2. 0 / 52. 2. 0
+  libavfilter    1.22. 0 /  1.22. 0
+  libswscale     0.11. 0 /  0.11. 0
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'D:\Apps\apache-tomcat-6.0.33\webapps\As
+setBankBase/files/2/200034.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 1
+    compatible_brands: mp42mp41
+  Duration: 00:05:31.16, start: 0.000000, bitrate: 519 kb/s
+    Stream #0.0(eng): Video: h264, yuv420p, 640x480, 492 kb/s, 25 fps, 25 tbr, 2
+5 tbn, 50 tbc
+    Stream #0.1(eng): Audio: aac, 32000 Hz, mono, s16, 24 kb/s
+
+
+
+
+
+
+
+=========================================================================================
+Caused by: com.bn2web.common.exception.Bn2Exception: Failed to run command:
+ D:\Apps\apache-tomcat-6.0.33\webapps\AssetBankBase\WEB-INF\manager-config\win-tools\ffmpeg -i D:\Apps\apache-tomcat-6.0.33\webapps\AssetBankBase/files/4/200034.mp4 -vcodec png -b 400k -ss 0 -s 140x0 -vframes 1 -an -f rawvideo -y D:\Apps\apache-tomcat-6.0.33\webapps\AssetBankBase/files/temp/vidthumbs3/thumb0null.png  
+ed code: 1. Error output: FFmpeg version SVN-r24208, Copyright (c) 2000-2010 the
+ FFmpeg developers
