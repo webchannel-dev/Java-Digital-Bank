@@ -1,0 +1,22 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+       <to>#adminEmailAddresses#</to>		 
+      </addresses>
+      <subject>
+         Image Bank: User has requested approval on assets
+      </subject>
+      <body>
+#name# has requested approval to download a set of images.
+
+Their email address: #email#
+
+Please log in to Image Bank and go to the Approve Images section to see the request and approve the images.
+
+IDs of assets requested: #assetids#
+      </body>
+   </email-template>
+
+</email-templates>

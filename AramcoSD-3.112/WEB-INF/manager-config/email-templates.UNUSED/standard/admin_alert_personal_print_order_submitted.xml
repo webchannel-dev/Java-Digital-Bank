@@ -1,0 +1,22 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+       <to>#adminEmailAddresses#</to>		 
+      </addresses>
+      <subject>
+         Image Bank: User has requested prints.
+      </subject>
+      <body>
+#greetname#(#username#) has placed an order (#ordernum#) requesting prints of the following assets:
+
+#orderDetails#
+
+Please log in to Image Bank and go to the Orders -> Personal Orders section to review  the order.
+When the order has been shipped you can change the status to 'Fulfilled'.
+
+      </body>
+   </email-template>
+
+</email-templates>

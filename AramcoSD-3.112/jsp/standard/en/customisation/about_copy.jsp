@@ -1,0 +1,1 @@
+<bright:cmsWrite identifier="copy-about-asset-bank" filter="false" replaceVariables="true" />

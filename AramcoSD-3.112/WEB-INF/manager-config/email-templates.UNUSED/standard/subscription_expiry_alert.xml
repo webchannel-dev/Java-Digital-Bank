@@ -1,0 +1,24 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Subscription expiry alert
+      </subject>
+      <body>
+Dear #name#
+
+The following subscription to Asset Bank will expire in #days_left# day(s): 
+#description#
+
+Your login details are:
+Username: #username#
+Password: #password#
+
+Kind regards,
+Image Bank Admin
+      </body>
+   </email-template>
+</email-templates>

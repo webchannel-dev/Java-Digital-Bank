@@ -1,0 +1,101 @@
+/* Import main stylesheet */
+@import url("default.css");
+@import url("print.css");
+                                  
+/* PDF only styles */
+div.attributeGroupPanel {
+    font-size: 10pt;   
+}
+
+#compareLayout8 div.attributeGroupPanel,
+#compareLayout16 div.attributeGroupPanel,
+#compareLayout20 div.attributeGroupPanel {
+	font-size: 8pt;
+}
+
+/* Tweaks for optimum pdf printing */
+
+/* Attributes ------ */
+div.attributeGroupPanel table.form {
+	min-width: 300px;
+}
+#compareLayout1 div.attributeGroupPanel table.form,
+#compareLayout2 div.attributeGroupPanel table.form {
+	min-width: 600px;
+}
+#compareLayout16 div.attributeGroupPanel table.form,
+#compareLayout20 div.attributeGroupPanel table.form {
+	min-width: 120px;
+}
+
+
+/* Vertical spacing ------ */
+#compareLayout2 div.compare {
+	min-height: 600px;
+}
+#compareLayout4 div.compare {
+	min-height: 540px;
+}
+#compareLayout8 div.compare {
+	min-height: 250px;
+}
+#compareLayout16 div.compare {
+	min-height: 245px;
+}
+#compareLayout20 div.compare {
+	min-height: 200px;
+}
+
+/* Horizontal spacing ------ */
+#compare div.compare {
+	width: 50%;
+	float:left;
+	margin:0 0 10px 0;
+}
+#compareLayout1 div.compare {
+	width: 100%;
+}
+#compareLayout2 div.compare {
+	width: 100%;
+	float:left;
+	margin:0 0 10px 0;
+}
+#compareLayout16 div.compare, #compareLayout20 div.compare {
+	width: 25%;
+}
+
+
+
+/* Image sizes ------ */
+#compareLayout1 img{
+	max-width:100%;
+	max-height: 940px;
+}
+#compareLayout1 table.imageTable,
+#compareLayout1 table.imageTable table {
+	max-width: 100%;
+}
+div.noAttributes #compareLayout1 img{
+	max-width:100%;
+	max-height: 1000px;
+}
+#compareLayout2 img{
+	max-width: none;
+	max-height: 420px;
+}
+div.noAttributes #compareLayout2 img{
+	max-height: 600px;
+	max-width:none;
+}
+#compareLayout4 img{
+	max-width:350px;
+	max-height: 300px;
+}
+#compareLayout4 table td.imageBox{
+	height: 300px;
+}
+
+
+#compareLayout8 img{
+	max-width:350px;
+}

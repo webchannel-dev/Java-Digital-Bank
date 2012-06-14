@@ -1,0 +1,19 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#adminEmailAddresses#</to>	
+      </addresses>
+      <subject>
+         Image Bank Contact
+      </subject>
+      <body>
+Name: #name#
+Email: #email#
+Tel no: #telephone#
+
+Message:
+#message#
+      </body>
+   </email-template>
+</email-templates>

@@ -1,0 +1,4 @@
+div.categoryListBox { margin-top: 4px; display: none; }
+select.categoryListBox {width: 180px; }
+select.chosenCategoryList {width: 270px}
+p.catlist { color: #535353; line-height: 120%; font-family: Verdana, Arial, Helvetica, Swiss, SunSans-Regular; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0.7em}

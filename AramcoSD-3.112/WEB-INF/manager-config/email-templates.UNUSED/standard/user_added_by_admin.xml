@@ -1,0 +1,24 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         You are now an Asset Bank user!
+      </subject>
+      <body>
+Dear #name#
+
+You have been added as a user of Asset Bank. 
+
+Your login details are:
+Username: #username#
+Password: #password#
+You can change your password after logging in.
+
+Kind regards,
+Image Bank Admin
+      </body>
+   </email-template>
+</email-templates>

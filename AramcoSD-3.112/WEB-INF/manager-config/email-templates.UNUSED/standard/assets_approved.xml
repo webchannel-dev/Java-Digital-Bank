@@ -1,0 +1,24 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Download request processed
+      </subject>
+      <body>
+Dear #name#
+
+Your request to download one or more assets has been processed.
+
+Please log in to the Asset Bank and go to 'My Folder' for details.
+
+Kind regards,
+Image Bank Admin
+
+      </body>
+   </email-template>
+
+</email-templates>

@@ -1,0 +1,26 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#adminEmailAddresses#</to>		 
+      </addresses>
+      <subject>
+         Image Bank: Items requested on CD
+      </subject>
+      <body>
+-- Contact details --
+Name: #name#
+Division: #division#
+Email: #email#
+Tel no: #telephone#
+Address:
+#address#
+Additional comments:
+#message#
+
+--Requested items--
+The user has requested the following assets on CD: 
+Assets the user has permission to download: #downloadableIds#
+      </body>
+   </email-template>
+</email-templates>

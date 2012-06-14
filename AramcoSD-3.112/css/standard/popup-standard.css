@@ -1,0 +1,14 @@
+body { 
+   margin: 0 15px 15px; 
+   padding: 0; 
+   font-family: arial, sans-serif; 
+   font-size: 80%; 
+}
+
+p {padding: 3px; margin: 3px;}
+
+a { text-decoration: none; color: #00a6cc; }
+a:hover { text-decoration: underline; }
+a.bold { font-weight: bold; }
+
+div.rule { border: 0px solid #ddd; border-width: 0px 0px 1px; padding: 0px; margin: 0px; }

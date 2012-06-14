@@ -1,0 +1,32 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Commercial purchase approved.  Online Payment required.
+      </subject>
+      <body>
+Dear #greetname# (#username#)
+
+This e-mail is to confirm that your commercial purchase order (#ordernum#) placed on #datePlaced# has been approved and now requires on line payment.
+
+Please login to Asset Bank (http://www.assetbank.co.uk/ecommerce) and proceed to the 'My Purchases-> My Orders' section to view the order and complete payment.
+Your login details are:
+Your username: #username#
+Your password: #password#
+
+Your order details and commercial options approved are 
+
+#orderDetails#
+			
+#terms# 
+
+Thank you for purchasing images from AssetBank.
+
+Regards,
+assetbank.com, admin
+      </body>
+   </email-template>
+</email-templates>

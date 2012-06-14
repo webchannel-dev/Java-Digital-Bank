@@ -1,0 +1,1901 @@
+/* ======================================================================================== */
+/* M A I N   S T Y L E S H E E T                                                            */
+/* Contains rules for page layout and page-specific styles                                  */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		07-Feb-2006    Created.                                          */
+/* ======================================================================================== */
+
+/* ================================================================================= */
+/* Page layout styles  																 */
+/* ================================================================================= */
+
+div {margin: 0; padding: 0;}  	/* Initialise all divs */
+
+body { 
+   margin: 0;
+   padding: 0; 
+   font-family: tahoma, verdana, arial, sans-serif; 
+   font-size: 70%; 
+	background-color: #fff; 
+	color: #444; 
+	min-width: 770px;
+	}
+	
+div.pageWrapper{ 
+ 	max-width: 1040px;
+	min-width: 710px; 
+	margin:0 auto; 					/* This is redefined as a percentage margin in ie-win.css	 */
+	padding: 0 4.9%;					/* this value affects how many assets you can fit in a row on the browse/search pages */
+	height:1%;
+	}
+
+	
+#content {                    	/* wrapper div for main content column */
+   width: 100%;  
+   float: right; 
+   margin-left: -165px;				/* using negative margins to hold nav column */
+   }
+
+#mainCol  {                    	/* push main content over */
+   margin-left:165px; 
+	}
+
+#navCol {                     	/* left-hand column containg navigation */
+   width: 165px; 
+   float:left;
+	}
+
+pre {
+	font-family: tahoma, verdana, arial, sans-serif;
+	width: 650px;
+	overflow: auto;
+	margin-top: 0px; 
+	margin-bottom: 0px;
+	padding: 0px 6px 0px 0px;
+}
+
+/* ================================================================================= */
+/* Header styles  																						 */
+/* ================================================================================= */	
+	
+#topStrip { 								/* coloured strip at top of page */
+	background: #999 url(../../images/standard/misc/top_shadow.png) bottom left repeat-x;
+	height:10px;
+	line-height: 10px;
+	}	
+		
+#header {                     		/* main banner - contains hLinks, searchForm and  logo*/
+   background: #ccc; 
+	border-bottom:1px solid #aaa;
+	height:81px;
+	}
+	
+#header div.headerContent{				/* contains hLinks and search */ 
+	margin-right::165px;
+	text-align:left;
+	}
+
+#header img.logo { 								/* logo */
+	float:right; 
+	margin-top:10px;
+	border:0;
+	}		
+
+#hLinks { 
+	float:left;
+	margin: 13px 0 15px 0; 
+	}		
+
+#header form { 
+	float:left;
+	clear:left; 
+	}
+	
+div.headerContent input.keywords { 
+	width: 125px;
+	}
+
+div.headShadow {							/* banner dropshadow	 */
+	padding-bottom: 10px;
+	background: url(../../images/standard/misc/head_drop.gif) bottom left repeat-x;
+	height: 1%;
+	margin-bottom: 1.3em;
+	clear:both;
+	}
+
+/* ================================================================================= */
+/* Footer styles  																						 */
+/* ================================================================================= */	
+
+#footer { 
+	background-color: #fff;
+	color: #999;
+   margin: 2em 0 2em 165px; 
+   clear: both; 
+	border-top: 1px solid #aaa;
+	padding: 12px 0px;
+	font-size: 90%;  
+	}
+	
+#footer a {
+	font-weight: normal;
+	}
+
+
+/* ================================================================================= */
+/*  Login & registration page styles                                                 */
+/* ================================================================================= */
+
+#loginPage, #registrationPage { 
+   background: #fff; 
+   margin-top: 0;
+   /* text-align: center;  */
+	}
+
+#loginPage div.leftShadow, #registrationPage div.leftShadow {
+	width:420px;
+	margin: 50px auto 0 auto; 
+	}
+	
+#loginPage div.logo, #registrationPage div.logo {
+	margin-bottom: 2em;
+	padding:10px 30px;
+	background-color: #fff;
+	}	
+
+div.logo img { border:0px; }
+	
+#loginPanel { 
+   /* text-align:left; */
+   border: 1px solid #999; 
+	background-color: #fff;
+	}
+   
+div.loginForm { 
+	padding:0 25px 25px 30px;
+	}
+ 
+#registrationPage div.loginForm table.form td.submit { padding-top: 10px;}
+#registrationPage div.loginForm table.form select {width:202px;}
+#registrationPage div.loginForm input.text, #registrationPage div.loginForm textarea { width: 195px !important; }
+#registrationPage table.form th {width:100px;}
+
+
+
+/* =================================================================================
+	Approval page styles 																		
+	================================================================================= */
+/* Old search results list is still used on asset approval pages */
+ul.assetList { 
+   list-style: none; 
+   padding: 0; 
+   margin: 1em 0;
+	overflow: hidden;
+	height:1%;
+   }
+
+ul.assetList li { 
+	clear: left;
+   margin: 0 0 1em 0; 
+   border: 1px solid #bbb; 
+   padding: 1em; 
+	overflow:hidden;
+	height:1%;
+	background-color: #fff;
+   }
+ul.assetList li.selected {
+	background-color: #f1f1f1;
+}   
+ul.assetList li table {
+	width: 100%;
+}
+ul.assetList li table td {
+	vertical-align: top;
+	padding-right: 1em;
+}
+ul.assetList li table ul.attributeList {
+	margin:0;
+}
+ul.assetList li table td.image {
+	width: 140px;
+}
+ul.assetList li table td.image img {
+	display:block;
+	/* margin-bottom: 1em; */
+}
+ul.assetList li.first td.copyAction{
+	visibility: hidden;		/* This is overridden in js-enabled.css */
+} 
+
+
+ul.assetList label.selector{
+ 	float:right;
+ 	margin:0;
+ 	text-align: right;
+ }
+ul.assetList label.selector input{
+ 	float:none;
+ 	margin:0; 
+ }    
+div.imageHolder {  /* div to hold centered thumbnail to ensure descriptive text is vertically aligned */
+   float: left; 
+   margin: 0 1em 0 0; 
+   padding: 0px;  
+   min-width: 140px;           /* should be greater than thumbnail width. this is redefined in ie-win.css */
+   text-align: center; }
+	
+ul.assetList h3 { margin: 0 0 0.5em 0; }
+
+ul.assetList p.action { float: right; text-align: right; }
+ul.assetList p.action a { 
+   display: block; 
+   width: 130px; 
+   height: 30px; 
+   background: url(../../images/standard/icon/folder_grey.gif) bottom right no-repeat; }
+ul.assetList p.action a.in:hover, ul.results p.action a.in { text-decoration: none; color:#666; cursor: text; } 
+ul.assetList p.action a.add { background-image: url(../../images/standard/icon/folder.gif);}
+
+
+
+/* ================================================================================= 
+ 	Lightbox styles
+	- used in many places (browse pages, lightbox pages, search results, featured 
+	images etc...                                                                   
+==================================================================================== */
+
+ul.lightbox { 
+   list-style: none; 
+   padding: 0; 
+   margin: 0; 
+   padding-bottom: 1em; }
+   
+ul.lightbox li { 								/* lightbox panels */
+   padding: 0; 
+   float: left; 
+   width: 14em; 
+   margin: 0.5em 1em 0.5em 0; 
+   background-color: #eee; 
+   border: 1px solid #aaa; 
+   text-align: center; 
+   font-size: 88%; 
+  	}
+
+	
+ul.lightbox li div.detailWrapper {		/* wraps thumbnmail and details */
+	margin: 8px;
+	min-height:16em;							/* this is also defined as height in ie5.css and ie6.css */
+	word-wrap: break-word;					
+ 	}			
+div.detailWrapper p{
+	display:inline;
+	margin:0;
+}   
+div.detailWrapper p.block{
+	display:block;
+	margin:4px 0 4px 0;
+}  
+div.detailWrapper span {
+	padding:2px 0;
+	display:block;
+}
+div.detailWrapper span.notRated {
+	padding:5px 0 3px 0;
+}
+/* Style for when optional description is included */
+ul.lightbox li p.catDesc { line-height:1.2em; }
+
+/* Don't want icons (e.g. word, pdf) to have a border */
+ul.lightbox img.icon {border:0px;}
+
+/* Small video or audio icon that appears nect to title */
+ul.lightbox li img.media_icon { 
+	border: 0; 
+	position:relative; 
+	top:2px; 
+	margin:0 3px 0 0;
+	}
+
+/* Action links */
+ul.lightbox p.action { 
+	padding: 0 8px 8px 5px; 
+	text-align: right;
+	font-size: 90%;
+	margin:0;
+	}
+	
+	
+ul.lightbox p.action a, ul.lightbox p.action span.added { 
+	font-weight: normal; 
+	padding-right: 12px; 
+	display:block; 
+	height: 1%;
+	}
+ul.lightbox p.action a.view { background: url(../../images/standard/icon/small_arrow.gif) right center no-repeat; }
+ul.lightbox p.action a.directdl { background: url(../../images/standard/icon/small_down_arrow.gif) right center no-repeat; }
+ul.lightbox p.action a.add { background: url(../../images/standard/icon/add.gif) right center no-repeat; }
+ul.lightbox p.action span.added { background: url(../../images/standard/icon/tick.gif) right center no-repeat; color:#666; }
+ul.lightbox p.action a.remove { background: url(../../images/standard/icon/x.gif) right center no-repeat; }
+ul.lightbox p.action a.in { background: url(../../images/standard/icon/tick.gif) right center no-repeat; color:#666; }
+ul.lightbox p.action a.in:hover { text-decoration: none; cursor: text; } 
+ul.lightbox p.action span.view { padding-right: 12px; background: url(../../images/standard/icon/small_arrow_disabled.gif) right center no-repeat; }
+
+/* add and in links are hidden by default. Code sets the relevant one to display:block */
+ul.lightbox p.action a.add,
+ul.lightbox p.action a.in {
+	display: none;
+}
+
+
+
+
+
+
+
+
+/* ================================================================================= 
+ 	Copy asset with child relationships page																						
+	================================================================================= */
+ul.lightbox li div.controls {
+	height:8em;
+	text-align:left;
+	padding: 0 1em;
+	overflow: hidden;
+}
+
+ul.lightbox li div.controls label {
+ 	padding-left:15px !important;
+ 	margin:0;
+ 	line-height: 1.2em;
+}
+ul.lightbox li div.radioGroup label {
+	padding-top:0 !important;
+}
+ul.lightbox li div.controls input {
+	margin-bottom:0;
+	margin-right: 2px;
+}
+
+/* ================================================================================= 
+ 	Selecting assets (e.g. on bulk update, default relationships)																							
+	================================================================================= */
+body.assetSelectPage ul.lightbox li{
+	cursor: pointer;
+}
+body.assetSelectPage ul.lightbox li.selected {
+	background: #d0f2d3;
+	border:1px solid #69b322;
+}
+body.assetSelectPage li input.checkbox {
+	margin-bottom:1em;
+	margin-right:0;
+}
+body.assetSelectPage li label {
+	padding: 0.6em !important;			/* Make a larger clickable area */
+	cursor: pointer;
+	line-height: 1em;	
+}
+
+/* Special cases for assetbox page (as these assets are also draggable) */
+body#lightboxPage ul.lightbox li div.detailWrapper.draggable{
+	cursor: move;
+}
+body#lightboxPage ul.lightbox li{
+	cursor: auto;
+}
+body#lightboxPage li input.checkbox {
+	margin-bottom:0em !important;
+	cursor: pointer;
+	position: relative; 
+	top: 2px;
+}
+
+/* ================================================================================= 
+ 	AssetBox page																					
+================================================================================= */
+
+ul.lightbox div.selector {				
+	padding-bottom: 0.3em;
+	
+} 
+ul.lightbox div.selector label {
+	background: #999 !important;
+	color: #fff;
+	display: block;
+	padding-bottom: 0.9em !important;
+	padding-top: 0.4em !important;
+	height: 1%;
+}
+#lightboxPage div.buttons {
+	float:right;
+	margin-top:10px;
+}
+#lightboxPage h2.section { 
+	clear: left; 
+	margin: 10px 0; 
+	}  
+
+/* ================================================================================= 
+ 	Lightbox List styles
+	- Users can toggle between the standard asset panel view and a new list view                                                            
+==================================================================================== */
+table.lightboxList {
+	width: 100%;
+	border:1px solid #ccc;
+}
+table.lightboxList th,
+table.lightboxList td {
+	padding: 0.5em 1em;
+	text-align: left;
+}
+table.lightboxList th,
+table.lightboxList thead tr.even th {
+	background: #aaa;
+	color:#fff;
+}
+
+
+
+table.lightboxList td.action a { 
+	font-weight: normal; 
+	padding-left: 12px; 
+	display:block; 
+	height: 1%;
+	}
+table.lightboxList td.action {
+	width: 120px;
+}	
+table.lightboxList td.thumb {
+	width: 50px;
+}
+table.lightboxList td.thumb img.image {
+	width: 50px;
+	height: 50px;
+	border:1px solid #666;
+}	
+	
+table.lightboxList td.action a.view { background: url(../../images/standard/icon/small_arrow.gif) left center no-repeat; }
+table.lightboxList td.action a.directdl { background: url(../../images/standard/icon/small_down_arrow.gif) left center no-repeat; }
+table.lightboxList td.action a.add { background: url(../../images/standard/icon/add.gif) left center no-repeat; }
+table.lightboxList td.action span.added { background: url(../../images/standard/icon/tick.gif) left center no-repeat; color:#666; }
+table.lightboxList td.action a.remove { background: url(../../images/standard/icon/x.gif) left center no-repeat; }
+table.lightboxList td.action a.in { background: url(../../images/standard/icon/tick.gif) left center no-repeat; color:#666; }
+table.lightboxList td.action a.in:hover { text-decoration: none; cursor: text; } 
+table.lightboxList td.action span.view { padding-right: 12px; background: url(../../images/standard/icon/small_arrow_disabled.gif) left center no-repeat; }
+
+/* add and in links are hidden by default. Code sets the relevant one to display:block */
+table.lightboxList td.action a.add,
+table.lightboxList td.action a.in {
+	display: none;
+}
+
+
+
+/* ================================================================================= 
+ 	Previewing larger version of asset - for list view and panel view																				
+	================================================================================= */
+
+table.lightboxList a.thumb,
+ul.lightbox a.thumb {
+	zoom:1;
+	display:block;
+	/* position:relative;   removed to fix IE7 stacking order issue with image hover preview*/
+	}
+table.lightboxList a.thumb:hover,
+ul.lightbox a.thumb:hover {
+	text-decoration: none;
+}
+table.lightboxList span.loading,
+ul.lightbox span.loading {				/* styles for loading graphic */
+	width: 100%;
+	border:0;
+	position:relative;	
+	float:left;
+	display:none; 					/* initially hidden */
+}
+table.lightboxList span.loading img,
+ul.lightbox span.loading img {
+	border:0;
+	position:absolute;
+	top: -30px;
+	left:45%;
+	opacity: 0.6;
+}
+table.lightboxList span.larger,
+ul.lightbox span.larger {				/* Pop-up preview of medium sized image */
+	position:relative;
+	z-index: 1000;
+	top:0;
+	left:0;
+	height: 1px;
+	display:block;
+	}
+table.lightboxList span.inner,
+ul.lightbox span.inner {				/* Use inner span to control positioning of popup image */
+	position: absolute; 
+	display:none;
+	top:0px;
+	right: -120px;
+	z-index: 1200;
+	height: 1px;
+	}	
+table.lightboxList span.inner img,
+ul.lightbox span.inner img {
+	border:1px solid #333;
+	visibility: hidden;						/* initially hidden - is shown by javascript */
+	position:relative;
+	z-index: 100;
+}
+
+
+/* ================================================================================= 
+ 	Dragging assets to reorder them.																						
+================================================================================= */
+
+
+ul.lightbox li.hover { 
+	background-color: #AAAAAA !important;			/* 'landing' colour */
+	}
+	
+	
+/* Non-javascript fallback */
+ul.lightbox div.upDownArrows {
+	overflow:hidden; 
+	height:1%;
+	margin-bottom: 1em;
+}
+
+ul.lightbox li a.up, ul.lightbox li a.down  { 		/* reordering links */
+	font-weight: normal;
+	font-size: 0.9em;			
+	margin: 0 0 0 0;		
+	
+  	}		
+ul.lightbox li a.up{ 								
+   float:left;
+	margin-left:8px;
+	background: url(../../images/standard/arrow/lb_up.gif) left 2px no-repeat;
+	padding-left:12px;
+  	}
+ul.lightbox li a.up:hover{ 							
+	background-position:left -7px;
+  	}	
+ul.lightbox li a.down{ 							
+ 	float:right;
+	margin-right: 8px;
+	background: url(../../images/standard/arrow/lb_down.gif) right 2px no-repeat;
+	padding-right:12px;
+  	}	
+ul.lightbox li a.down:hover{ 						
+	background-position:right -7px;
+  	}	
+  	
+/* ================================================================================= 
+ 	Comparing Images	- control panel now also used on slideshow page																	
+================================================================================= */
+
+#controlPanel {
+	display: block;
+	border: 1px solid #999;
+	margin-bottom: 2em;
+	}
+
+#controlPanel div.header {
+	padding: 0.5em 15px;
+	background-color: #999;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: bold;
+}	
+#controlPanel div.header span {
+	font-weight: normal;
+}
+#controlPanel a.print {
+	color:#fff;
+	float:right;
+	padding-left: 22px;
+	background: url(../../images/standard/icon/print.png) top left no-repeat;
+}
+#controlPanel a.close {
+	float:right;
+	padding-left: 20px;
+	background: url(../../images/standard/icon/close.gif) left center no-repeat;
+}
+
+#controlInner {
+	overflow: hidden;
+	height: 1%;
+	padding: 0 15px 15px 15px;
+	background: #eee;
+}
+#controlInner form {
+	overflow: hidden;
+	height: 1%;
+}
+#controlPanel fieldset {
+	border:0;
+	padding:0;
+}
+	
+
+
+#changeAttributes {
+	overflow:hidden;
+	height: 1%;
+	padding: 0 0 1em 0;
+}
+#changeAttributes label {
+	width: 15em;
+	float:left;
+	line-height: 1.8em;
+	margin-right:1em;
+}
+#changeAttributes label:hover {
+	color: #111;
+}
+#changeAttributes p.note {
+	clear:left;
+	line-height: 1.8em;
+	margin:0;
+}
+
+/* Layout selector control */
+#layoutSelector {
+	margin-bottom: 1em;
+}
+#layoutSelector h3 span {
+	font-weight: normal;
+	font-size: 0.9em;
+}
+#layoutList {
+	overflow: hidden;
+	height:1%;
+	list-style: none;
+	margin:0; padding:0;
+}
+#layoutList li {
+	float:left;
+	padding-bottom: 1em;
+	width: 200px;
+}
+
+#layoutList label {
+	float:left; 
+	width: 96px;
+	height: 40px;
+	margin-right: 1em;
+	padding: 8px 8px 8px 50px;
+	background: #dfdfdf url(../../images/standard/icon/contact1.gif) 10px center no-repeat;
+	border: 2px solid #bbb;
+	color:#555;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+#layoutList label.layout2 {
+	background-image: url(../../images/standard/icon/contact2.gif);
+}
+#layoutList label.layout4 {
+	background-image: url(../../images/standard/icon/contact4.gif);
+}
+#layoutList label.layout8 {
+	background-image: url(../../images/standard/icon/contact8.gif);
+}
+#layoutList label.layout16 {
+	background-image: url(../../images/standard/icon/contact16.gif);
+}
+#layoutList label.layout20 {
+	background-image: url(../../images/standard/icon/contact20.gif);
+}
+#layoutList input {
+	float:left;
+	margin: 0 0.8em 0 0;
+	position:relative;
+	top: 20px;
+}
+#layoutList label:hover, #layoutList li.selected label {
+	border-color:#333;
+	background-color: #cfcfcf;
+	color:#222;
+}
+#layoutList label:hover {
+	cursor: pointer;
+}
+
+table td.imageBox{
+	height: 300px;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+#compare table.imageTable,
+#compare table.imageTable table {
+	max-width: 310px;
+}
+/* Styles for different page layouts - vary the image max sizes depending on */
+#compare div.compare {
+	width: 310px;
+	float:left;
+	margin:0 10px 10px 0;
+}
+#compareLayout1 div.compare, #compareLayout2 div.compare {
+	width: 100%;
+	float:none;
+}
+#compareLayout16 div.compare, #compareLayout20 div.compare {
+	width: 150px;
+}
+#compareLayout1 img{
+	max-width:600px;
+	max-height: 600px;
+}
+#compareLayout2 img{
+	max-width:600px;
+	max-height: 320px;
+}
+
+#compareLayout1 table.imageTable,
+#compareLayout1 table.imageTable table, 
+#compareLayout2 table.imageTable,
+#compareLayout2 table.imageTable table {
+	max-width: 600px;
+}
+
+#compareLayout4 img{
+	max-width:310px;
+	max-height: 250px;
+}
+#compareLayout4 table td.imageBox{
+	height: 250px;
+}
+#compareLayout8 img {
+	max-width:310px;
+	max-height: 168px;
+}
+#compareLayout8 table td.imageBox{
+	height: 168px;
+}
+#compareLayout16 img {
+	max-width:150px;
+	max-height: 160px;
+}
+#compareLayout16 table td.imageBox{
+	height: 160px;
+}
+#compareLayout20 table td.imageBox{
+	height: 120px;
+}
+#compareLayout20 img {
+	max-width:150px;
+	max-height: 120px;
+}
+
+
+/* When no attributes are selected - make images bigger */
+div.noAttributes #compareLayout1 img{
+	/* width:91%;  */
+	max-height: 900px;
+	max-width:none;
+	width: 80%;
+}
+div.noAttributes #compareLayout2 img{
+	max-height: 425px;
+	max-width:none;
+}
+div.noAttributes #compareLayout4 img{
+	max-width:350px;
+	max-height: 420px;
+}
+div.noAttributes #compareLayout1 table td.imageBox,
+div.noAttributes #compareLayout2 table td.imageBox{
+	height: auto; 
+}
+#compare div.noAttributes #compareLayout1 table.imageTable {
+	width: 100%;
+	max-width: 100%;
+}
+
+div.noAttributes #compareLayout4 div.compare {
+	width: 350px;
+}
+
+/* Fix for html attributes */
+#compare table.stripey td p {
+	margin:0;
+}
+
+/* ================================================================================= 
+ 	Slideshow																				
+================================================================================= */
+body#slideshow {
+	background: #000;
+	height:94%;
+	padding: 2% 0 0 0;
+}
+body#slideshow .leftShadow, body#slideshow .rightShadow {
+	background: none;
+	padding:0;
+}
+body#slideshow #controlPanel {
+	border:0;
+	border-bottom: 1px solid #fff;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index:100;
+	width: 100%; 
+
+}
+body#slideshow #controlPanel div.header {
+	background: #555;
+}
+body#slideshow #controlPanel div.header a {
+	color:#fff;
+}
+body#slideshow #controlPanel div.inner {
+	border-bottom: 1px solid #ddd;
+	background: url(../../images/standard/misc/bg_opaque.png) top left repeat;
+}
+body#slideshow #flashcontent {
+	height:100%;	
+}
+body#slideshow a.help-popup,
+body#slideshow a.embed {
+	float:right; 
+	background: url(../../images/standard/icon/help_slideshow.gif) left center no-repeat;
+	padding-left: 20px;
+	margin-right: 1.5em;
+}
+body#slideshow a.embed {
+	background: url(../../images/standard/icon/embed_slideshow.gif) left center no-repeat;
+}
+
+body#popup #flashcontent {
+	height:100%;	
+	margin-bottom: 0.8em;
+}
+
+/* embeddable slideshows */
+textarea.embedCode {
+	font-family: 'Courier New'; 
+	width: 600px;
+	height: 260px;
+	font-size: 1.1em;
+	line-height: 1.3em;
+	color:#555;
+
+}
+
+/* ================================================================================= */
+/* Filters                                                                       */
+/* ================================================================================= */
+span.filterset select{width:115px; margin-top: 3px;}
+span.filterset{margin-top:10px; display:block;}
+span.filterset_first{margin-top:0;}
+
+
+/* ================================================================================= */
+/* Browse page                                                                       */
+/* ================================================================================= */
+
+div.categoryList ul { float:left;}
+div.categoryList ul li { line-height: 1.2em; padding: 0px 10px 3px 0; clear:both; }
+
+div.categoryList ul.catThumbs { width: 19%; float: left; list-style: none; margin:0; padding:0;}
+div.categoryList ul.catThumbs li { padding-bottom:5px;}
+div.categoryList ul li table { margin:0;}
+div.categoryList ul li td {padding-right:5px; vertical-align:middle;}
+div.categoryList ul li img {border:1px solid #666;}
+
+
+#browsePage div.categoryList ul.left { width: 25%; padding-left: 21px; margin-bottom: 1em;}
+#browsePage a.back { 
+   background: url(../../images/standard/arrow/back_arrow.gif) left center no-repeat; 
+   padding-left:11px;
+   height: 1%; 				/* N.B. 'height: 1%' forces IE/PC5.x to display padding */
+	} 
+	
+div.browsePager { 
+	margin:0 0 5px 0;	 
+	}
+
+/* Fix display issue when use explorer browser */
+#categoryContent div.browsePager { 
+	/* float:none !important; */
+	clear:none !important;
+}	
+#categoryContent div.browsePager:after {
+	clear:none !important;
+}
+
+	
+#key {
+	margin:0 0 1em 0;
+	padding:0;
+	list-style: none;
+}	
+#key li{
+	margin-bottom:5px;
+}
+#key span {
+	width:13px; height:13px;
+	background: #eee;
+	float:left;
+	margin-right:5px;
+	border:1px solid #aaa;
+}
+	
+div#extensionasset {
+	border-bottom: 1px solid #ccc;
+	margin:0;
+	display: block;
+}
+ul.attributeList {
+	list-style: none;
+	margin: 1em 0;
+	padding: 0;
+}
+ul.lightbox ul.attributeList {
+	margin-top: 0.5em;
+}
+ul.attributeList li {
+	float:none;
+	border:0 !important;
+	width: auto !important;
+	margin:0 0 0.3em 0; padding:0;
+	background: transparent !important;
+}
+ul.attributeList li h2 {
+	margin-bottom: 0.3em;
+}
+ul.attributeList li p {
+	display:inline;
+}
+
+div.panel {
+	margin:1.5em 0 1em 0;
+}
+
+/* ================================================================================= */
+/* Search results page styles 																		 */
+/* ================================================================================= */
+/* Following is used if the results span more than one page */
+#resultsPage div.foot { 
+	padding-top: 0px; 
+	/* position: relative;  */
+	margin: 1em 0; 
+	}
+div.foot div.searchPager { top: 0; }
+
+
+form#numResultsForm {
+	float:right;
+	padding-top: 0.2em;
+	margin-left:3em;
+}
+p.addAll { text-align:right; font-size: 90%;}
+
+div.head span.divider, div.foot span.divider { margin: 0px 3px; }
+
+div.extraInfo {color: #909090; position: relative; float: left; width: 100%; margin: 4px 0px 0px 0px; z-index: 1;}
+
+/* ================================================================================= */
+/* Asset detail page styles                                                          */
+/* ================================================================================= */
+/* Action buttons and links */
+div.actions { float: left; width: auto; padding-left: 20px; /* margin-bottom:1em; */ }
+div.actions input { width: 11em; margin-bottom: 7px; margin-left: 0; }
+div.actions p {width: 160px;}
+div.actions ul { width: auto; list-style: none; margin: 0em 0 0 0; padding: 0; }
+div.actions ul li.text, div.actions ul li.cms { 
+	width: 160px;
+	line-height: 1.3em; 
+	padding-bottom:  5px; } 
+div.actions ul li.border { border-top: 1px solid #ccc; } 
+div.actions ul li.link { border-top: 1px solid #ccc; font-size: 90%; padding: 6px 0px 5px 0px;}
+div.actions ul li.warning { background-color: #FDD; margin-bottom:7px; padding:3px; border: 1px solid red;   }
+div.actions ul li a {display:block; padding-right:22px; text-transform: lowercase;}
+div.actions ul li.cms a { display:inline; padding:0;}
+
+div.actions ul a.view { background: url(../../images/standard/icon/popup.gif) top right no-repeat; }
+div.actions ul a.print { background: url(../../images/standard/icon/print.gif) top right no-repeat; }
+div.actions ul a.embed{ background: url(../../images/standard/icon/embed.gif) top right no-repeat; }
+div.actions ul a.lbAdd { background: url(../../images/standard/icon/folder.gif) top right no-repeat; }
+div.actions ul a.lbRemove { background: url(../../images/standard/icon/folder_grey.gif) top right no-repeat; }
+div.actions ul a.download { background: url(../../images/standard/icon/download.gif) top right no-repeat; }
+
+div.articleActions div.actions { padding-left:0px; float:none; width:120px; }
+div.articleActions div.actions li.empty { padding:0px; }
+
+/* Stripey table rows - generated by javascript - displaying asset metadata */
+table.form {
+	margin-bottom: 1em;
+}
+table.form.stripey { border: 1px solid #ddd; margin-top:0px; border-collapse: collapse;}
+table.form.stripey th { width:20%;}
+table.form.stripey th, table.form.stripey td { padding-bottom:6px !important; padding-left:10px !important;}
+table.stripey tr.even{ background-color: #eee;} 
+
+/* Highlighted attribute */
+table.stripey tr.highlight th, table.stripey tr.highlight td {
+	border:1px solid #E90505; 
+	font-weight: bold;}
+table.stripey tr.highlight th {border-right:0;}
+table.stripey tr.highlight td {border-left:0;} 
+
+
+/* Related Assets (grouped by category) */
+table.related { width: 100%; }
+table.related th {
+	border-top:5px solid #fff;
+	padding:0.5em 10px;
+	background: #eee;
+	}	
+	
+table.related td.id { width:2%;}	
+table.related td { padding: 0.4em 10px; }	
+table.related td.links {text-align: right;}	
+
+/* Note, these class names are generated by jsp code - do not change the names */
+div.firstAttributePanel-below	{ margin-bottom: 6px; margin-top: 6px; background: #fdd; padding:5px 12px; border: 1px #faa solid; }
+div.firstAttributePanelLabel-below  { font-weight: bold; text-decoration: underline; margin-bottom: 6px; }
+span.firstAttributePanelLabel-below { font-weight: bold; }
+
+/* Note, these class names are generated by jsp code - do not change the names */
+div.firstAttributePanel-right	{ margin-left: 20px; float: left; width: 340px; background: #eee; padding: 5px 12px 7px 12px; border: 1px #bbb solid; }
+div.firstAttributePanelLabel-right  { font-weight: bold; text-decoration: underline; margin-bottom: 6px; }
+span.firstAttributePanelLabel-right { font-weight: bold; }
+
+div#attributeGroupHeading { 
+   width: auto; 
+   border: 1px solid #aaa; 
+   margin: 0.4em 0 0 0; 
+   padding: 5px 10px;
+	background: url(../../images/standard/misc/panel_grad.gif) bottom left repeat-x; 
+	}
+
+div#attributeGroupHeading a:hover { text-decoration: none; }
+
+div#attributeGroupHeading h3 { margin: 0px }
+
+
+
+/* Large image view --------------------------------  */
+body.largeViewEnabled h1 {
+	float:left;
+	margin-bottom: 10px; 
+	height: 1%;
+}
+body.largeViewEnabled p.tabHolderPopup {
+	margin-top:6px;
+	float:right;
+	overflow:hidden;
+	height: 1%;
+}
+body.largeViewEnabled div.head {
+	clear:both;
+	margin-top:-1px;
+	float:left;
+	width:100%;
+}
+body.largeViewEnabled h2{
+	clear:left;
+}
+
+body.largeViewOn div.actions {
+	clear:left;
+	padding-left:0;
+	margin-bottom: 0.5em;
+}
+body.largeViewOn div.actions ul li{
+	float:left;
+	margin-right: 1em;
+	border:0 !important
+}
+body.largeViewOn div.actions ul li.link {
+	padding-top:4px;
+	margin-left: 0;
+	margin-right: 1.5em;
+}
+body.largeViewOn div.actions ul li.text, body.largeViewOn div.actions ul li.cms { 
+	width: auto;
+	padding-top:2px;
+}
+
+/* ================================================================================= */
+/* Download page styles                                                              */
+/* ================================================================================= */
+div.thumb, div.thumbFile { 			
+   float:left; 
+   padding:0 30px 0px 16px; 
+   height: 70px;                    /* this should be taller than the thumbnail max height */
+   border-right: 0px solid #999; 
+   margin-right: 0px; }
+
+div.thumbFile { 
+	padding:30px 35px 20px 35px;
+	border:1px solid #666;
+	}
+#downloadPage div.formFields {clear:both;}
+div.formFields input, div.formFields select { display: block; margin: 3px 0; }
+
+
+/* Dialogue panel for converting images */
+div.dialogPanel { 
+	width: 360px; 							/* needs to be redefined for IE 5.x due to padding */
+	margin: 1em 0; 
+	border: 1px solid #999; 
+	padding: 1em }
+
+div.panelWide { 
+	width: 97%; 							/* needs to be redefined for IE 5.x due to padding */
+	margin: 1em 0; 
+	border: 1px solid #999; 
+	padding: 1em }
+
+div.downloadAttributes {
+	margin: 1em 0 0 0;
+}
+
+div.downloadAttributes table.singleAttribute th,
+div.lightboxDownloadAttributes table.singleAttribute th {
+	text-align: left;
+	padding: 0 6px 0 0;
+}
+
+div.lightboxDownloadAttributes table.form,
+div.lightboxDownloadAttributes table {
+	margin-bottom: 8px;	
+}
+
+div.lightboxDownloadAttributes {
+	max-height: 250px;
+	overflow: auto;
+	padding: 1px;
+}
+
+div.lightboxDownloadAttributes h4 {
+	margin: 0 0 3px 0;	
+}
+
+/* ================================================================================= */
+/* Bulk upload page styles                                                           */
+/* ================================================================================= */
+div#filesUploading {
+	display:none;
+	clear:left;
+	padding-top:0.5em;
+	font-style: italic;
+}	
+h3.progressLoader {
+	display:none;
+	line-height: 24px;
+}
+h3.progressLoader img {
+	float:left;
+	margin-right:0.5em;
+}
+h3.progressLoader span{
+	font-weight: normal;
+}
+	
+/* ================================================================================= */
+/* Add to Basket/View Basket styles                                                  */
+/* ================================================================================= */
+
+div.image-options {
+	padding: 0px;
+}
+
+div.add-to-basket #basket-message {
+	border-top: 1px solid #ccc;
+	padding-top: 5px;
+}
+
+div.add-to-basket #basket-message p {
+	width: auto !important;
+}
+
+div.add-to-basket li {
+	width: 400px !important;
+}
+
+body.largeViewOn div.add-to-basket ul li{
+	float:none;
+	margin-right: 1em;
+	
+}
+body.largeViewOn div.add-to-basket ul li.border {
+	border-top: 1px solid #CCC !important;
+}
+
+
+div.add-to-basket form h3 {
+	padding: 0px;
+	margin: 0px 0 5px 0;
+}
+
+div.add-to-basket input.download-priceband{
+	width: auto !important;
+}
+
+div.add-to-basket input.print-priceband {
+	width: auto !important;
+}
+
+div.add-to-basket div.priceband-item {
+	overflow: auto;
+	zoom: 1;
+}
+
+div.add-to-basket div.priceband-item label {
+	width: 7em;
+	float: left;
+	line-height: 1.8em;
+	padding-left: 15px;
+}
+
+div.add-to-basket div.priceband-item span.priceband-item-action {
+	float: left;
+	width: 30px;
+	display: block;
+	text-align: right;
+}
+
+div.basket-actions {
+	overflow: auto;
+	zoom: 1;
+}
+
+div.basket-actions .button {
+	float: left;
+}
+
+a.view-basket {
+	float: left;
+	padding: 0 0 0 10px !important;
+	line-height: 1.8em;
+}
+
+.priceband-table {
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 1em;
+	border-collapse: collapse;
+}
+
+.priceband-table th, .priceband-table td {
+	padding: 0 1em 5px 0;
+	margin: 0px;
+	vertical-align:top;
+}
+ 
+.priceband-table th.first, .priceband-table td.first {
+/* 	width: 70px; */
+}
+
+.priceband-table th.second, .priceband-table td.second {
+/* 	width: 35%; */
+}
+
+.priceband-table input {
+	padding: 0px 0;
+	margin: 0px !important;
+}
+
+.priceband-table th {
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+.prints-section {
+	border-top: 1px solid #ccc;
+	padding-top: 7px !important;
+}
+
+/* ================================================================================= */
+/* Purchase Required Cart styles               						                 */
+/* ================================================================================= */
+
+ul.lightbox.cart li {
+	display: block;
+	float: none;
+	width: 99%;
+	text-align: left;
+	height: 12em;
+	background: #fff !important;
+	border: none;
+	border-bottom: 1px solid #ddd !important;
+	padding: 10px 0;
+}
+
+ul.cart li div.asset-thumb, ul.cart li div.asset-name, ul.cart li div.asset-details {
+	float: left;
+	font-size: 1.1em !important;
+	line-height: 1.8em;
+	padding-left: 0px;
+}
+
+ul.cart li div.asset-name {
+	width: 20%;
+	line-height: 1.5em;
+	padding-right:10px;
+}
+
+ul.cart li div.asset-thumb {
+	width: 150px;
+}
+
+ul.cart li div.asset-details {
+	width: 50%;
+}
+
+ul.cart li p.action {
+	top: 6px !important;
+	font-size: 1.1em;
+	float:right;
+	line-height: 1.8em;
+}
+
+ul.cart li.headers {
+	display: block;
+	float: none;
+	width: 99%;
+	text-align: left;
+	height: 2em;
+	background: #f2f2f2 !important;
+	border: none;
+	border-bottom: 1px solid #E6E6E6 !important;
+	border-top: 1px solid #D9D9D9 !important;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 11px;
+	color: #454545;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+ul.cart li.headers div {
+	padding-left: 0px;
+}
+
+span.asset-format, span.asset-price ,  span.asset-option{
+	width: 100px;
+	float: left;
+	display: block;
+}
+
+span.asset-format {
+	display: block;
+	width: 60%;
+}
+
+span.asset-price {
+	display: block;
+}
+
+/* ================================================================================= */
+/* Cart styles with Commercial options                                               */
+/* ================================================================================= */
+
+ul.option li div.asset-name {
+	width: 25%;
+	margin-right:15px;
+}
+ul.option span.asset-option{
+	width: 50%;
+	margin-right:15px;
+}
+
+ul.option li div.asset-details {
+	width: 40%;
+  }
+
+ul.option span.asset-format {
+ 	width:25%;
+  }
+
+ul.option span.asset-price {
+	display: block;
+ 	width:40%;
+ }
+
+
+
+/* ================================================================================= */
+/* Sub Totals section on Select Commercial Options page                              */
+/* ================================================================================= */
+li#totals{
+	height:auto;
+	float:left;
+}
+	
+/* ================================================================================= */
+/* checkout page styles                                                              */
+/* ================================================================================= */
+#checkout div.dialogPanel { 
+	width: 40%; 							
+	margin: 1em 1em 1em 0; 
+	float:left; 
+}
+	
+/* ================================================================================= */
+/* Admin pages styles 																					 */
+/* ================================================================================= */
+input.inline { margin-left: 2px; }
+* html input.inline { position: relative; top: -1px;  }
+
+
+/* Group pages */
+/* BB - replaced permission key table with div */
+div.permissionKey {border:1px solid #999; padding: 12px; margin:1em; font-size:90%; width:25%; float:left;}
+div.permissionKey ul {width:90%; list-style: none; margin:0;padding:0;}
+td.newPerm, th.newPerm { padding-left:25px; }
+
+/* Attributes */
+table.checklistCol {
+	float:left;
+	width:30%;
+	margin: 0 0 1em 0;
+}
+/* Reports pages */
+table.report { width: 100%; margin: 1em 0;}
+table.report th, table.report td { 
+	text-align: left; 
+	padding: 3px 14px 3px 0px; 
+	vertical-align: top;
+	border-collapse: collapse;
+	}
+table.report td { border-top:1px solid #eee;}
+table.report th.downloads { text-align: right; padding-right: 3px; }
+table.report td.downloads { text-align: right; padding-right: 5.1em; }
+table.report td.uses { text-align: right; padding-right: 3.8em; }
+table.report tr.downloadbreakdown { background:#eee; }
+table.report tr.downloadbreakdown td { padding: 4px 16px 4px 6px; padding-right: 5.4em; }
+table.report tr.downloadbreakdown td.groups { font-weight: bold; padding-bottom: 1px; }
+table.report tr.categoryRow td {border-top:1px solid #aaa}
+table.report tr.topSpace td, table.report tr.topSpace th {padding-top:1em;}
+table.report tr.underline th {border-bottom:1px solid #999; padding-bottom:5px;}
+table.report tr.rule td { border-bottom:1px solid #999;}
+table.report tr:hover td{ background: #eee; cursor: default }
+
+table.orderSummary { 
+	border:1px solid #ccc;
+	width:100%;
+	background: #eee;
+	}
+table.orderSummary td, table.orderSummary  th { padding: 0.5em 1em 0.5em 1em;}	
+
+/* Keyword styles */
+
+table.keywordNav { width: 100%;}
+table.keywordNav td { text-align:center; padding:3px;}
+table.keywordNav td.current {background:#f1f1f1; border: 1px solid #ccc;}
+table.keywordNav td.current a {color:#000}
+
+tr.keyword-listing td{
+	border-bottom:1px solid #dedede;
+}
+
+a.videoFrameLink { float:left; margin: 0 8px 8px 0;}
+a.videoFrameLink img {display:inline; border: solid 5px #fff;}
+a.videoFrameLink:hover img { border: solid 5px #ccc; }
+
+
+
+h3.attributeGroupHeading { border: 1px #aaa solid; margin-top: 8px; padding: 4px 8px; background-color: #f1f1f1; }
+
+
+/* ================================================================================= */
+/* Error page 																								 */
+/* ================================================================================= */
+/* * html #errorPage { width: 100%; background: #fff; } */
+/* * html #errorPage #pageWrapper { width: auto; background: none; }
+* html #errorPage #pageBottom { background: none; } */
+div.errorBox {
+	margin:20px; 
+	width:92%; 
+	border:1px solid #666; 
+	background-color: #EEE; 
+	padding:10px; 
+	overflow: auto;}
+/*************************/
+
+
+
+
+/* ================================================================================= 
+	 Hidden thumbnails on search and browse page 																								
+	================================================================================= */
+#resultsPage ul.lightbox li.noThumb,
+#browsePage ul.lightbox li.noThumb,
+#lightboxPage ul.lightbox li.noThumb  { 								/* lightbox panels */
+   padding: 0; 
+   float: left; 
+	width:33%;
+   margin: 5px 0 4px 0; 
+   background: none; 
+	border:0;
+	text-align: left; 
+	font-size: 1em;
+	}
+
+#lightboxPage ul.lightbox li.noThumb {
+	width:49%;
+	margin-right:0;
+	}	
+	
+ ul.lightbox li.noThumb a.thumb {									/* wraps thumbnail image */
+	display: none;  
+	}  
+	
+#resultsPage ul.lightbox li.noThumb div.detailWrapper, 
+#browsePage ul.lightbox li.noThumb div.detailWrapper,
+#lightboxPage ul.lightbox li.noThumb div.detailWrapper {		/* wraps thumbnmail and details */
+	margin: 0px;
+	overflow: visible;
+	height:9.5em;
+	padding:0 1.5em 0.5em 0;
+	float:left;
+	}		
+
+#lightboxPage ul.lightbox li.noThumb div.detailWrapper {
+	padding-right:0;
+	height:5em;
+	width: 60%;						/* allow action links to float up alongside */
+	}	
+
+#lightboxPage ul.lightbox li.noThumb p.action {
+	margin-right:5em;}	
+
+li.noThumb div.detailWrapper p.catDesc { margin-bottom:1em;}	
+
+ul.lightbox li.incomplete { border: dashed 1px #AF6262; background: #FFe6e6; }
+
+/*ul.lightbox li.assetList { background-color: #CCFFCC; }*/
+
+ul.lightbox li.restricted { background: #FDD; }
+
+
+ul.lightbox li.restricted img.icon { border: 0 }
+
+ul.lightbox li.agreementApplies { background: #FFFFCC; }
+
+/* ================================================================================= 
+	 Full / Larger size image page																							
+	================================================================================= */
+	
+body#fullSize, body#masks {
+	min-width:0;			/* Cancel min-width as we are in a popup window */
+	}	
+
+#zoomControlPanel {
+	display: none;
+	text-align: left;
+	position:fixed; top:20px; left: 5%; z-index:1000; 
+	padding:8px;
+	border: 1px solid #000;
+	background: #fff;
+	width:86%; 
+	height:4em;
+	opacity: .9;
+	filter: alpha(opacity=90);
+	}
+#zoomControlPanel td { vertical-align: top; }
+#zoomControlPanel .paging { margin-bottom:6px; }
+	
+body#fullSize .paging {
+	position: relative;
+	line-height:20px; height:20px;
+	z-index:100;
+	background:#fff;
+	border-bottom:1px solid #000;
+	}
+	
+body#fullSize #pageNumbers {
+	/* Removed positioning so does not overlap image on smaller monitor resolutions.
+		BB - reinstated else draggable image overlaps this control panel when switched on.
+		Can get round above problem by switching on image zoom.
+	  */
+	position:absolute;
+	z-index:2000;
+	left:0; bottom:0px; 
+	display:block;
+	width:100%;
+	background: #fff;
+	border-top :1px solid #000;
+	line-height:24px; height:50px;
+	text-align: center; 
+	color:#999;
+	}
+
+#pageNumbers .numbers { padding:0 4px; }
+
+/* ================================================================================= 
+	 Asset versions																							
+	================================================================================= */		
+ul.versions {
+	list-style:none; 
+	margin:1.5em 0; padding:0;
+	}
+	
+ul.versions li {
+	border-bottom: 1px solid #ccc;
+	padding-bottom:1em; margin-bottom:1em;
+	line-height: 1.3em;
+	}
+ul.versions li img {
+	float:left; 
+	margin-right:1em;
+	}		
+	
+/* ================================================================================= 
+	 News Panel
+	================================================================================= */
+div.newsPanel { 
+	padding: 10px 10px 2px 10px; 
+	background: #FFFFC3;
+	border:1px solid #CFCF9F;
+	margin-top:1em;
+	}
+div.newsContent { 
+	border-top:1px solid #ccc;
+	padding: 9px 0;
+	}
+div.newsContent p{ 
+	margin-bottom:0;
+	}	
+div.newsDate { 
+	float: right; 
+	color: #999; 
+	margin-left: 8px; 
+	}	
+
+div.newsContent strong.headline {
+	display:block;
+	margin-bottom:2px;
+	}	
+	
+/* ================================================================================= 
+	 Workflow
+	================================================================================= */	
+	
+body#workflow ul.lightbox {
+	float:left;
+	clear:left;
+}
+body#workflow ul.lightbox li {
+	float:none;
+	margin:0 0 2em 0;
+}
+
+form.approvalState{							/* used on workflow page */
+	float:left; 
+	margin:0 0 1.5em 1.5em;
+	width:60%;
+	display: inline;
+}
+form.approvalState input.button{	
+	float:left; 
+}
+div#approvalState {							/* used on batch update page */
+	border: 1px solid #ccc;
+	border-width:1px 0;
+	padding: 1em 0; margin:1em 0;
+	overflow:hidden;
+}
+div#approvalState div.container{
+	float:left;
+	width:458px;
+}
+
+
+form.approvalState label, div#approvalState label{
+	font-weight: bold;
+}
+form.approvalState p.approvalMessage, div#approvalState p.approvalMessage {
+	margin:0.3em 0 1em 0;
+	overflow:hidden;			/* required for IE7 */
+}	
+form.approvalState span.userDate, div#approvalState span.userDate {
+	display:block;
+	margin:0.4em 0 0 0;
+	padding:0.3em 0 0 0;
+	font-style: italic; 
+	border-top:1px dotted #aaa;
+}	
+form.approvalState a.viewMessages, div#approvalState a.viewMessages{
+	float:right;
+}
+form.approvalState textarea, div#approvalState textarea {
+	width:100%;
+	height:4em;
+	margin:0.3em 0;
+}
+
+/* =================================================================================
+	Download child assets 																		
+	================================================================================= */
+ul.childList { 
+   list-style: none; 
+   padding: 0; 
+   margin: 0;
+	overflow: hidden;
+	height:1%;
+}
+ul.childList li { 
+	width:35.5%; float:left; 
+	margin: 0 14% 1em 0;
+   border-top: 1px solid #ddd; 
+   padding: 1em 0 0 0; 
+	overflow:hidden;
+	height:1%;
+}
+
+ul.childList form {
+	float:right;
+	margin-left:0.5em;
+}
+ul.childList li img {
+	float:left;
+	margin-right: 0.5em;
+	border:1px solid #aaa;
+}
+
+/* =================================================================================
+	Image masks																		
+	================================================================================= */
+#masks {
+	padding: 1em;
+}
+
+#masks h1 {
+	padding: 0.5em 1em;
+	margin:0;
+	font-size: 125%;
+}
+#masks .inner {
+	padding: 1em;
+}
+#masks h2 {
+	padding: 0.5em 0;
+	margin:0;
+}
+
+div.section {
+	border: 1px solid #aaa;
+	background: #eee;
+	padding: 1em;
+	margin-bottom: 1.5em;
+	overflow:hidden;
+	height:1%;
+
+}
+
+
+
+div.section.noRightPadding {
+	padding-right:0;
+}
+div.section.noRightPadding p {
+	padding-right:1em;
+}
+/* div.section p {
+	margin-bottom:0;
+} */
+
+#masks div.wrapper {
+	background:#eee;
+	float:left;
+	position:relative;
+	margin: 0 0 1em 0;
+	width:400px;
+	height:320px;
+	background: url(../servlet/display?file=<bean:write name='file'/>) top left no-repeat;
+}
+img#mask{
+	cursor: pointer;
+	border:6px solid #f6f6f6; 
+	position: absolute;
+}
+* html img#mask {
+	border:0;
+}
+
+
+
+ul.panelSelector {
+	overflow: hidden;
+	height: 1%;
+	margin: 1em 0 0 0;
+	padding:0;
+	list-style: none;
+}
+ul.panelSelector li {
+	float:left;
+	width: 14em;
+	margin:0;
+	display:block;
+}
+
+ul.panelSelector li a{
+	display: block;
+	padding: 1em;
+	border: 2px solid #bbb;
+	background: #dfdfdf;
+	color:#777;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	font-weight: normal;
+	overflow: hidden;
+	height:1%;
+	margin: 0 1em 1em 0;
+}
+
+ul.panelSelector li a span {
+	float:left;
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	margin-right: 0.8em;
+}
+
+
+ul.panelSelector li a:hover,
+ul.panelSelector li a.selected {
+	border-color:#222;
+	background-color: #cfcfcf;
+	color:#222;
+	text-decoration: none;
+}
+ul.panelSelector li a:hover span,
+ul.panelSelector li a.selected span {
+	border-color: #333;
+}
+
+ul.panelSelector li img {
+	border:0;	
+	float:left;
+}
+ul.panelSelector li.hidden {
+	display:none;
+}
+
+#specifyColour {
+	clear:left;
+}
+#masks #customColour {
+	clear:both;
+	height:1%;
+	padding-top: 1em;
+}
+#masks #customColour input {
+	float:left; 
+	margin: 0 10px 5px 0;
+}
+#masks #pickerholder {
+	clear:left;
+}
+#masks h2 span {
+	/* background: #999; */
+	color:#666;
+	font-size: 1em;
+}
+/* do not show step numbers when some steps are missing */
+#masks.noSteps h2 span {
+	display: none;
+}
+
+/* =================================================================================
+	Preview email - these styles used to sit in emailPreview.css (which has now been deleted)																	
+	================================================================================= */
+div.content { margin: 20px; width: 400px; }
+
+table.email { border: thin solid #aaa; margin-bottom: 10px; width: 100% }
+table.email th { text-align: left; padding: 4px 8px 4px 14px; background-color: white; border-bottom: 1px thin; width: 10%; }
+table.email td { padding: 4px 8px; background-color: white; border-bottom: 1px thin;} 
+table.email td.body { padding:14px; }
+table.email td.language { text-decoration: underline; }
+table.email tr.odd td, table.email tr.odd th { background-color: #eee; }
+
+

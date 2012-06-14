@@ -1,0 +1,20 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Your Image Bank registration has been approved
+      </subject>
+      <body>
+Dear #name#
+
+You have been approved as a user of the Asset Bank. 
+Your login details are the same as you use to log in to your Windows PC.
+
+Kind regards,
+Image Bank Admin
+      </body>
+   </email-template>
+</email-templates>

@@ -1,0 +1,18 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>#from#</from>
+         <to>#recipients#</to>	
+      </addresses>
+      <subject>Asset Bank: #filename#</subject>
+      <body>
+This message was sent to you from #username# via Asset Bank.
+
+#message#
+
+Click the link below to download:
+
+#url#
+      </body>
+   </email-template>
+</email-templates>

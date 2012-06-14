@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="search" size="3068,2577" id="" metadata="uml2-1.0" initialized="true" tag="1000" key="32303036313031382061737365742D62616E6B2D7472756E6B2F5374657665">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.1" name="IndexManager" location="150,1140" size="373,265" id="com.bright.framework.search.service/IndexManager" runTimeClassModel="optimizeIndex(Ljava.lang.String;),sortFieldSpecifier,deleteDocuments(Ljava.lang.String;Ljava.util.Vector;),k_sDefaultOperatorOr,indexExists(Ljava.lang.String;),indexDocuments(Ljava.lang.String;Ljava.util.Vector;ZZLcom.bright.framework.language.bean.Language;),getDocuments(Ljava.lang.String;Ljava.lang.String;[Lorg.apache.lucene.search.SortField;Ljava.lang.String;Z),deleteAllDocuments(Ljava.lang.String;),k_sDefaultOperatorAnd,deleteDocument(Ljava.lang.String;Ljava.lang.String;),setSortFieldSpecifier(Lcom.bright.framework.search.service.SortFieldSpecifier;),getSortFieldSpecifier()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="209,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="k_sDefaultOperatorAnd" id="com.bright.framework.search.service/IndexManager#k_sDefaultOperatorAnd"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="k_sDefaultOperatorOr" id="com.bright.framework.search.service/IndexManager#k_sDefaultOperatorOr"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sortFieldSpecifier" id="com.bright.framework.search.service/IndexManager#sortFieldSpecifier"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="130,162">
+      <children xsi:type="editmodel:MethodEditModel" name="deleteAllDocuments" id="com.bright.framework.search.service/IndexManager#deleteAllDocuments(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteDocument" id="com.bright.framework.search.service/IndexManager#deleteDocument(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteDocuments" id="com.bright.framework.search.service/IndexManager#deleteDocuments(Ljava.lang.String;Ljava.util.Vector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDocuments" id="com.bright.framework.search.service/IndexManager#getDocuments(Ljava.lang.String;Ljava.lang.String;[Lorg.apache.lucene.search.SortField;Ljava.lang.String;Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSortFieldSpecifier" id="com.bright.framework.search.service/IndexManager#getSortFieldSpecifier()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexDocuments" id="com.bright.framework.search.service/IndexManager#indexDocuments(Ljava.lang.String;Ljava.util.Vector;ZZLcom.bright.framework.language.bean.Language;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexExists" id="com.bright.framework.search.service/IndexManager#indexExists(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="optimizeIndex" id="com.bright.framework.search.service/IndexManager#optimizeIndex(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSortFieldSpecifier" id="com.bright.framework.search.service/IndexManager#setSortFieldSpecifier(Lcom.bright.framework.search.service.SortFieldSpecifier;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ReindexAction" location="240,15" size="368,139" id="com.bright.framework.search.action/ReindexAction" runTimeClassModel="searchManager,categoryManager,execute(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),setSearchManager(Lcom.bright.framework.search.service.ManualReindexQueueManager;),setCategoryManager(Lcom.bright.framework.category.service.CategoryManager;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="262,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="categoryManager" id="com.bright.framework.search.action/ReindexAction#categoryManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchManager" id="com.bright.framework.search.action/ReindexAction#searchManager"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="131,54">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="com.bright.framework.search.action/ReindexAction#execute(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCategoryManager" id="com.bright.framework.search.action/ReindexAction#setCategoryManager(Lcom.bright.framework.category.service.CategoryManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSearchManager" id="com.bright.framework.search.action/ReindexAction#setSearchManager(Lcom.bright.framework.search.service.ManualReindexQueueManager;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.framework.search.action/ReindexAction->com.bright.framework.search.service/ManualReindexQueueManager" source="//@children.1" target="//@children.2" targetEnd="//@children.1/@sourceConnections.0/@children.2" label="//@children.1/@sourceConnections.0/@children.0" sourceEnd="//@children.1/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="183,139" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="184,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.1/@sourceConnections.0 //@children.8/@sourceConnections.0" name="ManualReindexQueueManager" location="239,248" size="479,121" id="com.bright.framework.search.service/ManualReindexQueueManager" runTimeClassModel="processQueueItem(Lcom.bright.framework.queue.bean.QueuedItem;),rebuildIndex(ZJ),queueRebuildIndex(ZJ),setCategoryCountCacheManager(Lcom.bright.assetbank.category.service.CategoryCountCacheManager;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="190,72">
+      <children xsi:type="editmodel:MethodEditModel" name="processQueueItem" id="com.bright.framework.search.service/ManualReindexQueueManager#processQueueItem(Lcom.bright.framework.queue.bean.QueuedItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="queueRebuildIndex" id="com.bright.framework.search.service/ManualReindexQueueManager#queueRebuildIndex(ZJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rebuildIndex" id="com.bright.framework.search.service/ManualReindexQueueManager#rebuildIndex(ZJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCategoryCountCacheManager" id="com.bright.framework.search.service/ManualReindexQueueManager#setCategoryCountCacheManager(Lcom.bright.assetbank.category.service.CategoryCountCacheManager;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.9/@sourceConnections.0" name="SingleIndexSearchManager" location="725,480" size="459,499" id="com.bright.framework.search.service/SingleIndexSearchManager" runTimeClassModel="deleteIndex(),optimiseIndex(),indexDocument(Lcom.bright.framework.search.bean.IndexableDocument;ZZ),getIndexLanguage(),indexDirectory,rebuildIndex(Z),rebuildIndex(ZJ),search(Lcom.bright.framework.search.bean.SearchQuery;IIZ),indexLanguage,setIndexLanguage(Lcom.bright.framework.language.bean.Language;),startup(),initialiseIndex(),clearIndex(),setIndexDirectory(Ljava.lang.String;),getIndexDirectory(),rebuildIndex(ZJZ),removeDocument(Lcom.bright.framework.search.bean.IndexableDocument;),run(),setScheduleManager(Lcom.bright.framework.common.service.ScheduleManager;),getScheduleManager(),rebuildIndexAsynchronously(),indexDocuments(Ljava.util.Vector;ZZZLcom.bright.framework.language.bean.Language;),setIndexManager(Lcom.bright.framework.search.service.IndexManager;),indexManager,scheduleManager">
+    <children xsi:type="editmodel:CompartmentEditModel" size="212,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="indexDirectory" id="com.bright.framework.search.service/SingleIndexSearchManager#indexDirectory"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="indexLanguage" id="com.bright.framework.search.service/SingleIndexSearchManager#indexLanguage"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="indexManager" id="com.bright.framework.search.service/SingleIndexSearchManager#indexManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="scheduleManager" id="com.bright.framework.search.service/SingleIndexSearchManager#scheduleManager"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="168,378">
+      <children xsi:type="editmodel:MethodEditModel" name="clearIndex" id="com.bright.framework.search.service/SingleIndexSearchManager#clearIndex()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteIndex" id="com.bright.framework.search.service/SingleIndexSearchManager#deleteIndex()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIndexDirectory" id="com.bright.framework.search.service/SingleIndexSearchManager#getIndexDirectory()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getIndexLanguage" id="com.bright.framework.search.service/SingleIndexSearchManager#getIndexLanguage()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getScheduleManager" id="com.bright.framework.search.service/SingleIndexSearchManager#getScheduleManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexDocument" id="com.bright.framework.search.service/SingleIndexSearchManager#indexDocument(Lcom.bright.framework.search.bean.IndexableDocument;ZZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexDocuments" id="com.bright.framework.search.service/SingleIndexSearchManager#indexDocuments(Ljava.util.Vector;ZZZLcom.bright.framework.language.bean.Language;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initialiseIndex" id="com.bright.framework.search.service/SingleIndexSearchManager#initialiseIndex()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="optimiseIndex" id="com.bright.framework.search.service/SingleIndexSearchManager#optimiseIndex()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rebuildIndex" id="com.bright.framework.search.service/SingleIndexSearchManager#rebuildIndex(Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rebuildIndex" id="com.bright.framework.search.service/SingleIndexSearchManager#rebuildIndex(ZJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rebuildIndex" id="com.bright.framework.search.service/SingleIndexSearchManager#rebuildIndex(ZJZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rebuildIndexAsynchronously" id="com.bright.framework.search.service/SingleIndexSearchManager#rebuildIndexAsynchronously()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeDocument" id="com.bright.framework.search.service/SingleIndexSearchManager#removeDocument(Lcom.bright.framework.search.bean.IndexableDocument;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="run" id="com.bright.framework.search.service/SingleIndexSearchManager#run()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="search" id="com.bright.framework.search.service/SingleIndexSearchManager#search(Lcom.bright.framework.search.bean.SearchQuery;IIZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setIndexDirectory" id="com.bright.framework.search.service/SingleIndexSearchManager#setIndexDirectory(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setIndexLanguage" id="com.bright.framework.search.service/SingleIndexSearchManager#setIndexLanguage(Lcom.bright.framework.language.bean.Language;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setIndexManager" id="com.bright.framework.search.service/SingleIndexSearchManager#setIndexManager(Lcom.bright.framework.search.service.IndexManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setScheduleManager" id="com.bright.framework.search.service/SingleIndexSearchManager#setScheduleManager(Lcom.bright.framework.common.service.ScheduleManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startup" id="com.bright.framework.search.service/SingleIndexSearchManager#startup()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.search.service/ManualReindexQueueManager&lt;-com.bright.framework.search.service/SingleIndexSearchManager" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,46" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="308,121"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.framework.search.service/SingleIndexSearchManager->com.bright.framework.search.service/IndexManager" source="//@children.3" target="//@children.0" targetEnd="//@children.3/@sourceConnections.1/@children.2" label="//@children.3/@sourceConnections.1/@children.0" sourceEnd="//@children.3/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,489" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="363,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.10/@sourceConnections.0" name="BaseSearchQuery" location="1320,14" size="382,355" id="com.bright.framework.search.bean/BaseSearchQuery" runTimeClassModel="isEmpty(),getQueryDescription(),setKeywords(Ljava.lang.String;),BaseSearchQuery(),getDefaultOperator(),setMaxNoOfResults(I),keywords,getKeywords(),setDefaultOperator(Ljava.lang.String;),getMaxNoOfResults(),k_sDefaultOperatorOr,defaultOperator,maxNoOfResults,prepareUserQuery(Ljava.lang.String;),k_sDefaultOperatorAnd,setSortFields([Lorg.apache.lucene.search.SortField;),getSortFields()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="167,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="defaultOperator" id="com.bright.framework.search.bean/BaseSearchQuery#defaultOperator"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="k_sDefaultOperatorAnd" id="com.bright.framework.search.bean/BaseSearchQuery#k_sDefaultOperatorAnd"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="k_sDefaultOperatorOr" id="com.bright.framework.search.bean/BaseSearchQuery#k_sDefaultOperatorOr"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="keywords" id="com.bright.framework.search.bean/BaseSearchQuery#keywords"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="maxNoOfResults" id="com.bright.framework.search.bean/BaseSearchQuery#maxNoOfResults"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="129,216">
+      <children xsi:type="editmodel:MethodEditModel" name="BaseSearchQuery" id="com.bright.framework.search.bean/BaseSearchQuery#BaseSearchQuery()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDefaultOperator" id="com.bright.framework.search.bean/BaseSearchQuery#getDefaultOperator()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getKeywords" id="com.bright.framework.search.bean/BaseSearchQuery#getKeywords()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMaxNoOfResults" id="com.bright.framework.search.bean/BaseSearchQuery#getMaxNoOfResults()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getQueryDescription" id="com.bright.framework.search.bean/BaseSearchQuery#getQueryDescription()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSortFields" id="com.bright.framework.search.bean/BaseSearchQuery#getSortFields()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isEmpty" id="com.bright.framework.search.bean/BaseSearchQuery#isEmpty()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="prepareUserQuery" id="com.bright.framework.search.bean/BaseSearchQuery#prepareUserQuery(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDefaultOperator" id="com.bright.framework.search.bean/BaseSearchQuery#setDefaultOperator(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setKeywords" id="com.bright.framework.search.bean/BaseSearchQuery#setKeywords(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMaxNoOfResults" id="com.bright.framework.search.bean/BaseSearchQuery#setMaxNoOfResults(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSortFields" id="com.bright.framework.search.bean/BaseSearchQuery#setSortFields([Lorg.apache.lucene.search.SortField;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.search.bean/SearchQuery&lt;-com.bright.framework.search.bean/BaseSearchQuery" source="//@children.4" target="//@children.5" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="382,177" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,200"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.4/@sourceConnections.0 //@children.11/@sourceConnections.1" name="SearchQuery" location="1529,-15" size="351,621" id="com.bright.framework.search.bean/SearchQuery" runTimeClassModel="getLanguageCode(),setSortAttributeId(J),getQueryDescription(),getNumericFilter(),setSortDescending(Z),setAssetEntityId(J),getDescriptiveCategoriesToRefine(),getVisibleCategoriesAsBits(),setPriceUpper(Lcom.bright.framework.common.bean.BrightMoney;),getMaxNoOfResults(),setPriceLower(Lcom.bright.framework.common.bean.BrightMoney;),setDescriptiveCategoriesToRefine(Ljava.util.Vector;),setPermissionCategoriesToRefine(Ljava.util.Vector;),getPermissionCategoriesToRefine(),getAssetEntityId(),getPriceUpper(),setLanguageCode(Ljava.lang.String;),getSortFields(),isEmpty(),setPageIndex(I),getPriceLower(),getDateFilter(),getSortAttributeId(),getDefaultOperator(),setMaxNoOfResults(I),setPageSize(I),getPageSize(),getPageIndex(),isSortDescending(),setSortFields([Lorg.apache.lucene.search.SortField;),getLuceneQuery()">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="194,558">
+      <children xsi:type="editmodel:MethodEditModel" name="getAssetEntityId" id="com.bright.framework.search.bean/SearchQuery#getAssetEntityId()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDateFilter" id="com.bright.framework.search.bean/SearchQuery#getDateFilter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDefaultOperator" id="com.bright.framework.search.bean/SearchQuery#getDefaultOperator()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDescriptiveCategoriesToRefine" id="com.bright.framework.search.bean/SearchQuery#getDescriptiveCategoriesToRefine()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLanguageCode" id="com.bright.framework.search.bean/SearchQuery#getLanguageCode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLuceneQuery" id="com.bright.framework.search.bean/SearchQuery#getLuceneQuery()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getMaxNoOfResults" id="com.bright.framework.search.bean/SearchQuery#getMaxNoOfResults()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumericFilter" id="com.bright.framework.search.bean/SearchQuery#getNumericFilter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPageIndex" id="com.bright.framework.search.bean/SearchQuery#getPageIndex()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPageSize" id="com.bright.framework.search.bean/SearchQuery#getPageSize()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPermissionCategoriesToRefine" id="com.bright.framework.search.bean/SearchQuery#getPermissionCategoriesToRefine()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPriceLower" id="com.bright.framework.search.bean/SearchQuery#getPriceLower()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPriceUpper" id="com.bright.framework.search.bean/SearchQuery#getPriceUpper()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getQueryDescription" id="com.bright.framework.search.bean/SearchQuery#getQueryDescription()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSortAttributeId" id="com.bright.framework.search.bean/SearchQuery#getSortAttributeId()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSortFields" id="com.bright.framework.search.bean/SearchQuery#getSortFields()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVisibleCategoriesAsBits" id="com.bright.framework.search.bean/SearchQuery#getVisibleCategoriesAsBits()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isEmpty" id="com.bright.framework.search.bean/SearchQuery#isEmpty()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isSortDescending" id="com.bright.framework.search.bean/SearchQuery#isSortDescending()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetEntityId" id="com.bright.framework.search.bean/SearchQuery#setAssetEntityId(J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDescriptiveCategoriesToRefine" id="com.bright.framework.search.bean/SearchQuery#setDescriptiveCategoriesToRefine(Ljava.util.Vector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setLanguageCode" id="com.bright.framework.search.bean/SearchQuery#setLanguageCode(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMaxNoOfResults" id="com.bright.framework.search.bean/SearchQuery#setMaxNoOfResults(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPageIndex" id="com.bright.framework.search.bean/SearchQuery#setPageIndex(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPageSize" id="com.bright.framework.search.bean/SearchQuery#setPageSize(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPermissionCategoriesToRefine" id="com.bright.framework.search.bean/SearchQuery#setPermissionCategoriesToRefine(Ljava.util.Vector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPriceLower" id="com.bright.framework.search.bean/SearchQuery#setPriceLower(Lcom.bright.framework.common.bean.BrightMoney;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPriceUpper" id="com.bright.framework.search.bean/SearchQuery#setPriceUpper(Lcom.bright.framework.common.bean.BrightMoney;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSortAttributeId" id="com.bright.framework.search.bean/SearchQuery#setSortAttributeId(J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSortDescending" id="com.bright.framework.search.bean/SearchQuery#setSortDescending(Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSortFields" id="com.bright.framework.search.bean/SearchQuery#setSortFields([Lorg.apache.lucene.search.SortField;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SearchResults" location="2325,669" size="358,427" id="com.bright.framework.search.bean/SearchResults" runTimeClassModel="setPageIndex(I),searchResults,originalNumberOfResults,setTotalHits(I),setPageSize(I),getNumPages(),getPageSize(),setMaxResultsExceeded(Z),getMaxResultsExceeded(),getOriginalNumberOfResults(),setSearchResults(Ljava.util.Vector;),setOriginalNumberOfResults(I),getPageIndex(),getResultOffset(),pageIndex,getNumResultsOnPage(),getSearchResults(),totalHits,pageSize,maxResultsExceeded,getTotalHits()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="187,108">
+      <children xsi:type="editmodel:AttributeEditModel" name="maxResultsExceeded" id="com.bright.framework.search.bean/SearchResults#maxResultsExceeded"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="originalNumberOfResults" id="com.bright.framework.search.bean/SearchResults#originalNumberOfResults"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pageIndex" id="com.bright.framework.search.bean/SearchResults#pageIndex"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pageSize" id="com.bright.framework.search.bean/SearchResults#pageSize"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchResults" id="com.bright.framework.search.bean/SearchResults#searchResults"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="totalHits" id="com.bright.framework.search.bean/SearchResults#totalHits"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="166,270">
+      <children xsi:type="editmodel:MethodEditModel" name="getMaxResultsExceeded" id="com.bright.framework.search.bean/SearchResults#getMaxResultsExceeded()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumPages" id="com.bright.framework.search.bean/SearchResults#getNumPages()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumResultsOnPage" id="com.bright.framework.search.bean/SearchResults#getNumResultsOnPage()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getOriginalNumberOfResults" id="com.bright.framework.search.bean/SearchResults#getOriginalNumberOfResults()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPageIndex" id="com.bright.framework.search.bean/SearchResults#getPageIndex()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPageSize" id="com.bright.framework.search.bean/SearchResults#getPageSize()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getResultOffset" id="com.bright.framework.search.bean/SearchResults#getResultOffset()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSearchResults" id="com.bright.framework.search.bean/SearchResults#getSearchResults()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTotalHits" id="com.bright.framework.search.bean/SearchResults#getTotalHits()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setMaxResultsExceeded" id="com.bright.framework.search.bean/SearchResults#setMaxResultsExceeded(Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOriginalNumberOfResults" id="com.bright.framework.search.bean/SearchResults#setOriginalNumberOfResults(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPageIndex" id="com.bright.framework.search.bean/SearchResults#setPageIndex(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPageSize" id="com.bright.framework.search.bean/SearchResults#setPageSize(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSearchResults" id="com.bright.framework.search.bean/SearchResults#setSearchResults(LTree;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setTotalHits" id="com.bright.framework.search.bean/SearchResults#setTotalHits(I)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.15/@sourceConnections.0" name="SearchResult" location="2349,-16" size="352,117" id="com.bright.framework.search.bean/SearchResult" runTimeClassModel="setScore(F),setPosition(I),populateFromLuceneDocument(Lorg.apache.lucene.document.Document;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="179,54">
+      <children xsi:type="editmodel:MethodEditModel" name="populateFromLuceneDocument" id="com.bright.framework.search.bean/SearchResult#populateFromLuceneDocument(Lorg.apache.lucene.document.Document;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPosition" id="com.bright.framework.search.bean/SearchResult#setPosition(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setScore" id="com.bright.framework.search.bean/SearchResult#setScore(F)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.13/@sourceConnections.0 //@children.14/@sourceConnections.0" name="MultiLanguageSearchManager" location="90,615" size="472,445" id="com.bright.assetbank.search.service/MultiLanguageSearchManager" runTimeClassModel="indexDocument(Lcom.bright.framework.search.bean.IndexableDocument;Z),indexRootFilepath,indexDocuments(Lcom.bright.framework.database.bean.DBTransaction;Ljava.util.Vector;Z),searchManagers,assetManager,rebuildIndex(ZJ),rebuildIndices(Z),indexDocuments(Lcom.bright.framework.database.bean.DBTransaction;Ljava.util.Vector;ZZ),startup(),setSortFieldSpecifier(Lcom.bright.framework.search.service.SortFieldSpecifier;),setAssetManager(Lcom.bright.assetbank.application.service.AssetManager;),transactionManager,rebuildIndicesAsynchronously(),addLanguage(Lcom.bright.framework.language.bean.Language;),setTransactionManager(Lcom.bright.framework.database.service.DBTransactionManager;),languageManager,indexDocumentsAsynchronously(Ljava.util.Vector;),search(Lcom.bright.framework.search.bean.SearchQuery;IILjava.lang.String;),removeDocument(Lcom.bright.framework.search.bean.IndexableDocument;),setScheduleManager(Lcom.bright.framework.common.service.ScheduleManager;),optimiseIndicies(),sortFieldSpecifier,c_ksClassName,setLanguageManager(Lcom.bright.assetbank.language.service.LanguageManager;),scheduleManager,getSortFieldSpecifier(),removeLanguage(Ljava.lang.String;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="248,90">
+      <children xsi:type="editmodel:AttributeEditModel" name="c_ksClassName" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#c_ksClassName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchManagers" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#searchManagers"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="indexRootFilepath" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#indexRootFilepath"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="190,342">
+      <children xsi:type="editmodel:MethodEditModel" name="startup" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#startup()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addLanguage" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#addLanguage(Lcom.bright.framework.language.bean.Language;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeLanguage" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#removeLanguage(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rebuildIndicesAsynchronously" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#rebuildIndicesAsynchronously()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="search" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#search(Lcom.bright.framework.search.bean.SearchQuery;IILjava.lang.String;Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rebuildIndices" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#rebuildIndices(Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="rebuildIndex" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#rebuildIndex(ZJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="optimiseIndicies" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#optimiseIndicies()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexDocument" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#indexDocument(Lcom.bright.framework.search.bean.IndexableDocument;Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexDocumentsAsynchronously" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#indexDocumentsAsynchronously(Ljava.util.Vector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexDocuments" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#indexDocuments(Lcom.bright.framework.database.bean.DBTransaction;Ljava.util.Vector;Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexDocuments" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#indexDocuments(Lcom.bright.framework.database.bean.DBTransaction;Ljava.util.Vector;ZZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeDocument" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#removeDocument(Lcom.bright.framework.search.bean.IndexableDocument;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetManager" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#setAssetManager(Lcom.bright.assetbank.application.service.AssetManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSortFieldSpecifier" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#getSortFieldSpecifier()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSortFieldSpecifier" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#setSortFieldSpecifier(Lcom.bright.framework.search.service.SortFieldSpecifier;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setTransactionManager" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#setTransactionManager(Lcom.bright.framework.database.service.DBTransactionManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setLanguageManager" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#setLanguageManager(Lcom.bright.assetbank.language.service.LanguageManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setScheduleManager" id="com.bright.assetbank.search.service/MultiLanguageSearchManager#setExternalFilterManager(Lcom.bright.framework.common.service.ScheduleManager;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.search.service/ManualReindexQueueManager&lt;-com.bright.assetbank.search.service/MultiLanguageSearchManager" source="//@children.8" target="//@children.2" targetEnd="//@children.8/@sourceConnections.0/@children.1" sourceEnd="//@children.8/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="310,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="161,121"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.assetbank.search.service/MultiLanguageSearchManager->com.bright.assetbank.search.service/AssetSearchManager" source="//@children.8" target="//@children.9" targetEnd="//@children.8/@sourceConnections.1/@children.2" label="//@children.8/@sourceConnections.1/@children.0" sourceEnd="//@children.8/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="472,435" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.8/@sourceConnections.1" name="AssetSearchManager" location="724,1124" size="410,157" id="com.bright.assetbank.search.service/AssetSearchManager" runTimeClassModel="assetManager,getAssetManager(),setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;),indexDocuments(Lcom.bright.framework.database.bean.DBTransaction;Ljava.util.Vector;ZZZLcom.bright.framework.language.bean.Language;),indexDocument(Lcom.bright.framework.search.bean.IndexableDocument;ZZ),startup()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="181,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="assetManager" id="com.bright.assetbank.search.service/AssetSearchManager#assetManager"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="116,90">
+      <children xsi:type="editmodel:MethodEditModel" name="getAssetManager" id="com.bright.assetbank.search.service/AssetSearchManager#getAssetManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexDocument" id="com.bright.assetbank.search.service/AssetSearchManager#indexDocument(Lcom.bright.framework.search.bean.IndexableDocument;ZZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="indexDocuments" id="com.bright.assetbank.search.service/AssetSearchManager#indexDocuments(Lcom.bright.framework.database.bean.DBTransaction;Ljava.util.Vector;ZZZLcom.bright.framework.language.bean.Language;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetManager" id="com.bright.assetbank.search.service/AssetSearchManager#setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startup" id="com.bright.assetbank.search.service/AssetSearchManager#startup()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.search.service/SingleIndexSearchManager&lt;-com.bright.assetbank.search.service/AssetSearchManager" source="//@children.9" target="//@children.3" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="205,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="204,499"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.11/@sourceConnections.0 //@children.12/@sourceConnections.0" name="BaseSearchQuery" location="1230,424" size="377,327" id="com.bright.assetbank.search.bean/BaseSearchQuery" runTimeClassModel="assetEntityIdsToExclude,withoutCategory,sortDescending,assetEntityId,priceUpper,includeImplicitCategoryMembers,sortAttributeId,priceLower,categoryIds,includePreviousVersions,languageCode,pageIndex,orCategories,bulkUpload,pageSize,attributeExclusions">
+    <children xsi:type="editmodel:CompartmentEditModel" size="236,288">
+      <children xsi:type="editmodel:AttributeEditModel" name="categoryIds" id="com.bright.assetbank.search.bean/BaseSearchQuery#categoryIds"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="orCategories" id="com.bright.assetbank.search.bean/BaseSearchQuery#orCategories"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="includeImplicitCategoryMembers" id="com.bright.assetbank.search.bean/BaseSearchQuery#includeImplicitCategoryMembers"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="withoutCategory" id="com.bright.assetbank.search.bean/BaseSearchQuery#withoutCategory"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="priceLower" id="com.bright.assetbank.search.bean/BaseSearchQuery#priceLower"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="priceUpper" id="com.bright.assetbank.search.bean/BaseSearchQuery#priceUpper"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="includePreviousVersions" id="com.bright.assetbank.search.bean/BaseSearchQuery#includePreviousVersions"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="attributeExclusions" id="com.bright.assetbank.search.bean/BaseSearchQuery#attributeExclusions"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pageIndex" id="com.bright.assetbank.search.bean/BaseSearchQuery#pageIndex"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="pageSize" id="com.bright.assetbank.search.bean/BaseSearchQuery#pageSize"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="bulkUpload" id="com.bright.assetbank.search.bean/BaseSearchQuery#bulkUpload"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="languageCode" id="com.bright.assetbank.search.bean/BaseSearchQuery#languageCode"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetEntityIdsToExclude" id="com.bright.assetbank.search.bean/BaseSearchQuery#assetEntityIdsToExclude"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetEntityId" id="com.bright.assetbank.search.bean/BaseSearchQuery#assetEntityId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sortAttributeId" id="com.bright.assetbank.search.bean/BaseSearchQuery#sortAttributeId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sortDescending" id="com.bright.assetbank.search.bean/BaseSearchQuery#sortDescending"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="198,756"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.search.bean/BaseSearchQuery&lt;-com.bright.assetbank.search.bean/BaseSearchQuery" source="//@children.10" target="//@children.4" targetEnd="//@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.10/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="233,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="143,355"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SearchCriteria" location="1799,765" size="355,435" id="com.bright.assetbank.search.bean/SearchCriteria" runTimeClassModel="dateImageModLower,title,dateImageAddedUpper,orientation,dateImageCreatedUpper,assetIds,filename,agreementType,filesizeLower,addedByUserId,averageRating,dateImageAddedLower,addedBy,attributeSearches,originalAssetIdsString,dateImageCreatedLower,dateDownloadedUpper,agreementText,filesizeUpper,dateDownloadedLower,author,dateImageModUpper">
+    <children xsi:type="editmodel:CompartmentEditModel" size="187,396">
+      <children xsi:type="editmodel:AttributeEditModel" name="author" id="com.bright.assetbank.search.bean/SearchCriteria#author"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="addedBy" id="com.bright.assetbank.search.bean/SearchCriteria#addedBy"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="addedByUserId" id="com.bright.assetbank.search.bean/SearchCriteria#addedByUserId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="filename" id="com.bright.assetbank.search.bean/SearchCriteria#filename"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="title" id="com.bright.assetbank.search.bean/SearchCriteria#title"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dateImageAddedLower" id="com.bright.assetbank.search.bean/SearchCriteria#dateImageAddedLower"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dateImageAddedUpper" id="com.bright.assetbank.search.bean/SearchCriteria#dateImageAddedUpper"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dateImageModLower" id="com.bright.assetbank.search.bean/SearchCriteria#dateImageModLower"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dateImageModUpper" id="com.bright.assetbank.search.bean/SearchCriteria#dateImageModUpper"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dateImageCreatedLower" id="com.bright.assetbank.search.bean/SearchCriteria#dateImageCreatedLower"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dateImageCreatedUpper" id="com.bright.assetbank.search.bean/SearchCriteria#dateImageCreatedUpper"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dateDownloadedLower" id="com.bright.assetbank.search.bean/SearchCriteria#dateDownloadedLower"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dateDownloadedUpper" id="com.bright.assetbank.search.bean/SearchCriteria#dateDownloadedUpper"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetIds" id="com.bright.assetbank.search.bean/SearchCriteria#assetIds"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="attributeSearches" id="com.bright.assetbank.search.bean/SearchCriteria#attributeSearches"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="orientation" id="com.bright.assetbank.search.bean/SearchCriteria#orientation"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="originalAssetIdsString" id="com.bright.assetbank.search.bean/SearchCriteria#originalAssetIdsString"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="agreementText" id="com.bright.assetbank.search.bean/SearchCriteria#agreementText"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="agreementType" id="com.bright.assetbank.search.bean/SearchCriteria#agreementType"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="averageRating" id="com.bright.assetbank.search.bean/SearchCriteria#averageRating"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="filesizeLower" id="com.bright.assetbank.search.bean/SearchCriteria#filesizeLower"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="filesizeUpper" id="com.bright.assetbank.search.bean/SearchCriteria#filesizeUpper"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="171,1422"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.assetbank.search.bean/BaseSearchQuery&lt;-com.bright.assetbank.search.bean/SearchCriteria" source="//@children.11" target="//@children.10" targetEnd="//@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.11/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,92" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="377,297"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.search.bean/SearchQuery&lt;-com.bright.assetbank.search.bean/SearchCriteria" source="//@children.11" target="//@children.5" targetEnd="//@children.11/@sourceConnections.1/@children.1" sourceEnd="//@children.11/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="310,621"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SearchBuilderQuery" location="1184,989" size="392,211" id="com.bright.assetbank.search.bean/SearchBuilderQuery" runTimeClassModel="isEmpty(),getNumericFilter(),getQueryDescription(),setClauses(Ljava.util.Vector;),getClauses(),getDateFilter(),setupPermissions(Lcom.bright.assetbank.user.bean.ABUserProfile;),clauses,getLuceneQuery()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="138,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="clauses" id="com.bright.assetbank.search.bean/SearchBuilderQuery#clauses"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="129,144">
+      <children xsi:type="editmodel:MethodEditModel" name="getClauses" id="com.bright.assetbank.search.bean/SearchBuilderQuery#getClauses()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getDateFilter" id="com.bright.assetbank.search.bean/SearchBuilderQuery#getDateFilter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLuceneQuery" id="com.bright.assetbank.search.bean/SearchBuilderQuery#getLuceneQuery()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumericFilter" id="com.bright.assetbank.search.bean/SearchBuilderQuery#getNumericFilter()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getQueryDescription" id="com.bright.assetbank.search.bean/SearchBuilderQuery#getQueryDescription()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="isEmpty" id="com.bright.assetbank.search.bean/SearchBuilderQuery#isEmpty()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setClauses" id="com.bright.assetbank.search.bean/SearchBuilderQuery#setClauses(Ljava.util.Vector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setupPermissions" id="com.bright.assetbank.search.bean/SearchBuilderQuery#setupPermissions(Lcom.bright.assetbank.user.bean.ABUserProfile;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.assetbank.search.bean/BaseSearchQuery&lt;-com.bright.assetbank.search.bean/SearchBuilderQuery" source="//@children.12" target="//@children.10" targetEnd="//@children.12/@sourceConnections.0/@children.1" sourceEnd="//@children.12/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="218,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="172,327"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BaseSearchAction" location="-181,15" size="386,301" id="com.bright.assetbank.search.action/BaseSearchAction" runTimeClassModel="attributeManager,searchManager,assetEntityManager,setAssetEntityManager(Lcom.bright.assetbank.entity.service.AssetEntityManager;),setListManager(Lcom.bright.framework.simplelist.service.ListManager;),setAttributeManager(Lcom.bright.assetbank.attribute.service.AttributeManager;),listManager,setSearchManager(Lcom.bright.assetbank.search.service.MultiLanguageSearchManager;),assetManager,getAssetManager(),setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;),execute(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;Lcom.bright.framework.database.bean.DBTransaction;),searchReportManager,setSearchReportManager(Lcom.bright.assetbank.report.service.SearchReportManager;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="261,108">
+      <children xsi:type="editmodel:AttributeEditModel" name="assetEntityManager" id="com.bright.assetbank.search.action/BaseSearchAction#assetEntityManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetManager" id="com.bright.assetbank.search.action/BaseSearchAction#assetManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="attributeManager" id="com.bright.assetbank.search.action/BaseSearchAction#attributeManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="listManager" id="com.bright.assetbank.search.action/BaseSearchAction#listManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchManager" id="com.bright.assetbank.search.action/BaseSearchAction#searchManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchReportManager" id="com.bright.assetbank.search.action/BaseSearchAction#searchReportManager"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="154,144">
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="com.bright.assetbank.search.action/BaseSearchAction#execute(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;Lcom.bright.framework.database.bean.DBTransaction;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAssetManager" id="com.bright.assetbank.search.action/BaseSearchAction#getAssetManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetEntityManager" id="com.bright.assetbank.search.action/BaseSearchAction#setAssetEntityManager(Lcom.bright.assetbank.entity.service.AssetEntityManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetManager" id="com.bright.assetbank.search.action/BaseSearchAction#setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAttributeManager" id="com.bright.assetbank.search.action/BaseSearchAction#setAttributeManager(Lcom.bright.assetbank.attribute.service.AttributeManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setListManager" id="com.bright.assetbank.search.action/BaseSearchAction#setListManager(Lcom.bright.framework.simplelist.service.ListManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSearchManager" id="com.bright.assetbank.search.action/BaseSearchAction#setSearchManager(Lcom.bright.assetbank.search.service.MultiLanguageSearchManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSearchReportManager" id="com.bright.assetbank.search.action/BaseSearchAction#setSearchReportManager(Lcom.bright.assetbank.report.service.SearchReportManager;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.assetbank.search.action/BaseSearchAction->com.bright.assetbank.search.service/MultiLanguageSearchManager" source="//@children.13" target="//@children.8" targetEnd="//@children.13/@sourceConnections.0/@children.2" label="//@children.13/@sourceConnections.0/@children.0" sourceEnd="//@children.13/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="328,301" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="57,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SaveAssetAction" location="-405,374" size="404,679" id="com.bright.assetbank.application.action/SaveAssetAction" runTimeClassModel="searchManager,attributeManager,agreementsManager,categoryManager,assetEntityManager,setAttributeManager(Lcom.bright.assetbank.attribute.service.AttributeManager;),setActionOnAssetManager(Lcom.bright.assetbank.actiononasset.service.ActionOnAssetManager;),getSearchManager(),setSearchManager(Lcom.bright.assetbank.search.service.MultiLanguageSearchManager;),assetManager,getAssetManager(),taxonomyManager,setAssetWorkflowManager(Lcom.bright.assetbank.workflow.service.AssetWorkflowManager;),getCategoryManager(),setAgreementsManager(Lcom.bright.assetbank.agreements.service.AgreementsManager;),setDBTransactionManager(Lcom.bright.framework.database.service.DBTransactionManager;),assetWorkflowManager,setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;),setFileStoreManager(Lcom.bright.framework.service.FileStoreManager;),actionOnAssetManager,checkApprovalSetting(Lcom.bright.assetbank.user.bean.ABUserProfile;Lcom.bright.assetbank.application.form.AssetForm;Lcom.bright.assetbank.application.bean.Asset;Z),fileStoreManager,setTaxonomyManager(Lcom.bright.assetbank.taxonomy.service.TaxonomyManager;),categoryCountCacheManager,execute(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;),orgUnitManager,setListManager(Lcom.bright.framework.simplelist.service.ListManager;),setAssetEntityManager(Lcom.bright.assetbank.entity.service.AssetEntityManager;),setAssetLogManager(Lcom.bright.assetbank.application.service.AssetLogManager;),setCategoryManager(Lcom.bright.assetbank.application.service.AssetCategoryManager;),listManager,getAssetNeedsApproving(Lcom.bright.assetbank.user.bean.ABUserProfile;Lcom.bright.assetbank.application.form.AssetForm;Lcom.bright.assetbank.application.bean.Asset;Z),setOrgUnitManager(Lcom.bright.assetbank.orgunit.service.OrgUnitManager;),assetLogManager,setCategoryCountCacheManager(Lcom.bright.assetbank.category.service.CategoryCountCacheManager;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="328,252">
+      <children xsi:type="editmodel:AttributeEditModel" name="actionOnAssetManager" id="com.bright.assetbank.application.action/SaveAssetAction#actionOnAssetManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="agreementsManager" id="com.bright.assetbank.application.action/SaveAssetAction#agreementsManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetEntityManager" id="com.bright.assetbank.application.action/SaveAssetAction#assetEntityManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetLogManager" id="com.bright.assetbank.application.action/SaveAssetAction#assetLogManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetManager" id="com.bright.assetbank.application.action/SaveAssetAction#assetManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetWorkflowManager" id="com.bright.assetbank.application.action/SaveAssetAction#assetWorkflowManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="attributeManager" id="com.bright.assetbank.application.action/SaveAssetAction#attributeManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="categoryCountCacheManager" id="com.bright.assetbank.application.action/SaveAssetAction#categoryCountCacheManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="categoryManager" id="com.bright.assetbank.application.action/SaveAssetAction#categoryManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileStoreManager" id="com.bright.assetbank.application.action/SaveAssetAction#fileStoreManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="listManager" id="com.bright.assetbank.application.action/SaveAssetAction#listManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="orgUnitManager" id="com.bright.assetbank.application.action/SaveAssetAction#orgUnitManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchManager" id="com.bright.assetbank.application.action/SaveAssetAction#searchManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="taxonomyManager" id="com.bright.assetbank.application.action/SaveAssetAction#taxonomyManager"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="190,378">
+      <children xsi:type="editmodel:MethodEditModel" name="checkApprovalSetting" id="com.bright.assetbank.application.action/SaveAssetAction#checkApprovalSetting(Lcom.bright.assetbank.user.bean.ABUserProfile;Lcom.bright.assetbank.application.form.AssetForm;Lcom.bright.assetbank.application.bean.Asset;Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="execute" id="com.bright.assetbank.application.action/SaveAssetAction#execute(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAssetManager" id="com.bright.assetbank.application.action/SaveAssetAction#getAssetManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAssetNeedsApproving" id="com.bright.assetbank.application.action/SaveAssetAction#getAssetNeedsApproving(Lcom.bright.assetbank.user.bean.ABUserProfile;Lcom.bright.assetbank.application.form.AssetForm;Lcom.bright.assetbank.application.bean.Asset;Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCategoryManager" id="com.bright.assetbank.application.action/SaveAssetAction#getCategoryManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSearchManager" id="com.bright.assetbank.application.action/SaveAssetAction#getSearchManager()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setActionOnAssetManager" id="com.bright.assetbank.application.action/SaveAssetAction#setActionOnAssetManager(Lcom.bright.assetbank.actiononasset.service.ActionOnAssetManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAgreementsManager" id="com.bright.assetbank.application.action/SaveAssetAction#setAgreementsManager(Lcom.bright.assetbank.agreements.service.AgreementsManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetEntityManager" id="com.bright.assetbank.application.action/SaveAssetAction#setAssetEntityManager(Lcom.bright.assetbank.entity.service.AssetEntityManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetLogManager" id="com.bright.assetbank.application.action/SaveAssetAction#setAssetLogManager(Lcom.bright.assetbank.application.service.AssetLogManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetManager" id="com.bright.assetbank.application.action/SaveAssetAction#setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetWorkflowManager" id="com.bright.assetbank.application.action/SaveAssetAction#setAssetWorkflowManager(Lcom.bright.assetbank.workflow.service.AssetWorkflowManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAttributeManager" id="com.bright.assetbank.application.action/SaveAssetAction#setAttributeManager(Lcom.bright.assetbank.attribute.service.AttributeManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCategoryCountCacheManager" id="com.bright.assetbank.application.action/SaveAssetAction#setCategoryCountCacheManager(Lcom.bright.assetbank.category.service.CategoryCountCacheManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCategoryManager" id="com.bright.assetbank.application.action/SaveAssetAction#setCategoryManager(Lcom.bright.assetbank.application.service.AssetCategoryManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDBTransactionManager" id="com.bright.assetbank.application.action/SaveAssetAction#setDBTransactionManager(Lcom.bright.framework.database.service.DBTransactionManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setFileStoreManager" id="com.bright.assetbank.application.action/SaveAssetAction#setFileStoreManager(Lcom.bright.framework.service.FileStoreManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setListManager" id="com.bright.assetbank.application.action/SaveAssetAction#setListManager(Lcom.bright.framework.simplelist.service.ListManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOrgUnitManager" id="com.bright.assetbank.application.action/SaveAssetAction#setOrgUnitManager(Lcom.bright.assetbank.orgunit.service.OrgUnitManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSearchManager" id="com.bright.assetbank.application.action/SaveAssetAction#setSearchManager(Lcom.bright.assetbank.search.service.MultiLanguageSearchManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setTaxonomyManager" id="com.bright.assetbank.application.action/SaveAssetAction#setTaxonomyManager(Lcom.bright.assetbank.taxonomy.service.TaxonomyManager;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.assetbank.application.action/SaveAssetAction->com.bright.assetbank.search.service/MultiLanguageSearchManager" source="//@children.14" target="//@children.8" targetEnd="//@children.14/@sourceConnections.0/@children.2" label="//@children.14/@sourceConnections.0/@children.0" sourceEnd="//@children.14/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="405,460" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,219"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="LightweightAsset" location="2325,150" size="400,489" id="com.bright.assetbank.application.bean/LightweightAsset" runTimeClassModel="isComplete,searchName,position,previewImageFile,thumbnailImageFile,typeId,isSensitive,price,isRestricted,aPIAttributes,originalFilename,numDownloads,homogenizedImageFile,entity,orientation,agreementTypeId,numViews,fileLocation,inAssetBox,searchDescription,isFeatured,agreement,overrideRestriction,fileSizeInBytes,format">
+    <children xsi:type="editmodel:CompartmentEditModel" size="191,450">
+      <children xsi:type="editmodel:AttributeEditModel" name="typeId" id="com.bright.assetbank.application.bean/LightweightAsset#typeId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="thumbnailImageFile" id="com.bright.assetbank.application.bean/LightweightAsset#thumbnailImageFile"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="homogenizedImageFile" id="com.bright.assetbank.application.bean/LightweightAsset#homogenizedImageFile"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="previewImageFile" id="com.bright.assetbank.application.bean/LightweightAsset#previewImageFile"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="price" id="com.bright.assetbank.application.bean/LightweightAsset#price"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="orientation" id="com.bright.assetbank.application.bean/LightweightAsset#orientation"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileSizeInBytes" id="com.bright.assetbank.application.bean/LightweightAsset#fileSizeInBytes"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="fileLocation" id="com.bright.assetbank.application.bean/LightweightAsset#fileLocation"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="inAssetBox" id="com.bright.assetbank.application.bean/LightweightAsset#inAssetBox"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="isRestricted" id="com.bright.assetbank.application.bean/LightweightAsset#isRestricted"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="isComplete" id="com.bright.assetbank.application.bean/LightweightAsset#isComplete"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="position" id="com.bright.assetbank.application.bean/LightweightAsset#position"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="format" id="com.bright.assetbank.application.bean/LightweightAsset#format"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchName" id="com.bright.assetbank.application.bean/LightweightAsset#searchName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchDescription" id="com.bright.assetbank.application.bean/LightweightAsset#searchDescription"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="isFeatured" id="com.bright.assetbank.application.bean/LightweightAsset#isFeatured"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="isSensitive" id="com.bright.assetbank.application.bean/LightweightAsset#isSensitive"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="numViews" id="com.bright.assetbank.application.bean/LightweightAsset#numViews"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="numDownloads" id="com.bright.assetbank.application.bean/LightweightAsset#numDownloads"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="entity" id="com.bright.assetbank.application.bean/LightweightAsset#entity"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="originalFilename" id="com.bright.assetbank.application.bean/LightweightAsset#originalFilename"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="agreement" id="com.bright.assetbank.application.bean/LightweightAsset#agreement"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="agreementTypeId" id="com.bright.assetbank.application.bean/LightweightAsset#agreementTypeId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="aPIAttributes" id="com.bright.assetbank.application.bean/LightweightAsset#aPIAttributes"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="overrideRestriction" id="com.bright.assetbank.application.bean/LightweightAsset#overrideRestriction"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="206,1656"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.search.bean/SearchResult&lt;-com.bright.assetbank.application.bean/LightweightAsset" source="//@children.15" target="//@children.7" targetEnd="//@children.15/@sourceConnections.0/@children.1" sourceEnd="//@children.15/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="200,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="176,117"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting rulersVisibility="false" snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

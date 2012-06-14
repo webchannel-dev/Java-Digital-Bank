@@ -1,0 +1,1 @@
+<input type="hidden" name="status" value="OK" />

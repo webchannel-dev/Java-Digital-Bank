@@ -1,0 +1,18 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+       <to>#adminEmailAddresses#</to>		 
+      </addresses>
+      <subject>
+         Image Bank: User asset request has been approved
+      </subject>
+      <body>
+Download approvals for user #name# have been processed, for the following assets:
+#assetids#
+
+      </body>
+   </email-template>
+
+</email-templates>

@@ -1,0 +1,23 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Your Asset Bank permissions have been updated
+      </subject>
+      <body>
+Dear #name#
+
+You recently requested your Asset Bank permissions to be updated. 
+
+The administrator has now updated your permissions.
+
+Message: #adminMessage#
+
+Kind regards,
+Image Bank Admin
+      </body>
+   </email-template>
+</email-templates>

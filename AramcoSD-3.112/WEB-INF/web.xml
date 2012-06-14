@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+
+	<!-- Note the order is important - startupCheckFilter and updateInProgressFilter should go first -->
+	<!-- StartupCheckFilter checks whether the application managers are still starting up, or if there is an error or license problem -->
+	<filter>
+		<filter-name>startupCheckFilter</filter-name>
+		<filter-class>com.bright.assetbank.application.filter.StartupCheckFilter</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>startupCheckFilterForApi</filter-name>
+		<filter-class>com.bright.assetbank.application.filter.StartupCheckFilterForApiServlets</filter-class>
+		 <init-param>
+			<param-name>retryMins</param-name>
+			<param-value>5</param-value>
+		 </init-param>    
+		 <init-param>
+			<param-name>excludes</param-name>
+			<param-value>action,images,forward</param-value>
+		 </init-param>    
+	</filter>
+	
+	<filter>
+		<filter-name>updateInProgressFilter</filter-name>
+		<filter-class>com.bright.assetbank.application.filter.UpdateInProgressFilter</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>staticResourceFilter</filter-name>
+		<filter-class>com.bright.assetbank.application.filter.StaticResourceFilter</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>autoLoginFilter</filter-name>
+		<filter-class>com.bright.assetbank.application.filter.AutomaticLoginFilter</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>initProfileFilter</filter-name>
+		<filter-class>com.bright.assetbank.application.filter.InitialiseProfileFilter</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>authenticationFilter</filter-name>
+		<filter-class>com.bright.assetbank.application.filter.AuthenticationFilter</filter-class>
+	</filter>
+	
+	<!-- Call languageExtractionFilter before ssoAuthenticationFilter so that the user can be saved with the correct language -->
+	<filter>
+		<filter-name>languageExtractionFilter</filter-name>
+		<filter-class>com.bright.assetbank.language.filter.LanguageSelectionFilter</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>ssoAuthenticationFilter</filter-name>
+		<filter-class>com.bright.assetbank.application.filter.SSOAuthenticationFilter</filter-class>
+	</filter>
+	
+	<!-- The startupCheckFilterForApi is applied to all servlets except application, which is excluded in the filter init code -->
+	<filter-mapping>
+		<filter-name>startupCheckFilter</filter-name>
+		<servlet-name>application</servlet-name>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>startupCheckFilterForApi</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+		
+	<filter-mapping>
+		<filter-name>updateInProgressFilter</filter-name>
+		<servlet-name>application</servlet-name>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>staticResourceFilter</filter-name>
+		<servlet-name>application</servlet-name>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>autoLoginFilter</filter-name>
+		<servlet-name>application</servlet-name>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>initProfileFilter</filter-name>
+		<servlet-name>application</servlet-name>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>authenticationFilter</filter-name>
+		<servlet-name>application</servlet-name>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>ssoAuthenticationFilter</filter-name>
+		<servlet-name>application</servlet-name>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>languageExtractionFilter</filter-name>
+		<servlet-name>application</servlet-name>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>
+			com.bright.assetbank.application.listener.ABServletContextListener
+		</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>
+			org.apache.axis.transport.http.AxisHTTPSessionListener
+		</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>
+			com.bright.assetbank.application.service.AssetLogManager
+		</listener-class>
+	</listener>
+	
+	
+	<!-- Settings and component manager config, used in ABServletContextListener for initialisation: -->
+	<context-param>
+		<param-name>componentmanagerconfig</param-name>
+		<param-value>/WEB-INF/components.xconf</param-value>
+	</context-param>
+	<context-param>
+		<param-name>settingspropertyfile</param-name>
+		<param-value>ApplicationSettings</param-value>
+	</context-param>
+
+	
+	<servlet>
+		<servlet-name>application</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.application.servlet.ApplicationActionServlet
+		</servlet-class>
+
+		<!-- Settings used by the struts framework: -->
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml,/WEB-INF/struts-config-indesign.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>detail</param-name>
+			<param-value>3</param-value>
+		</init-param>
+		<init-param>
+			<param-name>validating</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<description>
+				This is the list of actions that are not stored in order that
+				they can be returned to after the assetbox or language has been switched. It should
+				contain (amongst other urls) any actions that are used in popups or new windows.</description>
+			<param-name>noStoreGetActions</param-name>
+			<param-value>
+				downloadAssetBox,
+				downloadAssetBoxFile,
+				downloadFile,
+				downloadVideo,
+				downloadSharedAsset,
+				compressDownload,
+				viewDownloadAssetBox,
+				viewDownloadAssetsProgress,
+				relateAssets,
+				switchAssetBox,
+				viewAddAssetboxUsersEmailPreview,
+				viewLanguage,
+				viewAssetUsage,
+				changeSelectedFilter,
+				generateCatJS.js,
+				viewFullSizedImage,
+				viewHelp,
+				viewKeywordAdminPopup,
+				viewAddKeywordPopup,
+				addKeywordPopup,
+				quickAddKeywordPopup,
+				deleteKeywordPopup,
+				viewUpdateKeywordPopup,
+				updateKeywordPopup,
+				viewChangeKeywordParentPopup,
+				changeKeywordParentPopup,
+				keywordChooser,
+				keywordChooserHierarchy,
+				viewAssetInPopup,
+				viewConditionsPopup,
+				viewImageConditionsPopup,
+				viewVideoConditionsPopup,
+				viewFileConditionsPopup,
+				viewCommercialConditionsPopup,
+				viewUploadConditionsPopup,
+				viewSearchHelp,
+				viewHowDoI,
+				viewCrop,
+				playMedia,
+				downloadDeferred,
+				savedSearchRss.xml,
+				searchRss,
+				viewLogin,
+				login,
+				loginWithToken,
+				ssoAuthenticate,
+				viewSSOLogin,
+				ssoLogin,
+				ssoSessionCheck,
+				ssoHTTPRequestToken,
+				ssoCreateSession,
+				viewSearchBuilderAttributeValue,
+				viewAttributeValue,
+				addAssetBox,
+				clearAssetBox,
+				viewExplorerAjax,
+				browseExplorerItems
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>downloadServlet</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.application.servlet.FileDownloadServlet
+		</servlet-class>
+	</servlet>
+
+	<!-- xml transformation servlets -->
+	<servlet>
+		<servlet-name>transformLastSearch</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.search.servlet.TransformLastSearchServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>transformLastBrowse</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.category.servlet.TransformLastBrowseServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>transformAssetbox</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.assetbox.servlet.TransformAssetboxServlet
+		</servlet-class>
+	</servlet>
+	
+	<!-- file upload servlet -->
+	<servlet>
+		<servlet-name>uploadServlet</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.application.servlet.BulkUploadServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>displayServlet</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.application.servlet.FileDisplayServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>pseudoStreamServlet</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.application.servlet.PseudoStreamServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>assetFileServlet</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.application.servlet.RelatedAssetFileServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>forbiddenServlet</servlet-name>
+		<servlet-class>
+			com.bright.framework.common.servlet.ForbiddenRequestServlet
+		</servlet-class>
+	</servlet>
+	
+	<!-- api servlets -->
+    <servlet>
+        <servlet-name>jersey</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>com.bright.assetbank.restapi.resources;com.bright.assetbank.custom.indesign.restapi</param-value>
+		</init-param>
+		<!-- The next init-param makes sure that Jersey always takes notice
+		     of @XmlRootElement annotations. Without this init-param it uses
+		     the class name in some circumstances. That would mean, since the
+		     classes that get serialized by Jersey have Repr in their names,
+		     that the XML/JSON would have unwanted "Repr"s in element
+		     names. -->
+        <init-param>
+            <param-name>com.sun.jersey.config.feature.XmlRootElementProcessing</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+
+	<servlet>
+		<display-name>API: Select Asset Servlet</display-name>
+		<servlet-name>apiSelectAssetServlet</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.api.servlet.SelectAssetServlet
+		</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<display-name>API: Download Asset Servlet</display-name>
+		<servlet-name>apiRemoteDownloadAssetServlet</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.api.servlet.RemoteDownloadServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>API: Search Servlet</display-name>
+		<servlet-name>apiSearchServlet</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.api.servlet.SearchServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>OpenGis CSW API</display-name>
+		<servlet-name>OpenGisCswRestServlet</servlet-name>
+		<servlet-class>
+			com.bright.assetbank.opengis.servlet.OpenGisCswRestServlet
+		</servlet-class>
+	</servlet>
+	
+
+	<!-- axis servlets -->
+	<servlet>
+		<display-name>Apache-Axis Servlet</display-name>
+		<servlet-name>AxisServlet</servlet-name>
+		<servlet-class>
+			org.apache.axis.transport.http.AxisServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>Axis Admin Servlet</display-name>
+		<servlet-name>AdminServlet</servlet-name>
+		<servlet-class>
+			org.apache.axis.transport.http.AdminServlet
+		</servlet-class>
+		<load-on-startup>100</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<display-name>SOAPMonitorService</display-name>
+		<servlet-name>SOAPMonitorService</servlet-name>
+		<servlet-class>
+			org.apache.axis.monitor.SOAPMonitorService
+		</servlet-class>
+		<init-param>
+			<param-name>SOAPMonitorPort</param-name>
+			<param-value>5001</param-value>
+		</init-param>
+		<load-on-startup>100</load-on-startup>
+	</servlet>
+	
+	<servlet>
+        <servlet-name>SimpleCaptchaServlet</servlet-name>
+        <servlet-class>nl.captcha.servlet.SimpleCaptchaServlet</servlet-class>
+        <init-param>
+            <param-name>width</param-name>
+            <param-value>250</param-value>
+        </init-param>
+        <init-param>
+            <param-name>height</param-name>
+            <param-value>75</param-value>
+        </init-param>
+    </servlet>	
+	
+	<servlet-mapping>
+		<servlet-name>application</servlet-name>
+		<url-pattern>/action/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>transformLastSearch</servlet-name>
+		<url-pattern>/servlet/transformLastSearch</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>transformLastBrowse</servlet-name>
+		<url-pattern>/servlet/transformLastBrowse</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>transformAssetbox</servlet-name>
+		<url-pattern>/servlet/transformAssetbox</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>downloadServlet</servlet-name>
+		<url-pattern>/servlet/download</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>uploadServlet</servlet-name>
+		<url-pattern>/servlet/upload</url-pattern>
+	</servlet-mapping>
+		
+	<servlet-mapping>
+		<servlet-name>displayServlet</servlet-name>
+		<url-pattern>/servlet/display/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>displayServlet</servlet-name>
+		<url-pattern>/servlet/display.jpg</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>pseudoStreamServlet</servlet-name>
+		<url-pattern>/servlet/stream/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>forbiddenServlet</servlet-name>
+		<url-pattern>/servlet/forbidden/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>assetFileServlet</servlet-name>
+		<url-pattern>/assetfile/*</url-pattern>
+	</servlet-mapping>
+
+    <servlet-mapping>
+    	<servlet-name>jersey</servlet-name>
+    	<url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>apiRemoteDownloadAssetServlet</servlet-name>
+		<url-pattern>/api/remoteDownloadAsset</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>apiSelectAssetServlet</servlet-name>
+		<url-pattern>/api/selectAsset</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>apiSearchServlet</servlet-name>
+		<url-pattern>/api/search</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>OpenGisCswRestServlet</servlet-name>
+		<url-pattern>/OpenGisCsw</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>/servlet/AxisServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>*.jws</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AxisServlet</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SOAPMonitorService</servlet-name>
+		<url-pattern>/SOAPMonitor</url-pattern>
+	</servlet-mapping>
+
+	<!-- axis admin servlet -->
+	<servlet-mapping>
+		<servlet-name>AdminServlet</servlet-name>
+		<url-pattern>/servlet/AdminServlet</url-pattern>
+	</servlet-mapping>
+  
+ 	<servlet-mapping>
+        <servlet-name>SimpleCaptchaServlet</servlet-name>
+        <url-pattern>/captchaImg</url-pattern>
+    </servlet-mapping> 
+
+	<session-config xmlns="">
+		<session-timeout>45</session-timeout>
+	</session-config>
+	
+	<mime-mapping>
+		<extension>wsdl</extension>
+		<mime-type>text/xml</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>xsd</extension>
+		<mime-type>text/xml</mime-type>
+	</mime-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>forward.jsp</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+        <error-code>500</error-code>
+        <location>/jsp/standard/en/error/general_error.jsp</location>
+    </error-page>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Asset Files</web-resource-name>
+			<url-pattern>/files/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>Asset Files</realm-name>
+	</login-config>
+
+	<security-role>
+		<role-name>admin</role-name>
+	</security-role>
+	
+</web-app>

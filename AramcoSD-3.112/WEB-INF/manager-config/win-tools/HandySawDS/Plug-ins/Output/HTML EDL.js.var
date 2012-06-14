@@ -1,0 +1,43 @@
+[Scale]
+Type=String
+FriendlyName="Images scale factor"
+Hint="How much images will be scaled down on page. Default 8"
+Default="8"
+[ScenesPerPage]
+Type=String
+FriendlyName="Scenes per page"
+Hint="Set limit of scenes per page. Default 100"
+Default="100"
+[Columns0]
+Type=String
+FriendlyName="Column 1 heading"
+Default="No"
+[Columns1]
+Type=String
+FriendlyName="Column 2 heading"
+Default="Scene"
+[Columns2]
+Type=String
+FriendlyName="Column 3 heading"
+Default="First frame"
+[Columns3]
+Type=String
+FriendlyName="Column 4 heading"
+Default="Frame at marker"
+[Columns4]
+Type=String
+FriendlyName="Column 5 heading"
+Default="Last frame"
+[Columns5]
+Type=String
+FriendlyName="Column 6 heading"
+Default="Content"
+[Columns6]
+Type=String
+FriendlyName="Column 7 heading"
+Default="Sound"
+[Columns7]
+Type=String
+FriendlyName="Column 8 heading"
+Default="Comments"
+

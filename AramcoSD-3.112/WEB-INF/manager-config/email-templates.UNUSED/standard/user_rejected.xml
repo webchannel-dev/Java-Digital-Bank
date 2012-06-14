@@ -1,0 +1,23 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Your Asset Bank registration has not been approved
+      </subject>
+      <body>
+Dear #name#
+
+Sorry, your application to become a user of Asset Bank has not been approved.
+
+#adminMessage#
+
+Kind regards,
+Asset Bank Admin
+      </body>
+   </email-template>
+
+</email-templates>

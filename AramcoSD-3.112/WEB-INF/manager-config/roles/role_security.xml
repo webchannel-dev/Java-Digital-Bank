@@ -1,0 +1,57 @@
+<!-- 
+	GROUP ROLE SECURITY FILE:
+	
+	This file allows you to give groups of users that have certain roles
+	access to admin functionality - either in the form of an action url or
+	a securedLink (see com.bright.assetbank.application.taglib.SecuredLinkTag)
+
+	This file is only relevant if the use-group-roles setting is set to true in
+	ApplicationSettings.properties and roles have been setup in the database 
+	(see the Role table). It currently is only available for the following actions...
+
+	/action/exportFromSearch
+	/action/exportAssets
+	/action/downloadExportFile
+	/action/deleteExportedAssets
+	/action/viewReportHome
+	/action/viewReport
+	/action/viewSearchReport
+	/action/viewAssetReport
+	/action/downloadAssetReport
+	/action/downloadSearchReport
+	/action/downloadUsageReport
+
+	...to add it to other actions the permission checking for those actions needs 
+	to be updated to include the userprofile.checkForRolePermission check (see one
+	of the actions listed for examples of this)
+
+	An example structure is shown below (the role's are listed by their identifier
+	i.e. to use a role 'test' you have to have a role in the database with
+	identifier 'test')
+
+-->	
+<secured>
+	<secure>
+		<allowed_roles>
+			<role>export</role>
+		</allowed_roles>
+		<secured type="action">exportFromSearch</secured>
+		<secured type="action">exportAssets</secured>
+		<secured type="action">downloadExportFile</secured>
+		<secured type="action">deleteExportedAssets</secured>
+		<secured type="link">exportLink</secured>
+	</secure>
+	<secure>
+		<allowed_roles>
+			<role>reports</role>
+		</allowed_roles>
+		<secured type="action">viewReportHome</secured>
+		<secured type="action">viewReport</secured>
+		<secured type="action">downloadUsageReport</secured>
+		<secured type="action">viewSearchReport</secured>
+		<secured type="action">viewAssetReport</secured>
+		<secured type="action">downloadAssetReport</secured>
+		<secured type="action">downloadSearchReport</secured>
+		<secured type="action">viewAssetReportPage</secured>
+	</secure>
+</secured>

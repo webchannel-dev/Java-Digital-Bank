@@ -1,0 +1,14 @@
+/* This file can contain custom styles for asset types */
+
+/* -- Custom search/browse panel styles --
+
+The classes should be listed as li.<asset type without spaces>, so if an asset type exists with the name 'Photo Set', 
+the corresponding class will be li.photoset
+
+Examples:
+
+li.image { background-image: url("../../images/standard/icon/photo.gif"); background-repeat: no-repeat; background-position: 4% 98%;}
+li.video { background-image: url("../../images/standard/icon/video.gif"); background-repeat: no-repeat; background-position: 4% 98%;}
+li.audio { background-image: url("../../images/standard/icon/audio.gif"); background-repeat: no-repeat; background-position: 4% 98%;}
+
+*/

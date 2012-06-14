@@ -1,0 +1,1372 @@
+/* ======================================================================================== */
+/* G L O B A L    S T Y L E S                                                               */
+/* Contains rules for general typography and frequently used elements (e.g. horizontal      */
+/* rules, etc)                                                                              */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		07-Feb-2006    Created.                                     */
+/* ======================================================================================== */
+
+
+/* ================================================================================= */
+/* General typography													 			 */
+/* ================================================================================= */
+
+
+p {
+   line-height: 1.3em;
+   margin: 0 0 0.8em 0;
+   }
+
+.disabled {color: #b0b0b0;}
+a.disabled {
+	cursor: auto;
+}
+a.disabled:hover {
+	text-decoration: none !important;
+	color: #b0b0b0 !important;
+}
+.comment {color: #909090;}
+.hidden {display:none;}
+.underline { border-bottom: 1px solid #ccc;}
+.noTopMargin {margin-top:0 !important}
+.even {
+	background-color: #eee;
+}
+
+/* Used for testing what copy is content-managed */
+span.langTest, span.langtest { 
+	color:red !important; 
+	width:auto !important; 
+	display:inline; 
+	float:none !important; 
+	padding:0 !important;}   
+    
+a {
+   color: #555;
+   font-weight: bold;
+   text-decoration: none;
+   outline:none;
+   }   
+a:hover { text-decoration: underline; }
+a.help-popup { }
+
+input#closeButton {					/* Close window buttons on popup windows - hidden until shown by javascript */
+	display:none;
+	float:right;
+	margin-bottom:1em;
+}
+
+/* Headings */   
+h1 { font-size: 170%; margin: 0 0 0.6em 0;}
+h1.underline { padding-bottom: 10px; border-bottom:1px solid #666;}	/* for pages which don't have a div.head */
+h2 { font-size: 125%; margin: 0 0 0.8em 0; }
+h2.underline { font-size: 125%; margin: 0 0 0.8em 0;  padding-bottom: 10px; border-bottom:1px solid #666;}
+h3 { font-size: 110%; margin: 0 0 0.8em 0; }   
+h4 { font-size: 100%; margin: 0 0 0.5em 0; }  
+
+h2.light {
+	font-weight: normal; 
+	font-size: 140%;
+}
+h2 span {
+	font-weight: normal;
+	font-size: 0.8em;
+}
+h2 strong, h3 strong {
+	/* color:#000; */
+}
+/* make sure browsers display font-sizes consistently */ 
+ul, ol, dl, table, p, input, textarea, select, label { font-size: 100%; }   
+textarea {font-family: tahoma, verdana, arial, sans-serif;}
+
+ul {
+   margin: 0 0 0 1.2em;
+   padding: 0;
+   }
+
+ul.normal li {margin: 0.2em 0;}
+
+
+/* Thumbnail images used throught asset bank */
+a.image img, img.image { border: 1px solid #000;  }
+img.icon {border:0;}
+
+/* Make sure all browsers display hover behaviour: */
+a.image:hover img, * html a.image:hover { border-color: #999; }
+
+
+.hr {									/* Horizontal rule   <div class="hr"></div>  */
+	padding: 0;
+	margin: 1em 0;
+	padding-top: 0px;
+	border-top:1px solid #666;
+	line-height: 1px;
+	}
+	
+.centered {							/* Used a lot for form submit buttons */
+	text-align:center; }	
+	
+.alignRight { text-align: right !important; }
+
+	
+span.required { 					/* used to style the asterix indicating a required field */   
+	color: #f00; 
+	font-weight: normal; 
+	}   
+span.requiredForCompleteness { 					/* used to style the asterix indicating a required field */   
+	color: #61A52B !important; 
+	} 	
+#importPage span.requiredForCompleteness { 	/* do not show on bulk upload page */   
+	display:none;
+	} 	
+	
+div#loading { 						/* loading box - background image also needs to be defined inline on the page to work */
+	background: url(../images/standard/misc/loading.gif) top center no-repeat;  
+	padding-top:40px;
+	font-style: italic;
+	text-align: center;
+	}
+		
+div.head { 							/* head strip on numerous pages usually containg a link back */
+   padding:1em 0; 				/* to previous pages */
+   margin-bottom: 1em; 
+   border: 1px solid #ddd; 
+   border-width: 1px 0px;  
+   overflow: hidden;
+   height: 1%;
+	}
+div.head.stripBelow {
+	margin-bottom: 0;
+	border-width:1px 0;
+}
+div.head.tabsAbove {
+	border-top:0;
+	padding-top:0;
+}
+	
+a.slideshow {
+	float:right;
+	background: url(../../images/standard/icon/slideshow.gif) left center no-repeat;  
+	padding-left:20px;
+}	
+
+a.editLink {
+	color: red;
+}
+
+.js-enabled-show, .js-enabled-show-inline {				/* initially hide things which are shown in the dynamic js-enabled.css */
+	display:none;
+}
+
+.printOnly {
+	display:none;
+}
+.printOnlyIE67 {
+	display:none;
+}
+
+/* fix issue with tinymce inserting paragraphs around content */
+label p {
+	display:inline;
+	margin:0; padding:0;
+}
+
+div.horizontalScroll {
+	width: 100%;
+	overflow-x: auto;
+}
+
+/* dl used for printing out attributes (e.g user details) */
+dl {
+	overflow: hidden;
+	height:1%;
+}
+dt,dd {
+	float:left;
+	padding: 0.3em 0;
+	margin: 0;
+}
+dt {
+	width: 13%;
+	font-weight: bold;
+	clear:left;
+	text-align:right;
+	padding-left: 2%;
+}
+dd {
+	float:left;
+	padding-left: 2%;
+	width: 83%;
+}
+
+dl.user {
+	border: 1px solid #ccc;
+	margin-bottom: 2em;
+}
+
+
+div.logHeading {
+	font-weight:bold;
+	color: #fff;
+	background:#999;
+	margin-top:0.5em;
+	padding: 0.5em 1em;
+}
+ul.log {
+	margin:0 0 1.5em 0;
+	padding:0;
+	list-style:none;
+	border: 1px solid #ccc;
+	border-top:0;
+	max-height:200px;
+	overflow-y:auto;
+}
+ul.log li {
+	padding: 0.3em 1em;
+}
+ul.log li.even {
+	background:#eee;
+}
+
+/* ================================================================================= */
+/* ================================================================================= */
+/* UI components																	 */
+/* ================================================================================= */
+/* ================================================================================= */
+
+/* ================================================================================= */
+/* System messages															     	 */
+/* ================================================================================= */		
+/* old school error messages */
+.error {color: #E70505;}
+p.error {
+	border: 1px solid #CF3333;
+	background: #FCE4E4;
+	padding:1em;
+	font-weight: bold;
+	margin-bottom:1em;
+	}
+/* New style of system message */
+div.error, div.confirm, div.warning, div.info, div.edit-mode-strip{
+	border:1px solid #aaa;
+	padding:1.2em 1em 1.2em 4.4em;
+	margin-bottom:1em;
+	line-height:1.3em;
+	background-position: 1em center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}	
+div.error {
+	font-size:1.1em;	 	/* error messages more dominant */
+	border-color: #CF5A5A;
+	background-color: #FCE4E4;
+	background-image: url(../../images/standard/icon/error.gif);
+	color:#8F1111;
+	}
+div.confirm {
+	border-color: #61A52B;
+	background-color: #E9F9D0;
+	background-image: url(../../images/standard/icon/confirm.gif);
+	}
+div.info {
+	border-color: #77A5BF;
+	background-color: #e7f0f3;
+	background-image:  url(../../images/standard/icon/info.gif);
+	}	
+div.warning {
+/*	font-size:1.1em;*/		/* warning messages more dominant */
+	border-color:#DFB90D;
+	background-color: #fdfecd;
+	background-image: url(../../images/standard/icon/warning.gif);
+	background-position: 0.8em center;
+	}	
+div.warning.warningTopAlign {
+	background-position: 0.8em 10px;
+	}	
+/* Versions without an icon */
+div.confirm.noIcon, div.error.noIcon {
+	background-image: none;
+	padding-left: 1em
+}	
+
+/* top align icon */
+div.warning.warningTopAlign {
+	background-position: 0.8em 1.2em;
+}
+div.warning.warningTopAlign h3 {
+	line-height:30px;
+}
+	
+div.error a{
+	color: #8F1111;
+	text-decoration: underline;
+}
+div.warning a {
+	color:#BC7927;
+	text-decoration: underline;
+}
+div.confirm a {
+	color: #4B7F1F;
+}
+
+div.edit-mode-strip {
+	background-image: none; 
+	margin:0;
+	border-top:0;
+	padding: 0;
+}	
+div.edit-mode-strip p {
+	font-size: 1.2em;
+	background: url(../../images/standard/icon/info.gif) left center no-repeat;
+	padding-left: 40px;
+	line-height: 40px;
+}
+	
+div.error p, div.confirm p, div.warning p, div.info p{
+	margin:0 0 0.2em 0;
+}		
+div.error ul, div.confirm ul, div.warning ul, div.info ul{
+	margin:0.5em 0;padding:0 0 0 2em;
+	list-style: square;
+}	
+div.error li, div.confirm li, div.warning li, div.info li{
+	margin:0 0 0.5em 0;padding:0;
+}				
+p.message {
+	border: 1px dashed #bbb;
+	background: #eee;
+	padding:1em;
+	font-weight: bold;
+	margin-bottom:1em;
+	}	
+	
+div.highlight{
+	border: 1px solid #aaa;
+	background-color: #eee;
+	margin: 0.5em 0;
+	padding: 0.5em;
+}		
+
+div.confirm.empty h2{
+	background-position: 1em 1em;
+}	
+
+
+div.confirm.noIcon h2 {
+	background: url(../../images/standard/icon/accept.png) left 2px no-repeat;
+	padding-left: 22px;
+	line-height: 30px;
+	margin-bottom: 0;
+}
+div.confirm.noIcon h3 {
+	background: url(../../images/standard/icon/confirm.gif) left 0 no-repeat;
+	padding-left: 3.2em;
+	line-height: 30px;
+	margin-bottom: 0;
+}
+div.confirm div.floated {
+	float: left;
+	padding: 1em 0;
+	margin: 1em 0;
+}
+
+/* ========================== */
+/* = Multiline button links = */
+/* ========================== */
+a.multilineButton {
+	float:left;
+	padding: 1em;
+	display: block;
+	border: 1px solid #ccc;
+	background: #eee ;
+	margin: 1em 2em 1em 0;
+	-moz-border-radius: 0.7em;   
+	-webkit-border-radius: 0.7em;  
+	border-radius: 0.7em;
+	text-decoration: none;
+}
+a.multilineButton span {
+	font-weight: normal;
+	text-decoration: none;
+	color: #444;
+}
+div.warning a.multilineButton {
+	width: 25%;
+	border: 1px solid #DFB90D;
+	background: #F3F4AB;
+	text-decoration: none;
+	margin:0 2em 0 0;
+}
+div.warning a.multilineButton:hover {
+	border-color:#E5C05B;
+	background-color:#FCFA92;
+}
+
+/* toolbar-like control panels, e.g. on assetbox page ------------------------------ */
+div.toolbar {
+	margin:0 0 1em 0;
+	clear:both;
+	/* cannot use overflow hidden for clearing as js dropdown will be obscured */
+	display:block;
+	height: 1%;
+	float:left;
+	width:100%;
+}
+
+div.toolbar div.group,
+div.toolbar ul.toolbarActions  li {
+	float:left;
+	height: 22px; 
+	background: url(../../images/standard/misc/vdots.gif) top left repeat-y;
+	padding-left: 1.5em;
+	margin-left:1.5em; 
+	line-height: 2em; 
+	list-style:none;
+}
+
+div.toolbar div.group.first {
+	background: none;
+	padding: 0; margin:0;
+}
+div.toolbar div.group input,
+div.toolbar div.group select {
+	float:left;
+	margin:0;
+}
+div.toolbar div.group select {
+	padding: 2px;
+}
+div.toolbar h2 {
+	float:left;
+	margin:0 !important;
+	line-height: 1.5em;
+}
+div.toolbar h3 {
+	float:left;
+	line-height: 1.8em;
+	margin:0 !important;
+}
+div.toolbar p {
+	float:left;
+	line-height: 2em;
+	margin:0 1em 0 0;
+}
+
+/* Button style links ----------------------------------- */
+
+a.linkButton {
+	line-height: 1em; 
+	padding: 4px 8px;
+	float:left;
+	border: 1px solid #666;
+	background: #FEFEFE url(../../images/standard/misc/button_bg.png) repeat-x left bottom;					
+	color: #494754;
+	font-weight: normal;
+	margin-right:1em;
+	zoom:1;
+}
+a.linkButton.last {
+	margin-right:0;
+}
+a.linkButton:hover {
+	text-decoration: none;
+}
+/* Dropdown buttons ----------------------------------- */
+a.linkButton.dropButton {
+	background: #FEFEFE url(../../images/standard/arrow/drop_down_button.png); 
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-right: 19px;
+}
+div.dropHolder a.linkButton.dropButton:hover {
+	background-position: right -20px;
+}
+div.dropHolder a.linkButton.dropButton.on,
+div.dropHolder a.linkButton.dropButton.on:hover {
+	background-position: right -40px;
+	color:#fff;
+}
+div.dropHolder{
+	position: relative;
+	float:left;
+	z-index:1;
+}
+ul.dropOptions {
+	position: absolute;
+	background: #fff;
+	left:0;
+	top:20px;
+	z-index:100;
+	padding: 0;
+	border:1px solid #aaa;
+	line-height: 1.2em;
+	width: 14em;
+	display: none;
+	list-style: none;
+	margin:0;
+	-moz-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Firefox */
+	-webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Safari, Chrome */
+	box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* CSS3 */	
+}
+
+div.toolbar ul.dropOptions li {
+	padding:0;margin:0;
+	float:none; background: none;
+	height: auto;
+	line-height: 1.3em;
+}
+
+ul.dropOptions a {
+	display:block;
+	padding: 0.5em 1em;
+	font-weight: normal;
+	color:#333;
+	height:1%;
+}
+ul.dropOptions a:hover {
+	background: #eee;
+	text-decoration: none;
+}
+
+
+/* dummy button for when proper button is disabled (i.e. no items are selected) */
+#dummyButtons {
+	opacity:0.5;
+	-moz-opacity: 0.5;
+	filter: alpha(opacity=50);
+	float:left;
+}
+#dummyButtons a {
+	cursor: default;
+}
+#dummyButtons  a.linkButton.dropArrow:hover {
+	background-position: right top;
+}
+#dropButtonSelected {
+	display:none;						/* Actual button is initially hidden */
+	float:left;
+}
+
+/* Dropdown links ----------------------------------- */
+div.linkType ul.dropOptions,
+div.linkType div.drop {
+	top:21px;
+	z-index:1; 
+}
+
+a.dropLink {
+	padding: 0 2.1em 0 1em;
+	border: 1px solid #fff;
+	background: url(../../images/standard/arrow/nav_down_arrow.gif) right 60% no-repeat;
+	height: 1%;
+	float:left;
+	position:relative;
+	z-index: 10;
+	height: 20px;
+	line-height: 20px;
+}
+div.dropHolder a.dropLink:hover,
+div.dropHolder a.dropLink.on {
+	border-color:#aaa;
+	text-decoration: none;
+	
+}
+div.dropHolder a.dropLink:hover {
+	-moz-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Firefox */
+	-webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Safari, Chrome */
+	box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* CSS3 */	
+}
+div.dropHolder.linkType a.dropLink.on {
+	border-bottom-color:#fff;
+	color:#666;
+}
+div.dropHolder.linkType a.dropLink.on:hover {
+	-moz-box-shadow: none; /* Firefox */
+	-webkit-box-shadow: none; /* Safari, Chrome */
+	box-shadow: none; /* CSS3 */	
+	border-bottom-color:#fff;
+}
+
+/* Version without link text (only a single down arrow) ----------------------------------- */
+div.singleButton {
+	clear:none;
+	display:block;
+	float:left;
+}
+div.singleButton a.dropLink {
+	float:left;
+	height: 14px;
+	line-height: 14px;
+	width: 17px;
+	padding: 1px;
+	margin:2px 0 0 10px;
+	background-color: fff;
+	background-position: 5px 4px;
+	background-repeat: no-repeat;
+	border:1px solid transparent;
+	/* display:block; */
+}
+
+div.singleButton a.dropLink.invite {
+	background-color: #ddd;
+	border-color: #999;
+}
+div.singleButton a.dropLink.on,
+div.singleButton a.dropLink:hover {
+	text-decoration: none;
+	display:block;
+	background-color: #aaa;
+	border-color: #999;	
+}
+
+div.singleButton ul.dropOptions,
+div.singleButton div.drop {
+	top:18px;
+	right: 0;
+}
+
+/* Version in lbPanel */
+div.lbPanel div.singleButton a.dropLink {
+	margin:-1px 0 0 5px;
+}
+
+div.lbPanel div.dropOptionsWrap {
+
+	display:none;
+}
+
+div.lbPanel div.drop {
+	position: absolute;
+	background: #fff;
+	width: 15em;
+	left:10px;
+	top: 1.4em;
+	z-index:100;
+	border:1px solid #aaa;
+	line-height: 1.2em;
+	display: none;
+	-moz-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Firefox */
+	-webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* Safari, Chrome */
+	box-shadow: 4px 4px 6px rgba(0, 0, 0, .5); /* CSS3 */	
+}
+
+
+div.lbPanel div.drop.scroll{
+	width: 15em;
+}
+div.lbPanel div.drop.scroll ul {
+	max-height: 200px;
+	overflow-y: scroll;
+}
+
+div.lbPanel div.drop ul {
+	display:block;
+	position: static;
+	line-height: 1.2em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+div.drop ul a {
+	display:block;
+	padding: 0.5em 1em;
+	font-weight: normal;
+	color:#333;
+	height:1%;
+}
+div.drop ul a:hover {
+	background: #eee;
+	text-decoration: none;
+}
+
+div.lbPanel div.drop li.current,
+div.lbPanel div.drop li.current a{
+	background: #aaa !important;
+	color:#fff;
+}
+div.lbPanel div.drop li img {
+	margin: 0.5em 1em;
+}
+
+/* Add new lightbox section of dropdown */
+div.lbPanel div.add  {
+	padding: 7px 10px;
+	border-top: 1px solid #ccc; 
+	background: #eee;
+}
+
+div.drop div.add input {
+	font-size: 1em;
+}
+div.drop div.add input.text{
+	width: 96px;
+	font-size: 1em;
+}
+div.drop div.add input.button {
+	margin:0;
+}
+
+
+/* List view toggle ----------------------------------- */
+div.toolbar p.listViewToggle {
+	float: right;
+	margin: 1px 0 0 0;
+}
+p.listViewToggle a {
+	float:left;
+	margin-left:0.5em;
+	text-indent: -9999px;
+	background: url(../../images/standard/icon/panel_view.gif) left top no-repeat;
+	width: 20px;
+	height: 20px;
+	overflow:hidden;
+}
+p.listViewToggle a.list {
+	background-image: url(../../images/standard/icon/list_view.gif);
+}
+p.listViewToggle a.active,
+p.listViewToggle a.active:hover {
+	background-position: left -20px;
+}
+p.listViewToggle a.active {
+	cursor: default;
+}
+p.listViewToggle a:hover {
+	background-position: left -40px;
+}
+
+p.listViewToggle:hover a.dropLink {
+	background-color: #fff !important;
+	border-color: transparent;
+}
+
+/* autocomlete styles ------------------------------------------------------------ */
+div.autocomplete {
+  position:absolute;
+  margin:0;
+  padding:0;
+  font-size: 1.2em;
+  z-index: 100;
+  text-align: left;
+}
+div.autocomplete ul {
+  list-style-type:none;
+  margin:0; padding:0;
+  background: white;
+  border:1px solid #aaa; 
+}
+div.autocomplete ul li.selected { background-color: #eee;}
+div.autocomplete ul li {
+   list-style-type:none;
+   display:block;
+   margin:0;
+   padding:0 4px;
+	line-height:1.4em; 
+   cursor:pointer;
+}
+
+#qsPanel div.autocomplete ul li {
+   padding:0 6px;
+}
+
+/* sort strip - shown on lightbox, browse & search results ------------------------------ */	
+div.sortStrip {
+	margin: 0;
+	padding: 0.8em 0.5em;
+	background: #eee;
+	color:#666;
+	border-bottom: 1px solid #ccc;
+}
+#lightboxPage div.sortStrip {
+	border-bottom: 1px solid #ccc;
+}
+
+div.sortStrip .pager {
+	line-height:1.9em;
+}
+div.sortStrip input, div.sortStrip select {
+	margin:0;
+}
+
+a.sortToggle {
+	background-color: #aaa;
+	float:right;
+	padding: 0 0.8em 0 1.8em !important;
+	line-height: 1.7em;
+	font-weight: normal;
+	background-position: 0.8em center !important;
+	-moz-border-radius-bottomleft: 0.7em;  
+	-moz-border-radius-bottomright: 0.7em;  
+	-webkit-border-bottom-left-radius: 0.7em;  
+	-webkit-border-bottom-right-radius: 0.7em;  
+}
+
+
+/* colourpicker (farbtastic) ------------------------------------------------------------ */	
+/* bright styles for colourpicker */
+#pickerHolder {
+	display:none;
+}
+#hexString {
+	border: 1px solid #555;
+}
+#colorPicker {
+	float:left;
+	width: 195px;
+	padding: 10px 15px;
+	background: #eee;
+	border: 1px solid #aaa;
+	margin-bottom: 10px;
+}
+a.pickerLink {
+	float:left;
+	line-height: 17px;
+}
+a.closePicker {
+	float:left;
+	display:block;
+	padding: 5px 5px 5px 24px;
+	background: #555 url(../../images/standard/icon/close.gif) 5px center no-repeat;
+	color: #fff;
+	width: 30px;
+	position:relative;
+	left: -59px;
+}
+/* farbtastic styles for colourpicker */
+.farbtastic {
+  position: relative;
+}
+.farbtastic * {
+  position: absolute;
+  cursor: crosshair;
+}
+.farbtastic, .farbtastic .wheel {
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .color, .farbtastic .overlay {
+  top: 47px;
+  left: 47px;
+  width: 101px;
+  height: 101px;
+}
+.farbtastic .wheel {
+  background: url(../../tools/colorpicker/wheel.png) no-repeat;
+  width: 195px;
+  height: 195px;
+}
+.farbtastic .overlay {
+  background: url(../../tools/colorpicker/mask.png) no-repeat;
+}
+.farbtastic .marker {
+  width: 17px;
+  height: 17px;
+  margin: -8px 0 0 -8px;
+  overflow: hidden; 
+  background: url(../../tools/colorpicker/marker.png) no-repeat;
+}
+/* ================================================================================= */
+/* Clearing	/ floating																 					 */
+/* ================================================================================= */	
+	
+/* clearfix class to be used instead of div.clearing where possible */    
+/* -apply to the block element containing the floated element (not the floated element itself) */
+.clearfix:after {
+	content: "."; 
+	display: block; 
+	position:relative; /*works better in IE5.5 or float in float situations*/
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+	}
+	
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+/* Clearing div to be used when clearfix class not applicable */
+div.clearing { clear: both; height: 1px; line-height: 1px;}
+/* Left clearing div useful on the homepage */
+div.clearLeft {clear:left;  line-height: 1px; }
+
+.floatRight { float: right; }
+.floatLeft { float: left; }
+   
+div.pageBreak {
+	border-top: 5px dashed #bbb;
+	margin: 1em 0;
+	font-size: 1.3em; line-height:1.8em;
+	color:#aaa;
+	clear:both;
+}
+
+.clearedContainer {
+	overflow: hidden;
+	zoom: 1;
+}
+	
+	
+/* ================================================================================= 
+	Pager e.g. when search results span more than one page													
+==================================================================================== */	
+
+div.pager a { 
+	font-weight: bold; 								
+	display: block; 
+	float:left; 						/* BB - had to use floating to fix rtl display issues */
+	margin: 0 2px; 
+	}
+div.pager span {						/* wraps | divider */
+	display: block; 
+	float:left;
+	color: #999;
+	margin: 0 2px;
+	}	
+div.pager span.pipe {
+	margin:0;
+}	
+div.pager a.bf, div.pager span.bf { 						/* prev and next links */
+	font-weight: normal; 
+	margin: 0 4px;
+	}
+
+
+
+
+/* ================================================================================= 
+	sliding door drop shadows												
+==================================================================================== */	
+div.leftShadow {
+	background: url(../../images/standard/misc/drop_left.gif) bottom left no-repeat;
+	height:1%;
+	}
+div.rightShadow {
+	background: url(../../images/standard/misc/drop_right.gif) bottom right no-repeat;
+	padding-bottom:12px;
+	}
+
+
+
+/* ================================================================================= */
+/* Popup styles 																						 	 */
+/* ================================================================================= */
+#conditionsPopup, #help, #popup { 
+	padding: 10px; 
+	margin:0; 
+	background: #fff; 
+	min-width:10px;
+	height: 90%;
+	}
+
+/* needs homogenizing -BB */
+div.copy h2 { margin: 0 0 0.8em 0; padding: 0.5em;}
+div.copy h3, div.copy h4 { margin: 1.2em 0.5em 0.8em 0.5em; }
+div.copy p {margin-left:1em; }
+div.copy ul {margin-left:2.5em; padding-left:0;}
+div.copy p.note { font-style: italic; }
+div.copy li { margin-bottom: 0.5em; }
+div.copy code { font-size: 120%; color: #333;  }
+div.copy code.searchString { border: 1px solid #aaa; padding: 1px 5px; }	
+
+#popup div.copy table, #popup div.copy p { margin:0 0.5em; width:none;}
+
+
+
+/* ================================================================================= */
+/* Collapsing expanding content																	 	 */
+/* ================================================================================= */
+/* e.g. on the bulk upload page there is a section of help text that uses javascript
+	to show and hide it. Initialise the display site here: */
+#ftpHelp { display: block; }				/* this is reversed by javascript on the page iself */
+#expandLink {display: none; }
+#collapseLink {display: none; }
+
+.expand { 
+	padding-left: 13px;
+	background: url(../../images/standard/arrow/arrow.gif) center left no-repeat;
+	background-position: left center;
+	background-repeat: no-repeat;
+	height: 1%;
+}
+.expand.collapse {
+	padding-left: 13px;
+	background: url(../../images/standard/arrow/nav_down_arrow.gif) center left no-repeat;
+}
+.expand.collapse_up {
+	padding-left: 13px;
+	background-image: url(../../images/standard/arrow/nav_up_arrow.gif) ; 
+	background-position:  left 4px; 
+	background-repeat: no-repeat;
+}
+/* for use on a dark background */
+.expand.white { 
+	background: url(../../images/standard/arrow/arrow_white.gif) left center  no-repeat;
+	color:#fff;
+}
+.expand.collapse.white {
+	background-image: url(../../images/standard/arrow/down_arrow_white.gif)
+	background-position: left 4px 
+	background-repeat: no-repeat;
+	color:#fff;
+}
+.expand.white_small {
+	background-image: url(../../images/standard/arrow/expand_small_white.png); 
+	color:#fff;
+}
+.expand.collapse_up.white_small {
+	background-image: url(../../images/standard/arrow/expand_small_white_up.png);
+	color:#fff;
+}
+/* =================================================================================  
+   Admin Tabs																	 	 
+   ================================================================================= */
+
+div.adminTabs { 
+	margin:1.3em 0 1em 0;
+	}
+div.adminTabs h2 {
+	margin:0 2px 0 0;
+	padding:6px 11px;
+	float: left;
+	background: none;
+	border:1px solid #bbb;
+	position:relative; z-index: 10;
+	}	
+div.adminTabs h2.current {
+	background: url(../../images/standard/misc/panel_grad.gif) bottom left repeat-x;
+	border-bottom-color:#EBEAEB;
+	} 
+div.tabClearing { 
+	clear:both;
+	height:0.4em; line-height:0.4em;
+	border:1px solid #bbb;
+	background: #EBEAEB;
+	position: relative;
+	top:-1px;
+	}
+	
+/* Smaller tabs (e.g advanced download options */	
+p.tabHolder strong {
+	display: block;
+	margin:0 2px 0 0;
+	padding: 6px 11px;
+	float: left;
+	background: #eee;
+	border:1px solid #bbb;
+	position:relative; 
+	z-index: 1000;
+}
+p.tabHolder strong.active {
+	background-color: #fff;
+	border-bottom-width:0px;
+	position: relative; 
+	z-index: 100;
+	color:#333;
+	padding-top: 7px;
+	bottom: 0;
+	z-index: 50;
+}
+p.tabHolder {
+	margin: 14px 0 0px 0;
+	}
+.hr-tabs{
+	margin-top:4px;
+	}
+#tabContent{
+	border:1px solid #666;
+	padding:15px;
+	margin-top:-1px;
+	margin-bottom: 1.5em;
+	}
+p.tabHolderPopup {
+	overflow: hidden;
+	height: 1%;
+	margin: 14px 0 0px 0;
+}
+p.tabHolderPopup a {
+	display: block;
+	margin:0 2px 0 0;
+	padding: 6px 11px;
+	float: left;
+	background: #eee;
+	border:1px solid #bbb;
+	
+}
+p.tabHolderPopup a.active {
+	background-color: #fff;
+	border-bottom-width:0px;
+	color:#333;
+	padding-top: 7px;
+	/* z-index: 10;  removed to fix autocomplete dropdown stacking issue in IE7 */
+	position: relative;
+}
+
+.hr-tabs{
+	margin-top:4px;
+	}
+
+ 
+
+	
+	
+	
+/* =================================================================================  
+   Hover help (using tooltips)																 	 
+   ================================================================================= */	
+
+img.hoverHelp {
+	cursor:help; 
+	display:inline; 
+	margin-top:-3px; 
+	position:relative; 
+	top:3px;
+	}
+	
+	
+/* =================================================================================  
+   Content Edit mode																	 	 
+   ================================================================================= */
+
+span.editSpan { 
+	padding-right:5px;
+	display: inline;
+	}
+
+		
+span.editSpan:hover, span.editSpan:hover p {
+	background: #efefef !important;
+	}	
+		
+img.editImg { 
+	border:0; 
+	position:relative; 
+	top:1px; 
+	right:-5px;
+	}
+
+/* Fix various display issues */
+ul.nav a.editLink {
+	display: inline;
+	padding:0;
+	}
+	
+#header img.editImg { 								/* logo */
+	float:none; 
+	margin-top:0;
+	}
+	
+#qsPanel img.editImg {
+	position:static;
+	float:right;
+	margin-right:2px;
+	}
+#qsPanel label img.editImg { float:none; }			
+
+.formHelp {
+	padding-left: 10px;
+}
+
+/* ================================================================================= 
+	Standard invisible table styles 											
+==================================================================================== */
+table.standard {
+	margin: 1em 0;
+}
+
+table.standard th, table.standard td {
+	padding: 0.4em 1.5em 0.4em 0;
+	text-align: left;
+	vertical-align: top;	
+}
+table.standard thead th {
+	vertical-align: bottom;
+}
+
+
+
+/* ================================================================================= 
+	List style tables styles (use <thead>)											
+==================================================================================== */
+table.list {
+	border-bottom: 1px solid #ccc;
+	margin: 1em 0;
+}
+table.list.wide {
+	width: 100%;
+}
+table.list.wide th {
+	width: 10%;
+}
+
+table.list th, table.list td {
+	padding: 0.4em 2em 0.4em 0;
+	text-align: left;
+	vertical-align: top;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 1px 0 0 0;	
+	background: #fff;
+}
+
+table.list thead th {
+	vertical-align: bottom;
+	border-top:0;
+}
+
+table.list td.action {
+	padding-right:1em;
+}
+table.list th.width150, table.list td.width150 {
+	width: 150px;	
+}
+
+table.list.stripey thead tr,table.list.stripey thead th {
+	background: none !important;
+	vertical-align:bottom;
+}
+table.highlight tr:hover td, table.highlight tr:hover td {
+	background: #f3f3f3; !important;
+}
+/* drag and drop */
+table.list  td.sort {
+	cursor: move;
+}
+table.list tr.active td {
+	border-bottom-width: 1px;
+	background-color: #d3e1fa;
+	border-color: #77A5BF;
+	background-color: #e7f0f3;
+}
+table.list tr.landing {
+	height: 23px;
+}
+
+/* Nasty nested tables */
+table.list table td {
+	border: 0;
+	padding: 0 0.5em 0.2em 0;
+}
+
+table.list tr.spacer td {
+	background: #fff !important;
+	height: 2em;
+}
+
+/* ================================================================================= 
+	Spinner control - text field with up/down incremental buttons											
+==================================================================================== */
+.spinner .buttons, .spinner a, .spinner input{
+	float:left;
+}
+.spinner a {
+	width: 19px;
+	height: 10px;
+	background-image:url(../../images/standard/misc/buttons_spinner.gif);
+	display:block;
+	text-indent: -9999px;
+}
+.spinner a.up {
+	background-position: 0px 0px;
+}
+.spinner a.up:hover {
+	background-position: 0px 10px;
+}
+.spinner a.down {
+	background-position: 19px -1px;
+	clear:left;
+	height: 9px;
+}
+.spinner a.down:hover {
+	background-position: 19px 9px;
+}
+.spinner input {
+	margin: 0;
+	height:13px;
+}
+
+/* ================================================================================= 
+	Explorer - Windows explorer type control											
+==================================================================================== */
+ul.explorer,ul.explorer li, ul.explorer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* indentation of sub-categories */
+ul.explorer ul {
+	margin: 0 0 0 20px;
+}
+
+ul.explorer li {
+ 	padding-right: 10px;
+ 	height: 1%;
+}
+ul.explorer ul li {
+ 	padding-right: 0;
+}
+
+/* links */
+ul.explorer a:link,
+ul.explorer a:visited,
+ul.explorer a:hover,
+ul.explorer a:active {
+	text-decoration: none;
+	color: #000;
+	font-weight: normal;
+}
+ul.explorer a:hover {
+ 	text-decoration: underline;
+}
+ul.explorer a.expand:hover {
+ 	text-decoration: none;
+}
+ul.explorer li a {
+	margin: 1px auto;
+	background-image: url(../../images/standard/sprites/explorer.gif) !important;		/* sprite image */
+	background-position:  -14px -24px;
+	background-repeat:  no-repeat;
+	padding: 3px 0 3px 20px;
+	margin-left:15px;
+	display:block;
+	line-height: 1.2em;
+	height: 1%;
+  }
+ul.explorer li a.open {
+ 	background-position:-14px -1px;
+}
+ul.explorer li.empty a.open {			
+	background-position:  -14px -24px;			/* stick with closed foler if at the end of the tree */
+}
+ 
+/* expander links */
+ul.explorer li a.expand {
+	background-position: 0 1px;
+	width: 9px;
+	height: 10px;
+	padding:0; margin:5px 0 0 0;
+	float:left;
+	outline:none;
+	overflow: hidden;
+} 
+
+ul.explorer li a.collapse	{
+	background-position: 0 -9px;
+}
+
+/* Highlighted version */
+ul.explorer li a.current {
+	background-color: #e3e3e3;
+}
+
+/* Hide nested ULs */
+ul.explorer ul {
+	display:none; 
+}
+
+

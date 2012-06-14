@@ -1,0 +1,128 @@
+/* ======================================================================================== */
+/* IE - WINDOWS SPECIFIC STYLES                                                             */
+/* All IE-specific fixes go in here.								                                */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		14-Feb-2006    Created.                                          */
+/* ======================================================================================== */
+
+/* Import common IE rules */
+@import url("ie-win.css");
+
+
+div.pageWrapper {            
+   height: 1%;  
+	margin:0 5%;					/* Have percentage margins as alternative to min-width */
+	padding:0 10px;
+   }
+
+#hLinks a {
+	height:1em;						/* Required to enable inline padding in IE5.x */
+	}			   
+   
+
+
+#topStrip { 						/* disable png background */
+	background-image: none;
+	}	
+
+	
+#loginPage, #registrationPage { 	/* margin:auto doesn't work in IE5 */
+   text-align: center; 
+	}
+		
+#loginPanel { 
+	height: 1%;
+	text-align: left;
+	}	
+	
+#loginPanel table {				/* IE5 doesn't like 100% */
+	width:80%;}
+	
+div.hr { 
+	height: 1%; 					/* requuired to make the hr div show up at all in IE 5 */
+	}
+
+/* =lightbox styles
+------------------------------------------------------------------------*/	
+ul.lightbox li div.detailWrapper {		/* define height for IE - other browsers use min-height*/
+	height:16em !important;
+ 	}				
+
+	
+	
+/* Force correct display in PC/IE5.x  
+  'float' and 'width' settings remove horizontal padding
+  'height: 1%' removes vertical padding */
+ul.nav li { 
+	float: left; 
+	clear:left;}
+ul.nav a { 
+	float: left; 
+	clear: right; 
+	width: 140px; } 
+
+	
+/* ================================================================================= 
+	Home page fixes																	
+==================================================================================== */
+	
+div.browsePanel {						/* fix floating issues */
+	height:1%; 
+	}	
+
+#homePage a.imgWrapper {  			/* Alternative style recent/promo thumbs for IE5 */		
+	float:none; 						/* This is because with the standard style the links don't work in IE 5.0 */
+	height:auto;
+	display:inline;
+	margin:0;
+	border:0;
+	}
+#homePage a.imgWrapper img {
+	border:1px solid #444; 
+	margin:0 5px 5px 0px;
+	display:inline; 
+	}	
+#homePage a.imgWrapper:hover img {
+	border-color:#ccc; 
+	}
+
+div.promo a.iconWrapper img{ 				/* This is completely dependant on the size of homogenised thumbnails in the application */
+	border:0 !important;
+	}	
+
+#homePage div.categoryList ul { 
+	width: 30%;
+	padding-left: 0;
+	}	
+	
+/* ================================================================================= 
+	View asset details page																	
+==================================================================================== */
+div.actions ul li { 
+	width:160px; 				/* only assign a width to IE5.x */ 
+	height: 1%; 				/* only assign a height to IE5.x */
+} 
+
+
+/* ================================================================================= 
+	Search results page																	
+==================================================================================== */
+ul.results div.imageHolder { width:90px; }
+ul.results div.detailHolder { height:1% }
+
+
+/* Tabbed download option styles */	
+p.tabHolder a {
+	height:1%;}
+	
+
+
+	
+
+/* Lightbox ================================================================ */
+ul.lightbox p.action a, ul.lightbox p.action span.added {	/* allows padding to be applied to inline elements */
+	height:1%;}		
+
+
+

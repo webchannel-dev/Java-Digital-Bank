@@ -1,0 +1,121 @@
+<!-- 
+
+	To add a new attribute mapping...
+
+	1. Add a new attribute to Asset Bank in the Admin area (Admin -> Attributes)
+	2. Make a note of the id of the new attribute
+	3. Add a new mapping to the attributes section of this file (see the 'XML Mapping File Syntax' section and use the id from step 2 in place of <ATT_ID>)
+	4. Make sure that the xml element in the mapping you setup is returned by the xml that Asset Bank synchronises from (and that it is a direct descendant of a record element)
+	5. You can use nested elements by seperating them with ':' (i.e. to get the value of the test1 element from the following synchronisation xml  <record><testing><test1>value</test1></testing></record> you would enter 'testing:test1' in the xml part of the mapping.
+	6. Once the mapping, attribute and synchronisation xml have been setup, restart the Asset Bank webapp.
+
+	XML Mapping File Syntax:
+	
+	The file maps values from an xml file to attributes and fields in assetbank. It assumes that there is a root element in the xml file that contains
+	a records element. This records element then contains individual record elements that are to be imported into Asset Bank
+	Example...
+	
+	<mappings>
+		<root_element></root_element>
+		<records_element></records_element>
+		<record_element></record_element>
+		<file_element></file_element>
+		<assetbankid_element></assetbankid_element>
+		<category_elements prefix="">
+			<element></element>
+			<element></element>
+		</category_elements>
+		<default_category_id></default_category_id>
+		<accesslevel_elements prefix="">
+			<element></element>
+			<element></element>
+		</accesslevel_elements>
+		<default_accesslevel_id></default_accesslevel_id>
+		<fields>
+			<mapping defaultValue="">
+				<xml>The xml element within the record element to read the child text from (use : to seperate nested tags)</xml>
+				<assetbank type="string/long/int/float/double">Asset Bank field name - part of the Asset Bean (fully capitalised with no spaces)</assetbank>
+			</mapping>
+		</fields>
+		<attributes>
+			<mapping defaultValue="">
+				<xml>The xml element within the record element to read the child text from (use : to seperate nested tags)</xml>
+				<assetbank>att:<ATT_ID></assetbank>
+			</mapping>
+			<static_value id="<ATT_ID>" value=""/>
+		</attributes>
+	</mappings> 
+-->
+<mappings>
+	<root_element>adlibXML</root_element>
+	<records_element>recordList</records_element>
+	<record_element>record</record_element>
+	<file_element></file_element>
+	<assetbankid_element>AB-Id</assetbankid_element>
+	<category_elements prefix="Artwork">
+		<element>object_category:term</element>
+		<element>collection:term</element>
+	</category_elements>
+	<default_category_id>15</default_category_id>
+	<default_accesslevel_id>1</default_accesslevel_id>
+	<fields>
+		<mapping>
+			<xml>title</xml>
+			<assetbank type="string">Name</assetbank>
+		</mapping>
+	</fields>
+	<attributes>
+		<mapping>
+			<xml>object_number</xml>
+			<assetbank>33</assetbank>
+		</mapping>
+		<mapping>
+			<xml>object_category:term</xml>
+			<assetbank>34</assetbank>
+		</mapping>
+		<mapping>
+			<xml>object_name:term</xml>
+			<assetbank>35</assetbank>
+		</mapping>
+		<mapping defaultValue="Matt Stevenson">
+			<xml>creator:name</xml>
+			<assetbank>36</assetbank>
+		</mapping>
+		<mapping>
+			<xml>collection:term</xml>
+			<assetbank>37</assetbank>
+		</mapping>
+		<mapping>
+			<xml>series_name</xml>
+			<assetbank>38</assetbank>
+		</mapping>
+		<mapping>
+			<xml>production.date.start</xml>
+			<assetbank>39</assetbank>
+		</mapping>
+		<mapping>
+			<xml>technique:term</xml>
+			<assetbank>40</assetbank>
+		</mapping>
+		<mapping>
+			<xml>dimension.value</xml>
+			<assetbank>41</assetbank>
+		</mapping>
+		<mapping>
+			<xml topLevelElementIndex="2">dimension.value</xml>
+			<assetbank>42</assetbank>
+		</mapping>
+		<mapping>
+			<xml topLevelElementIndex="3">dimension.notes</xml>
+			<assetbank>43</assetbank>
+		</mapping>
+		<mapping>
+			<xml topLevelElementIndex="4">dimension.notes</xml>
+			<assetbank>44</assetbank>
+		</mapping>
+		<mapping>
+			<xml>location.default:term</xml>
+			<assetbank>45</assetbank>
+		</mapping>
+	</attributes>
+</mappings>

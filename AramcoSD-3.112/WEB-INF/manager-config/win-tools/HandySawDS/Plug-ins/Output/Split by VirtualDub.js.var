@@ -1,0 +1,18 @@
+[VDPath]
+Type=File
+FriendlyName="Full pathname of ""VirtualDub.exe"""
+Hint="Point to VirtualDub.exe file"
+Default="VirtualDub.exe"
+[WhatToDo]
+Type=List
+FriendlyName="Behaviour"
+Hint="Select what do you want this plugin generate"
+ChoiceSet="Normal","Only generate .SYL file"
+Default="Normal"
+[Show]
+Type=List
+FriendlyName="Show processing window"
+Hint="You may hide VirtualDub window during files processing"
+ChoiceSet="No","Yes"
+Default="Yes"
+

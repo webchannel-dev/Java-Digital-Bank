@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="workflow" size="1027,433" id="" metadata="uml2-1.0" initialized="true" tag="1000" key="32303036313031382061737365742D62616E6B2D7472756E6B2F5374657665">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.16/@sourceConnections.3" name="AssetInState" location="959,15" size="357,301" id="com.bright.assetbank.workflow.bean/AssetInState" runTimeClassModel="dateAdded,userName,matchedVariationName,assetTypeId,getAuditEntry(),thumbnailImageFile,setPermissionCategoriesAsBits(Ljava.math.BigInteger;),userEmail,getPermissionCategoriesAsBits(),auditEntry,assetId,stateName,setAuditEntry(Lcom.bright.assetbank.workflow.bean.AssetWorkflowAuditEntry;),workflowName">
+    <children xsi:type="editmodel:CompartmentEditModel" size="213,180">
+      <children xsi:type="editmodel:AttributeEditModel" name="assetId" id="com.bright.assetbank.workflow.bean/AssetInState#assetId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="matchedVariationName" id="com.bright.assetbank.workflow.bean/AssetInState#matchedVariationName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stateName" id="com.bright.assetbank.workflow.bean/AssetInState#stateName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workflowName" id="com.bright.assetbank.workflow.bean/AssetInState#workflowName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetTypeId" id="com.bright.assetbank.workflow.bean/AssetInState#assetTypeId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="thumbnailImageFile" id="com.bright.assetbank.workflow.bean/AssetInState#thumbnailImageFile"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="userName" id="com.bright.assetbank.workflow.bean/AssetInState#userName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="userEmail" id="com.bright.assetbank.workflow.bean/AssetInState#userEmail"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="auditEntry" id="com.bright.assetbank.workflow.bean/AssetInState#auditEntry"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dateAdded" id="com.bright.assetbank.workflow.bean/AssetInState#dateAdded"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="181,72">
+      <children xsi:type="editmodel:MethodEditModel" name="getAuditEntry" id="com.bright.assetbank.workflow.bean/AssetInState#getAuditEntry()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAuditEntry" id="com.bright.assetbank.workflow.bean/AssetInState#setAuditEntry(Lcom.bright.assetbank.workflow.bean.AssetWorkflowAuditEntry;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setPermissionCategoriesAsBits" id="com.bright.assetbank.workflow.bean/AssetInState#setPermissionCategoriesAsBits(Ljava.math.BigInteger;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getPermissionCategoriesAsBits" id="com.bright.assetbank.workflow.bean/AssetInState#getPermissionCategoriesAsBits()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.16/@sourceConnections.2" name="AssetsInState" location="954,329" size="363,175" id="com.bright.assetbank.workflow.bean/AssetsInState" runTimeClassModel="numberAssetsActual,compareTo(Lcom.bright.assetbank.workflow.bean.AssetsInState;),getKey(),assetList,state,incrementNumberAssetsActual(),getNumberAssets()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="138,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="assetList" id="com.bright.assetbank.workflow.bean/AssetsInState#assetList"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="state" id="com.bright.assetbank.workflow.bean/AssetsInState#state"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="numberAssetsActual" id="com.bright.assetbank.workflow.bean/AssetsInState#numberAssetsActual"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="180,72">
+      <children xsi:type="editmodel:MethodEditModel" name="compareTo" id="com.bright.assetbank.workflow.bean/AssetsInState#compareTo(Lcom.bright.assetbank.workflow.bean.AssetsInState;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getKey" id="com.bright.assetbank.workflow.bean/AssetsInState#getKey()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getNumberAssets" id="com.bright.assetbank.workflow.bean/AssetsInState#getNumberAssets()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="incrementNumberAssetsActual" id="com.bright.assetbank.workflow.bean/AssetsInState#incrementNumberAssetsActual()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.16/@sourceConnections.1" name="VariationsInWorkflow" location="929,635" size="415,103" id="com.bright.assetbank.workflow.bean/VariationsInWorkflow" runTimeClassModel="getNumberStates(),variationList,workflowName">
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="variationList" id="com.bright.assetbank.workflow.bean/VariationsInWorkflow#variationList"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workflowName" id="com.bright.assetbank.workflow.bean/VariationsInWorkflow#workflowName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="113,18">
+      <children xsi:type="editmodel:MethodEditModel" name="getNumberStates" id="com.bright.assetbank.workflow.bean/VariationsInWorkflow#getNumberStates()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.0" name="State" location="62,135" size="317,337" id="com.bright.framework.workflow.bean/State" runTimeClassModel="getTransitionsHaveHelpText(),getNumTransitions(),stateNumber,alertList,getVisibleToOwner(),helpText,visibleTo,variationName,description,getTransitionNumberByName(Ljava.lang.String;),getTransition(I),eventList,transitionList,name,workflowName">
+    <children xsi:type="editmodel:CompartmentEditModel" size="140,198">
+      <children xsi:type="editmodel:AttributeEditModel" name="alertList" id="com.bright.framework.workflow.bean/State#alertList"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="description" id="com.bright.framework.workflow.bean/State#description"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="eventList" id="com.bright.framework.workflow.bean/State#eventList"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="helpText" id="com.bright.framework.workflow.bean/State#helpText"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="com.bright.framework.workflow.bean/State#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="transitionList" id="com.bright.framework.workflow.bean/State#transitionList"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="variationName" id="com.bright.framework.workflow.bean/State#variationName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="visibleTo" id="com.bright.framework.workflow.bean/State#visibleTo"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workflowName" id="com.bright.framework.workflow.bean/State#workflowName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stateNumber" id="com.bright.framework.workflow.bean/State#stateNumber"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="169,90">
+      <children xsi:type="editmodel:MethodEditModel" name="getNumTransitions" id="com.bright.framework.workflow.bean/State#getNumTransitions()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTransition" id="com.bright.framework.workflow.bean/State#getTransition(I)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTransitionNumberByName" id="com.bright.framework.workflow.bean/State#getTransitionNumberByName(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTransitionsHaveHelpText" id="com.bright.framework.workflow.bean/State#getTransitionsHaveMessages()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVisibleToOwner" id="com.bright.framework.workflow.bean/State#getVisibleToOwner()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.12/@sourceConnections.2" name="WorkflowInfo" location="62,516" size="368,193" id="com.bright.framework.workflow.bean/WorkflowInfo" runTimeClassModel="WorkflowInfo(),variationName,stateName,lastStateChangeDate,state,id,workflowName,entityId">
+    <children xsi:type="editmodel:CompartmentEditModel" size="148,126">
+      <children xsi:type="editmodel:AttributeEditModel" name="entityId" id="com.bright.framework.workflow.bean/WorkflowInfo#entityId"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="com.bright.framework.workflow.bean/WorkflowInfo#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="lastStateChangeDate" id="com.bright.framework.workflow.bean/WorkflowInfo#lastStateChangeDate"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="state" id="com.bright.framework.workflow.bean/WorkflowInfo#state"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="stateName" id="com.bright.framework.workflow.bean/WorkflowInfo#stateName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="variationName" id="com.bright.framework.workflow.bean/WorkflowInfo#variationName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workflowName" id="com.bright.framework.workflow.bean/WorkflowInfo#workflowName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="95,18">
+      <children xsi:type="editmodel:MethodEditModel" name="WorkflowInfo" id="com.bright.framework.workflow.bean/WorkflowInfo#WorkflowInfo()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.framework.workflow.bean/WorkflowInfo->com.bright.framework.workflow.bean/State" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«instantiate»" size="61,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="158,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="158,337"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.12/@sourceConnections.3" name="Transition" location="499,151" size="347,183" id="com.bright.framework.workflow.bean/Transition" runTimeClassModel="confirmationText,hasMessage,description,messageMandatory,transitionNumber,nextStateName,name,helpText">
+    <children xsi:type="editmodel:CompartmentEditModel" size="158,144">
+      <children xsi:type="editmodel:AttributeEditModel" name="confirmationText" id="com.bright.framework.workflow.bean/Transition#confirmationText"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="description" id="com.bright.framework.workflow.bean/Transition#description"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="helpText" id="com.bright.framework.workflow.bean/Transition#helpText"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="com.bright.framework.workflow.bean/Transition#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nextStateName" id="com.bright.framework.workflow.bean/Transition#nextStateName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="transitionNumber" id="com.bright.framework.workflow.bean/Transition#transitionNumber"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="hasMessage" id="com.bright.framework.workflow.bean/Transition#hasMessage"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="messageMandatory" id="com.bright.framework.workflow.bean/Transition#messageMandatory"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="StateAlert" location="499,544" size="347,111" id="com.bright.framework.workflow.bean/StateAlert" runTimeClassModel="handlerClassName,sendTo,template,name">
+    <children xsi:type="editmodel:CompartmentEditModel" size="143,72">
+      <children xsi:type="editmodel:AttributeEditModel" name="handlerClassName" id="com.bright.framework.workflow.bean/StateAlert#handlerClassName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="com.bright.framework.workflow.bean/StateAlert#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sendTo" id="com.bright.framework.workflow.bean/StateAlert#sendTo"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="template" id="com.bright.framework.workflow.bean/StateAlert#template"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="StateEvent" location="500,390" size="352,75" id="com.bright.framework.workflow.bean/StateEvent" runTimeClassModel="handlerClassName,name">
+    <children xsi:type="editmodel:CompartmentEditModel" size="143,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="handlerClassName" id="com.bright.framework.workflow.bean/StateEvent#handlerClassName"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="com.bright.framework.workflow.bean/StateEvent#name"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.10/@sourceConnections.0 //@children.12/@sourceConnections.1" name="EnterStateProcessor" location="540,1424" size="441,81" id="com.bright.framework.workflow.processor/EnterStateProcessor" runTimeClassModel="process(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.WorkflowInfo;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="70,18">
+      <children xsi:type="editmodel:MethodEditModel" name="process" id="com.bright.framework.workflow.processor/EnterStateProcessor#process(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.WorkflowInfo;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.11/@sourceConnections.0 //@children.12/@sourceConnections.0" name="SendAlertProcessor" location="15,1170" size="438,153" id="com.bright.framework.workflow.processor/SendAlertProcessor" runTimeClassModel="sendBatch(Lcom.bright.framework.database.bean.DBTransaction;J),endBatch(J),addToBatch(Lcom.bright.framework.workflow.bean.AlertInfo;J),startBatch(J),sendAlert(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.AlertInfo;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="88,90">
+      <children xsi:type="editmodel:MethodEditModel" name="sendAlert" id="com.bright.framework.workflow.processor/SendAlertProcessor#sendAlert(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.AlertInfo;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addToBatch" id="com.bright.framework.workflow.processor/SendAlertProcessor#addToBatch(Lcom.bright.framework.workflow.bean.AlertInfo;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sendBatch" id="com.bright.framework.workflow.processor/SendAlertProcessor#sendBatch(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startBatch" id="com.bright.framework.workflow.processor/SendAlertProcessor#startBatch(J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="endBatch" id="com.bright.framework.workflow.processor/SendAlertProcessor#endBatch(J)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.13/@sourceConnections.0 //@children.14/@sourceConnections.0" name="EnterStateProcessorImpl" location="538,1544" size="469,67" id="com.bright.framework.workflow.processor/EnterStateProcessorImpl" runTimeClassModel="process(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.WorkflowInfo;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="70,18">
+      <children xsi:type="editmodel:MethodEditModel" name="process" id="com.bright.framework.workflow.processor/EnterStateProcessorImpl#process(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.WorkflowInfo;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.workflow.processor/EnterStateProcessor&lt;-com.bright.framework.workflow.processor/EnterStateProcessorImpl" source="//@children.10" target="//@children.8" targetEnd="//@children.10/@sourceConnections.0/@children.1" sourceEnd="//@children.10/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="222,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="220,81"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.0" name="SendAlertProcessorImpl" location="15,1349" size="466,229" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl" runTimeClassModel="sendBatch(Lcom.bright.framework.database.bean.DBTransaction;J),setEmailManager(Lcom.bright.framework.mail.service.EmailManager;),setAssetWorkflowManager(Lcom.bright.assetbank.workflow.service.AssetWorkflowManager;),endBatch(J),assetWorkflowManager,emailManager,addToBatch(Lcom.bright.framework.workflow.bean.AlertInfo;J),startBatch(J),mapBatches,sendAlert(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.AlertInfo;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="273,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="mapBatches" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#mapBatches"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="emailManager" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#emailManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetWorkflowManager" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#assetWorkflowManager"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,126">
+      <children xsi:type="editmodel:MethodEditModel" name="sendBatch" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#sendBatch(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sendAlert" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#sendAlert(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.AlertInfo;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addToBatch" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#addToBatch(Lcom.bright.framework.workflow.bean.AlertInfo;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startBatch" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#startBatch(J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="endBatch" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#endBatch(J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEmailManager" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#setEmailManager(Lcom.bright.framework.mail.service.EmailManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetWorkflowManager" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl#setAssetWorkflowManager(Lcom.bright.assetbank.workflow.service.AssetWorkflowManager;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.workflow.processor/SendAlertProcessor&lt;-com.bright.framework.workflow.processor/SendAlertProcessorImpl" source="//@children.11" target="//@children.9" targetEnd="//@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.11/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="218,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="218,153"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.16/@sourceConnections.0" name="WorkflowManager" location="40,794" size="413,301" id="com.bright.framework.workflow.service/WorkflowManager" runTimeClassModel="getCurrentState(Lcom.bright.framework.database.bean.DBTransaction;J),startAlertProcessorBatch(Lcom.bright.framework.workflow.processor.SendAlertProcessor;J),processTransitionForBatch(Lcom.bright.framework.database.bean.DBTransaction;IJJJ),getAllStates(),getState(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;),endAlertProcessorBatch(Lcom.bright.framework.workflow.processor.SendAlertProcessor;J),createInitialWorkflow(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;Ljava.lang.String;JZ),removeWorkflow(Lcom.bright.framework.database.bean.DBTransaction;J),getStatesForWorkflow(Ljava.lang.String;Ljava.lang.String;),processTransition(Lcom.bright.framework.database.bean.DBTransaction;IJJ),createWorkflowForState(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;JJZ),startup(),sendAlertProcessorBatch(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.processor.SendAlertProcessor;J),createInitialWorkflowForBatch(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;Ljava.lang.String;JJZ)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="175,252">
+      <children xsi:type="editmodel:MethodEditModel" name="createInitialWorkflowForBatch" id="com.bright.framework.workflow.service/WorkflowManager#createInitialWorkflowForBatch(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;Ljava.lang.String;JJZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createWorkflowForState" id="com.bright.framework.workflow.service/WorkflowManager#createWorkflowForState(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;JJZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllStates" id="com.bright.framework.workflow.service/WorkflowManager#getAllStates()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getStatesForWorkflow" id="com.bright.framework.workflow.service/WorkflowManager#getStatesForWorkflow(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="processTransitionForBatch" id="com.bright.framework.workflow.service/WorkflowManager#processTransitionForBatch(Lcom.bright.framework.database.bean.DBTransaction;IJJJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeWorkflow" id="com.bright.framework.workflow.service/WorkflowManager#removeWorkflow(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startup" id="com.bright.framework.workflow.service/WorkflowManager#startup()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCurrentState" id="com.bright.framework.workflow.service/WorkflowManager#getCurrentState(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startAlertProcessorBatch" id="com.bright.framework.workflow.service/WorkflowManager#startAlertProcessorBatch(Lcom.bright.framework.workflow.processor.SendAlertProcessor;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="endAlertProcessorBatch" id="com.bright.framework.workflow.service/WorkflowManager#endAlertProcessorBatch(Lcom.bright.framework.workflow.processor.SendAlertProcessor;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="createInitialWorkflow" id="com.bright.framework.workflow.service/WorkflowManager#createInitialWorkflow(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;Ljava.lang.String;JZ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="processTransition" id="com.bright.framework.workflow.service/WorkflowManager#processTransition(Lcom.bright.framework.database.bean.DBTransaction;IJJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sendAlertProcessorBatch" id="com.bright.framework.workflow.service/WorkflowManager#sendAlertProcessorBatch(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.processor.SendAlertProcessor;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getState" id="com.bright.framework.workflow.service/WorkflowManager#getState(Ljava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.framework.workflow.service/WorkflowManager->com.bright.framework.workflow.processor/SendAlertProcessor" source="//@children.12" target="//@children.9" targetEnd="//@children.12/@sourceConnections.0/@children.2" label="//@children.12/@sourceConnections.0/@children.0" sourceEnd="//@children.12/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="206,301" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="231,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.framework.workflow.service/WorkflowManager->com.bright.framework.workflow.processor/EnterStateProcessor" source="//@children.12" target="//@children.8" targetEnd="//@children.12/@sourceConnections.1/@children.2" label="//@children.12/@sourceConnections.1/@children.0" sourceEnd="//@children.12/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="403,301" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,10"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.framework.workflow.service/WorkflowManager->com.bright.framework.workflow.bean/WorkflowInfo" source="//@children.12" target="//@children.4" targetEnd="//@children.12/@sourceConnections.2/@children.2" label="//@children.12/@sourceConnections.2/@children.0" sourceEnd="//@children.12/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="206,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="184,193"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.framework.workflow.service/WorkflowManager->com.bright.framework.workflow.bean/Transition" source="//@children.12" target="//@children.5" targetEnd="//@children.12/@sourceConnections.3/@children.2" label="//@children.12/@sourceConnections.3/@children.0" sourceEnd="//@children.12/@sourceConnections.3/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="413,10" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,183"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AssetApprovedProcessor" location="541,1689" size="464,103" id="com.bright.assetbank.workflow.processor/AssetApprovedProcessor" runTimeClassModel="setAssetWorkflowManager(Lcom.bright.assetbank.workflow.service.AssetWorkflowManager;),process(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.WorkflowInfo;),assetWorkflowManager">
+    <children xsi:type="editmodel:CompartmentEditModel" size="273,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="assetWorkflowManager" id="com.bright.assetbank.workflow.processor/AssetApprovedProcessor#assetWorkflowManager"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,36">
+      <children xsi:type="editmodel:MethodEditModel" name="process" id="com.bright.assetbank.workflow.processor/AssetApprovedProcessor#process(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.WorkflowInfo;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetWorkflowManager" id="com.bright.assetbank.workflow.processor/AssetApprovedProcessor#setAssetWorkflowManager(Lcom.bright.assetbank.workflow.service.AssetWorkflowManager;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.workflow.processor/EnterStateProcessorImpl&lt;-com.bright.assetbank.workflow.processor/AssetApprovedProcessor" source="//@children.13" target="//@children.10" targetEnd="//@children.13/@sourceConnections.0/@children.1" sourceEnd="//@children.13/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="231,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="234,67"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AssetDeleteProcessor" location="1050,1688" size="459,103" id="com.bright.assetbank.workflow.processor/AssetDeleteProcessor" runTimeClassModel="setAssetWorkflowManager(Lcom.bright.assetbank.workflow.service.AssetWorkflowManager;),process(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.WorkflowInfo;),assetWorkflowManager">
+    <children xsi:type="editmodel:CompartmentEditModel" size="273,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="assetWorkflowManager" id="com.bright.assetbank.workflow.processor/AssetDeleteProcessor#assetWorkflowManager"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="163,36">
+      <children xsi:type="editmodel:MethodEditModel" name="process" id="com.bright.assetbank.workflow.processor/AssetDeleteProcessor#process(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.WorkflowInfo;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetWorkflowManager" id="com.bright.assetbank.workflow.processor/AssetDeleteProcessor#setAssetWorkflowManager(Lcom.bright.assetbank.workflow.service.AssetWorkflowManager;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.workflow.processor/EnterStateProcessorImpl&lt;-com.bright.assetbank.workflow.processor/AssetDeleteProcessor" source="//@children.14" target="//@children.10" targetEnd="//@children.14/@sourceConnections.0/@children.1" sourceEnd="//@children.14/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="69,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="340,67"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AssetUploadedAlertProcessor" location="1,1545" size="494,247" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor" runTimeClassModel="duplicateEmails,assetManager,setDuplicateEmails(Z),userManager,populateApproverEmailsForAlert(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.AlertInfo;Ljava.util.HashMap;),setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;),sendApprovalEmail(Lcom.bright.assetbank.user.bean.ABUser;Ljava.util.HashMap;Ljava.lang.String;Z),sendBatchAlert(Lcom.bright.framework.database.bean.DBTransaction;Ljava.util.Vector;),sendAlert(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.AlertInfo;),setUserManager(Lcom.bright.assetbank.user.service.ABUserManager;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="183,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="userManager" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor#userManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetManager" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor#assetManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="duplicateEmails" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor#duplicateEmails"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="186,144">
+      <children xsi:type="editmodel:MethodEditModel" name="sendAlert" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor#sendAlert(Lcom.bright.framework.database.bean.DBTransaction;Lcom.bright.framework.workflow.bean.AlertInfo;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sendBatchAlert" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor#sendBatchAlert(Lcom.bright.framework.database.bean.DBTransaction;Ljava.util.Vector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sendApprovalEmail" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor#sendApprovalEmail(Lcom.bright.assetbank.user.bean.ABUser;Ljava.util.HashMap;Ljava.lang.String;Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setUserManager" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor#setUserManager(Lcom.bright.assetbank.user.service.ABUserManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetManager" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor#setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDuplicateEmails" id="com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor#setDuplicateEmails(Z)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.workflow.processor/SendAlertProcessorImpl&lt;-com.bright.assetbank.workflow.processor/AssetUploadedAlertProcessor" source="//@children.15" target="//@children.11" targetEnd="//@children.15/@sourceConnections.0/@children.1" sourceEnd="//@children.15/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="247,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="233,228"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AssetWorkflowManager" location="780,900" size="441,769" id="com.bright.assetbank.workflow.service/AssetWorkflowManager" runTimeClassModel="populateUsersFromRs(Ljava.sql.ResultSet;Ljava.util.Vector;),searchManager,userManager,categoryManager,deleteAsset(Lcom.bright.framework.database.bean.DBTransaction;J),changeAssetState(Lcom.bright.framework.database.bean.DBTransaction;JIJLjava.lang.String;ZJ),workflowManager,setWorkflowManager(Lcom.bright.framework.workflow.service.WorkflowManager;),setUserManager(Lcom.bright.assetbank.user.service.ABUserManager;),setSearchManager(Lcom.bright.assetbank.search.service.MultiLanguageSearchManager;),assetManager,transitionNotRequiresMessage(Lcom.bright.framework.database.bean.DBTransaction;JI),unsubmitAsset(Lcom.bright.framework.database.bean.DBTransaction;J),setDBTransactionManager(Lcom.bright.framework.database.service.DBTransactionManager;),setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;),endAssetUploadAlertBatch(J),getUsersWithSubmittedAssets(Lcom.bright.framework.database.bean.DBTransaction;),assetUploadedAlertProcessor,initiateAssetWorkflowForBatch(Lcom.bright.framework.database.bean.DBTransaction;JJZJJ),removeAssetWorkflow(Lcom.bright.framework.database.bean.DBTransaction;J),sendAssetUploadAlertBatch(Lcom.bright.framework.database.bean.DBTransaction;J),initiateAssetWorkflow(Lcom.bright.framework.database.bean.DBTransaction;JZJJ),categoryCountCacheManager,updateApprovalAlertProcessorDuplicateEmails(Z),getWorkflowAudit(Lcom.bright.framework.database.bean.DBTransaction;J),getTransitionableAssetsForOwner(Lcom.bright.framework.database.bean.DBTransaction;JLjava.math.BigInteger;),getTransitionableAssetsForApprover(Lcom.bright.framework.database.bean.DBTransaction;JLjava.math.BigInteger;),setAssetLogManager(Lcom.bright.assetbank.application.service.AssetLogManager;),approveAssetKeepWorkflow(Lcom.bright.framework.database.bean.DBTransaction;J),setCategoryManager(Lcom.bright.assetbank.application.service.AssetCategoryManager;),substituteApproversWithWorkflowApprovers(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;Ljava.lang.String;),deleteWorkflowAudit(Lcom.bright.framework.database.bean.DBTransaction;J),getAssetsForBatchUpdate(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;ILjava.math.BigInteger;),assetLogManager,generateAssetWorkflows(),setAssetUploadedAlertProcessor(Lcom.bright.assetbank.workflow.processor.AssetUploadedAlertProcessor;),setCategoryCountCacheManager(Lcom.bright.assetbank.category.service.CategoryCountCacheManager;),substituteApproversWithAssetApprovers(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;J),startAssetUploadAlertBatch(J),approveAssetEndWorkflow(Lcom.bright.framework.database.bean.DBTransaction;J),submitAsset(Lcom.bright.framework.database.bean.DBTransaction;J)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="331,144">
+      <children xsi:type="editmodel:AttributeEditModel" name="assetManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#assetManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="categoryManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#categoryManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="searchManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#searchManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="userManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#userManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workflowManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#workflowManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetUploadedAlertProcessor" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#assetUploadedAlertProcessor"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="categoryCountCacheManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#categoryCountCacheManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="assetLogManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#assetLogManager"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="254,576">
+      <children xsi:type="editmodel:MethodEditModel" name="initiateAssetWorkflowForBatch" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#initiateAssetWorkflowForBatch(Lcom.bright.framework.database.bean.DBTransaction;JJZJJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteAsset" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#deleteAsset(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#setAssetManager(Lcom.bright.assetbank.application.service.IAssetManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSearchManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#setSearchManager(Lcom.bright.assetbank.search.service.MultiLanguageSearchManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setUserManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#setUserManager(Lcom.bright.assetbank.user.service.ABUserManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setWorkflowManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#setWorkflowManager(Lcom.bright.framework.workflow.service.WorkflowManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="endAssetUploadAlertBatch" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#endAssetUploadAlertBatch(J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startAssetUploadAlertBatch" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#startAssetUploadAlertBatch(J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetUploadedAlertProcessor" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#setAssetUploadedAlertProcessor(Lcom.bright.assetbank.workflow.processor.AssetUploadedAlertProcessor;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sendAssetUploadAlertBatch" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#sendAssetUploadAlertBatch(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="substituteApproversWithAssetApprovers" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#substituteApproversWithAssetApprovers(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeAssetWorkflow" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#removeAssetWorkflow(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setDBTransactionManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#setDBTransactionManager(Lcom.bright.framework.database.service.DBTransactionManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="deleteWorkflowAudit" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#deleteWorkflowAudit(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="approveAssetKeepWorkflow" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#approveAssetKeepWorkflow(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="approveAssetEndWorkflow" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#approveAssetEndWorkflow(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCategoryCountCacheManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#setCategoryCountCacheManager(Lcom.bright.assetbank.category.service.CategoryCountCacheManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTransitionableAssetsForOwner" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#getTransitionableAssetsForOwner(Lcom.bright.framework.database.bean.DBTransaction;JLjava.math.BigInteger;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="initiateAssetWorkflow" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#initiateAssetWorkflow(Lcom.bright.framework.database.bean.DBTransaction;JZJJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="generateAssetWorkflows" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#generateAssetWorkflows()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAssetsForBatchUpdate" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#getAssetsForBatchUpdateOwner(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;ILjava.math.BigInteger;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCategoryManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#setCategoryManager(Lcom.bright.assetbank.application.service.AssetCategoryManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getWorkflowAudit" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#getWorkflowAudit(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="substituteApproversWithWorkflowApprovers" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#substituteApproversWithWorkflowApprovers(Lcom.bright.framework.database.bean.DBTransaction;Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="updateApprovalAlertProcessorDuplicateEmails" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#updateApprovalAlertProcessorDuplicateEmails(Z)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="submitAsset" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#submitAsset(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getUsersWithSubmittedAssets" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#getUsersWithSubmittedAssets(Lcom.bright.framework.database.bean.DBTransaction;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getTransitionableAssetsForApprover" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#getTransitionableAssetsForApprover(Lcom.bright.framework.database.bean.DBTransaction;JLjava.math.BigInteger;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="unsubmitAsset" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#unsubmitAsset(Lcom.bright.framework.database.bean.DBTransaction;J)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="changeAssetState" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#changeAssetState(Lcom.bright.framework.database.bean.DBTransaction;JIJLjava.lang.String;ZJ)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setAssetLogManager" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#setAssetLogManager(Lcom.bright.assetbank.application.service.AssetLogManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="transitionNotRequiresMessage" id="com.bright.assetbank.workflow.service/AssetWorkflowManager#transitionRequiresMessage(Lcom.bright.framework.database.bean.DBTransaction;JI)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.assetbank.workflow.service/AssetWorkflowManager->com.bright.framework.workflow.service/WorkflowManager" source="//@children.16" target="//@children.12" targetEnd="//@children.16/@sourceConnections.0/@children.2" label="//@children.16/@sourceConnections.0/@children.0" sourceEnd="//@children.16/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,97" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="413,203"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.assetbank.workflow.service/AssetWorkflowManager->com.bright.assetbank.workflow.bean/VariationsInWorkflow" source="//@children.16" target="//@children.2" targetEnd="//@children.16/@sourceConnections.1/@children.2" label="//@children.16/@sourceConnections.1/@children.0" sourceEnd="//@children.16/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="294,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="145,103"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.assetbank.workflow.service/AssetWorkflowManager->com.bright.assetbank.workflow.bean/AssetsInState" source="//@children.16" target="//@children.1" targetEnd="//@children.16/@sourceConnections.2/@children.2" label="//@children.16/@sourceConnections.2/@children.0" sourceEnd="//@children.16/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="307,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="133,175"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.assetbank.workflow.service/AssetWorkflowManager->com.bright.assetbank.workflow.bean/AssetInState" source="//@children.16" target="//@children.0" targetEnd="//@children.16/@sourceConnections.3/@children.2" label="//@children.16/@sourceConnections.3/@children.0" sourceEnd="//@children.16/@sourceConnections.3/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="309,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="130,301"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AssetApprovalForm" location="1032,1540" size="399,91" id="com.bright.assetbank.workflow.form/AssetApprovalForm" runTimeClassModel="selectedUserId,approvalList">
+    <children xsi:type="editmodel:CompartmentEditModel" size="190,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="approvalList" id="com.bright.assetbank.workflow.form/AssetApprovalForm#approvalList"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="selectedUserId" id="com.bright.assetbank.workflow.form/AssetApprovalForm#selectedUserId"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,36"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="StatesInVariation" location="944,525" size="388,75" id="com.bright.assetbank.workflow.bean/StatesInVariation" runTimeClassModel="stateList,variationName">
+    <children xsi:type="editmodel:CompartmentEditModel" size="121,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="stateList" id="com.bright.assetbank.workflow.bean/StatesInVariation#stateList"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="variationName" id="com.bright.assetbank.workflow.bean/StatesInVariation#variationName"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="AlertInfo" location="498,689" size="338,93" id="com.bright.framework.workflow.bean/AlertInfo" runTimeClassModel="alert,workflowInfo">
+    <children xsi:type="editmodel:CompartmentEditModel" size="155,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="alert" id="com.bright.framework.workflow.bean/AlertInfo#alert"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workflowInfo" id="com.bright.framework.workflow.bean/AlertInfo#workflowInfo"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TransitionableAssets" location="884,763" size="409,121" id="com.bright.assetbank.workflow.bean/TransitionableAssets" runTimeClassModel="returnSize,totalSize,getNumberStates(),workflowList">
+    <children xsi:type="editmodel:CompartmentEditModel" size="143,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="returnSize" id="com.bright.assetbank.workflow.bean/TransitionableAssets#returnSize"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="totalSize" id="com.bright.assetbank.workflow.bean/TransitionableAssets#totalSize"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="workflowList" id="com.bright.assetbank.workflow.bean/TransitionableAssets#workflowList"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="113,18">
+      <children xsi:type="editmodel:MethodEditModel" name="getNumberStates" id="com.bright.assetbank.workflow.bean/TransitionableAssets#getNumberStates()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting rulersVisibility="false" snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

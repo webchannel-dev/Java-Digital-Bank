@@ -1,0 +1,21 @@
+Name	Synonyms
+Europe/UK	England,Great Britain
+Europe/France	Paris
+Europe/Germany	German,Berlin
+Europe/Italy	Italian,Rome
+Europe/Denmark	Dane, Danish
+Asia/India	Indian
+Asia/China	Chinese
+Asia/Thailand	Thai,Bangkok,South East Asia
+Asia/Vietnam	Vietnamese,Hanoi
+Asia/Laos	Lao,Vientiane
+Asia/Malaysia	Malaysian
+The Americas/America	American,States,USA
+The Americas/South America	Brazil,Chile,Peri,Chilean
+Africa/Morocco	Moroccon, Marakesh
+Africa/South Africa	South African
+Africa/kenya	Kenyan
+Africa/Somalia	Somalian
+Oceania/Australia	Austalian,Aussie
+Oceania/New Zealand	Kiwi, New Zealander
+Oceania/Fiji	Fijians

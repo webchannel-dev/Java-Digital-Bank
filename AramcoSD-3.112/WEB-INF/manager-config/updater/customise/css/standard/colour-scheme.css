@@ -1,0 +1,372 @@
+/* ======================================================================================== */
+/* C U S T O M I S A T I O N   S T Y L E S H E E T                                          */
+/* ---------------------------------------------------------------------------------------- */
+/*                                                                                     
+	Customisations of the look and feel of Asset Bank should go in here.                                         
+*/
+/* ======================================================================================== */
+
+/* ================================================================================= 
+	General typography																		
+==================================================================================== */
+
+body,
+legend {
+	color: #444;									/* Colour of the text throughout the application */
+	font-family: tahoma, verdana, arial, sans-serif;  
+	}		
+
+body { font-size: 70%; }						/* Base font size */	
+	
+h1 { 													/* Main headings */
+	color: #009BC6;				
+	}
+
+a,												
+span.required,
+span.requiredForCompleteness,							
+div.copy code
+	{
+	color: #009BC6;						/* Colour of links throughout */
+	}
+
+/* ================================================================================= 
+	Layout and positioning																		
+==================================================================================== */
+
+#hLinks { 
+	margin-top: 25px; 							/* tweak to adjust hLinks position */
+	margin-bottom: 13px;							/* tweak to adjust search bar position */
+	color: #bae0ed;
+	}		
+div.pageWrapper {
+	overflow: hidden;
+	zoom: 1;
+}
+#header img.logo { padding: 30px 0; margin: 0;}		/* tweak position of logo in header */		
+	
+#loginPage div.logo, #registrationPage div.logo {
+	padding-top:25px;								/* padding around logo on login page */
+	padding-bottom: 25px;
+	background: #183a5e;
+	}	
+
+/* Larger light box panels (put in here so existing clients can overwrite) */	
+ul.lightbox li { 								/* lightbox panels */ 
+   width: 16.5em;  
+  	}
+ul.lightbox li div.detailWrapper {		/* wraps thumbnmail and details */
+ 	min-height:19em; 						/* this is also defined as height in ie5.css and ie6.css */
+ 	}			
+* html ul.lightbox li div.detailWrapper {		/* IE only */
+	height:19em !important;							/* explicitly define height for IE5 & 6 */
+ 	}	
+
+/* ================================================================================= 
+	Colour Scheme																		
+==================================================================================== */
+
+#topStrip {
+	background: #444; 
+	color: #FFF;
+	border-bottom: 1px solid #97bcc9;
+	height: 2em;					
+	}
+
+#topStrip .pageWrapper {
+	height: 2em;
+}	
+
+#topStrip a {
+	line-height: 2em;
+	color:#fff;
+	font-weight: normal;
+	float:left;
+	display:block;
+}	
+	
+div#topStrip.langSelect {							/* multi-language switched on */
+	background: #183a5e; 
+	border-bottom: 1px solid #97bcc9;
+	color: #FFF;
+	text-align:left;
+	}		
+div.headShadow {
+	background: #183a5e;
+	padding: 0;
+}
+
+#header {
+	background: transparent;							/* Main banner colour */
+	border: none;
+	height: auto;
+	}
+#header div.pageWrapper {}
+div.browsePanel {					/* Coloured panels on homepage */
+	border-color:#ccc;
+	background: #e6e6e6 url(../../images/standard/large_box_grad.png) repeat-x left bottom;
+	}
+
+div.newsPanel {
+	border-color:#ccc;
+	background: #e6e6e6 url(../../images/standard/news_grad_bg.png) repeat-x left bottom;
+}		
+
+div.lbPanel,
+div.infoPanel,
+div.mySaved, div.commonSaved,
+div.mySaved.middle,
+div.commonSaved.middle {							/* Search panel on homepage - extended to include saved searches*/
+	border: none;
+	background: #fdfdfd url(../../images/standard/lb_grad_bg.png) repeat-x 0 0;
+	}
+
+#qsPanel.middle,
+div.mySaved.middle,
+div.commonSaved.middle {							/* Seperation of different saved searches */
+	/* border-bottom: 1px solid #aaa; */		/* Border instead of default bg image */
+}
+
+#qsPanel {
+	padding: 0;
+	border-color: #183a5e;
+	background: #183a5e;
+}
+#qsPanel form {
+	border: 1px solid #4ab8d7;
+	background: #183a5e;
+	color: #FFF;
+	padding: 10px 0 10px 2%;
+	overflow:hidden;
+	height: 1%;
+}
+
+
+
+#qsPanel label.search {
+	line-height: 27px;
+	float:left;
+}
+#qsPanel input.text {
+	font-size: 1.2em;
+}
+#qsPanel input.button {
+	padding: 0 5px;
+	font-weight: bold;
+	float:left;
+	overflow:visible;
+	height: 28px;
+}
+
+#qsPanel input#qkeywords {
+	border: 1px solid #1278a3;
+	padding: 5px;
+	width:40%;
+	float:left;
+}
+#qsPanel a.advanced {
+	color: #FFF;
+	font-size: 1.1em;
+	width: 22%;
+	min-width: 105px;
+	padding: 0.7em 0 0 5px;
+}
+
+#qsPanel ul.radioList {
+	clear:left;
+	padding-top: 0.5em;
+}
+#qsPanel ul.radioList li:hover {
+	background: #009BC6;
+}
+
+h1.underline,
+div.hr,
+div.head,
+ul.results li,
+#footer {
+	border-color: #ccc;								/* Horizontal rules throughout the site */
+	}
+
+div.infoPanel,
+div.dialogPanel,
+#loginPanel,
+p.tabHolder strong,
+#tabContent,
+fieldset,
+#homePage a.imgWrapper,
+div.adminTabs h2,
+div.tabClearing  {
+	border-color: #ccc;								/* Borders of panels throughout the application */
+	}
+
+ul.lightbox li	{
+	border-color:#ccc;
+	background: #e6e6e6 url(../../images/standard/news_grad_bg.png) repeat-x left bottom;		
+	}	
+
+img.image { 											/* thumbnail borders - may need toning down. */
+	border-color: #000
+	}	
+			
+ul.nav a	{	
+	color: #676767;							/* Colour of main navigation links */
+	background: #FFF;
+	}
+							
+ul.nav li a.current, 							
+ul.nav li a.current:hover {						/* Current page highlighting */
+	/* Occasionaly may want to use nav_arrow_white.gif, if defining a dark background colour */
+	background: #e9eaeb url(../../images/standard/arrow/nav_arrow.gif) right center no-repeat; 		
+	}
+
+#hLinks a {
+	color: #FFF;							/* Colour of links in the header bar */			
+	}
+a#helpLink {
+	background: transparent url(../../images/standard/help_icon.png) no-repeat scroll right center;
+	padding-right: 16px;
+}
+a#profileLink {
+	background: transparent;
+	padding-right: 0;
+}
+a#logoutLink {
+	background: transparent;
+	padding-right: 0;
+}
+
+#help div.copy h2,						
+#popup div.copy h2 {
+	background: #009BC6;					/* Pop-up help headers */	
+	color: #fff; 			
+	}
+
+#homePage a.imgWrapper:hover, a.videoFrameLink:hover img,
+div.commonSaved a:hover img {				
+	border-color: #009BC6;				/* Hover effect on recent and promoted images, and video thumbs */
+	background: #FFF;				
+	} 
+
+table.stripey tr.even th, table.stripey tr.even td  {
+	background: #eee;									/* color of attribute stripes on asset detail page	 */
+	}
+			
+input.button {
+	background: #FEFEFE url(../../images/standard/button_bg.png) repeat-x left bottom;					/* Styling of all buttons throughout the application */
+	color: #494754;
+	padding: 2px 3px; 						
+	border-top: 1px solid #336a86;
+	border-bottom: 1px solid #527c94;
+	border-left: 1px solid #7092a6;
+	border-right: 1px solid #336886;
+}
+input#keywords {
+	border: 1px solid #0084a8;
+	padding: 3px;
+}
+
+div.rightShadow, div.leftShadow {
+	background: #FFF;
+	padding-bottom: 6px;
+}
+div.lbShadow {
+	margin-top: 2em;
+	background: #FFF;
+	padding-bottom: 0;
+	width: 136px;
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+div.lbPanel, div.infoPanel {
+	margin-top: 0 !important;
+	width: 136px;
+}
+
+/* #key span.Image {
+	background: red;
+}	 */
+
+/* ================================================================================= 
+ 	Deactivate nav menu stylings 							 									 		
+==================================================================================== */
+ul.nav,										/* images/standard/misc/dots.gif */
+ul.nav li,									/* images/standard/misc/dots.gif */
+ul.nav ul li,								/* images/standard/misc/dots.gif */
+ul.nav ul,
+ul.nav li.last 	
+{
+/* 
+	background-image: none;
+	padding: 0px;
+	border: 0px solid #ddd;	
+ */
+}
+
+ul.nav,								/* Replace image-based dividers with borders */
+ul#admin_nav,
+ul#upload_nav
+{
+	background: #bec0c2;
+}
+
+ul.nav li,							/* Replace image-based dividers with borders */
+ul.nav ul li
+{
+	background: #bec0c2;
+}
+
+ul.nav a:hover  {
+	background-color: #FFF;
+}
+ul.nav li.subholder a:hover, #adminPage a#admin_nav_link, #importPage a#upload_nav_link  {
+	background-color: #FFF !important;
+}
+ul.nav a.open {
+	background-color: #FFF !important;
+}
+
+
+/* ================================================================================= 
+   Deactivate drop shadows				 																
+==================================================================================== */
+	
+/* div.leftShadow, div.rightShadow, div.headShadow, div.lbShadow {
+	background: none;
+	padding:0;
+	} */
+
+	
+/* ================================================================================= */
+/* Revert to older Asset Bank styles 																 */
+/* ================================================================================= */
+
+/* 
+#topStrip { background: #fff;}
+
+div.headShadow {
+	background: none;
+	}
+div.headerContent { 
+	background: #999;
+	border-top:8px solid #333;
+	padding: 0 8px 10px 0;
+	}	
+#header { 
+	border:0;
+	}	
+
+div.recent {
+	padding:8px;
+	background-color: #ccc;
+	position:relative;
+	top:-11px;
+	z-index:1000;}
+
+a.imgWrapper {
+	position:relative;
+	}
+			
+a.imgWrapper img {margin:0!important;} 
+
+*/

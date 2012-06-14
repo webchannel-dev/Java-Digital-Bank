@@ -1,0 +1,36 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>	
+      </addresses>
+      <subject>
+         Asset Bank Payment Confirmation
+      </subject>
+      <body>
+Dear #greetname# (#username#)
+
+This email confirms your purchase of assets from Asset Bank.
+Order/Purchase ID: #ordernum#  
+
+Your order/purchase details are			
+#orderDetails#
+			
+#purchaseCommercialReceiptNote#
+			
+#purchaseDownloadInstructions#
+#purchasePrintInstructions#
+			
+Your login details are:
+Your username: #username#
+Your password: #password#
+
+To view the terms and conditions of your purchase go to #purchaseTermsLink#
+			
+This is a test email from Asset Bank. The text of all emails sent to users is configurable.
+
+Regards,
+AssetBank Admin
+      </body>
+   </email-template>
+</email-templates>

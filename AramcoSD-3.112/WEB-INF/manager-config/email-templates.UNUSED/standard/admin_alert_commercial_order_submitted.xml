@@ -1,0 +1,26 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+       <to>#adminEmailAddresses#</to>		 
+      </addresses>
+      <subject>
+         Image Bank: User has requested approval for commercial use.
+      </subject>
+      <body>
+#greetname#(#username#) has placed an order (#ordernum#) requesting approval for commercial use of the following assets:
+
+#orderDetails#
+			
+The following usage notes were provided by the user.
+#UserNotes#
+			
+Please log in to Image Bank and go to the Orders -> Commercial Orders section to review and approve the order.
+			
+#OfflinePaymentRequest#
+
+      </body>
+   </email-template>
+
+</email-templates>

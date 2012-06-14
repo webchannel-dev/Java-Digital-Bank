@@ -1,0 +1,18 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+       <to>#adminEmailAddresses#</to>		 
+      </addresses>
+      <subject>
+         Image Bank: assets require approval
+      </subject>
+      <body>
+#name# has uploaded or updated assets. The new or updated assets require approval.
+
+Please log in to Image Bank and go to the Approve Assets section to approve the changes
+      </body>
+   </email-template>
+
+</email-templates>

@@ -1,0 +1,35 @@
+<email-templates>
+   <email-template>
+      <addresses>
+	<from>lfbphotos@london-fire.gov.uk</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Assetbank: alteration to request for commercial use of image/s
+      </subject>
+      <body>
+Dear #username#
+
+IMPORTANT INFORMATION ABOUT YOUR REQUEST FOR COMMERCIAL USE OF IMAGE/S
+
+Your order number: #ordernum#
+#assetDetails#
+
+Having assessed your request, and from the additional information you have provided us, we have felt it necessary to change the commercial option you had initially selected from '#oldOption#'  to '#newOption#'. This has resulted in a change of price for the purchase of the image/s.
+
+You can view the change of use by logging into Assetbank, and proceed to the MY PURCHASES - MY ORDERS section. 
+
+If you do not agree with our assessment of your intended use of the image/s, please contact us and we will be happy to discuss it further with you.
+
+YOUR LOGIN DETAILS
+
+Your username: #username#
+Your password: #password#
+
+Thank you for using Assetbank.co.uk.
+
+Regards,
+assetbank.com, admin
+      </body>
+   </email-template>
+</email-templates> 

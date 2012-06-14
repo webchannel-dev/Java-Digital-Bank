@@ -1,0 +1,16 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#userEmails#</to>		 
+      </addresses>
+      <subject>
+																		   #subject#
+      </subject>
+      <body>
+#body#
+      </body>
+   </email-template>
+
+</email-templates>

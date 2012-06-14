@@ -1,0 +1,182 @@
+/* ======================================================================================== */
+/* N A V I G A T I O N   S T Y L E S H E E T                                                */
+/* Contains rules navigational elements (i.e. main menu, header links and lightbox panel).  */
+/* ---------------------------------------------------------------------------------------- */
+/* History                                                                                  */
+/* d1		Ben Browning		07-Feb-2006    Created.                                          */
+/* ======================================================================================== */
+
+/* ================================================================================= 
+	Main Navigation menu													
+==================================================================================== */	
+ul.nav, ul.nav ul { 
+   width: 140px; 
+   list-style: none; 
+   margin: 0; 
+   padding: 0; 
+   background: url(../../images/standard/misc/dots.gif) top left repeat-x; 
+   padding-top:1px;
+   }
+   
+ul.nav li, ul.nav ul li { 
+   background: url(../../images/standard/misc/dots.gif) bottom left repeat-x; 
+   padding-bottom: 1px;
+   width:100%; 
+   }
+   
+ul.nav a { 
+   font-weight: bold; 
+   display: block; 
+   padding: 6px 16px 6px 10px; }
+   
+ul.nav a:hover { 
+   background: url(../../images/standard/arrow/nav_arrow.gif) right center no-repeat; 
+   text-decoration: none; } 
+   
+ul.nav li a.current, ul.nav li a.current:hover { 
+   background: #eee url(../../images/standard/arrow/nav_arrow.gif) right center no-repeat; }
+
+/* Upload and Admin expanding links */	
+#main_nav a.openHover{
+	background: url(../../images/standard/arrow/nav_down_arrow_hover.gif) right center no-repeat;
+	}
+
+#main_nav a.open {
+	background: url(../../images/standard/arrow/nav_down_arrow.gif) right center no-repeat;
+	}
+	
+#adminPage a#admin_nav_link,
+#importPage a#upload_nav_link {
+	background: url(../../images/standard/arrow/nav_down_arrow.gif) right center no-repeat;
+	}
+
+/* sub-menu styles */  
+ul.nav ul li a {padding-left: 20px; font-weight: normal;}
+ul.nav ul li.last {background: none; padding:0;}       /* last sub-list item does'nt need a border */
+
+/* Ensure the sub-menus stay open when on an admin or upload page */
+#adminPage ul#admin_nav,#importPage ul#upload_nav, #orgUnitPage ul#orgunit_content_nav { display: block; } 	
+
+/* ================================================================================= 
+	Header Links (hLinks)												
+==================================================================================== */	 
+#hLinks span.divider { padding: 0px 2px; }
+#hLinks a {font-weight: normal;}
+a#helpLink { background: url(../../images/standard/icon/help_icon.png) right center no-repeat; padding-right:16px;}
+
+/* ================================================================================= 
+	Panels (appear below main menu)												
+==================================================================================== */	
+div.lbPanel, div.menuPanel, div.infoPanel, div.linkPanel { 
+   width: 138px; 
+   border: 1px solid #aaa; 
+   margin: 0.8em 0 0 0; 
+   padding: 8px 0;
+	background: url(../../images/standard/misc/panel_grad.gif) bottom left repeat-x; 
+	}
+
+div.lbShadow {
+	width:138px;
+	padding-bottom:16px;
+	background: url(../../images/standard/misc/drop_lb.gif) bottom left no-repeat;}
+	
+div.lbPanel h3 { 
+	margin: 0; 
+	padding: 0 0 0 10px; 
+	float:left;
+	max-width: 90px;
+	}
+div.lbPanel h3 a {
+	float:left;
+}	
+div.lbPanel p { 
+	font-size: 90%; 
+	margin: 0.8em 0 0 0; 
+	padding: 0 10px; 
+	line-height: 1.3em; 
+	clear:left;
+}
+div.lbPanel a#lbLink { 
+	background: url(../../images/standard/icon/folder.gif) top left no-repeat; 
+	padding-left: 18px; 
+	display: block; 
+	line-height: 13px; 
+	margin-top: 1px; 
+}
+div.lbPanel a.empty {
+	background: url(../../images/standard/icon/bin.gif) left 1px no-repeat;
+	padding-left: 13px;
+	font-weight: normal;
+	display:none; 					/* hidden by default */
+}
+div.lbPanel a.empty.on {
+	display:inline;
+}
+
+div.menuPanel p, div.linkPanel p {
+	padding: 0 10px; 
+	margin:0;}
+
+div.linkPanel {
+	border: 1px solid #aaa;
+	background: #eee;
+	margin-top:2em;
+	}	
+
+div.linkPanel a { color:#666666}	
+
+
+/* =================================================================================  
+   Info Panels															 	 
+   ================================================================================= */	
+
+div.infoPanel {
+	margin-top:0.8em;
+	border-color:#a3bdd4;
+	border-color:#bbb;
+	background: url(../../images/standard/misc/info_grad.gif) bottom left repeat-x; 
+	}	
+	
+div.infoPanel p.info {
+	background: url(../../images/standard/icon/info_small.gif) left 2px no-repeat;
+	margin:2px 5px 5px 8px;
+	padding-left: 29px;
+	}
+div.infoPanel p.ruled {
+	margin: 2px 5px 5px 37px;
+	border-top: 1px dashed #bbb; 
+	padding-top: 5px; 
+	background-position: left 7px;
+	}	
+	
+
+/* =================================================================================  
+   Footer language links													 	 
+   ================================================================================= */			
+
+div#topStrip.langSelect {				/* multi-language switched on */
+	background-color: #f3f3f3; 
+	border-bottom:1px solid #bbb;
+	height: 2em;
+	font-size: 0.9em;
+	}		
+ul.languageLinks {
+	float:left;
+	width:auto;
+	max-width:50%;
+	margin:0; padding:0;
+	list-style: none;
+	}
+ul.languageLinks li { 
+	margin:0 0 0 10px;
+	display:block;
+	float:left;
+	line-height:1.9em;
+	}	
+ul.languageLinks li.graphic {				/* for languages with a flag icon */
+	background-position:left center;
+	background-repeat: no-repeat; 
+	padding-left: 20px; 
+	}	
+	
+	

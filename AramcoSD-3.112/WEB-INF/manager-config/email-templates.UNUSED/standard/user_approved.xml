@@ -1,0 +1,27 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Your Asset Bank registration has been approved
+      </subject>
+      <body>
+Dear #name#
+
+You have been approved as a user of Asset Bank. 
+
+Your login details are:
+Username: #username#
+Password: #password#
+			
+You can change your password after logging in: click 'Your Profile' in the top right of the screen, then click 'change your password'.
+
+#adminMessage#
+
+Kind regards,
+Asset Bank Admin
+      </body>
+   </email-template>
+</email-templates>

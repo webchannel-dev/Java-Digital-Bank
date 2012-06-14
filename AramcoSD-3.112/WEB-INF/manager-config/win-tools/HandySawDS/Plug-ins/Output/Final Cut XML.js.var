@@ -1,0 +1,29 @@
+[TargetHost]
+Type=List
+FriendlyName="Target host"
+Hint="Select target host application"
+ChoiceSet="Any","EDIUS"
+Default="Any"
+[SequenceRate]
+Type=List
+FriendlyName="Sequence framerate"
+Hint="Sequence framerate may be equal to source file framerate or you can force some specific value"
+ChoiceSet="As file","24P(23.97)","Film(24)","PAL(25)","NTSC(29.97)","NTSC(30)","50","59.94","60"
+Default="As file"
+[TargetOS]
+Type=List
+FriendlyName="Target OS"
+Hint="Select target Operation System. In case of Mac OS filename will be converted using following prefixes"
+ChoiceSet="Windows","Mac"
+Default="Windows"
+[WinPrefix]
+Type=String
+FriendlyName="Windows prefix"
+Hint="Specify prefix of media file name as it seen from Windows computer that will be replaced by Mac prefix"
+Default="E:"
+[MacPrefix]
+Type=String
+FriendlyName="Mac prefix"
+Hint="Specify prefix of media file name as it seen from Mac computer that will replace Windows prefix"
+Default="file://localhost/Users"
+

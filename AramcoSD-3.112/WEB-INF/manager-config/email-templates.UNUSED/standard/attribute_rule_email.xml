@@ -1,0 +1,30 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>#from#</from>
+         <to>#recipient#</to>		 
+      </addresses>
+      <subject>
+         Asset Bank Automatic Email
+      </subject>
+      <body>
+Dear Asset Bank user
+
+This email has been automatically sent to you by Asset Bank because a date specified on one or more assets has been reached.
+
+The asset attribute is: #rule_attribute#.
+The rule that has triggered is: #rule_name#.
+Message:
+#rule_message#
+
+Assets (id and title):
+#asset_list#
+
+Regards,
+Image Bank Admin
+
+      </body>
+   </email-template>
+
+</email-templates>

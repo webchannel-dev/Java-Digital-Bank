@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="sso" size="997,420" id="" metadata="uml2-1.0" initialized="true" tag="1000" key="32303036313031382061737365742D62616E6B2D7472756E6B2F5374657665">
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.2/@sourceConnections.1 //@children.3/@sourceConnections.1" name="SSOPlugin" location="113,-45" size="310,351" id="com.bright.framework.user.sso/SSOPlugin" runTimeClassModel="doHTTPRequestCheck(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;),processRequest(Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;),getRemoteUser(Ljavax.servlet.http.HttpServletRequest;),getLoginFormForPost(Ljavax.servlet.http.HttpServletRequest;),k_sSSOMode_RemoteLoginForm,getLogoutUrl(Ljavax.servlet.http.HttpServletRequest;),getLoginJsp(),getLoginUrlForRedirect(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;),getSSOMode(),k_sSSOMode_RemoteSessionCheck,getForwardUrl(Ljavax.servlet.http.HttpServletRequest;),k_sSSOMode_HTTPRequestToken,getSessionCheckUrl(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;),doDestroyAction(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;Lcom.bright.framework.database.bean.DBTransaction;),getLoginBaseUrl(),validateForm(Lcom.bright.framework.user.form.LoginForm;),k_sSSOMode_Identify">
+    <children xsi:type="editmodel:CompartmentEditModel" size="229,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="k_sSSOMode_RemoteLoginForm" id="com.bright.framework.user.sso/SSOPlugin#k_sSSOMode_RemoteLoginForm"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="k_sSSOMode_Identify" id="com.bright.framework.user.sso/SSOPlugin#k_sSSOMode_Identify"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="k_sSSOMode_HTTPRequestToken" id="com.bright.framework.user.sso/SSOPlugin#k_sSSOMode_HTTPRequestToken"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="143,234">
+      <children xsi:type="editmodel:MethodEditModel" name="getForwardUrl" id="com.bright.framework.user.sso/SSOPlugin#getForwardUrl(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginJsp" id="com.bright.framework.user.sso/SSOPlugin#getLoginJsp()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRemoteUser" id="com.bright.framework.user.sso/SSOPlugin#getRemoteUser(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSessionCheckUrl" id="com.bright.framework.user.sso/SSOPlugin#getSessionCheckUrl(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="validateForm" id="com.bright.framework.user.sso/SSOPlugin#validateForm(Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doDestroyAction" id="com.bright.framework.user.sso/SSOPlugin#doDestroyAction(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;Lcom.bright.framework.database.bean.DBTransaction;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSSOMode" id="com.bright.framework.user.sso/SSOPlugin#getSSOMode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="processRequest" id="com.bright.framework.user.sso/SSOPlugin#processRequest(Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginUrlForRedirect" id="com.bright.framework.user.sso/SSOPlugin#getLoginUrlForRedirect(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLogoutUrl" id="com.bright.framework.user.sso/SSOPlugin#getLogoutUrl(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginBaseUrl" id="com.bright.framework.user.sso/SSOPlugin#getLoginBaseUrl()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginFormForPost" id="com.bright.framework.user.sso/SSOPlugin#getLoginFormForPost(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doHTTPRequestCheck" id="com.bright.framework.user.sso/SSOPlugin#doHTTPRequestCheck(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0 //@children.3/@sourceConnections.0" name="BaseSSOPlugin" location="510,37" size="341,103" id="com.bright.framework.user.sso/BaseSSOPlugin" runTimeClassModel="getSSOLoginFormUrl(Ljavax.servlet.http.HttpServletRequest;),getSSOCreateSessionActionUrl(Ljavax.servlet.http.HttpServletRequest;),parseFullUsername(Ljava.lang.String;),getSSODestroySessionActionUrl(Ljavax.servlet.http.HttpServletRequest;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="188,54">
+      <children xsi:type="editmodel:MethodEditModel" name="getSSODestroySessionActionUrl" id="com.bright.framework.user.sso/BaseSSOPlugin#getSSODestroySessionActionUrl(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSSOLoginFormUrl" id="com.bright.framework.user.sso/BaseSSOPlugin#getLoginFormUrl(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="parseFullUsername" id="com.bright.framework.user.sso/BaseSSOPlugin#parseFullUsername(Ljava.lang.String;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="OpenIdSSOPlugin" location="75,345" size="356,355" id="com.bright.framework.user.sso/OpenIdSSOPlugin" runTimeClassModel="doHTTPRequestCheck(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;),setOpenIdManager(Lcom.bright.framework.user.sso.OpenIdManager;),processRequest(Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;),remoteUser,getRemoteUser(Ljavax.servlet.http.HttpServletRequest;),getLogoutUrl(Ljavax.servlet.http.HttpServletRequest;),getLoginFormForPost(Ljavax.servlet.http.HttpServletRequest;),getLoginJsp(),openIdManager,getLoginUrlForRedirect(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;),getSSOMode(),getForwardUrl(Ljavax.servlet.http.HttpServletRequest;),getSessionCheckUrl(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;),doDestroyAction(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;Lcom.bright.framework.database.bean.DBTransaction;),startup(),validateForm(Lcom.bright.framework.user.form.LoginForm;),getLoginBaseUrl()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="189,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="openIdManager" id="com.bright.framework.user.sso/OpenIdSSOPlugin#openIdManager"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="remoteUser" id="com.bright.framework.user.sso/OpenIdSSOPlugin#remoteUser"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="140,270">
+      <children xsi:type="editmodel:MethodEditModel" name="getForwardUrl" id="com.bright.framework.user.sso/OpenIdSSOPlugin#getForwardUrl(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginJsp" id="com.bright.framework.user.sso/OpenIdSSOPlugin#getLoginJsp()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRemoteUser" id="com.bright.framework.user.sso/OpenIdSSOPlugin#getRemoteUser(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setOpenIdManager" id="com.bright.framework.user.sso/OpenIdSSOPlugin#setOpenIdManager(Lcom.bright.framework.user.sso.OpenIdManager;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="validateForm" id="com.bright.framework.user.sso/OpenIdSSOPlugin#validateForm(Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doDestroyAction" id="com.bright.framework.user.sso/OpenIdSSOPlugin#doDestroyAction(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;Lcom.bright.framework.database.bean.DBTransaction;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSessionCheckUrl" id="com.bright.framework.user.sso/OpenIdSSOPlugin#getSessionCheckUrl(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSSOMode" id="com.bright.framework.user.sso/OpenIdSSOPlugin#getSSOMode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="processRequest" id="com.bright.framework.user.sso/OpenIdSSOPlugin#processRequest(Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginBaseUrl" id="com.bright.framework.user.sso/OpenIdSSOPlugin#getLoginBaseUrl()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startup" id="com.bright.framework.user.sso/OpenIdSSOPlugin#startup()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLogoutUrl" id="com.bright.framework.user.sso/OpenIdSSOPlugin#getLogoutUrl(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginFormForPost" id="com.bright.framework.user.sso/OpenIdSSOPlugin#getLoginFormForPost(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginUrlForRedirect" id="com.bright.framework.user.sso/OpenIdSSOPlugin#getLoginUrlForRedirect(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doHTTPRequestCheck" id="com.bright.framework.user.sso/OpenIdSSOPlugin#doHTTPRequestCheck(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.user.sso/BaseSSOPlugin&lt;-com.bright.framework.user.sso/OpenIdSSOPlugin" source="//@children.2" target="//@children.1" targetEnd="//@children.2/@sourceConnections.0/@children.1" sourceEnd="//@children.2/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="352,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="119,103"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.user.sso/SSOPlugin&lt;-com.bright.framework.user.sso/OpenIdSSOPlugin" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.1/@children.1" sourceEnd="//@children.2/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="192,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="154,351"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="com.bright.framework.user.sso/OpenIdSSOPlugin->com.bright.framework.user.sso/OpenIdManager" source="//@children.2" target="//@children.4" targetEnd="//@children.2/@sourceConnections.2/@children.2" label="//@children.2/@sourceConnections.2/@children.0" sourceEnd="//@children.2/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«call»" size="28,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="173,355" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="193,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SagePassportSSOPlugin" location="495,360" size="397,319" id="com.bright.framework.user.sso/SagePassportSSOPlugin" runTimeClassModel="doHTTPRequestCheck(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;),processRequest(Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;),validateDates(Ljava.lang.String;Ljava.lang.String;),getRemoteUser(Ljavax.servlet.http.HttpServletRequest;),getLogoutUrl(Ljavax.servlet.http.HttpServletRequest;),getLoginFormForPost(Ljavax.servlet.http.HttpServletRequest;),getLoginJsp(),getLoginUrlForRedirect(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;),getSSOMode(),getForwardUrl(Ljavax.servlet.http.HttpServletRequest;),getSessionCheckUrl(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;),doDestroyAction(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;Lcom.bright.framework.database.bean.DBTransaction;),startup(),getLoginBaseUrl(),validateForm(Lcom.bright.framework.user.form.LoginForm;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="140,270">
+      <children xsi:type="editmodel:MethodEditModel" name="getForwardUrl" id="com.bright.framework.user.sso/SagePassportSSOPlugin#getForwardUrl(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginJsp" id="com.bright.framework.user.sso/SagePassportSSOPlugin#getLoginJsp()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getRemoteUser" id="com.bright.framework.user.sso/SagePassportSSOPlugin#getRemoteUser(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSessionCheckUrl" id="com.bright.framework.user.sso/SagePassportSSOPlugin#getSessionCheckUrl(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="validateForm" id="com.bright.framework.user.sso/SagePassportSSOPlugin#validateForm(Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="validateDates" id="com.bright.framework.user.sso/SagePassportSSOPlugin#validateDates(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginUrlForRedirect" id="com.bright.framework.user.sso/SagePassportSSOPlugin#getLoginUrlForRedirect(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doDestroyAction" id="com.bright.framework.user.sso/SagePassportSSOPlugin#doDestroyAction(Lorg.apache.struts.action.ActionMapping;Lorg.apache.struts.action.ActionForm;Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;Lcom.bright.framework.database.bean.DBTransaction;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSSOMode" id="com.bright.framework.user.sso/SagePassportSSOPlugin#getSSOMode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="processRequest" id="com.bright.framework.user.sso/SagePassportSSOPlugin#processRequest(Ljavax.servlet.http.HttpServletRequest;Lcom.bright.framework.user.form.LoginForm;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLogoutUrl" id="com.bright.framework.user.sso/SagePassportSSOPlugin#getLogoutUrl(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginFormForPost" id="com.bright.framework.user.sso/SagePassportSSOPlugin#getLoginFormForPost(Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getLoginBaseUrl" id="com.bright.framework.user.sso/SagePassportSSOPlugin#getLoginBaseUrl()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startup" id="com.bright.framework.user.sso/SagePassportSSOPlugin#startup()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="doHTTPRequestCheck" id="com.bright.framework.user.sso/SagePassportSSOPlugin#doHTTPRequestCheck(Lcom.bright.framework.database.bean.DBTransaction;Ljavax.servlet.http.HttpServletRequest;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.user.sso/BaseSSOPlugin&lt;-com.bright.framework.user.sso/SagePassportSSOPlugin" source="//@children.3" target="//@children.1" targetEnd="//@children.3/@sourceConnections.0/@children.1" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="185,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="170,103"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="com.bright.framework.user.sso/SSOPlugin&lt;-com.bright.framework.user.sso/SagePassportSSOPlugin" source="//@children.3" target="//@children.0" targetEnd="//@children.3/@sourceConnections.1/@children.1" sourceEnd="//@children.3/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="24,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="310,317"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.2" name="OpenIdManager" location="55,765" size="368,139" id="com.bright.framework.user.sso/OpenIdManager" runTimeClassModel="getVerifiedUser(Ljavax.servlet.http.HttpServletRequest;Ljava.lang.String;),getAuthenticationUrl(Ljava.lang.String;Ljavax.servlet.http.HttpServletRequest;),startup()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="153,18"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="127,72">
+      <children xsi:type="editmodel:MethodEditModel" name="getAuthenticationUrl" id="com.bright.framework.user.sso/OpenIdManager#getAuthenticationUrl(Ljava.lang.String;Ljavax.servlet.http.HttpServletRequest;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getVerifiedUser" id="com.bright.framework.user.sso/OpenIdManager#getVerifiedUser(Ljavax.servlet.http.HttpServletRequest;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="startup" id="com.bright.framework.user.sso/OpenIdManager#startup()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting rulersVisibility="false" snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

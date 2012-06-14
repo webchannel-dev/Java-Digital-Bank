@@ -1,0 +1,32 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Commercial purchase declined.
+      </subject>
+      <body>
+Dear #greetname# (#username#)
+
+Your commercial purchase order (#ordernum#) placed on #datePlaced# has been declined.
+			
+You may be contacted shortly by a member of our admin team to discuss the issue with your request.
+			
+You can login to Asset Bank (http://www.assetbank.co.uk/ecommerce) and go to the 'My Purchases-> My Orders' section to view the declined order.
+Your login details are:
+Your username: #username#
+Your password: #password#
+
+Your declined order details, commercial options and terms and conditions are 
+
+#orderDetails#
+			
+#terms# 
+
+Regards,
+assetbank.com, admin
+      </body>
+   </email-template>
+</email-templates>

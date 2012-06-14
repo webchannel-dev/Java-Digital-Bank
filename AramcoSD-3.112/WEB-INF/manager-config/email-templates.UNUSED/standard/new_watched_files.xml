@@ -1,0 +1,14 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#adminEmailAddresses#</to>	
+      </addresses>
+      <subject>
+         Asset Bank: New files uploaded
+      </subject>
+      <body>
+New files have been added to the the following directories: #directories#
+      </body>
+   </email-template>
+</email-templates>

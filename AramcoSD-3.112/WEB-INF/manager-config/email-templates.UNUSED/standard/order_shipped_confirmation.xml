@@ -1,0 +1,29 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Your order has been shipped.
+      </subject>
+      <body>
+Dear #greetname# (#username#)
+
+This e-mail is to confirm that your order (#ordernum#) placed on #datePlaced# has been shipped to
+
+#address#
+
+Your order details are
+
+#orderDetails#
+
+Thank you for purchasing images from Asset Bank.
+
+This is a test email from Asset Bank. The text of all emails sent to users is configurable.
+			
+Regards,
+Asset Bank Admin
+      </body>
+   </email-template>
+</email-templates>

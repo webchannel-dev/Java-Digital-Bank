@@ -1,0 +1,29 @@
+<email-templates>
+   <email-template>
+      <addresses>
+		 <from>imagebank@bright-interactive.com</from>
+         <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Asset Bank Subscription Confirmation
+      </subject>
+      <body>
+Dear #username#
+
+This email confirms that you purchased the following subscription on Asset Bank.
+
+Description: #description#
+Amount: #amount#.
+
+You can login to Asset Bank (http://www.assetbank.co.uk/) to download images. 
+Your login details are:
+Your username: #username#
+Your password: #password#
+
+This is a test email from Asset Bank. The text of all emails sent to users is configurable.
+
+Regards,
+Asset Bank Admin
+      </body>
+   </email-template>
+</email-templates>
