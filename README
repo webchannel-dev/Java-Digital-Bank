@@ -1,4 +1,4 @@
-asset bank 3.77 version decomplied with jad
+Digital Bank 3.77 version decomplied with jad
 -------------------------------------------
 
 This version is the development environment containing only the decompiled java files. It does not have the deployable part, the JSPs, js, and other web related parts of the application. A deployable format 'AssetBankBase' is also available.
